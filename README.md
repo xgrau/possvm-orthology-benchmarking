@@ -1,10 +1,26 @@
 # *Possvm* accuracy benchmarks
 
-This is a companion repository to [*Possvm*](https://github.com/xgrau/possvm-orthology), which contains scripts and data to reproduce the benchmarking analyses done for the *Possvm* manuscript ([Grau-Bové and Sebé-Pedrós, bioRxiv 2021](https://www.biorxiv.org/content/10.1101/2021.05.03.442399v1)).
+This is a companion repository to [*Possvm*](https://github.com/xgrau/possvm-orthology), and contains scripts and data to reproduce the benchmarking analyses done for the *Possvm* manuscript ([Grau-Bové and Sebé-Pedrós, bioRxiv 2021](https://www.biorxiv.org/content/10.1101/2021.05.03.442399v1)).
+
+You can find the *Possvm* source code, manual and installation instructions in the [main repository for this project](https://github.com/xgrau/possvm-orthology).
+
+## Data sources
+
+If you use the datasets provided in this repository, cite the original sources:
+
+* [HomeoDB](http://homeodb.zoo.ox.ac.uk/) database (v2): **[Zhong et al. Evolution & Development, 2011](https://onlinelibrary.wiley.com/doi/full/10.1111/j.1525-142X.2011.00513.x)**.
+* [Orthobench](https://github.com/davidemms/Open_Orthobench) repository (v2.0): **[Emms et al. GBE 2020](https://academic.oup.com/gbe/article/12/12/2258/5918455)**.
+
+If you use *Possvm*, please cite the following papers:
+
+* *Possvm*: **[Grau-Bové and Sebé-Pedrós, bioRxiv 2021](https://www.biorxiv.org/content/10.1101/2021.05.03.442399v1)**.
+* *ETE* toolkit: **[Huerta-Cepas *et al.* Molecular Biology and Evolution 2016](https://academic.oup.com/mbe/article/33/6/1635/2579822)**.
+* Species overlap algorithm: **[Huerta-Cepas *et al.* Genome Biolgy 2007](https://genomebiology.biomedcentral.com/articles/10.1186/gb-2007-8-6-r109)**.
+* *MCL* clustering: **[Enright *et al.* Nucleic Acids Research 2002](https://pubmed.ncbi.nlm.nih.gov/11917018/)**.
 
 ## TALE homeobox classification
 
-Test the accuracy of *Possvm* using manually curated homeobox families from HomeoDB. 
+Test the accuracy of *Possvm* using manually curated homeobox families from HomeoDB.
 
 From the `**homeobox-test**` folder:
 
