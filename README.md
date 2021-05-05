@@ -22,7 +22,7 @@ If you use *Possvm*, please cite the following papers:
 
 Test the accuracy of *Possvm* using manually curated homeobox families from HomeoDB.
 
-From the `**homeobox-test**` folder:
+From the **`homeobox-test`** folder:
 
 1. Get TALE, PRD and ANTP sequences from [HomeoDB](http://homeodb.zoo.ox.ac.uk/) (as of 7th Feb 2021).
 
@@ -89,7 +89,7 @@ Rscript s21_evaluate_permutations_all.R
 
 Test the accuracy of *Possvm* using manually curated orthologs from the [Orthobench 2.0 repository](https://github.com/davidemms/Open_Orthobench) (see [Emms et al. GBE 2020](https://academic.oup.com/gbe/article/12/12/2258/5918455)).
 
-From the `**orthobench-test**` folder:
+From the **`orthobench-test`** folder:
 
 1. Get Orthobench reference groups (`refOG`) from the [Open_Orthobench Github](https://github.com/davidemms/Open_Orthobench/tree/master/BENCHMARKS); total: 70 RefOGs), as well as raw and tight trees (ignore intermediate trees).
 
