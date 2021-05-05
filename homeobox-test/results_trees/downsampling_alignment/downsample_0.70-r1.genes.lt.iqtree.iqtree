@@ -1,0 +1,1854 @@
+IQ-TREE 2.1.0 COVID-edition built Jul 18 2020
+
+Input file name: results_trees/downsampling_alignment/downsample_0.70-r1.genes.lt.fasta
+Type of analysis: ModelFinder + tree reconstruction + ultrafast bootstrap (1000 replicates)
+Random seed number: 534592
+
+REFERENCES
+----------
+
+To cite IQ-TREE please use:
+
+Bui Quang Minh, Heiko A. Schmidt, Olga Chernomor, Dominik Schrempf,
+Michael D. Woodhams, Arndt von Haeseler, and Robert Lanfear (2020)
+IQ-TREE 2: New models and efficient methods for phylogenetic inference
+in the genomic era. Mol. Biol. Evol., in press.
+https://doi.org/10.1093/molbev/msaa015
+
+To cite ModelFinder please use: 
+
+Subha Kalyaanamoorthy, Bui Quang Minh, Thomas KF Wong, Arndt von Haeseler,
+and Lars S Jermiin (2017) ModelFinder: Fast model selection for
+accurate phylogenetic estimates. Nature Methods, 14:587–589.
+https://doi.org/10.1038/nmeth.4285
+
+Since you used ultrafast bootstrap (UFBoot) please also cite: 
+
+Diep Thi Hoang, Olga Chernomor, Arndt von Haeseler, Bui Quang Minh,
+and Le Sy Vinh (2018) UFBoot2: Improving the ultrafast bootstrap
+approximation. Mol. Biol. Evol., 35:518–522.
+https://doi.org/10.1093/molbev/msx281
+
+SEQUENCE ALIGNMENT
+------------------
+
+Input data: 419 sequences with 216 amino-acid sites
+Number of constant sites: 0 (= 0% of all sites)
+Number of invariant (constant or ambiguous constant) sites: 0 (= 0% of all sites)
+Number of parsimony informative sites: 216
+Number of distinct site patterns: 216
+
+ModelFinder
+-----------
+
+Best-fit model according to BIC: LG+F+G4
+
+List of models sorted by BIC scores: 
+
+Model                  LogL         AIC      w-AIC        AICc     w-AICc         BIC      w-BIC
+LG+F+G4          -95139.579  191989.158 +        1 1655749.158 -        0  194875.021 +        1
+LG+G4            -95562.650  192797.300 - 3.27e-176 1592261.300 +        1  195619.032 - 2.75e-162
+JTT+F+G4         -95514.027  192738.055 - 2.39e-163 1656498.055 -        0  195623.918 - 2.39e-163
+WAG+G4           -95599.265  192870.531 - 4.1e-192 1592334.531 - 1.25e-16  195692.263 - 3.45e-178
+JTT+G4           -95614.325  192900.649 - 1.18e-198 1592364.649 - 3.61e-23  195722.382 - 9.95e-185
+WAG+F+G4         -95749.356  193208.713 - 1.5e-265 1656968.713 -        0  196094.576 - 1.5e-265
+LG              -102409.462  206488.925 -        0 1602608.925 -        0  209307.282 -        0
+
+AIC, w-AIC   : Akaike information criterion scores and weights.
+AICc, w-AICc : Corrected AIC scores and weights.
+BIC, w-BIC   : Bayesian information criterion scores and weights.
+
+Plus signs denote the 95% confidence sets.
+Minus signs denote significant exclusion.
+
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: LG+F+G4
+
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.0706
+  pi(R) = 0.0846
+  pi(N) = 0.0417
+  pi(D) = 0.0359
+  pi(C) = 0.0082
+  pi(Q) = 0.0611
+  pi(E) = 0.0706
+  pi(G) = 0.0402
+  pi(H) = 0.0244
+  pi(I) = 0.0319
+  pi(L) = 0.0748
+  pi(K) = 0.0857
+  pi(M) = 0.0228
+  pi(F) = 0.0368
+  pi(P) = 0.0753
+  pi(S) = 0.1021
+  pi(T) = 0.0615
+  pi(W) = 0.0073
+  pi(Y) = 0.0301
+  pi(V) = 0.0345
+
+Model of rate heterogeneity: Gamma with 4 categories
+Gamma shape alpha: 0.6830
+
+ Category  Relative_rate  Proportion
+  1         0.0706         0.2500
+  2         0.3554         0.2500
+  3         0.9184         0.2500
+  4         2.6556         0.2500
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -94752.6800 (s.e. 2927.4025)
+Unconstrained log-likelihood (without tree): -1161.0601
+Number of free parameters (#branches + #model parameters): 855
+Akaike information criterion (AIC) score: 191215.3600
+Corrected Akaike information criterion (AICc) score: 1654975.3600
+Bayesian information criterion (BIC) score: 194101.2230
+
+**************************** WARNING ****************************
+Number of parameters (K, model parameters and branch lengths): 855
+Sample size (n, alignment length): 216
+
+Given that K>=n, the parameter estimates might be inaccurate.
+Thus, phylogenetic estimates should be interpreted with caution.
+
+Ideally, it is desirable that n >> K. When selecting optimal models,
+1. use AIC or BIC if n > 40K;
+2. use AICc or BIC if 40K >= n > K;
+3. be extremely cautious if n <= K
+
+To improve the situation (3), consider the following options:
+  1. Increase the sample size (n)
+  2. Decrease the number of parameters (K) to be estimated. If
+     possible:
+     a. Remove the least important sequences from the alignment
+     b. Specify some of the parameter values for the substitution
+        model (e.g., the nucleotide or amino acid frequencies)
+     c. Specify some of the parameter values for the rates-across-
+        sites model (e.g., the shape parameter for the discrete
+        Gamma distribution, the proportion of invariable sites, or
+        the rates of change for different rate categories under
+        the FreeRate model)
+
+Reference:
+Burnham KR, Anderson DR (2002). Model Selection and Multimodel
+Inference: A Practical Information-Theoretic Approach. Springer,
+New York.
+************************ END OF WARNING ***********************
+
+Total tree length (sum of branch lengths): 228.4324
+Sum of internal branch lengths: 77.9142 (34.1082% of tree length)
+
+WARNING: 7 near-zero internal branches (<0.0046) should be treated with caution
+         Such branches are denoted by '**' in the figure below
+
+NOTE: Tree is UNROOTED although outgroup taxon 'Xesp_013872-T1' is drawn at root
+Numbers in parentheses are  ultrafast bootstrap support (%)
+
++-----Xesp_013872-T1
+|
++--Gasp_gasp1.m3.14269.m1
+|
+|                              +---Tcas_TC006888_001
+|                           +--| (100)
+|                           |  +-------Dmel_FBtr0333875
+|                       +---| (100)
+|                       |   |  +------Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA156652
+|                       |   +--| (88)
+|                       |      |  +--Hsap_ENST00000302945
+|                       |      +--| (100)
+|                       |         +--Hsap_ENST00000326902
+|                    +--| (100)
+|                    |  |      +--Hhon_g10818.t1
+|                    |  |  +---| (100)
+|                    |  |  |   +--Tadh_TriadT33728
+|                    |  +--| (100)
+|                    |     |          +**Xesp_015649-T1
+|                    |     |  +-------| (100)
+|                    |     |  |       +**Xesp_025417-T1
+|                    |     +--| (100)
+|                    |        |  +--Morvir_scaffold348.g20.t1
+|                    |        +--| (100)
+|                    |           +------Gasp_gasp1.m3.27866.m1
+|                 +--| (93)
+|                 |  |                                   +---------Morvir_scaffold98.g48.t1
+|                 |  |                                +--| (99)
+|                 |  |                                |  |        +--Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA79123
+|                 |  |                                |  |     +--| (100)
+|                 |  |                                |  |     |  |  +------Dmel_FBtr0082941
+|                 |  |                                |  |     |  +--| (100)
+|                 |  |                                |  |     |     +--Tcas_TC013614_001
+|                 |  |                                |  |  +--| (99)
+|                 |  |                                |  |  |  +---Gasp_gasp1.m3.24581.m1
+|                 |  |                                |  +--| (92)
+|                 |  |                                |     +--------Xesp_013923-T1
+|                 |  |                             +--| (75)
+|                 |  |                             |  |                    +--Gasp_gasp1.m3.987.m1
+|                 |  |                             |  |                 +--| (100)
+|                 |  |                             |  |                 |  +-----Xesp_013920-T1
+|                 |  |                             |  |              +--| (84)
+|                 |  |                             |  |              |  |       +--Hhon_g07172.t1
+|                 |  |                             |  |              |  +-------| (100)
+|                 |  |                             |  |              |          +--Tadh_TriadT50928
+|                 |  |                             |  |           +--| (52)
+|                 |  |                             |  |           |  |     +--Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA80758
+|                 |  |                             |  |           |  |  +--| (99)
+|                 |  |                             |  |           |  |  |  +--Tcas_TC012136_001
+|                 |  |                             |  |           |  +--| (99)
+|                 |  |                             |  |           |     +--Dmel_FBtr0330386
+|                 |  |                             |  |        +--| (45)
+|                 |  |                             |  |        |  |     +--Hsap_ENST00000357878
+|                 |  |                             |  |        |  |  +--| (68)
+|                 |  |                             |  |        |  |  |  +----Hsap_ENST00000339992
+|                 |  |                             |  |        |  +--| (44)
+|                 |  |                             |  |        |     +-----Hsap_ENST00000400677
+|                 |  |                             |  |  +-----| (100)
+|                 |  |                             |  |  |     |       +**Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA80782
+|                 |  |                             |  |  |     +-------| (100)
+|                 |  |                             |  |  |             +**Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA81827
+|                 |  |                             |  +--| (62)
+|                 |  |                             |     |          +--Gasp_gasp1.m3.21838.m1
+|                 |  |                             |     |       +--| (99)
+|                 |  |                             |     |       |  |  +---------Morvir_scaffold42.g46.t1
+|                 |  |                             |     |       |  +--| (99)
+|                 |  |                             |     |       |     +--------------Xesp_013949-T1
+|                 |  |                             |     +-------| (100)
+|                 |  |                             |             |     +--Hsap_ENST00000295886
+|                 |  |                             |             |  +--| (72)
+|                 |  |                             |             |  |  |                   +--Hhon_g07174.t1
+|                 |  |                             |             |  |  |     +-------------| (100)
+|                 |  |                             |             |  |  |     |             +--Tadh_TriadT31334
+|                 |  |                             |             |  |  |  +--| (57)
+|                 |  |                             |             |  |  |  |  +--Hsap_ENST00000368592
+|                 |  |                             |             |  |  +--| (70)
+|                 |  |                             |             |  |     +-----Hsap_ENST00000518699
+|                 |  |                             |             +--| (96)
+|                 |  |                             |                |  +--Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA6193
+|                 |  |                             |                +--| (87)
+|                 |  |                             |                   |  +--Dmel_FBtr0075720
+|                 |  |                             |                   +--| (100)
+|                 |  |                             |                      +--Tcas_TC014200_001
+|                 |  |                          +--| (58)
+|                 |  |                          |  |                           +**Gasp_gasp1.m3.682.m1
+|                 |  |                          |  |                     +-----| (100)
+|                 |  |                          |  |                     |     +----------------------Gasp_gasp1.m3.10613.m1
+|                 |  |                          |  |                  +--| (100)
+|                 |  |                          |  |                  |  +------Xesp_012798-T1
+|                 |  |                          |  |               +--| (90)
+|                 |  |                          |  |               |  +--Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA29749
+|                 |  |                          |  |            +--| (99)
+|                 |  |                          |  |            |  |  +--Hsap_ENST00000370193
+|                 |  |                          |  |            |  +--| (92)
+|                 |  |                          |  |            |     +---------Hsap_ENST00000377566
+|                 |  |                          |  |     +------| (100)
+|                 |  |                          |  |     |      |  +--Tcas_TC011748_001
+|                 |  |                          |  |     |      +--| (99)
+|                 |  |                          |  |     |         |  +--Dmel_FBtr0332438
+|                 |  |                          |  |     |         +--| (100)
+|                 |  |                          |  |     |            +--Dmel_FBtr0084091
+|                 |  |                          |  |  +--| (75)
+|                 |  |                          |  |  |  |                               +--Tcas_TC011749_001
+|                 |  |                          |  |  |  |                            +--| (100)
+|                 |  |                          |  |  |  |                            |  +--Dmel_FBtr0084111
+|                 |  |                          |  |  |  |                         +--| (99)
+|                 |  |                          |  |  |  |                         |  +---------Morvir_scaffold99.g69.t1
+|                 |  |                          |  |  |  |                      +--| (98)
+|                 |  |                          |  |  |  |                      |  +--Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA222072
+|                 |  |                          |  |  |  |                   +--| (79)
+|                 |  |                          |  |  |  |                   |  +--Hsap_ENST00000370196
+|                 |  |                          |  |  |  |                +--| (79)
+|                 |  |                          |  |  |  |                |  +--Hsap_ENST00000233638
+|                 |  |                          |  |  |  |     +----------| (100)
+|                 |  |                          |  |  |  |     |          +**Hsap_ENST00000296921
+|                 |  |                          |  |  |  |  +--| (33)
+|                 |  |                          |  |  |  |  |  |                 +---Gasp_gasp1.m3.11755.m1
+|                 |  |                          |  |  |  |  |  |              +--| (44)
+|                 |  |                          |  |  |  |  |  |              |  +-------------Morvir_scaffold11.g90.t1
+|                 |  |                          |  |  |  |  |  |           +--| (42)
+|                 |  |                          |  |  |  |  |  |           |  +----Xesp_013947-T1
+|                 |  |                          |  |  |  |  |  |        +--| (94)
+|                 |  |                          |  |  |  |  |  |        |  |           +**Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA110019
+|                 |  |                          |  |  |  |  |  |        |  |     +-----| (100)
+|                 |  |                          |  |  |  |  |  |        |  |     |     +**Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA129537
+|                 |  |                          |  |  |  |  |  |        |  |  +**| (41)
+|                 |  |                          |  |  |  |  |  |        |  |  |  |         +---Hhon_g07171.t1
+|                 |  |                          |  |  |  |  |  |        |  |  |  +---------| (100)
+|                 |  |                          |  |  |  |  |  |        |  |  |            +--Tadh_TriadT9560
+|                 |  |                          |  |  |  |  |  |        |  +--| (45)
+|                 |  |                          |  |  |  |  |  |        |     +--Hsap_ENST00000282728
+|                 |  |                          |  |  |  |  |  +--------| (100)
+|                 |  |                          |  |  |  |  |           |  +---------Tcas_TC004555_001
+|                 |  |                          |  |  |  |  |           +--| (97)
+|                 |  |                          |  |  |  |  |              +----------Dmel_FBtr0084037
+|                 |  |                          |  |  |  +--| (23)
+|                 |  |                          |  |  |     |                      +--Gasp_gasp1.m3.29873.m1
+|                 |  |                          |  |  |     |        +-------------| (100)
+|                 |  |                          |  |  |     |        |             +--Gasp_gasp1.m3.18420.m1
+|                 |  |                          |  |  |     |     +--| (92)
+|                 |  |                          |  |  |     |     |  |                        +**Xesp_014792-T1
+|                 |  |                          |  |  |     |     |  |  +---------------------| (100)
+|                 |  |                          |  |  |     |     |  |  |                     +--Xesp_014794-T1
+|                 |  |                          |  |  |     |     |  +--| (93)
+|                 |  |                          |  |  |     |     |     +-----Hsap_ENST00000325980
+|                 |  |                          |  |  |     |  +--| (99)
+|                 |  |                          |  |  |     |  |  |      +-----------------------Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA121761
+|                 |  |                          |  |  |     |  |  +------| (100)
+|                 |  |                          |  |  |     |  |         +-----Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA208832
+|                 |  |                          |  |  |     +--| (97)
+|                 |  |                          |  |  |        |              +**Hsap_ENST00000229307
+|                 |  |                          |  |  |        +--------------| (100)
+|                 |  |                          |  |  |                       +**Hsap_ENST00000528386
+|                 |  |                          |  +--| (51)
+|                 |  |                          |     |                                   +---Gasp_gasp1.m3.4134.m1
+|                 |  |                          |     |                                +--| (47)
+|                 |  |                          |     |                                |  |     +-------------Morvir_scaffold46.g33.t1
+|                 |  |                          |     |                                |  |  +--| (47)
+|                 |  |                          |     |                                |  |  |  +--------Xesp_021545-T1
+|                 |  |                          |     |                                |  +--| (48)
+|                 |  |                          |     |                                |     |  +--------Gasp_gasp1.m3.4129.m1
+|                 |  |                          |     |                                |     +--| (93)
+|                 |  |                          |     |                                |        +--------Xesp_022051-T1
+|                 |  |                          |     |                             +--| (62)
+|                 |  |                          |     |                             |  |  +--Gasp_gasp1.m3.4132.m1
+|                 |  |                          |     |                             |  +--| (99)
+|                 |  |                          |     |                             |     +------Gasp_gasp1.m3.4130.m1
+|                 |  |                          |     |                          +--| (61)
+|                 |  |                          |     |                          |  |        +--Xesp_016908-T1
+|                 |  |                          |     |                          |  +--------| (100)
+|                 |  |                          |     |                          |           +**Xesp_021558-T1
+|                 |  |                          |     |                       +**| (28)
+|                 |  |                          |     |                       |  |        +---Tadh_TriadT9561
+|                 |  |                          |     |                       |  |     +--| (40)
+|                 |  |                          |     |                       |  |     |  +----------Morvir_scaffold83.g2.t1
+|                 |  |                          |     |                       |  +-----| (97)
+|                 |  |                          |     |                       |        +------------Morvir_scaffold273.g2.t1
+|                 |  |                          |     |                    +--| (60)
+|                 |  |                          |     |                    |  |           +--Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA70572
+|                 |  |                          |     |                    |  |        +--| (100)
+|                 |  |                          |     |                    |  |        |  +--Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA221803
+|                 |  |                          |     |                    |  |     +--| (100)
+|                 |  |                          |     |                    |  |     |  +------Hsap_ENST00000258829
+|                 |  |                          |     |                    |  |  +--| (100)
+|                 |  |                          |     |                    |  |  |  +--Hsap_ENST00000377142
+|                 |  |                          |     |                    |  +--| (100)
+|                 |  |                          |     |                    |     |  +--Dmel_FBtr0070110
+|                 |  |                          |     |                    |     +--| (100)
+|                 |  |                          |     |                    |        +---Tcas_TC007014_001
+|                 |  |                          |     |                 +--| (99)
+|                 |  |                          |     |                 |  |           +--Dmel_FBtr0113751
+|                 |  |                          |     |                 |  |        +--| (82)
+|                 |  |                          |     |                 |  |        |  +--Tcas_TC008996_001
+|                 |  |                          |     |                 |  |     +--| (81)
+|                 |  |                          |     |                 |  |     |  |  +--Hsap_ENST00000351817
+|                 |  |                          |     |                 |  |     |  +--| (100)
+|                 |  |                          |     |                 |  |     |     +--Hsap_ENST00000354822
+|                 |  |                          |     |                 |  |  +--| (68)
+|                 |  |                          |     |                 |  |  |  |  +--Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA40416
+|                 |  |                          |     |                 |  |  |  +--| (100)
+|                 |  |                          |     |                 |  |  |     +----Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA172338
+|                 |  |                          |     |                 |  +--| (94)
+|                 |  |                          |     |                 |     |         +**Hhon_g07292.t1
+|                 |  |                          |     |                 |     +---------| (100)
+|                 |  |                          |     |                 |               +--Tadh_TriadT9507
+|                 |  |                          |     |              +--| (84)
+|                 |  |                          |     |              |  |        +--Hsap_ENST00000329198
+|                 |  |                          |     |              |  |     +--| (100)
+|                 |  |                          |     |              |  |     |  +---Hsap_ENST00000325017
+|                 |  |                          |     |              |  |  +--| (100)
+|                 |  |                          |     |              |  |  |  +--Hsap_ENST00000344586
+|                 |  |                          |     |              |  +--| (100)
+|                 |  |                          |     |              |     |  +---Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA170007
+|                 |  |                          |     |              |     +--| (100)
+|                 |  |                          |     |              |        +--Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA220898
+|                 |  |                          |     |           +--| (74)
+|                 |  |                          |     |           |  |     +--Gasp_gasp1.m3.679.m1
+|                 |  |                          |     |           |  |  +--| (100)
+|                 |  |                          |     |           |  |  |  +---Xesp_013044-T1
+|                 |  |                          |     |           |  +--| (94)
+|                 |  |                          |     |           |     +------Morvir_scaffold11.g115.t1
+|                 |  |                          |     |        +--| (39)
+|                 |  |                          |     |        |  +---------Tcas_TC011745_001
+|                 |  |                          |     |     +--| (97)
+|                 |  |                          |     |     |  +------Dmel_FBtr0084086
+|                 |  |                          |     |  +--| (100)
+|                 |  |                          |     |  |  |             +---Gasp_gasp1.m3.680.m1
+|                 |  |                          |     |  |  |          +--| (65)
+|                 |  |                          |     |  |  |          |  |  +--Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA79432
+|                 |  |                          |     |  |  |          |  +--| (95)
+|                 |  |                          |     |  |  |          |     |  +----Tcas_TC012743_001
+|                 |  |                          |     |  |  |          |     +--| (100)
+|                 |  |                          |     |  |  |          |        +-----Dmel_FBtr0084087
+|                 |  |                          |     |  |  |       +--| (33)
+|                 |  |                          |     |  |  |       |  |  +----Xesp_013038-T1
+|                 |  |                          |     |  |  |       |  +--| (84)
+|                 |  |                          |     |  |  |       |     +------------------Morvir_scaffold477.g8.t1
+|                 |  |                          |     |  |  |    +--| (88)
+|                 |  |                          |     |  |  |    |  +--Hsap_ENST00000382438
+|                 |  |                          |     |  |  +----| (100)
+|                 |  |                          |     |  |       +--------Hsap_ENST00000380871
+|                 |  |                          |     +--| (60)
+|                 |  |                          |        |                 +-----Gasp_gasp1.m3.4135.m1
+|                 |  |                          |        |              +--| (99)
+|                 |  |                          |        |              |  +----------------------Tadh_TriadT51739
+|                 |  |                          |        |           +--| (94)
+|                 |  |                          |        |           |  |      +--Tcas_TC015928_001
+|                 |  |                          |        |           |  +------| (100)
+|                 |  |                          |        |           |         +-----------Dmel_FBtr0083968
+|                 |  |                          |        |      +----| (100)
+|                 |  |                          |        |      |    |  +----------Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA70959
+|                 |  |                          |        |      |    +--| (96)
+|                 |  |                          |        |      |       |     +--------Morvir_scaffold188.g35.t1
+|                 |  |                          |        |      |       |  +--| (100)
+|                 |  |                          |        |      |       |  |  |             +**Xesp_022106-T1
+|                 |  |                          |        |      |       |  |  |          +--| (99)
+|                 |  |                          |        |      |       |  |  |          |  +--Xesp_022121-T1
+|                 |  |                          |        |      |       |  |  |       +--| (80)
+|                 |  |                          |        |      |       |  |  |       |  |     +--Xesp_017090-T1
+|                 |  |                          |        |      |       |  |  |       |  |  +--| (100)
+|                 |  |                          |        |      |       |  |  |       |  |  |  +--Xesp_022100-T1
+|                 |  |                          |        |      |       |  |  |       |  +--| (100)
+|                 |  |                          |        |      |       |  |  |       |     +--Xesp_022099-T1
+|                 |  |                          |        |      |       |  |  +-------| (100)
+|                 |  |                          |        |      |       |  |          +--Xesp_022116-T1
+|                 |  |                          |        |      |       +--| (99)
+|                 |  |                          |        |      |          +--------------Gasp_gasp1.m3.4133.m1
+|                 |  |                          |        +------| (100)
+|                 |  |                          |               |            +--Gasp_gasp1.m3.677.m1
+|                 |  |                          |               |         +--| (93)
+|                 |  |                          |               |         |  +------Xesp_013039-T1
+|                 |  |                          |               |      +--| (85)
+|                 |  |                          |               |      |  |  +--Hsap_ENST00000382723
+|                 |  |                          |               |      |  +--| (100)
+|                 |  |                          |               |      |     +--Hsap_ENST00000239243
+|                 |  |                          |               |   +--| (68)
+|                 |  |                          |               |   |  |  +----Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA176625
+|                 |  |                          |               |   |  +--| (99)
+|                 |  |                          |               |   |     +--Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA87981
+|                 |  |                          |               +---| (100)
+|                 |  |                          |                   |  +-----Tcas_TC012748_001
+|                 |  |                          |                   +--| (100)
+|                 |  |                          |                      |  +--Tcas_TC011744_001
+|                 |  |                          |                      +--| (100)
+|                 |  |                          |                         +---Dmel_FBtr0085441
+|                 |  |                       +--| (48)
+|                 |  |                       |  |                       +------------------------Morvir_scaffold85.g37.t1
+|                 |  |                       |  |                +------| (100)
+|                 |  |                       |  |                |      |             +--Hhon_g08608.t1
+|                 |  |                       |  |                |      |  +----------| (100)
+|                 |  |                       |  |                |      |  |          +--Tadh_TriadT18102
+|                 |  |                       |  |                |      +--| (34)
+|                 |  |                       |  |                |         |     +--Tcas_TC034733_001
+|                 |  |                       |  |                |         |  +--| (30)
+|                 |  |                       |  |                |         |  |  +--Dmel_FBtr0290136
+|                 |  |                       |  |                |         +--| (15)
+|                 |  |                       |  |                |            |     +--Hsap_ENST00000524983
+|                 |  |                       |  |                |            |  +--| (90)
+|                 |  |                       |  |                |            |  |  +---------Hsap_ENST00000332700
+|                 |  |                       |  |                |            +--| (87)
+|                 |  |                       |  |                |               +--Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA220261
+|                 |  |                       |  |             +--| (72)
+|                 |  |                       |  |             |  |              +---------Xesp_009987-T1
+|                 |  |                       |  |             |  |           +--| (32)
+|                 |  |                       |  |             |  |           |  +-----Gasp_gasp1.m3.12691.m1
+|                 |  |                       |  |             |  |      +----| (100)
+|                 |  |                       |  |             |  |      |    +--Gasp_gasp1.m3.30352.m1
+|                 |  |                       |  |             |  |  +---| (98)
+|                 |  |                       |  |             |  |  |   +-------------Gasp_gasp1.m3.14501.m1
+|                 |  |                       |  |             |  +--| (92)
+|                 |  |                       |  |             |     |     +----Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA173964
+|                 |  |                       |  |             |     |  +--| (50)
+|                 |  |                       |  |             |     |  |  +----Hsap_ENST00000366903
+|                 |  |                       |  |             |     +--| (63)
+|                 |  |                       |  |             |        +--------Tcas_TC031113_001
+|                 |  |                       |  |          +--| (94)
+|                 |  |                       |  |          |  +--------Dmel_FBtr0079227
+|                 |  |                       |  |     +----| (100)
+|                 |  |                       |  |     |    +------Morvir_scaffold95.g3.t1
+|                 |  |                       |  |  +--| (95)
+|                 |  |                       |  |  |  |                 +--Gasp_gasp1.m3.24801.m1
+|                 |  |                       |  |  |  |              +--| (100)
+|                 |  |                       |  |  |  |              |  |  +------Gasp_gasp1.m3.24803.m1
+|                 |  |                       |  |  |  |              |  +--| (56)
+|                 |  |                       |  |  |  |              |     +--Gasp_gasp1.m3.16233.m1
+|                 |  |                       |  |  |  |           +--| (100)
+|                 |  |                       |  |  |  |           |  +------Xesp_004967-T1
+|                 |  |                       |  |  |  |        +--| (100)
+|                 |  |                       |  |  |  |        |  +-----Morvir_scaffold175.g50.t1
+|                 |  |                       |  |  |  |     +--| (100)
+|                 |  |                       |  |  |  |     |  +-------------Xesp_015541-T1
+|                 |  |                       |  |  |  |  +--| (95)
+|                 |  |                       |  |  |  |  |  |       +-------Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA80939
+|                 |  |                       |  |  |  |  |  +-------| (100)
+|                 |  |                       |  |  |  |  |          |   +---Hsap_ENST00000253968
+|                 |  |                       |  |  |  |  |          +---| (100)
+|                 |  |                       |  |  |  |  |              +-----Hsap_ENST00000281437
+|                 |  |                       |  |  |  +--| (99)
+|                 |  |                       |  |  |     |           +--Hsap_ENST00000343035
+|                 |  |                       |  |  |     |       +---| (100)
+|                 |  |                       |  |  |     |       |   +-------Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA149569
+|                 |  |                       |  |  |     |    +--| (100)
+|                 |  |                       |  |  |     |    |  +---Tcas_TC015394_001
+|                 |  |                       |  |  |     +----| (100)
+|                 |  |                       |  |  |          +-----Dmel_FBtr0089320
+|                 |  |                       |  +--| (88)
+|                 |  |                       |     |                 +----Gasp_gasp1.m3.4695.m1
+|                 |  |                       |     |              +--| (95)
+|                 |  |                       |     |              |  +-----Xesp_010138-T1
+|                 |  |                       |     |           +--| (94)
+|                 |  |                       |     |           |  +--------Morvir_scaffold140.g36.t1
+|                 |  |                       |     |        +--| (99)
+|                 |  |                       |     |        |  |        +--Hsap_ENST00000361725
+|                 |  |                       |     |        |  |     +--| (94)
+|                 |  |                       |     |        |  |     |  +---------Hsap_ENST00000240306
+|                 |  |                       |     |        |  |  +--| (100)
+|                 |  |                       |     |        |  |  |  +--Hsap_ENST00000518156
+|                 |  |                       |     |        |  +--| (99)
+|                 |  |                       |     |        |     |   +--Hsap_ENST00000648378
+|                 |  |                       |     |        |     +---| (100)
+|                 |  |                       |     |        |         |  +----Hsap_ENST00000234198
+|                 |  |                       |     |        |         +--| (100)
+|                 |  |                       |     |        |            +--Hsap_ENST00000434704
+|                 |  |                       |     |     +--| (100)
+|                 |  |                       |     |     |  |              +**Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA40403
+|                 |  |                       |     |     |  |       +------| (100)
+|                 |  |                       |     |     |  |       |      +--Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA74740
+|                 |  |                       |     |     |  |    +--| (90)
+|                 |  |                       |     |     |  |    |  +--Dmel_FBtr0300076
+|                 |  |                       |     |     |  +----| (100)
+|                 |  |                       |     |     |       +--Tcas_TC009351_001
+|                 |  |                       |     +-----| (100)
+|                 |  |                       |           |  +---------Morvir_scaffold140.g33.t1
+|                 |  |                       |           +--| (99)
+|                 |  |                       |              |       +--Hhon_g08887.t1
+|                 |  |                       |              +-------| (100)
+|                 |  |                       |                      +--Tadh_TriadT49530
+|                 |  |                    +--| (65)
+|                 |  |                    |  |                   +**Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA174957
+|                 |  |                    |  |                +--| (100)
+|                 |  |                    |  |                |  +**Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA30874
+|                 |  |                    |  |             +--| (100)
+|                 |  |                    |  |             |  |  +--Tcas_TC031415_001
+|                 |  |                    |  |             |  +--| (100)
+|                 |  |                    |  |             |     |  +--Dmel_FBtr0074429
+|                 |  |                    |  |             |     +--| (100)
+|                 |  |                    |  |             |        +---Dmel_FBtr0074430
+|                 |  |                    |  |         +---| (98)
+|                 |  |                    |  |         |   |  +--Hsap_ENST00000370445
+|                 |  |                    |  |         |   +--| (47)
+|                 |  |                    |  |         |      +--Hsap_ENST00000263610
+|                 |  |                    |  |     +---| (100)
+|                 |  |                    |  |     |   |               +**Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA48054
+|                 |  |                    |  |     |   |       +-------| (100)
+|                 |  |                    |  |     |   |       |       +**Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA187461
+|                 |  |                    |  |     |   +-------| (100)
+|                 |  |                    |  |     |           |  +--Dmel_FBtr0073656
+|                 |  |                    |  |     |           +--| (100)
+|                 |  |                    |  |     |              +--Tcas_TC000424_001
+|                 |  |                    |  |  +--| (70)
+|                 |  |                    |  |  |  |              +--Gasp_gasp1.m3.10379.m1
+|                 |  |                    |  |  |  |           +--| (100)
+|                 |  |                    |  |  |  |           |  +-------Xesp_007977-T1
+|                 |  |                    |  |  |  |        +--| (100)
+|                 |  |                    |  |  |  |        |  +------------Xesp_007810-T1
+|                 |  |                    |  |  |  |     +--| (81)
+|                 |  |                    |  |  |  |     |  |     +--Gasp_gasp1.m3.10374.m1
+|                 |  |                    |  |  |  |     |  |  +--| (100)
+|                 |  |                    |  |  |  |     |  |  |  +--Gasp_gasp1.m3.10375.m1
+|                 |  |                    |  |  |  |     |  +--| (99)
+|                 |  |                    |  |  |  |     |     +----Xesp_007812-T1
+|                 |  |                    |  |  |  |  +--| (72)
+|                 |  |                    |  |  |  |  |  +-----Gasp_gasp1.m3.10369.m1
+|                 |  |                    |  |  |  +--| (97)
+|                 |  |                    |  |  |     +----------Xesp_007813-T1
+|                 |  |                    |  +--| (62)
+|                 |  |                    |     |               +**Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA30886
+|                 |  |                    |     |            +--| (98)
+|                 |  |                    |     |            |  +------Morvir_scaffold21.g122.t1
+|                 |  |                    |     |         +**| (67)
+|                 |  |                    |     |         |  +**Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA78648
+|                 |  |                    |     +---------| (100)
+|                 |  |                    |               |        +--Gasp_gasp1.m3.982.m1
+|                 |  |                    |               |     +--| (81)
+|                 |  |                    |               |     |  +---Xesp_013922-T1
+|                 |  |                    |               |  +--| (78)
+|                 |  |                    |               |  |  |  +---Dmel_FBtr0330389
+|                 |  |                    |               |  |  +--| (99)
+|                 |  |                    |               |  |     +--Tcas_TC012332_001
+|                 |  |                    |               +--| (78)
+|                 |  |                    |                  |  +--Hsap_ENST00000422806
+|                 |  |                    |                  +--| (96)
+|                 |  |                    |                     +-----Hsap_ENST00000451024
+|                 |  |                 +--| (54)
+|                 |  |                 |  |                            +------------Gasp_gasp1.m3.16096.m1
+|                 |  |                 |  |                       +----| (96)
+|                 |  |                 |  |                       |    +---------Gasp_gasp1.m3.23770.m1
+|                 |  |                 |  |                    +--| (84)
+|                 |  |                 |  |                    |  |       +**Gasp_gasp1.m3.970.m1
+|                 |  |                 |  |                    |  +-------| (100)
+|                 |  |                 |  |                    |          +------Gasp_gasp1.m1b.1230.m1
+|                 |  |                 |  |                 +--| (90)
+|                 |  |                 |  |                 |  +---------Xesp_020407-T1
+|                 |  |                 |  |              +--| (70)
+|                 |  |                 |  |              |  |                +--Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA88560
+|                 |  |                 |  |              |  |           +----| (99)
+|                 |  |                 |  |              |  |           |    |     +--Tcas_TC000483_001
+|                 |  |                 |  |              |  |           |    +-----| (100)
+|                 |  |                 |  |              |  |           |          +------Dmel_FBtr0083571
+|                 |  |                 |  |              |  |        +--| (69)
+|                 |  |                 |  |              |  |        |  +--------Gasp_gasp1.m3.2245.m1
+|                 |  |                 |  |              |  |     +--| (66)
+|                 |  |                 |  |              |  |     |  +--Gasp_gasp1.m3.13464.m1
+|                 |  |                 |  |              |  |  +--| (92)
+|                 |  |                 |  |              |  |  |  +---------Xesp_013856-T1
+|                 |  |                 |  |              |  +--| (90)
+|                 |  |                 |  |              |     |      +--Hhon_g10555.t1
+|                 |  |                 |  |              |     +------| (100)
+|                 |  |                 |  |              |            +--Tadh_TriadT49524
+|                 |  |                 |  |           +--| (80)
+|                 |  |                 |  |           |  |  +-------------------Gasp_gasp1.m3.2233.m1
+|                 |  |                 |  |           |  +--| (62)
+|                 |  |                 |  |           |     +--------Morvir_scaffold149.g55.t1
+|                 |  |                 |  |        +--| (97)
+|                 |  |                 |  |        |  |  +-------------------------Gasp_gasp1.m3.28194.m1
+|                 |  |                 |  |        |  +--| (54)
+|                 |  |                 |  |        |     |  +---------Gasp_gasp1.m3.2249.m1
+|                 |  |                 |  |        |     +--| (89)
+|                 |  |                 |  |        |        |  +--------------------Gasp_gasp1.m1b.2861.m1
+|                 |  |                 |  |        |        +--| (97)
+|                 |  |                 |  |        |           +---------Hsap_ENST00000398468
+|                 |  |                 |  |     +--| (98)
+|                 |  |                 |  |     |  |                  +------Gasp_gasp1.m3.23164.m1
+|                 |  |                 |  |     |  |         +--------| (100)
+|                 |  |                 |  |     |  |         |        +-----Xesp_013885-T1
+|                 |  |                 |  |     |  |     +---| (97)
+|                 |  |                 |  |     |  |     |   |            +-----Gasp_gasp1.m3.22638.m1
+|                 |  |                 |  |     |  |     |   +------------| (100)
+|                 |  |                 |  |     |  |     |                +--------------------Xesp_013548-T1
+|                 |  |                 |  |     |  |  +--| (98)
+|                 |  |                 |  |     |  |  |  |        +---Gasp_gasp1.m3.23161.m1
+|                 |  |                 |  |     |  |  |  |     +--| (96)
+|                 |  |                 |  |     |  |  |  |     |  +-----------Morvir_scaffold5.g160.t1
+|                 |  |                 |  |     |  |  |  |  +--| (100)
+|                 |  |                 |  |     |  |  |  |  |  +----------Gasp_gasp1.m1b.17996.m1
+|                 |  |                 |  |     |  |  |  +--| (92)
+|                 |  |                 |  |     |  |  |     |        +---Dmel_FBtr0082880
+|                 |  |                 |  |     |  |  |     |     +--| (96)
+|                 |  |                 |  |     |  |  |     |     |  |  +--Tcas_TC011763_001
+|                 |  |                 |  |     |  |  |     |     |  +--| (95)
+|                 |  |                 |  |     |  |  |     |     |     +---Dmel_FBtr0082863
+|                 |  |                 |  |     |  |  |     |  +--| (39)
+|                 |  |                 |  |     |  |  |     |  |  |  +------Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA25827
+|                 |  |                 |  |     |  |  |     |  |  +--| (93)
+|                 |  |                 |  |     |  |  |     |  |     +--Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA183448
+|                 |  |                 |  |     |  |  |     +--| (93)
+|                 |  |                 |  |     |  |  |        |   +--Hsap_ENST00000258106
+|                 |  |                 |  |     |  |  |        +---| (100)
+|                 |  |                 |  |     |  |  |            +--Hsap_ENST00000553456
+|                 |  |                 |  |     |  +--| (87)
+|                 |  |                 |  |     |     |         +-------Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA80769
+|                 |  |                 |  |     |     +---------| (100)
+|                 |  |                 |  |     |               |   +--Hsap_ENST00000369206
+|                 |  |                 |  |     |               +---| (100)
+|                 |  |                 |  |     |                   +--Hsap_ENST00000234392
+|                 |  |                 |  |  +--| (47)
+|                 |  |                 |  |  |  |                   +--Gasp_gasp1.m3.15756.m1
+|                 |  |                 |  |  |  |              +----| (100)
+|                 |  |                 |  |  |  |              |    |  +--Gasp_gasp1.m3.26136.m1
+|                 |  |                 |  |  |  |              |    +--| (100)
+|                 |  |                 |  |  |  |              |       +--Gasp_gasp1.m3.26141.m1
+|                 |  |                 |  |  |  |           +--| (100)
+|                 |  |                 |  |  |  |           |  +----Gasp_gasp1.m3.12286.m1
+|                 |  |                 |  |  |  |        +--| (99)
+|                 |  |                 |  |  |  |        |  +------Gasp_gasp1.m3.12289.m1
+|                 |  |                 |  |  |  |  +-----| (100)
+|                 |  |                 |  |  |  |  |     +---Gasp_gasp1.m3.12287.m1
+|                 |  |                 |  |  |  +--| (89)
+|                 |  |                 |  |  |     +----------------------Xesp_007966-T1
+|                 |  |                 |  +--| (53)
+|                 |  |                 |     |             +--------Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA171492
+|                 |  |                 |     |          +--| (90)
+|                 |  |                 |     |          |  +----Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA147353
+|                 |  |                 |     |       +--| (91)
+|                 |  |                 |     |       |  +-------------------Dmel_FBtr0072224
+|                 |  |                 |     +-------| (100)
+|                 |  |                 |             |  +----Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA154864
+|                 |  |                 |             +--| (90)
+|                 |  |                 |                +------------------Gasp_gasp1.m3.16169.m1
+|                 |  |              +**| (46)
+|                 |  |              |  |              +-----Gasp_gasp1.m3.4690.m1
+|                 |  |              |  |           +--| (97)
+|                 |  |              |  |           |  +-----Gasp_gasp1.m1b.6286.m1
+|                 |  |              |  |        +--| (80)
+|                 |  |              |  |        |  |  +-------Xesp_010136-T1
+|                 |  |              |  |        |  +--| (75)
+|                 |  |              |  |        |     +--------------Xesp_010137-T1
+|                 |  |              |  |     +--| (97)
+|                 |  |              |  |     |  |   +---Tcas_TC033532_001
+|                 |  |              |  |     |  +---| (99)
+|                 |  |              |  |     |      +------Dmel_FBtr0342701
+|                 |  |              |  |  +--| (81)
+|                 |  |              |  |  |  |             +-------Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA127720
+|                 |  |              |  |  |  |        +----| (100)
+|                 |  |              |  |  |  |        |    +**Tcas_TC001164_001
+|                 |  |              |  |  |  +--------| (100)
+|                 |  |              |  |  |           +---Dmel_FBtr0308948
+|                 |  |              |  +--| (64)
+|                 |  |              |     |                    +--Tcas_TC009896_001
+|                 |  |              |     |                 +--| (100)
+|                 |  |              |     |                 |  +--Dmel_FBtr0088068
+|                 |  |              |     |              +--| (100)
+|                 |  |              |     |              |  |  +---Dmel_FBtr0088095
+|                 |  |              |     |              |  +--| (94)
+|                 |  |              |     |              |     +--Tcas_TC008952_001
+|                 |  |              |     |           +--| (28)
+|                 |  |              |     |           |  |     +--Hsap_ENST00000295206
+|                 |  |              |     |           |  |  +--| (100)
+|                 |  |              |     |           |  |  |  +--Hsap_ENST00000297375
+|                 |  |              |     |           |  +--| (43)
+|                 |  |              |     |           |     +----------Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA152542
+|                 |  |              |     +-----------| (100)
+|                 |  |              |                 +--Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA152545
+|                 |  |           +--| (94)
+|                 |  |           |  +-------------------------------------Dmel_FBtr0081668
+|                 |  |        +--| (94)
+|                 |  |        |  |                        +**Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA127728
+|                 |  |        |  |                     +**| (95)
+|                 |  |        |  |                     |  +**Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA159948
+|                 |  |        |  |                +----| (100)
+|                 |  |        |  |                |    +--Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA137362
+|                 |  |        |  |             +--| (100)
+|                 |  |        |  |             |  |  +--Dmel_FBtr0085090
+|                 |  |        |  |             |  +--| (98)
+|                 |  |        |  |             |     +-----Tcas_TC030553_001
+|                 |  |        |  |        +----| (100)
+|                 |  |        |  |        |    |  +--Gasp_gasp1.m3.12193.m1
+|                 |  |        |  |        |    +--| (72)
+|                 |  |        |  |        |       +----Xesp_009291-T1
+|                 |  |        |  |     +--| (78)
+|                 |  |        |  |     |  |      +-----Gasp_gasp1.m3.12181.m1
+|                 |  |        |  |     |  +------| (100)
+|                 |  |        |  |     |         |                  +**Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA70992
+|                 |  |        |  |     |         |               +--| (100)
+|                 |  |        |  |     |         |               |  +**Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA99816
+|                 |  |        |  |     |         |           +---| (98)
+|                 |  |        |  |     |         |           |   +--Tcas_TC009469_001
+|                 |  |        |  |     |         |        +--| (98)
+|                 |  |        |  |     |         |        |  +--Dmel_FBtr0088390
+|                 |  |        |  |     |         +--------| (100)
+|                 |  |        |  |     |                  |  +--Hsap_ENST00000308618
+|                 |  |        |  |     |                  +--| (100)
+|                 |  |        |  |     |                     +--Hsap_ENST00000496902
+|                 |  |        |  |  +**| (57)
+|                 |  |        |  |  |  |                       +--Gasp_gasp1.m3.3944.m1
+|                 |  |        |  |  |  |                    +--| (76)
+|                 |  |        |  |  |  |                    |  +--------Gasp_gasp1.m3.3946.m1
+|                 |  |        |  |  |  |                 +--| (98)
+|                 |  |        |  |  |  |                 |  |   +---Gasp_gasp1.m3.3948.m1
+|                 |  |        |  |  |  |                 |  +---| (76)
+|                 |  |        |  |  |  |                 |      +----Xesp_010186-T1
+|                 |  |        |  |  |  |              +--| (36)
+|                 |  |        |  |  |  |              |  +-------Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA173096
+|                 |  |        |  |  |  |           +--| (48)
+|                 |  |        |  |  |  |           |  +------Gasp_gasp1.m3.3947.m1
+|                 |  |        |  |  |  |        +--| (98)
+|                 |  |        |  |  |  |        |  |     +-----Hsap_ENST00000262041
+|                 |  |        |  |  |  |        |  |  +--| (49)
+|                 |  |        |  |  |  |        |  |  |  +-----Hsap_ENST00000318579
+|                 |  |        |  |  |  |        |  +--| (49)
+|                 |  |        |  |  |  |        |     |   +--Tcas_TC030982_001
+|                 |  |        |  |  |  |        |     +---| (98)
+|                 |  |        |  |  |  |        |         +-------------Dmel_FBtr0084278
+|                 |  |        |  |  |  |  +-----| (100)
+|                 |  |        |  |  |  |  |     +---Morvir_scaffold59.g41.t1
+|                 |  |        |  |  |  +--| (79)
+|                 |  |        |  |  |     |               +----Gasp_gasp1.m3.12278.m1
+|                 |  |        |  |  |     |           +---| (100)
+|                 |  |        |  |  |     |           |   |  +--Dmel_FBtr0088586
+|                 |  |        |  |  |     |           |   +--| (100)
+|                 |  |        |  |  |     |           |      |  +--Tcas_TC009309_001
+|                 |  |        |  |  |     |           |      +--| (100)
+|                 |  |        |  |  |     |           |         +--------------Xesp_001248-T1
+|                 |  |        |  |  |     |        +--| (81)
+|                 |  |        |  |  |     |        |  |  +--Hsap_ENST00000306318
+|                 |  |        |  |  |     |        |  +--| (100)
+|                 |  |        |  |  |     |        |     +--Hsap_ENST00000297537
+|                 |  |        |  |  |     +--------| (100)
+|                 |  |        |  |  |              +---Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA151262
+|                 |  |        |  +--| (94)
+|                 |  |        |     |           +--Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA41929
+|                 |  |        |     |        +--| (100)
+|                 |  |        |     |        |  +--Hsap_ENST00000252971
+|                 |  |        |     |  +-----| (97)
+|                 |  |        |     |  |     |  +---Tcas_TC009461_001
+|                 |  |        |     |  |     +**| (78)
+|                 |  |        |     |  |        +---Dmel_FBtr0076751
+|                 |  |        |     +--| (97)
+|                 |  |        |        |         +--Hhon_g09133.t1
+|                 |  |        |        +---------| (100)
+|                 |  |        |                  +**Tadh_TriadT50911
+|                 |  |     +--| (39)
+|                 |  |     |  |           +--Tcas_TC000926_001
+|                 |  |     |  |        +--| (100)
+|                 |  |     |  |        |  +------Dmel_FBtr0081696
+|                 |  |     |  |     +--| (100)
+|                 |  |     |  |     |  |     +----Hsap_ENST00000239174
+|                 |  |     |  |     |  |  +--| (100)
+|                 |  |     |  |     |  |  |  +--Hsap_ENST00000643460
+|                 |  |     |  |     |  +--| (100)
+|                 |  |     |  |     |     +--Hsap_ENST00000331462
+|                 |  |     |  |  +--| (100)
+|                 |  |     |  |  |  +---Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA219807
+|                 |  |     |  +--| (100)
+|                 |  |     |     |      +-------Morvir_scaffold27.g7.t1
+|                 |  |     |     +------| (100)
+|                 |  |     |            |  +----Gasp_gasp1.m3.12183.m1
+|                 |  |     |            +--| (100)
+|                 |  |     |               +---------Xesp_009187-T1
+|                 |  |  +--| (97)
+|                 |  |  |  +-------------------Morvir_scaffold70.g42.t1
+|                 |  +--| (93)
+|                 |     |  +--------Dmel_FBtr0081670
+|                 |     +--| (100)
+|                 |        +------Dmel_FBtr0081671
+|              +--| (99)
+|              |  |        +--------------Gasp_gasp1.m3.12182.m1
+|              |  |     +--| (99)
+|              |  |     |  |          +--Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA94911
+|              |  |     |  |       +--| (92)
+|              |  |     |  |       |  |  +----Dmel_FBtr0089276
+|              |  |     |  |       |  +--| (92)
+|              |  |     |  |       |     +----Tcas_TC000925_001
+|              |  |     |  |  +----| (100)
+|              |  |     |  |  |    |  +--Hsap_ENST00000222718
+|              |  |     |  |  |    +--| (100)
+|              |  |     |  |  |       +--Hsap_ENST00000330070
+|              |  |     |  +--| (94)
+|              |  |     |     +---------Xesp_009184-T1
+|              |  |  +--| (94)
+|              |  |  |  |            +--Hsap_ENST00000311626
+|              |  |  |  |         +--| (100)
+|              |  |  |  |         |  +--Hsap_ENST00000317201
+|              |  |  |  |     +---| (100)
+|              |  |  |  |     |   +--Hsap_ENST00000249440
+|              |  |  |  |  +--| (100)
+|              |  |  |  |  |  +--------Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA219808
+|              |  |  |  +--| (98)
+|              |  |  |     |      +-----Tcas_TC000921_001
+|              |  |  |     +------| (100)
+|              |  |  |            +----Tcas_TC000922_001
+|              |  +--| (94)
+|              |     |     +------Gasp_gasp1.m3.12180.m1
+|              |     +-----| (100)
+|              |           +----Xesp_009183-T1
+|           +--| (49)
+|           |  |                    +------Tcas_TC000916_001
+|           |  |                 +--| (98)
+|           |  |                 |  +-------------Dmel_FBtr0081625
+|           |  |              +--| (92)
+|           |  |              |  +------Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA168125
+|           |  |           +--| (66)
+|           |  |           |  |           +--Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA94879
+|           |  |           |  |        +--| (99)
+|           |  |           |  |        |  |              +--Tcas_TC000894_001
+|           |  |           |  |        |  |        +-----| (100)
+|           |  |           |  |        |  |        |     +--Dmel_FBtr0083388
+|           |  |           |  |        |  |     +--| (76)
+|           |  |           |  |        |  |     |  +---Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA225442
+|           |  |           |  |        |  |  +--| (76)
+|           |  |           |  |        |  |  |  |     +--Tcas_TC000903_001
+|           |  |           |  |        |  |  |  +-----| (100)
+|           |  |           |  |        |  |  |        +--Dmel_FBtr0083347
+|           |  |           |  |        |  +--| (100)
+|           |  |           |  |        |     +--Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA94902
+|           |  |           |  |     +--| (92)
+|           |  |           |  |     |  |      +--Hsap_ENST00000239144
+|           |  |           |  |     |  +------| (100)
+|           |  |           |  |     |         |  +--Hsap_ENST00000040584
+|           |  |           |  |     |         +--| (99)
+|           |  |           |  |     |            +--Hsap_ENST00000313173
+|           |  |           |  |  +--| (100)
+|           |  |           |  |  |  |      +--Tcas_TC000912_001
+|           |  |           |  |  |  |  +---| (100)
+|           |  |           |  |  |  |  |   +--Dmel_FBtr0081647
+|           |  |           |  |  |  +--| (93)
+|           |  |           |  |  |     |  +--Hsap_ENST00000242159
+|           |  |           |  |  |     +--| (100)
+|           |  |           |  |  |        +--Hsap_ENST00000239165
+|           |  |           |  +--| (100)
+|           |  |           |     |  +--Hsap_ENST00000225648
+|           |  |           |     +--| (100)
+|           |  |           |        |  +--Hsap_ENST00000222728
+|           |  |           |        +--| (100)
+|           |  |           |           +----Hsap_ENST00000243108
+|           |  |        +--| (44)
+|           |  |        |  |        +---Dmel_FBtr0474171
+|           |  |        |  |  +-----| (100)
+|           |  |        |  |  |     +--Tcas_TC000917_001
+|           |  |        |  +--| (50)
+|           |  |        |     |      +---Hsap_ENST00000513209
+|           |  |        |     |  +---| (100)
+|           |  |        |     |  |   +**Hsap_ENST00000312492
+|           |  |        |     +--| (100)
+|           |  |        |        |  +--Hsap_ENST00000239151
+|           |  |        |        +--| (100)
+|           |  |        |           +--Hsap_ENST00000222726
+|           |  |     +--| (61)
+|           |  |     |  |         +---Dmel_FBtr0081621
+|           |  |     |  |      +--| (100)
+|           |  |     |  |      |  +--Tcas_TC000920_001
+|           |  |     |  |   +--| (97)
+|           |  |     |  |   |  |     +--Hsap_ENST00000332503
+|           |  |     |  |   |  |  +--| (100)
+|           |  |     |  |   |  |  |  |  +--Hsap_ENST00000303406
+|           |  |     |  |   |  |  |  +--| (100)
+|           |  |     |  |   |  |  |     +--Hsap_ENST00000306324
+|           |  |     |  |   |  +--| (100)
+|           |  |     |  |   |     +--Hsap_ENST00000360046
+|           |  |     |  +---| (100)
+|           |  |     |      +---Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA149640
+|           |  |  +--| (100)
+|           |  |  |  +----Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA168122
+|           |  +--| (61)
+|           |     |                    +--Hsap_ENST00000303450
+|           |     |                 +--| (100)
+|           |     |                 |  +--Hsap_ENST00000249499
+|           |     |             +---| (100)
+|           |     |             |   |     +**Hsap_ENST00000343483
+|           |     |             |   |  +--| (100)
+|           |     |             |   |  |  +**Hsap_ENST00000470747
+|           |     |             |   +--| (100)
+|           |     |             |      +--Hsap_ENST00000311177
+|           |     |        +----| (99)
+|           |     |        |    |       +---Hsap_ENST00000283921
+|           |     |        |    |    +--| (100)
+|           |     |        |    |    |  +--Hsap_ENST00000249501
+|           |     |        |    +----| (100)
+|           |     |        |         +--Hsap_ENST00000303460
+|           |     |     +--| (94)
+|           |     |     |  |       +--Hsap_ENST00000006015
+|           |     |     |  +-------| (100)
+|           |     |     |          +--Hsap_ENST00000249504
+|           |     |  +--| (100)
+|           |     |  |  |          +----Tcas_TC000889_002
+|           |     |  |  |  +-------| (100)
+|           |     |  |  |  |       +--Dmel_FBtr0083384
+|           |     |  |  +--| (70)
+|           |     |  |     |        +------------------------Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA70154
+|           |     |  |     |     +--| (70)
+|           |     |  |     |     |  |            +--Hsap_ENST00000649031
+|           |     |  |     |     |  |         +--| (97)
+|           |     |  |     |     |  |         |  +---Hsap_ENST00000290295
+|           |     |  |     |     |  |      +--| (71)
+|           |     |  |     |     |  |      |  +--Hsap_ENST00000243056
+|           |     |  |     |     |  +------| (99)
+|           |     |  |     |     |         +--Hsap_ENST00000392539
+|           |     |  |     |  +--| (71)
+|           |     |  |     |  |  |          +---Hsap_ENST00000406506
+|           |     |  |     |  |  +----------| (100)
+|           |     |  |     |  |             +----Hsap_ENST00000243103
+|           |     |  |     +--| (70)
+|           |     |  |        +-----------Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA126009
+|           |     +--| (99)
+|           |        |          +---Tcas_TC032769_002
+|           |        |       +--| (98)
+|           |        |       |  |  +------Dmel_FBtr0335152
+|           |        |       |  +--| (99)
+|           |        |       |     +-----Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA109027
+|           |        +-------| (100)
+|           |                |  +-----Hsap_ENST00000373514
+|           |                +--| (65)
+|           |                   |  +---Hsap_ENST00000231656
+|           |                   +--| (100)
+|           |                      +--Hsap_ENST00000381020
+|        +--| (61)
+|        |  |            +---------Gasp_gasp1.m3.27871.m1
+|        |  |  +---------| (100)
+|        |  |  |         +---------Morvir_scaffold189.g37.t1
+|        |  +--| (93)
+|        |     |  +-----Hsap_ENST00000381033
+|        |     +--| (100)
+|        |        +------Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA196539
+|     +--| (98)
+|     |  |          +--------------Xesp_009185-T1
+|     |  |       +--| (84)
+|     |  |       |  +-------Xesp_009182-T1
+|     |  |  +----| (91)
+|     |  |  |    +----------Gasp_gasp1.m3.12179.m1
+|     |  +--| (63)
+|     |     +--------------Morvir_scaffold70.g45.t1
+|  +--| (99)
+|  |  |       +---Morvir_scaffold340.g1.t1
+|  |  +-------| (100)
+|  |          +--Morvir_scaffold45.g78.t1
++--| (100)
+   +-----------Morvir_scaffold216.g16.t1
+
+Tree in newick format:
+
+(Xesp_013872-T1:0.4534946476,Gasp_gasp1.m3.14269.m1:0.1974555671,((((((((((Tcas_TC006888_001:0.2868740238,Dmel_FBtr0333875:0.5682572168)100:0.1289802897,(Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA156652:0.5182359185,(Hsap_ENST00000302945:0.2173873519,Hsap_ENST00000326902:0.2134351786)100:0.1594935015)88:0.0734526970)100:0.2760319384,((Hhon_g10818.t1:0.0535477908,Tadh_TriadT33728:0.0636547774)100:0.3200491279,((Xesp_015649-T1:0.0000026582,Xesp_025417-T1:0.0000020954)100:0.5806282431,(Morvir_scaffold348.g20.t1:0.1765406279,Gasp_gasp1.m3.27866.m1:0.4939289319)100:0.0846341959)100:0.0749509086)100:0.0770690723)100:0.2349811366,((((((((((((Morvir_scaffold98.g48.t1:0.6899122901,(((Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA79123:0.0450478879,(Dmel_FBtr0082941:0.4618286810,Tcas_TC013614_001:0.2583257976)100:0.0925505510)100:0.0588094586,Gasp_gasp1.m3.24581.m1:0.3212538741)99:0.1790063015,Xesp_013923-T1:0.6360201189)92:0.0738621954)99:0.1951168644,((((((Gasp_gasp1.m3.987.m1:0.2185185618,Xesp_013920-T1:0.4127917287)100:0.0547008709,(Hhon_g07172.t1:0.0955464003,Tadh_TriadT50928:0.0170887565)100:0.5709489547)84:0.0448600380,((Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA80758:0.0284387283,Tcas_TC012136_001:0.1132947453)99:0.1074247833,Dmel_FBtr0330386:0.2471748228)99:0.1001782500)52:0.0334411459,((Hsap_ENST00000357878:0.2056807054,Hsap_ENST00000339992:0.3434100220)68:0.0566652074,Hsap_ENST00000400677:0.4016425762)44:0.0283810514)45:0.1269228933,(Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA80782:0.0000022022,Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA81827:0.0000022714)100:0.5594747799)100:0.4199360587,((Gasp_gasp1.m3.21838.m1:0.1286971226,(Morvir_scaffold42.g46.t1:0.7040367444,Xesp_013949-T1:1.0016042962)99:0.1980526550)99:0.2169448977,((Hsap_ENST00000295886:0.1119985798,(((Hhon_g07174.t1:0.0370017201,Tadh_TriadT31334:0.1713975590)100:0.9642138095,Hsap_ENST00000368592:0.0382232978)57:0.0250897750,Hsap_ENST00000518699:0.4544033741)70:0.0643468540)72:0.0619189485,(Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA6193:0.2186456889,(Dmel_FBtr0075720:0.1913412012,Tcas_TC014200_001:0.2297378874)100:0.0577403873)87:0.0877177880)96:0.0932084944)100:0.5610819636)62:0.0555640382)75:0.1331306063,(((((((Gasp_gasp1.m3.682.m1:0.0000023524,Gasp_gasp1.m3.10613.m1:1.5250451350)100:0.4410562568,Xesp_012798-T1:0.5063137231)100:0.2086111281,Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA29749:0.1842916900)90:0.0656795574,(Hsap_ENST00000370193:0.0506991746,Hsap_ENST00000377566:0.7064952837)92:0.1623545340)99:0.1770429054,(Tcas_TC011748_001:0.1706121389,(Dmel_FBtr0332438:0.2145855015,Dmel_FBtr0084091:0.1576356805)100:0.1281452024)99:0.0615058390)100:0.4995223018,((((((((Tcas_TC011749_001:0.0626022273,Dmel_FBtr0084111:0.1246374663)100:0.0810912227,Morvir_scaffold99.g69.t1:0.6842983835)99:0.0958335210,Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA222072:0.1636162845)98:0.1387253176,Hsap_ENST00000370196:0.0710346817)79:0.0062319045,Hsap_ENST00000233638:0.1931831041)79:0.0680021641,Hsap_ENST00000296921:0.0000021210)100:0.7573046512,((((Gasp_gasp1.m3.11755.m1:0.2729832373,Morvir_scaffold11.g90.t1:0.9307842988)44:0.0905969516,Xesp_013947-T1:0.3877961110)42:0.0264846934,(((Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA110019:0.0000010000,Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA129537:0.0000010000)100:0.4407957762,(Hhon_g07171.t1:0.2699317065,Tadh_TriadT9560:0.1496262936)100:0.7008577252)41:0.0000026007,Hsap_ENST00000282728:0.1400550437)45:0.1785193648)94:0.1796761575,(Tcas_TC004555_001:0.7024522946,Dmel_FBtr0084037:0.7782301341)97:0.1461982048)100:0.6170310365)33:0.0748572667,((((Gasp_gasp1.m3.29873.m1:0.2019811833,Gasp_gasp1.m3.18420.m1:0.0803820693)100:0.9500204767,((Xesp_014792-T1:0.0000027493,Xesp_014794-T1:0.0586149998)100:1.4763482890,Hsap_ENST00000325980:0.4312365726)93:0.2400721567)92:0.0898935562,(Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA121761:1.5929911441,Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA208832:0.4076357994)100:0.5125364451)99:0.2220129439,(Hsap_ENST00000229307:0.0000020887,Hsap_ENST00000528386:0.0044124883)100:1.0055890580)97:0.1404878287)23:0.0527560675)75:0.0598205346,((((((((((((Gasp_gasp1.m3.4134.m1:0.2648979215,((Morvir_scaffold46.g33.t1:0.9167966012,Xesp_021545-T1:0.6304022852)47:0.1525204972,(Gasp_gasp1.m3.4129.m1:0.5888796152,Xesp_022051-T1:0.6487174935)93:0.2038204781)48:0.1714344993)47:0.0734401930,(Gasp_gasp1.m3.4132.m1:0.1854757955,Gasp_gasp1.m3.4130.m1:0.4904249188)99:0.0805249052)62:0.0927597459,(Xesp_016908-T1:0.0478337440,Xesp_021558-T1:0.0000022774)100:0.6088527169)61:0.1051070822,((Tadh_TriadT9561:0.2623428895,Morvir_scaffold83.g2.t1:0.7738146641)40:0.0331982386,Morvir_scaffold273.g2.t1:0.8932336320)97:0.4282143242)28:0.0000020702,((((Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA70572:0.0237642897,Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA221803:0.0808564356)100:0.1243379699,Hsap_ENST00000258829:0.5081380778)100:0.1307053276,Hsap_ENST00000377142:0.1357980104)100:0.1804110308,(Dmel_FBtr0070110:0.2177609152,Tcas_TC007014_001:0.2625430396)100:0.1252128745)100:0.0775538172)60:0.0533612796,((((Dmel_FBtr0113751:0.0822059815,Tcas_TC008996_001:0.0464546686)82:0.1632273911,(Hsap_ENST00000351817:0.0676161730,Hsap_ENST00000354822:0.1193804585)100:0.0942418915)81:0.0933992007,(Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA40416:0.0786212395,Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA172338:0.3801719206)100:0.1408954643)68:0.0557288959,(Hhon_g07292.t1:0.0000029747,Tadh_TriadT9507:0.0487330665)100:0.7118768698)94:0.0946472689)99:0.0928056348,(((Hsap_ENST00000329198:0.2039995225,Hsap_ENST00000325017:0.2836949529)100:0.1009199667,Hsap_ENST00000344586:0.1151715239)100:0.0817379748,(Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA170007:0.3036730804,Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA220898:0.1625135833)100:0.2207090470)100:0.1758877306)84:0.0745478828,((Gasp_gasp1.m3.679.m1:0.1212498269,Xesp_013044-T1:0.3151748873)100:0.2175210201,Morvir_scaffold11.g115.t1:0.4790678948)94:0.1844905577)74:0.0511647624,Tcas_TC011745_001:0.7037422358)39:0.0250987075,Dmel_FBtr0084086:0.4905465879)97:0.1701908308,((((Gasp_gasp1.m3.680.m1:0.2848675843,(Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA79432:0.0643099983,(Tcas_TC012743_001:0.3280774879,Dmel_FBtr0084087:0.4558119415)100:0.0528458467)95:0.1706449121)65:0.1139978178,(Xesp_013038-T1:0.3315896212,Morvir_scaffold477.g8.t1:1.2975090370)84:0.2143118350)33:0.0597179025,Hsap_ENST00000382438:0.2312892327)88:0.1075169166,Hsap_ENST00000380871:0.6424659288)100:0.3717771515)100:0.2601368133,((((Gasp_gasp1.m3.4135.m1:0.4434304454,Tadh_TriadT51739:1.5114449096)99:0.1012838300,(Tcas_TC015928_001:0.2465709114,Dmel_FBtr0083968:0.7821577327)100:0.5067283357)94:0.0692079197,(Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA70959:0.7260786954,((Morvir_scaffold188.g35.t1:0.6317799302,(((Xesp_022106-T1:0.0000010000,Xesp_022121-T1:0.0421480506)99:0.0862228088,((Xesp_017090-T1:0.1208273933,Xesp_022100-T1:0.0245692941)100:0.1555340049,Xesp_022099-T1:0.0742061471)100:0.1301412253)80:0.0389219752,Xesp_022116-T1:0.0059794994)100:0.5665656034)100:0.1669053487,Gasp_gasp1.m3.4133.m1:1.0405719408)99:0.1937950757)96:0.0406628471)100:0.3562055187,((((Gasp_gasp1.m3.677.m1:0.1960493671,Xesp_013039-T1:0.4590971574)93:0.0593278121,(Hsap_ENST00000382723:0.0871232590,Hsap_ENST00000239243:0.1206881831)100:0.0730818339)85:0.0199482646,(Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA176625:0.3539910377,Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA87981:0.0214899057)99:0.1628265173)68:0.0442865025,(Tcas_TC012748_001:0.4176296653,(Tcas_TC011744_001:0.2052136275,Dmel_FBtr0085441:0.2902934831)100:0.0774092126)100:0.1406221745)100:0.2786519522)100:0.5146950763)60:0.0903806122)51:0.0441645953)58:0.0452477863,((((((Morvir_scaffold85.g37.t1:1.6306794596,((Hhon_g08608.t1:0.0733304603,Tadh_TriadT18102:0.0422732711)100:0.7570552022,((Tcas_TC034733_001:0.1687644806,Dmel_FBtr0290136:0.1321809526)30:0.1233518760,((Hsap_ENST00000524983:0.1599277967,Hsap_ENST00000332700:0.7124433507)90:0.0440985329,Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA220261:0.2260812103)87:0.0622810083)15:0.0142061115)34:0.1331458964)100:0.4905869998,((((Xesp_009987-T1:0.6800168137,Gasp_gasp1.m3.12691.m1:0.4298526137)32:0.1208646995,Gasp_gasp1.m3.30352.m1:0.1840751997)100:0.3539398380,Gasp_gasp1.m3.14501.m1:0.9642337527)98:0.2962056446,((Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA173964:0.3288036267,Hsap_ENST00000366903:0.3621372494)50:0.1232311155,Tcas_TC031113_001:0.5920231291)63:0.0926915380)92:0.0595163769)72:0.0713904823,Dmel_FBtr0079227:0.5919829386)94:0.1621922506,Morvir_scaffold95.g3.t1:0.5053893597)100:0.3762447667,((((((Gasp_gasp1.m3.24801.m1:0.1307477283,(Gasp_gasp1.m3.24803.m1:0.4582841355,Gasp_gasp1.m3.16233.m1:0.1994916946)56:0.0554167545)100:0.2366018092,Xesp_004967-T1:0.4597836948)100:0.1367005066,Morvir_scaffold175.g50.t1:0.4275233918)100:0.1196727869,Xesp_015541-T1:0.9646799450)100:0.1031361328,(Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA80939:0.5716771724,(Hsap_ENST00000253968:0.3050320554,Hsap_ENST00000281437:0.4557587971)100:0.2799966636)100:0.5225633800)95:0.0643295359,(((Hsap_ENST00000343035:0.2043208733,Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA149569:0.5625964431)100:0.3227904184,Tcas_TC015394_001:0.3227401221)100:0.1118886357,Dmel_FBtr0089320:0.4089099305)100:0.3465792479)99:0.1372510044)95:0.0687441513,(((((Gasp_gasp1.m3.4695.m1:0.3535457349,Xesp_010138-T1:0.4328048557)95:0.1228167483,Morvir_scaffold140.g36.t1:0.6433355701)94:0.0871527654,(((Hsap_ENST00000361725:0.1082315794,Hsap_ENST00000240306:0.6689356258)94:0.0535521703,Hsap_ENST00000518156:0.1453322184)100:0.0940764441,(Hsap_ENST00000648378:0.1270307933,(Hsap_ENST00000234198:0.3331256794,Hsap_ENST00000434704:0.2471990780)100:0.0731003609)100:0.3197969982)99:0.0618212126)99:0.0575384734,(((Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA40403:0.0000025508,Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA74740:0.0986415077)100:0.4835476277,Dmel_FBtr0300076:0.1379164549)90:0.0116698343,Tcas_TC009351_001:0.0870713982)100:0.3553638451)100:0.1060307702,(Morvir_scaffold140.g33.t1:0.6705228062,(Hhon_g08887.t1:0.1118671617,Tadh_TriadT49530:0.0260027495)100:0.5681597418)99:0.0314871009)100:0.4162048834)88:0.1004584543)48:0.0372934027,((((((Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA174957:0.0000021620,Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA30874:0.0000010000)100:0.1681888384,(Tcas_TC031415_001:0.1621118998,(Dmel_FBtr0074429:0.1438403223,Dmel_FBtr0074430:0.2657909372)100:0.0694822789)100:0.1767988003)100:0.0651413687,(Hsap_ENST00000370445:0.0815348609,Hsap_ENST00000263610:0.1466664010)47:0.1230475775)98:0.2978890987,((Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA48054:0.0000023427,Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA187461:0.0000021755)100:0.5824321010,(Dmel_FBtr0073656:0.2380369539,Tcas_TC000424_001:0.0692402303)100:0.2263181635)100:0.5498466352)100:0.2988153274,(((((Gasp_gasp1.m3.10379.m1:0.2586074230,Xesp_007977-T1:0.5829471447)100:0.0439218080,Xesp_007810-T1:0.8472315228)100:0.2024479119,((Gasp_gasp1.m3.10374.m1:0.1455506684,Gasp_gasp1.m3.10375.m1:0.1942497767)100:0.1312428558,Xesp_007812-T1:0.3780048631)99:0.1089588329)81:0.1124716255,Gasp_gasp1.m3.10369.m1:0.4436054998)72:0.2114503176,Xesp_007813-T1:0.7686925153)97:0.2217849976)70:0.0356322765,(((Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA30886:0.0000023130,Morvir_scaffold21.g122.t1:0.4648630817)98:0.1710453572,Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA78648:0.0000026443)67:0.0000022638,(((Gasp_gasp1.m3.982.m1:0.2059570624,Xesp_013922-T1:0.2761422727)81:0.0360081175,(Dmel_FBtr0330389:0.2825048118,Tcas_TC012332_001:0.2103900736)99:0.1364175262)78:0.0230102895,(Hsap_ENST00000422806:0.1368700968,Hsap_ENST00000451024:0.4372185948)96:0.0521160216)78:0.0917837816)100:0.6612522153)62:0.0807497066)65:0.0478966574,(((((((((Gasp_gasp1.m3.16096.m1:0.8573301837,Gasp_gasp1.m3.23770.m1:0.6645067417)96:0.3895428552,(Gasp_gasp1.m3.970.m1:0.0000025142,Gasp_gasp1.m1b.1230.m1:0.4584383334)100:0.5408189429)84:0.0523575920,Xesp_020407-T1:0.6889090607)90:0.2014660409,(((((Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA88560:0.0080190767,(Tcas_TC000483_001:0.1038687904,Dmel_FBtr0083571:0.4573665236)100:0.4497690340)99:0.3542593164,Gasp_gasp1.m3.2245.m1:0.6488480911)69:0.0461701229,Gasp_gasp1.m3.13464.m1:0.2256269288)66:0.0753608446,Xesp_013856-T1:0.6872461789)92:0.1556640453,(Hhon_g10555.t1:0.0607894357,Tadh_TriadT49524:0.0911378524)100:0.4665914032)90:0.0862542722)70:0.0387551535,(Gasp_gasp1.m3.2233.m1:1.3284810634,Morvir_scaffold149.g55.t1:0.6218499474)62:0.1089950261)80:0.0411655102,(Gasp_gasp1.m3.28194.m1:1.7563864620,(Gasp_gasp1.m3.2249.m1:0.6648148213,(Gasp_gasp1.m1b.2861.m1:1.3777875571,Hsap_ENST00000398468:0.6873831853)97:0.1303449335)89:0.0979317144)54:0.0082329706)97:0.0754160156,((((Gasp_gasp1.m3.23164.m1:0.4991748524,Xesp_013885-T1:0.4164749960)100:0.6370967776,(Gasp_gasp1.m3.22638.m1:0.3994730598,Xesp_013548-T1:1.3784617761)100:0.8994122231)97:0.2797981998,(((Gasp_gasp1.m3.23161.m1:0.3035044404,Morvir_scaffold5.g160.t1:0.8435401776)96:0.1059670521,Gasp_gasp1.m1b.17996.m1:0.7214584269)100:0.1752000839,(((Dmel_FBtr0082880:0.2712120941,(Tcas_TC011763_001:0.1172740922,Dmel_FBtr0082863:0.3193101638)95:0.0410043496)96:0.0945961370,(Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA25827:0.5169163469,Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA183448:0.2259223465)93:0.1582114483)39:0.0238560678,(Hsap_ENST00000258106:0.1777661428,Hsap_ENST00000553456:0.0545152378)100:0.3056944961)93:0.2100959848)92:0.1767950219)98:0.1091431782,(Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA80769:0.5585262609,(Hsap_ENST00000369206:0.2524617201,Hsap_ENST00000234392:0.0952771726)100:0.2610044332)100:0.6600947183)87:0.0685615003)98:0.1653326798,(((((Gasp_gasp1.m3.15756.m1:0.1180830509,(Gasp_gasp1.m3.26136.m1:0.1143042194,Gasp_gasp1.m3.26141.m1:0.2323212634)100:0.0267655703)100:0.3442841498,Gasp_gasp1.m3.12286.m1:0.3449682653)100:0.1827305811,Gasp_gasp1.m3.12289.m1:0.4863866635)99:0.1795458946,Gasp_gasp1.m3.12287.m1:0.3138962801)100:0.3915683644,Xesp_007966-T1:1.5031433764)89:0.1899084833)47:0.0222300857,(((Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA171492:0.6113235091,Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA147353:0.3678111940)90:0.2355447995,Dmel_FBtr0072224:1.3565960281)91:0.0520450531,(Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA154864:0.3766771280,Gasp_gasp1.m3.16169.m1:1.2621940066)90:0.2427727273)100:0.5755146450)53:0.0961092290)54:0.0112225937,(((((Gasp_gasp1.m3.4690.m1:0.4438649173,Gasp_gasp1.m1b.6286.m1:0.4116620482)97:0.1452437593,(Xesp_010136-T1:0.5777986174,Xesp_010137-T1:0.9802154814)75:0.0948747010)80:0.0412110111,(Tcas_TC033532_001:0.2955188816,Dmel_FBtr0342701:0.5108955379)99:0.3099440619)97:0.1743443460,((Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA127720:0.5456321308,Tcas_TC001164_001:0.0000024213)100:0.3609596936,Dmel_FBtr0308948:0.3181219613)100:0.6473460518)81:0.0941090771,((((Tcas_TC009896_001:0.0891199715,Dmel_FBtr0088068:0.1990754742)100:0.0816239668,(Dmel_FBtr0088095:0.2959266555,Tcas_TC008952_001:0.1620845430)94:0.1040109494)100:0.2474255819,((Hsap_ENST00000295206:0.2037498588,Hsap_ENST00000297375:0.1099320464)100:0.1187542453,Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA152542:0.7403697451)43:0.0395974136)28:0.0405196796,Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA152545:0.2575229445)100:0.8428677064)64:0.1158805021)46:0.0000022473,Dmel_FBtr0081668:2.4996153885)94:0.1012113197,(((((((Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA127728:0.0000010000,Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA159948:0.0000020156)95:0.0000026401,Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA137362:0.0168992067)100:0.3418801460,(Dmel_FBtr0085090:0.1428236089,Tcas_TC030553_001:0.4007840830)98:0.1814937856)100:0.1299802080,(Gasp_gasp1.m3.12193.m1:0.2034790561,Xesp_009291-T1:0.3827910951)72:0.0225744318)100:0.3394283234,(Gasp_gasp1.m3.12181.m1:0.4001901992,((((Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA70992:0.0000010000,Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA99816:0.0000010000)100:0.1659899266,Tcas_TC009469_001:0.1156641894)98:0.2750818932,Dmel_FBtr0088390:0.1832201411)98:0.1856526252,(Hsap_ENST00000308618:0.1918174558,Hsap_ENST00000496902:0.2070481331)100:0.1173734190)100:0.6495211978)100:0.4682352346)78:0.1500053519,(((((((Gasp_gasp1.m3.3944.m1:0.1695277010,Gasp_gasp1.m3.3946.m1:0.6428476393)76:0.1019663838,(Gasp_gasp1.m3.3948.m1:0.2912107311,Xesp_010186-T1:0.3624357607)76:0.2920733369)98:0.1660533830,Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA173096:0.5211180908)36:0.0085002948,Gasp_gasp1.m3.3947.m1:0.4815656482)48:0.0896227504,((Hsap_ENST00000262041:0.4210859585,Hsap_ENST00000318579:0.4523172585)49:0.1192073917,(Tcas_TC030982_001:0.1306122481,Dmel_FBtr0084278:0.9180295510)98:0.2730499429)49:0.0800628083)98:0.1673424498,Morvir_scaffold59.g41.t1:0.3098394875)100:0.4002031284,(((Gasp_gasp1.m3.12278.m1:0.3828738597,(Dmel_FBtr0088586:0.1532212612,(Tcas_TC009309_001:0.2074945332,Xesp_001248-T1:0.9839582811)100:0.1515841207)100:0.1303716282)100:0.3208080963,(Hsap_ENST00000306318:0.1674129976,Hsap_ENST00000297537:0.1610857158)100:0.1137804499)81:0.0342708858,Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA151262:0.3084800880)100:0.6147794455)79:0.0546530798)57:0.0000021493,(((Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA41929:0.0948807996,Hsap_ENST00000252971:0.1586067347)100:0.1428606630,(Tcas_TC009461_001:0.2682584014,Dmel_FBtr0076751:0.3095003519)78:0.0000020539)97:0.4128176601,(Hhon_g09133.t1:0.1595971543,Tadh_TriadT50911:0.0000025146)100:0.6564183682)97:0.1687409511)94:0.0904785812)94:0.0367244992,((((Tcas_TC000926_001:0.1933451184,Dmel_FBtr0081696:0.5094555060)100:0.1032313306,((Hsap_ENST00000239174:0.3466360405,Hsap_ENST00000643460:0.1403933855)100:0.1529391301,Hsap_ENST00000331462:0.2307020600)100:0.1803454499)100:0.1471718156,Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA219807:0.2719937820)100:0.1687198149,(Morvir_scaffold27.g7.t1:0.5376728818,(Gasp_gasp1.m3.12183.m1:0.3291757673,Xesp_009187-T1:0.6615089668)100:0.2288179447)100:0.4911444522)100:0.1391913474)39:0.0237880715,Morvir_scaffold70.g42.t1:1.3157728215)97:0.0215802251,(Dmel_FBtr0081670:0.5906459340,Dmel_FBtr0081671:0.4930288973)100:0.2533547917)93:0.0508148965)93:0.0294844719,(((Gasp_gasp1.m3.12182.m1:0.9782158295,(((Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA94911:0.1937506790,(Dmel_FBtr0089276:0.3488103888,Tcas_TC000925_001:0.3710979067)92:0.0759953135)92:0.0682383190,(Hsap_ENST00000222718:0.1385851138,Hsap_ENST00000330070:0.2392595901)100:0.1532387834)100:0.3440719747,Xesp_009184-T1:0.7134542622)94:0.0438721756)99:0.1150004308,((((Hsap_ENST00000311626:0.1721412603,Hsap_ENST00000317201:0.1390412926)100:0.0691154452,Hsap_ENST00000249440:0.1247918646)100:0.2767579963,Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA219808:0.6288734495)100:0.1978203549,(Tcas_TC000921_001:0.4236426263,Tcas_TC000922_001:0.3366803526)100:0.4661994815)98:0.1194500138)94:0.1075180171,(Gasp_gasp1.m3.12180.m1:0.4747949704,Xesp_009183-T1:0.3273169436)100:0.4295631129)94:0.0802485872)99:0.0287578701,(((((((Tcas_TC000916_001:0.4910761231,Dmel_FBtr0081625:0.9293736244)98:0.0890039320,Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA168125:0.5008112541)92:0.0586173418,((((Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA94879:0.1300754382,((((Tcas_TC000894_001:0.1393086383,Dmel_FBtr0083388:0.0773392587)100:0.3924656137,Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA225442:0.2858011454)76:0.0204166291,(Tcas_TC000903_001:0.0638873857,Dmel_FBtr0083347:0.1482963516)100:0.4086625148)76:0.0406048522,Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA94902:0.2221297388)100:0.1978791145)99:0.0780561428,(Hsap_ENST00000239144:0.1081333421,(Hsap_ENST00000040584:0.1322727074,Hsap_ENST00000313173:0.1205051186)99:0.0884943749)100:0.4857256420)92:0.0236746071,((Tcas_TC000912_001:0.1651017846,Dmel_FBtr0081647:0.1741973016)100:0.3180642678,(Hsap_ENST00000242159:0.1339981056,Hsap_ENST00000239165:0.1733421888)100:0.1997562768)93:0.1379577941)100:0.0591543309,(Hsap_ENST00000225648:0.1657139160,(Hsap_ENST00000222728:0.1579369703,Hsap_ENST00000243108:0.3762090389)100:0.1009753026)100:0.2223032598)100:0.1543883247)66:0.0432557697,((Dmel_FBtr0474171:0.2652298916,Tcas_TC000917_001:0.0325475608)100:0.3960304708,((Hsap_ENST00000513209:0.3024368743,Hsap_ENST00000312492:0.0000028096)100:0.3247369322,(Hsap_ENST00000239151:0.1399056841,Hsap_ENST00000222726:0.0712467808)100:0.0539819098)100:0.1377474147)50:0.1295969038)44:0.0251050477,(((Dmel_FBtr0081621:0.3157316811,Tcas_TC000920_001:0.1882003392)100:0.1719895796,((Hsap_ENST00000332503:0.1282888261,(Hsap_ENST00000303406:0.1405947151,Hsap_ENST00000306324:0.1962517048)100:0.0735108638)100:0.0457498116,Hsap_ENST00000360046:0.2030588045)100:0.2279301833)97:0.0661540874,Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA149640:0.2809730965)100:0.2893467947)61:0.0387776637,Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA168122:0.3539233451)100:0.0602154627,((((((Hsap_ENST00000303450:0.2017638197,Hsap_ENST00000249499:0.0934643786)100:0.1022551910,((Hsap_ENST00000343483:0.0000022036,Hsap_ENST00000470747:0.0000010000)100:0.2137412761,Hsap_ENST00000311177:0.2444857795)100:0.0564295793)100:0.2735975101,((Hsap_ENST00000283921:0.2952167281,Hsap_ENST00000249501:0.1387077806)100:0.1108054177,Hsap_ENST00000303460:0.1183043225)100:0.3701651014)99:0.3486835337,(Hsap_ENST00000006015:0.1791809487,Hsap_ENST00000249504:0.2189739580)100:0.5522224236)94:0.2126278375,((Tcas_TC000889_002:0.3854203197,Dmel_FBtr0083384:0.0641272818)100:0.5256906395,(((Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA70154:1.6463990164,(((Hsap_ENST00000649031:0.1230941852,Hsap_ENST00000290295:0.3036868320)97:0.0606958129,Hsap_ENST00000243056:0.1697151202)71:0.0923654388,Hsap_ENST00000392539:0.2108387207)99:0.4940753598)70:0.2013807627,(Hsap_ENST00000406506:0.2692556456,Hsap_ENST00000243103:0.3576660928)100:0.7523216170)71:0.2374414830,Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA126009:0.7956778682)70:0.1537803931)70:0.0814927364)100:0.1907907591,((Tcas_TC032769_002:0.3031685288,(Dmel_FBtr0335152:0.4849847102,Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA109027:0.4039902007)99:0.0498300776)98:0.0900283159,(Hsap_ENST00000373514:0.4310924469,(Hsap_ENST00000231656:0.2864429189,Hsap_ENST00000381020:0.1978597163)100:0.0831071533)65:0.0776472966)100:0.5384237975)99:0.1745459641)61:0.0781923377)49:0.0239334529,((Gasp_gasp1.m3.27871.m1:0.6562130106,Morvir_scaffold189.g37.t1:0.6898944904)100:0.6611121571,(Hsap_ENST00000381033:0.4519091756,Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA196539:0.4714443015)100:0.2289816573)93:0.2147700846)61:0.0782468046,(((Xesp_009185-T1:0.9926355720,Xesp_009182-T1:0.5796713253)84:0.0893785098,Gasp_gasp1.m3.12179.m1:0.7436348545)91:0.3345010313,Morvir_scaffold70.g45.t1:0.9867407473)63:0.0931567162)98:0.1044256588,(Morvir_scaffold340.g1.t1:0.3102355130,Morvir_scaffold45.g78.t1:0.2604550306)100:0.5275328103)99:0.0517673903,Morvir_scaffold216.g16.t1:0.8123793400)100:0.1949503697);
+
+CONSENSUS TREE
+--------------
+
+Consensus tree is constructed from 1000 bootstrap trees
+Log-likelihood of consensus tree: -94757.929900
+Robinson-Foulds distance between ML tree and consensus tree: 56
+
+Branches with support >0.000000% are kept (extended consensus)
+Branch lengths are optimized by maximum likelihood on original alignment
+Numbers in parentheses are bootstrap supports (%)
+
++-----Xesp_013872-T1
+|
++--Gasp_gasp1.m3.14269.m1
+|
+|                             +---Tcas_TC006888_001
+|                          +--| (100)
+|                          |  +-------Dmel_FBtr0333875
+|                       +--| (100)
+|                       |  |  +------Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA156652
+|                       |  +--| (88)
+|                       |     |  +--Hsap_ENST00000302945
+|                       |     +--| (100)
+|                       |        +--Hsap_ENST00000326902
+|                    +--| (100)
+|                    |  |      +--Hhon_g10818.t1
+|                    |  |  +---| (100)
+|                    |  |  |   +--Tadh_TriadT33728
+|                    |  +--| (100)
+|                    |     |          +--Xesp_015649-T1
+|                    |     |  +-------| (100)
+|                    |     |  |       +--Xesp_025417-T1
+|                    |     +--| (100)
+|                    |        |  +--Morvir_scaffold348.g20.t1
+|                    |        +--| (100)
+|                    |           +-----Gasp_gasp1.m3.27866.m1
+|                 +--| (93)
+|                 |  |                                +--------Morvir_scaffold98.g48.t1
+|                 |  |                             +--| (99)
+|                 |  |                             |  |        +--Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA79123
+|                 |  |                             |  |     +--| (100)
+|                 |  |                             |  |     |  |  +-----Dmel_FBtr0082941
+|                 |  |                             |  |     |  +--| (100)
+|                 |  |                             |  |     |     +--Tcas_TC013614_001
+|                 |  |                             |  |  +--| (99)
+|                 |  |                             |  |  |  +---Gasp_gasp1.m3.24581.m1
+|                 |  |                             |  +--| (92)
+|                 |  |                             |     +-------Xesp_013923-T1
+|                 |  |                          +--| (75)
+|                 |  |                          |  |                  +--Gasp_gasp1.m3.987.m1
+|                 |  |                          |  |               +--| (100)
+|                 |  |                          |  |               |  +----Xesp_013920-T1
+|                 |  |                          |  |            +--| (84)
+|                 |  |                          |  |            |  |       +--Hhon_g07172.t1
+|                 |  |                          |  |            |  +-------| (100)
+|                 |  |                          |  |            |          +--Tadh_TriadT50928
+|                 |  |                          |  |         +--| (52)
+|                 |  |                          |  |         |  |     +--Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA80758
+|                 |  |                          |  |         |  |  +--| (99)
+|                 |  |                          |  |         |  |  |  +--Tcas_TC012136_001
+|                 |  |                          |  |         |  +--| (99)
+|                 |  |                          |  |         |     +--Dmel_FBtr0330386
+|                 |  |                          |  |  +------| (100)
+|                 |  |                          |  |  |      |     +--Hsap_ENST00000357878
+|                 |  |                          |  |  |      |  +--| (68)
+|                 |  |                          |  |  |      |  |  +---Hsap_ENST00000339992
+|                 |  |                          |  |  |      +--| (51)
+|                 |  |                          |  |  |         |             +--Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA80782
+|                 |  |                          |  |  |         |    +--------| (100)
+|                 |  |                          |  |  |         |    |        +--Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA81827
+|                 |  |                          |  |  |         +----| (53)
+|                 |  |                          |  |  |              +--Hsap_ENST00000400677
+|                 |  |                          |  +--| (62)
+|                 |  |                          |     |          +--Gasp_gasp1.m3.21838.m1
+|                 |  |                          |     |       +--| (99)
+|                 |  |                          |     |       |  |  +--------Morvir_scaffold42.g46.t1
+|                 |  |                          |     |       |  +--| (99)
+|                 |  |                          |     |       |     +-------------Xesp_013949-T1
+|                 |  |                          |     +-------| (100)
+|                 |  |                          |             |     +--Hsap_ENST00000295886
+|                 |  |                          |             |  +--| (72)
+|                 |  |                          |             |  |  |                  +--Hhon_g07174.t1
+|                 |  |                          |             |  |  |     +------------| (100)
+|                 |  |                          |             |  |  |     |            +--Tadh_TriadT31334
+|                 |  |                          |             |  |  |  +--| (57)
+|                 |  |                          |             |  |  |  |  +--Hsap_ENST00000368592
+|                 |  |                          |             |  |  +--| (70)
+|                 |  |                          |             |  |     +-----Hsap_ENST00000518699
+|                 |  |                          |             +--| (96)
+|                 |  |                          |                |  +--Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA6193
+|                 |  |                          |                +--| (87)
+|                 |  |                          |                   |  +--Dmel_FBtr0075720
+|                 |  |                          |                   +--| (100)
+|                 |  |                          |                      +--Tcas_TC014200_001
+|                 |  |                       +--| (58)
+|                 |  |                       |  |                                +--Gasp_gasp1.m3.682.m1
+|                 |  |                       |  |                          +-----| (100)
+|                 |  |                       |  |                          |     +--------------------Gasp_gasp1.m3.10613.m1
+|                 |  |                       |  |                       +--| (100)
+|                 |  |                       |  |                       |  +------Xesp_012798-T1
+|                 |  |                       |  |                    +--| (90)
+|                 |  |                       |  |                    |  +--Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA29749
+|                 |  |                       |  |                 +--| (99)
+|                 |  |                       |  |                 |  |  +--Hsap_ENST00000370193
+|                 |  |                       |  |                 |  +--| (92)
+|                 |  |                       |  |                 |     +--------Hsap_ENST00000377566
+|                 |  |                       |  |           +-----| (100)
+|                 |  |                       |  |           |     |  +--Tcas_TC011748_001
+|                 |  |                       |  |           |     +--| (99)
+|                 |  |                       |  |           |        |  +--Dmel_FBtr0332438
+|                 |  |                       |  |           |        +--| (100)
+|                 |  |                       |  |           |           +--Dmel_FBtr0084091
+|                 |  |                       |  |        +--| (61)
+|                 |  |                       |  |        |  |              +---Gasp_gasp1.m3.11755.m1
+|                 |  |                       |  |        |  |           +--| (35)
+|                 |  |                       |  |        |  |           |  |           +--Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA110019
+|                 |  |                       |  |        |  |           |  |     +-----| (100)
+|                 |  |                       |  |        |  |           |  |     |     +--Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA129537
+|                 |  |                       |  |        |  |           |  |  +--| (52)
+|                 |  |                       |  |        |  |           |  |  |  +--Hsap_ENST00000282728
+|                 |  |                       |  |        |  |           |  +--| (54)
+|                 |  |                       |  |        |  |           |     |          +--Hhon_g07171.t1
+|                 |  |                       |  |        |  |           |     |  +-------| (100)
+|                 |  |                       |  |        |  |           |     |  |       +--Tadh_TriadT9560
+|                 |  |                       |  |        |  |           |     +--| (49)
+|                 |  |                       |  |        |  |           |        +-----------Morvir_scaffold11.g90.t1
+|                 |  |                       |  |        |  |        +--| (94)
+|                 |  |                       |  |        |  |        |  +----Xesp_013947-T1
+|                 |  |                       |  |        |  +--------| (100)
+|                 |  |                       |  |        |           |  +--------Tcas_TC004555_001
+|                 |  |                       |  |        |           +--| (97)
+|                 |  |                       |  |        |              +---------Dmel_FBtr0084037
+|                 |  |                       |  |     +--| (43)
+|                 |  |                       |  |     |  |                          +--Tcas_TC011749_001
+|                 |  |                       |  |     |  |                       +--| (100)
+|                 |  |                       |  |     |  |                       |  +--Dmel_FBtr0084111
+|                 |  |                       |  |     |  |                    +--| (99)
+|                 |  |                       |  |     |  |                    |  +--------Morvir_scaffold99.g69.t1
+|                 |  |                       |  |     |  |                 +--| (98)
+|                 |  |                       |  |     |  |                 |  +--Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA222072
+|                 |  |                       |  |     |  |              +--| (79)
+|                 |  |                       |  |     |  |              |  +--Hsap_ENST00000370196
+|                 |  |                       |  |     |  |           +--| (79)
+|                 |  |                       |  |     |  |           |  +--Hsap_ENST00000233638
+|                 |  |                       |  |     |  +-----------| (100)
+|                 |  |                       |  |     |              +--Hsap_ENST00000296921
+|                 |  |                       |  |  +--| (75)
+|                 |  |                       |  |  |  |                     +--Gasp_gasp1.m3.29873.m1
+|                 |  |                       |  |  |  |        +------------| (100)
+|                 |  |                       |  |  |  |        |            +--Gasp_gasp1.m3.18420.m1
+|                 |  |                       |  |  |  |     +--| (92)
+|                 |  |                       |  |  |  |     |  |                      +--Xesp_014792-T1
+|                 |  |                       |  |  |  |     |  |  +-------------------| (100)
+|                 |  |                       |  |  |  |     |  |  |                   +--Xesp_014794-T1
+|                 |  |                       |  |  |  |     |  +--| (93)
+|                 |  |                       |  |  |  |     |     +-----Hsap_ENST00000325980
+|                 |  |                       |  |  |  |  +--| (99)
+|                 |  |                       |  |  |  |  |  |      +---------------------Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA121761
+|                 |  |                       |  |  |  |  |  +------| (100)
+|                 |  |                       |  |  |  |  |         +----Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA208832
+|                 |  |                       |  |  |  +--| (97)
+|                 |  |                       |  |  |     |             +--Hsap_ENST00000229307
+|                 |  |                       |  |  |     +-------------| (100)
+|                 |  |                       |  |  |                   +--Hsap_ENST00000528386
+|                 |  |                       |  +--| (51)
+|                 |  |                       |     |                                      +--Gasp_gasp1.m3.4134.m1
+|                 |  |                       |     |                                   +--| (51)
+|                 |  |                       |     |                                   |  +--------------Morvir_scaffold46.g33.t1
+|                 |  |                       |     |                                +--| (30)
+|                 |  |                       |     |                                |  |   +-------Gasp_gasp1.m3.4129.m1
+|                 |  |                       |     |                                |  +---| (93)
+|                 |  |                       |     |                                |      +--------Xesp_022051-T1
+|                 |  |                       |     |                             +--| (47)
+|                 |  |                       |     |                             |  +------------Xesp_021545-T1
+|                 |  |                       |     |                          +--| (62)
+|                 |  |                       |     |                          |  |  +--Gasp_gasp1.m3.4132.m1
+|                 |  |                       |     |                          |  +--| (99)
+|                 |  |                       |     |                          |     +-----Gasp_gasp1.m3.4130.m1
+|                 |  |                       |     |                       +--| (61)
+|                 |  |                       |     |                       |  |       +--Xesp_016908-T1
+|                 |  |                       |     |                       |  +-------| (100)
+|                 |  |                       |     |                       |          +--Xesp_021558-T1
+|                 |  |                       |     |                    +--| (31)
+|                 |  |                       |     |                    |  |           +--Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA70572
+|                 |  |                       |     |                    |  |        +--| (100)
+|                 |  |                       |     |                    |  |        |  +--Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA221803
+|                 |  |                       |     |                    |  |     +--| (100)
+|                 |  |                       |     |                    |  |     |  +------Hsap_ENST00000258829
+|                 |  |                       |     |                    |  |  +--| (100)
+|                 |  |                       |     |                    |  |  |  +--Hsap_ENST00000377142
+|                 |  |                       |     |                    |  +--| (100)
+|                 |  |                       |     |                    |     |  +--Dmel_FBtr0070110
+|                 |  |                       |     |                    |     +--| (100)
+|                 |  |                       |     |                    |        +--Tcas_TC007014_001
+|                 |  |                       |     |                 +--| (60)
+|                 |  |                       |     |                 |  |    +--Tadh_TriadT9561
+|                 |  |                       |     |                 |  +----| (97)
+|                 |  |                       |     |                 |       |  +---------Morvir_scaffold83.g2.t1
+|                 |  |                       |     |                 |       +--| (57)
+|                 |  |                       |     |                 |          +-----------Morvir_scaffold273.g2.t1
+|                 |  |                       |     |              +--| (99)
+|                 |  |                       |     |              |  |           +--Dmel_FBtr0113751
+|                 |  |                       |     |              |  |        +--| (82)
+|                 |  |                       |     |              |  |        |  +--Tcas_TC008996_001
+|                 |  |                       |     |              |  |     +--| (81)
+|                 |  |                       |     |              |  |     |  |  +--Hsap_ENST00000351817
+|                 |  |                       |     |              |  |     |  +--| (100)
+|                 |  |                       |     |              |  |     |     +--Hsap_ENST00000354822
+|                 |  |                       |     |              |  |  +--| (68)
+|                 |  |                       |     |              |  |  |  |  +--Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA40416
+|                 |  |                       |     |              |  |  |  +--| (100)
+|                 |  |                       |     |              |  |  |     +----Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA172338
+|                 |  |                       |     |              |  +--| (94)
+|                 |  |                       |     |              |     |         +--Hhon_g07292.t1
+|                 |  |                       |     |              |     +---------| (100)
+|                 |  |                       |     |              |               +--Tadh_TriadT9507
+|                 |  |                       |     |           +--| (84)
+|                 |  |                       |     |           |  |        +--Hsap_ENST00000329198
+|                 |  |                       |     |           |  |     +--| (100)
+|                 |  |                       |     |           |  |     |  +---Hsap_ENST00000325017
+|                 |  |                       |     |           |  |  +--| (100)
+|                 |  |                       |     |           |  |  |  +--Hsap_ENST00000344586
+|                 |  |                       |     |           |  +--| (100)
+|                 |  |                       |     |           |     |  +---Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA170007
+|                 |  |                       |     |           |     +--| (100)
+|                 |  |                       |     |           |        +--Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA220898
+|                 |  |                       |     |        +--| (74)
+|                 |  |                       |     |        |  |     +--Gasp_gasp1.m3.679.m1
+|                 |  |                       |     |        |  |  +--| (100)
+|                 |  |                       |     |        |  |  |  +---Xesp_013044-T1
+|                 |  |                       |     |        |  +--| (94)
+|                 |  |                       |     |        |     +-----Morvir_scaffold11.g115.t1
+|                 |  |                       |     |     +--| (97)
+|                 |  |                       |     |     |  |  +--------Tcas_TC011745_001
+|                 |  |                       |     |     |  +--| (40)
+|                 |  |                       |     |     |     +-----Dmel_FBtr0084086
+|                 |  |                       |     |  +--| (100)
+|                 |  |                       |     |  |  |             +---Gasp_gasp1.m3.680.m1
+|                 |  |                       |     |  |  |          +--| (65)
+|                 |  |                       |     |  |  |          |  |  +--Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA79432
+|                 |  |                       |     |  |  |          |  +--| (95)
+|                 |  |                       |     |  |  |          |     |  +---Tcas_TC012743_001
+|                 |  |                       |     |  |  |          |     +--| (100)
+|                 |  |                       |     |  |  |          |        +-----Dmel_FBtr0084087
+|                 |  |                       |     |  |  |       +--| (33)
+|                 |  |                       |     |  |  |       |  |  +---Xesp_013038-T1
+|                 |  |                       |     |  |  |       |  +--| (84)
+|                 |  |                       |     |  |  |       |     +-----------------Morvir_scaffold477.g8.t1
+|                 |  |                       |     |  |  |    +--| (88)
+|                 |  |                       |     |  |  |    |  +--Hsap_ENST00000382438
+|                 |  |                       |     |  |  +----| (100)
+|                 |  |                       |     |  |       +--------Hsap_ENST00000380871
+|                 |  |                       |     +--| (60)
+|                 |  |                       |        |                 +-----Gasp_gasp1.m3.4135.m1
+|                 |  |                       |        |              +--| (99)
+|                 |  |                       |        |              |  +--------------------Tadh_TriadT51739
+|                 |  |                       |        |           +--| (94)
+|                 |  |                       |        |           |  |      +--Tcas_TC015928_001
+|                 |  |                       |        |           |  +------| (100)
+|                 |  |                       |        |           |         +----------Dmel_FBtr0083968
+|                 |  |                       |        |      +----| (100)
+|                 |  |                       |        |      |    |  +---------Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA70959
+|                 |  |                       |        |      |    +--| (96)
+|                 |  |                       |        |      |       |     +-------Morvir_scaffold188.g35.t1
+|                 |  |                       |        |      |       |  +--| (100)
+|                 |  |                       |        |      |       |  |  |             +--Xesp_022106-T1
+|                 |  |                       |        |      |       |  |  |          +--| (99)
+|                 |  |                       |        |      |       |  |  |          |  +--Xesp_022121-T1
+|                 |  |                       |        |      |       |  |  |       +--| (80)
+|                 |  |                       |        |      |       |  |  |       |  |     +--Xesp_017090-T1
+|                 |  |                       |        |      |       |  |  |       |  |  +--| (100)
+|                 |  |                       |        |      |       |  |  |       |  |  |  +--Xesp_022100-T1
+|                 |  |                       |        |      |       |  |  |       |  +--| (100)
+|                 |  |                       |        |      |       |  |  |       |     +--Xesp_022099-T1
+|                 |  |                       |        |      |       |  |  +-------| (100)
+|                 |  |                       |        |      |       |  |          +--Xesp_022116-T1
+|                 |  |                       |        |      |       +--| (99)
+|                 |  |                       |        |      |          +-------------Gasp_gasp1.m3.4133.m1
+|                 |  |                       |        +------| (100)
+|                 |  |                       |               |           +--Gasp_gasp1.m3.677.m1
+|                 |  |                       |               |        +--| (93)
+|                 |  |                       |               |        |  +-----Xesp_013039-T1
+|                 |  |                       |               |     +--| (85)
+|                 |  |                       |               |     |  |  +--Hsap_ENST00000382723
+|                 |  |                       |               |     |  +--| (100)
+|                 |  |                       |               |     |     +--Hsap_ENST00000239243
+|                 |  |                       |               |  +--| (68)
+|                 |  |                       |               |  |  |  +----Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA176625
+|                 |  |                       |               |  |  +--| (99)
+|                 |  |                       |               |  |     +--Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA87981
+|                 |  |                       |               +--| (100)
+|                 |  |                       |                  |  +----Tcas_TC012748_001
+|                 |  |                       |                  +--| (100)
+|                 |  |                       |                     |  +--Tcas_TC011744_001
+|                 |  |                       |                     +--| (100)
+|                 |  |                       |                        +---Dmel_FBtr0085441
+|                 |  |                    +--| (48)
+|                 |  |                    |  |                                 +-----------------------Morvir_scaffold85.g37.t1
+|                 |  |                    |  |                              +--| (45)
+|                 |  |                    |  |                              |  +--Tcas_TC034733_001
+|                 |  |                    |  |                           +--| (43)
+|                 |  |                    |  |                           |  +--Dmel_FBtr0290136
+|                 |  |                    |  |                        +--| (56)
+|                 |  |                    |  |                        |  |     +--Hsap_ENST00000524983
+|                 |  |                    |  |                        |  |  +--| (90)
+|                 |  |                    |  |                        |  |  |  +---------Hsap_ENST00000332700
+|                 |  |                    |  |                        |  +--| (87)
+|                 |  |                    |  |                        |     +--Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA220261
+|                 |  |                    |  |                +-------| (100)
+|                 |  |                    |  |                |       |         +--Hhon_g08608.t1
+|                 |  |                    |  |                |       +---------| (100)
+|                 |  |                    |  |                |                 +--Tadh_TriadT18102
+|                 |  |                    |  |             +--| (72)
+|                 |  |                    |  |             |  |         +--------Xesp_009987-T1
+|                 |  |                    |  |             |  |     +---| (100)
+|                 |  |                    |  |             |  |     |   |  +------Gasp_gasp1.m3.12691.m1
+|                 |  |                    |  |             |  |     |   +--| (68)
+|                 |  |                    |  |             |  |     |      +--Gasp_gasp1.m3.30352.m1
+|                 |  |                    |  |             |  |  +--| (98)
+|                 |  |                    |  |             |  |  |  +------------Gasp_gasp1.m3.14501.m1
+|                 |  |                    |  |             |  +--| (92)
+|                 |  |                    |  |             |     |     +---Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA173964
+|                 |  |                    |  |             |     |  +--| (50)
+|                 |  |                    |  |             |     |  |  +----Hsap_ENST00000366903
+|                 |  |                    |  |             |     +--| (63)
+|                 |  |                    |  |             |        +-------Tcas_TC031113_001
+|                 |  |                    |  |          +--| (94)
+|                 |  |                    |  |          |  +-------Dmel_FBtr0079227
+|                 |  |                    |  |     +----| (100)
+|                 |  |                    |  |     |    +------Morvir_scaffold95.g3.t1
+|                 |  |                    |  |  +--| (95)
+|                 |  |                    |  |  |  |                 +--Gasp_gasp1.m3.24801.m1
+|                 |  |                    |  |  |  |              +--| (100)
+|                 |  |                    |  |  |  |              |  |  +-----Gasp_gasp1.m3.24803.m1
+|                 |  |                    |  |  |  |              |  +--| (56)
+|                 |  |                    |  |  |  |              |     +--Gasp_gasp1.m3.16233.m1
+|                 |  |                    |  |  |  |           +--| (100)
+|                 |  |                    |  |  |  |           |  +-----Xesp_004967-T1
+|                 |  |                    |  |  |  |        +--| (100)
+|                 |  |                    |  |  |  |        |  +-----Morvir_scaffold175.g50.t1
+|                 |  |                    |  |  |  |     +--| (100)
+|                 |  |                    |  |  |  |     |  +------------Xesp_015541-T1
+|                 |  |                    |  |  |  |  +--| (95)
+|                 |  |                    |  |  |  |  |  |      +-------Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA80939
+|                 |  |                    |  |  |  |  |  +------| (100)
+|                 |  |                    |  |  |  |  |         |  +---Hsap_ENST00000253968
+|                 |  |                    |  |  |  |  |         +--| (100)
+|                 |  |                    |  |  |  |  |            +-----Hsap_ENST00000281437
+|                 |  |                    |  |  |  +--| (99)
+|                 |  |                    |  |  |     |          +--Hsap_ENST00000343035
+|                 |  |                    |  |  |     |      +---| (100)
+|                 |  |                    |  |  |     |      |   +------Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA149569
+|                 |  |                    |  |  |     |   +--| (100)
+|                 |  |                    |  |  |     |   |  +---Tcas_TC015394_001
+|                 |  |                    |  |  |     +---| (100)
+|                 |  |                    |  |  |         +----Dmel_FBtr0089320
+|                 |  |                    |  +--| (88)
+|                 |  |                    |     |                +----Gasp_gasp1.m3.4695.m1
+|                 |  |                    |     |             +--| (95)
+|                 |  |                    |     |             |  +-----Xesp_010138-T1
+|                 |  |                    |     |          +--| (94)
+|                 |  |                    |     |          |  +--------Morvir_scaffold140.g36.t1
+|                 |  |                    |     |       +--| (99)
+|                 |  |                    |     |       |  |        +--Hsap_ENST00000361725
+|                 |  |                    |     |       |  |     +--| (94)
+|                 |  |                    |     |       |  |     |  +--------Hsap_ENST00000240306
+|                 |  |                    |     |       |  |  +--| (100)
+|                 |  |                    |     |       |  |  |  +--Hsap_ENST00000518156
+|                 |  |                    |     |       |  +--| (99)
+|                 |  |                    |     |       |     |   +--Hsap_ENST00000648378
+|                 |  |                    |     |       |     +---| (100)
+|                 |  |                    |     |       |         |  +---Hsap_ENST00000234198
+|                 |  |                    |     |       |         +--| (100)
+|                 |  |                    |     |       |            +--Hsap_ENST00000434704
+|                 |  |                    |     |    +--| (100)
+|                 |  |                    |     |    |  |             +--Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA40403
+|                 |  |                    |     |    |  |       +-----| (100)
+|                 |  |                    |     |    |  |       |     +--Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA74740
+|                 |  |                    |     |    |  |    +--| (90)
+|                 |  |                    |     |    |  |    |  +--Dmel_FBtr0300076
+|                 |  |                    |     |    |  +----| (100)
+|                 |  |                    |     |    |       +--Tcas_TC009351_001
+|                 |  |                    |     +----| (100)
+|                 |  |                    |          |  +--------Morvir_scaffold140.g33.t1
+|                 |  |                    |          +--| (99)
+|                 |  |                    |             |       +--Hhon_g08887.t1
+|                 |  |                    |             +-------| (100)
+|                 |  |                    |                     +--Tadh_TriadT49530
+|                 |  |                 +--| (65)
+|                 |  |                 |  |                        +--Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA174957
+|                 |  |                 |  |                     +--| (100)
+|                 |  |                 |  |                     |  +--Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA30874
+|                 |  |                 |  |                  +--| (100)
+|                 |  |                 |  |                  |  |  +--Tcas_TC031415_001
+|                 |  |                 |  |                  |  +--| (100)
+|                 |  |                 |  |                  |     |  +--Dmel_FBtr0074429
+|                 |  |                 |  |                  |     +--| (100)
+|                 |  |                 |  |                  |        +--Dmel_FBtr0074430
+|                 |  |                 |  |               +--| (51)
+|                 |  |                 |  |               |  +--Hsap_ENST00000370445
+|                 |  |                 |  |          +----| (98)
+|                 |  |                 |  |          |    +--Hsap_ENST00000263610
+|                 |  |                 |  |     +----| (100)
+|                 |  |                 |  |     |    |              +--Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA48054
+|                 |  |                 |  |     |    |      +-------| (100)
+|                 |  |                 |  |     |    |      |       +--Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA187461
+|                 |  |                 |  |     |    +------| (100)
+|                 |  |                 |  |     |           |  +--Dmel_FBtr0073656
+|                 |  |                 |  |     |           +--| (100)
+|                 |  |                 |  |     |              +--Tcas_TC000424_001
+|                 |  |                 |  |  +--| (70)
+|                 |  |                 |  |  |  |              +--Gasp_gasp1.m3.10379.m1
+|                 |  |                 |  |  |  |           +--| (100)
+|                 |  |                 |  |  |  |           |  +-------Xesp_007977-T1
+|                 |  |                 |  |  |  |        +--| (100)
+|                 |  |                 |  |  |  |        |  +----------Xesp_007810-T1
+|                 |  |                 |  |  |  |     +--| (81)
+|                 |  |                 |  |  |  |     |  |     +--Gasp_gasp1.m3.10374.m1
+|                 |  |                 |  |  |  |     |  |  +--| (100)
+|                 |  |                 |  |  |  |     |  |  |  +--Gasp_gasp1.m3.10375.m1
+|                 |  |                 |  |  |  |     |  +--| (99)
+|                 |  |                 |  |  |  |     |     +----Xesp_007812-T1
+|                 |  |                 |  |  |  |  +--| (72)
+|                 |  |                 |  |  |  |  |  +-----Gasp_gasp1.m3.10369.m1
+|                 |  |                 |  |  |  +--| (97)
+|                 |  |                 |  |  |     +---------Xesp_007813-T1
+|                 |  |                 |  +--| (62)
+|                 |  |                 |     |              +--Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA30886
+|                 |  |                 |     |           +--| (98)
+|                 |  |                 |     |           |  +-----Morvir_scaffold21.g122.t1
+|                 |  |                 |     |        +--| (67)
+|                 |  |                 |     |        |  +--Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA78648
+|                 |  |                 |     +--------| (100)
+|                 |  |                 |              |        +--Gasp_gasp1.m3.982.m1
+|                 |  |                 |              |     +--| (81)
+|                 |  |                 |              |     |  +--Xesp_013922-T1
+|                 |  |                 |              |  +--| (78)
+|                 |  |                 |              |  |  |  +---Dmel_FBtr0330389
+|                 |  |                 |              |  |  +--| (99)
+|                 |  |                 |              |  |     +--Tcas_TC012332_001
+|                 |  |                 |              +--| (78)
+|                 |  |                 |                 |  +--Hsap_ENST00000422806
+|                 |  |                 |                 +--| (96)
+|                 |  |                 |                    +-----Hsap_ENST00000451024
+|                 |  |              +--| (54)
+|                 |  |              |  |                            +-----------Gasp_gasp1.m3.16096.m1
+|                 |  |              |  |                       +----| (96)
+|                 |  |              |  |                       |    +--------Gasp_gasp1.m3.23770.m1
+|                 |  |              |  |                    +--| (84)
+|                 |  |              |  |                    |  |      +--Gasp_gasp1.m3.970.m1
+|                 |  |              |  |                    |  +------| (100)
+|                 |  |              |  |                    |         +-----Gasp_gasp1.m1b.1230.m1
+|                 |  |              |  |                 +--| (90)
+|                 |  |              |  |                 |  +--------Xesp_020407-T1
+|                 |  |              |  |              +--| (70)
+|                 |  |              |  |              |  |                +--Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA88560
+|                 |  |              |  |              |  |           +----| (99)
+|                 |  |              |  |              |  |           |    |     +--Tcas_TC000483_001
+|                 |  |              |  |              |  |           |    +-----| (100)
+|                 |  |              |  |              |  |           |          +-----Dmel_FBtr0083571
+|                 |  |              |  |              |  |        +--| (69)
+|                 |  |              |  |              |  |        |  +--------Gasp_gasp1.m3.2245.m1
+|                 |  |              |  |              |  |     +--| (66)
+|                 |  |              |  |              |  |     |  +--Gasp_gasp1.m3.13464.m1
+|                 |  |              |  |              |  |  +--| (92)
+|                 |  |              |  |              |  |  |  +--------Xesp_013856-T1
+|                 |  |              |  |              |  +--| (90)
+|                 |  |              |  |              |     |     +--Hhon_g10555.t1
+|                 |  |              |  |              |     +-----| (100)
+|                 |  |              |  |              |           +--Tadh_TriadT49524
+|                 |  |              |  |           +--| (80)
+|                 |  |              |  |           |  |  +-----------------Gasp_gasp1.m3.2233.m1
+|                 |  |              |  |           |  +--| (62)
+|                 |  |              |  |           |     +-------Morvir_scaffold149.g55.t1
+|                 |  |              |  |        +--| (97)
+|                 |  |              |  |        |  |  +-----------------------Gasp_gasp1.m3.28194.m1
+|                 |  |              |  |        |  +--| (54)
+|                 |  |              |  |        |     |  +--------Gasp_gasp1.m3.2249.m1
+|                 |  |              |  |        |     +--| (89)
+|                 |  |              |  |        |        |  +------------------Gasp_gasp1.m1b.2861.m1
+|                 |  |              |  |        |        +--| (97)
+|                 |  |              |  |        |           +--------Hsap_ENST00000398468
+|                 |  |              |  |     +--| (98)
+|                 |  |              |  |     |  |                 +------Gasp_gasp1.m3.23164.m1
+|                 |  |              |  |     |  |         +-------| (100)
+|                 |  |              |  |     |  |         |       +----Xesp_013885-T1
+|                 |  |              |  |     |  |     +---| (97)
+|                 |  |              |  |     |  |     |   |           +----Gasp_gasp1.m3.22638.m1
+|                 |  |              |  |     |  |     |   +-----------| (100)
+|                 |  |              |  |     |  |     |               +------------------Xesp_013548-T1
+|                 |  |              |  |     |  |  +--| (98)
+|                 |  |              |  |     |  |  |  |        +---Gasp_gasp1.m3.23161.m1
+|                 |  |              |  |     |  |  |  |     +--| (96)
+|                 |  |              |  |     |  |  |  |     |  +----------Morvir_scaffold5.g160.t1
+|                 |  |              |  |     |  |  |  |  +--| (100)
+|                 |  |              |  |     |  |  |  |  |  +---------Gasp_gasp1.m1b.17996.m1
+|                 |  |              |  |     |  |  |  +--| (92)
+|                 |  |              |  |     |  |  |     |        +--Dmel_FBtr0082880
+|                 |  |              |  |     |  |  |     |     +--| (96)
+|                 |  |              |  |     |  |  |     |     |  |  +--Tcas_TC011763_001
+|                 |  |              |  |     |  |  |     |     |  +--| (95)
+|                 |  |              |  |     |  |  |     |     |     +---Dmel_FBtr0082863
+|                 |  |              |  |     |  |  |     |  +--| (48)
+|                 |  |              |  |     |  |  |     |  |  |   +--Hsap_ENST00000258106
+|                 |  |              |  |     |  |  |     |  |  +---| (100)
+|                 |  |              |  |     |  |  |     |  |      +--Hsap_ENST00000553456
+|                 |  |              |  |     |  |  |     +--| (93)
+|                 |  |              |  |     |  |  |        |  +------Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA25827
+|                 |  |              |  |     |  |  |        +--| (93)
+|                 |  |              |  |     |  |  |           +--Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA183448
+|                 |  |              |  |     |  +--| (87)
+|                 |  |              |  |     |     |        +------Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA80769
+|                 |  |              |  |     |     +--------| (100)
+|                 |  |              |  |     |              |  +--Hsap_ENST00000369206
+|                 |  |              |  |     |              +--| (100)
+|                 |  |              |  |     |                 +--Hsap_ENST00000234392
+|                 |  |              |  |  +--| (47)
+|                 |  |              |  |  |  |                 +--Gasp_gasp1.m3.15756.m1
+|                 |  |              |  |  |  |             +---| (100)
+|                 |  |              |  |  |  |             |   |  +--Gasp_gasp1.m3.26136.m1
+|                 |  |              |  |  |  |             |   +--| (100)
+|                 |  |              |  |  |  |             |      +--Gasp_gasp1.m3.26141.m1
+|                 |  |              |  |  |  |          +--| (100)
+|                 |  |              |  |  |  |          |  +---Gasp_gasp1.m3.12286.m1
+|                 |  |              |  |  |  |       +--| (99)
+|                 |  |              |  |  |  |       |  +-----Gasp_gasp1.m3.12289.m1
+|                 |  |              |  |  |  |  +----| (100)
+|                 |  |              |  |  |  |  |    +---Gasp_gasp1.m3.12287.m1
+|                 |  |              |  |  |  +--| (89)
+|                 |  |              |  |  |     +--------------------Xesp_007966-T1
+|                 |  |              |  +--| (53)
+|                 |  |              |     |             +-------Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA171492
+|                 |  |              |     |          +--| (90)
+|                 |  |              |     |          |  +----Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA147353
+|                 |  |              |     |       +--| (91)
+|                 |  |              |     |       |  +------------------Dmel_FBtr0072224
+|                 |  |              |     +-------| (100)
+|                 |  |              |             |  +----Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA154864
+|                 |  |              |             +--| (90)
+|                 |  |              |                +----------------Gasp_gasp1.m3.16169.m1
+|                 |  |           +--| (46)
+|                 |  |           |  |              +-----Gasp_gasp1.m3.4690.m1
+|                 |  |           |  |           +--| (97)
+|                 |  |           |  |           |  +----Gasp_gasp1.m1b.6286.m1
+|                 |  |           |  |        +--| (80)
+|                 |  |           |  |        |  |  +-------Xesp_010136-T1
+|                 |  |           |  |        |  +--| (75)
+|                 |  |           |  |        |     +------------Xesp_010137-T1
+|                 |  |           |  |     +--| (97)
+|                 |  |           |  |     |  |   +---Tcas_TC033532_001
+|                 |  |           |  |     |  +---| (99)
+|                 |  |           |  |     |      +------Dmel_FBtr0342701
+|                 |  |           |  |  +--| (81)
+|                 |  |           |  |  |  |            +------Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA127720
+|                 |  |           |  |  |  |       +----| (100)
+|                 |  |           |  |  |  |       |    +--Tcas_TC001164_001
+|                 |  |           |  |  |  +-------| (100)
+|                 |  |           |  |  |          +---Dmel_FBtr0308948
+|                 |  |           |  +--| (64)
+|                 |  |           |     |                   +--Tcas_TC009896_001
+|                 |  |           |     |                +--| (100)
+|                 |  |           |     |                |  +--Dmel_FBtr0088068
+|                 |  |           |     |             +--| (100)
+|                 |  |           |     |             |  |  +---Dmel_FBtr0088095
+|                 |  |           |     |             |  +--| (94)
+|                 |  |           |     |             |     +--Tcas_TC008952_001
+|                 |  |           |     |          +--| (38)
+|                 |  |           |     |          |  |  +--Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA152545
+|                 |  |           |     |          |  +--| (56)
+|                 |  |           |     |          |     +---------Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA152542
+|                 |  |           |     +----------| (100)
+|                 |  |           |                |  +--Hsap_ENST00000295206
+|                 |  |           |                +--| (100)
+|                 |  |           |                   +--Hsap_ENST00000297375
+|                 |  |        +--| (94)
+|                 |  |        |  +----------------------------------Dmel_FBtr0081668
+|                 |  |     +--| (94)
+|                 |  |     |  |                      +--Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA127728
+|                 |  |     |  |                   +--| (95)
+|                 |  |     |  |                   |  +--Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA159948
+|                 |  |     |  |               +---| (100)
+|                 |  |     |  |               |   +--Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA137362
+|                 |  |     |  |            +--| (100)
+|                 |  |     |  |            |  |  +--Dmel_FBtr0085090
+|                 |  |     |  |            |  +--| (98)
+|                 |  |     |  |            |     +----Tcas_TC030553_001
+|                 |  |     |  |        +---| (100)
+|                 |  |     |  |        |   |  +--Gasp_gasp1.m3.12193.m1
+|                 |  |     |  |        |   +--| (72)
+|                 |  |     |  |        |      +----Xesp_009291-T1
+|                 |  |     |  |     +--| (78)
+|                 |  |     |  |     |  |     +----Gasp_gasp1.m3.12181.m1
+|                 |  |     |  |     |  +-----| (100)
+|                 |  |     |  |     |        |                 +--Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA70992
+|                 |  |     |  |     |        |              +--| (100)
+|                 |  |     |  |     |        |              |  +--Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA99816
+|                 |  |     |  |     |        |           +--| (98)
+|                 |  |     |  |     |        |           |  +--Tcas_TC009469_001
+|                 |  |     |  |     |        |        +--| (98)
+|                 |  |     |  |     |        |        |  +--Dmel_FBtr0088390
+|                 |  |     |  |     |        +--------| (100)
+|                 |  |     |  |     |                 |  +--Hsap_ENST00000308618
+|                 |  |     |  |     |                 +--| (100)
+|                 |  |     |  |     |                    +--Hsap_ENST00000496902
+|                 |  |     |  |  +--| (57)
+|                 |  |     |  |  |  |                         +--Gasp_gasp1.m3.3944.m1
+|                 |  |     |  |  |  |                      +--| (76)
+|                 |  |     |  |  |  |                      |  +--------Gasp_gasp1.m3.3946.m1
+|                 |  |     |  |  |  |                   +--| (98)
+|                 |  |     |  |  |  |                   |  |  +--Gasp_gasp1.m3.3948.m1
+|                 |  |     |  |  |  |                   |  +--| (76)
+|                 |  |     |  |  |  |                   |     +----Xesp_010186-T1
+|                 |  |     |  |  |  |                +--| (54)
+|                 |  |     |  |  |  |                |  +-----Gasp_gasp1.m3.3947.m1
+|                 |  |     |  |  |  |             +--| (41)
+|                 |  |     |  |  |  |             |  |  +----Hsap_ENST00000262041
+|                 |  |     |  |  |  |             |  +--| (51)
+|                 |  |     |  |  |  |             |     +-----Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA173096
+|                 |  |     |  |  |  |          +--| (39)
+|                 |  |     |  |  |  |          |  +------Hsap_ENST00000318579
+|                 |  |     |  |  |  |       +--| (98)
+|                 |  |     |  |  |  |       |  |  +--Tcas_TC030982_001
+|                 |  |     |  |  |  |       |  +--| (98)
+|                 |  |     |  |  |  |       |     +-----------Dmel_FBtr0084278
+|                 |  |     |  |  |  |  +----| (100)
+|                 |  |     |  |  |  |  |    +---Morvir_scaffold59.g41.t1
+|                 |  |     |  |  |  +--| (79)
+|                 |  |     |  |  |     |              +----Gasp_gasp1.m3.12278.m1
+|                 |  |     |  |  |     |          +---| (100)
+|                 |  |     |  |  |     |          |   |  +--Dmel_FBtr0088586
+|                 |  |     |  |  |     |          |   +--| (100)
+|                 |  |     |  |  |     |          |      |  +--Tcas_TC009309_001
+|                 |  |     |  |  |     |          |      +--| (100)
+|                 |  |     |  |  |     |          |         +------------Xesp_001248-T1
+|                 |  |     |  |  |     |       +--| (81)
+|                 |  |     |  |  |     |       |  |  +--Hsap_ENST00000306318
+|                 |  |     |  |  |     |       |  +--| (100)
+|                 |  |     |  |  |     |       |     +--Hsap_ENST00000297537
+|                 |  |     |  |  |     +-------| (100)
+|                 |  |     |  |  |             +---Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA151262
+|                 |  |     |  +--| (94)
+|                 |  |     |     |          +--Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA41929
+|                 |  |     |     |       +--| (100)
+|                 |  |     |     |       |  +--Hsap_ENST00000252971
+|                 |  |     |     |  +----| (97)
+|                 |  |     |     |  |    |  +--Tcas_TC009461_001
+|                 |  |     |     |  |    +--| (78)
+|                 |  |     |     |  |       +---Dmel_FBtr0076751
+|                 |  |     |     +--| (97)
+|                 |  |     |        |        +--Hhon_g09133.t1
+|                 |  |     |        +--------| (100)
+|                 |  |     |                 +--Tadh_TriadT50911
+|                 |  |  +--| (97)
+|                 |  |  |  |              +--Tcas_TC000926_001
+|                 |  |  |  |           +--| (100)
+|                 |  |  |  |           |  +------Dmel_FBtr0081696
+|                 |  |  |  |        +--| (100)
+|                 |  |  |  |        |  |     +---Hsap_ENST00000239174
+|                 |  |  |  |        |  |  +--| (100)
+|                 |  |  |  |        |  |  |  +--Hsap_ENST00000643460
+|                 |  |  |  |        |  +--| (100)
+|                 |  |  |  |        |     +--Hsap_ENST00000331462
+|                 |  |  |  |     +--| (100)
+|                 |  |  |  |     |  +--Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA219807
+|                 |  |  |  |  +--| (100)
+|                 |  |  |  |  |  |     +------Morvir_scaffold27.g7.t1
+|                 |  |  |  |  |  +-----| (100)
+|                 |  |  |  |  |        |  +---Gasp_gasp1.m3.12183.m1
+|                 |  |  |  |  |        +--| (100)
+|                 |  |  |  |  |           +--------Xesp_009187-T1
+|                 |  |  |  +--| (59)
+|                 |  |  |     +----------------Morvir_scaffold70.g42.t1
+|                 |  +--| (93)
+|                 |     |  +-------Dmel_FBtr0081670
+|                 |     +--| (100)
+|                 |        +-----Dmel_FBtr0081671
+|              +--| (99)
+|              |  |        +------------Gasp_gasp1.m3.12182.m1
+|              |  |     +--| (99)
+|              |  |     |  |         +--Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA94911
+|              |  |     |  |      +--| (92)
+|              |  |     |  |      |  |  +---Dmel_FBtr0089276
+|              |  |     |  |      |  +--| (92)
+|              |  |     |  |      |     +----Tcas_TC000925_001
+|              |  |     |  |  +---| (100)
+|              |  |     |  |  |   |  +--Hsap_ENST00000222718
+|              |  |     |  |  |   +--| (100)
+|              |  |     |  |  |      +--Hsap_ENST00000330070
+|              |  |     |  +--| (94)
+|              |  |     |     +--------Xesp_009184-T1
+|              |  |  +--| (94)
+|              |  |  |  |           +--Hsap_ENST00000311626
+|              |  |  |  |        +--| (100)
+|              |  |  |  |        |  +--Hsap_ENST00000317201
+|              |  |  |  |     +--| (100)
+|              |  |  |  |     |  +--Hsap_ENST00000249440
+|              |  |  |  |  +--| (100)
+|              |  |  |  |  |  +-------Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA219808
+|              |  |  |  +--| (98)
+|              |  |  |     |     +----Tcas_TC000921_001
+|              |  |  |     +-----| (100)
+|              |  |  |           +---Tcas_TC000922_001
+|              |  +--| (94)
+|              |     |     +-----Gasp_gasp1.m3.12180.m1
+|              |     +-----| (100)
+|              |           +---Xesp_009183-T1
+|           +--| (49)
+|           |  |                 +-----Tcas_TC000916_001
+|           |  |              +--| (98)
+|           |  |              |  +------------Dmel_FBtr0081625
+|           |  |           +--| (92)
+|           |  |           |  +------Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA168125
+|           |  |        +--| (66)
+|           |  |        |  |           +--Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA94879
+|           |  |        |  |        +--| (99)
+|           |  |        |  |        |  |             +--Tcas_TC000894_001
+|           |  |        |  |        |  |        +----| (100)
+|           |  |        |  |        |  |        |    +--Dmel_FBtr0083388
+|           |  |        |  |        |  |     +--| (76)
+|           |  |        |  |        |  |     |  +---Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA225442
+|           |  |        |  |        |  |  +--| (76)
+|           |  |        |  |        |  |  |  |    +--Tcas_TC000903_001
+|           |  |        |  |        |  |  |  +----| (100)
+|           |  |        |  |        |  |  |       +--Dmel_FBtr0083347
+|           |  |        |  |        |  +--| (100)
+|           |  |        |  |        |     +--Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA94902
+|           |  |        |  |     +--| (92)
+|           |  |        |  |     |  |     +--Hsap_ENST00000239144
+|           |  |        |  |     |  +-----| (100)
+|           |  |        |  |     |        |  +--Hsap_ENST00000040584
+|           |  |        |  |     |        +--| (99)
+|           |  |        |  |     |           +--Hsap_ENST00000313173
+|           |  |        |  |  +--| (100)
+|           |  |        |  |  |  |      +--Tcas_TC000912_001
+|           |  |        |  |  |  |  +---| (100)
+|           |  |        |  |  |  |  |   +--Dmel_FBtr0081647
+|           |  |        |  |  |  +--| (93)
+|           |  |        |  |  |     |  +--Hsap_ENST00000242159
+|           |  |        |  |  |     +--| (100)
+|           |  |        |  |  |        +--Hsap_ENST00000239165
+|           |  |        |  +--| (100)
+|           |  |        |     |  +--Hsap_ENST00000225648
+|           |  |        |     +--| (100)
+|           |  |        |        |  +--Hsap_ENST00000222728
+|           |  |        |        +--| (100)
+|           |  |        |           +----Hsap_ENST00000243108
+|           |  |     +--| (61)
+|           |  |     |  |          +--Dmel_FBtr0474171
+|           |  |     |  |     +----| (100)
+|           |  |     |  |     |    +--Tcas_TC000917_001
+|           |  |     |  |  +--| (50)
+|           |  |     |  |  |  |        +---Dmel_FBtr0081621
+|           |  |     |  |  |  |     +--| (100)
+|           |  |     |  |  |  |     |  +--Tcas_TC000920_001
+|           |  |     |  |  |  |  +--| (97)
+|           |  |     |  |  |  |  |  |     +--Hsap_ENST00000332503
+|           |  |     |  |  |  |  |  |  +--| (100)
+|           |  |     |  |  |  |  |  |  |  |  +--Hsap_ENST00000303406
+|           |  |     |  |  |  |  |  |  |  +--| (100)
+|           |  |     |  |  |  |  |  |  |     +--Hsap_ENST00000306324
+|           |  |     |  |  |  |  |  +--| (100)
+|           |  |     |  |  |  |  |     +--Hsap_ENST00000360046
+|           |  |     |  |  |  +--| (100)
+|           |  |     |  |  |     +---Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA149640
+|           |  |     |  +--| (21)
+|           |  |     |     |      +---Hsap_ENST00000513209
+|           |  |     |     |  +---| (100)
+|           |  |     |     |  |   +--Hsap_ENST00000312492
+|           |  |     |     +--| (100)
+|           |  |     |        |  +--Hsap_ENST00000239151
+|           |  |     |        +--| (100)
+|           |  |     |           +--Hsap_ENST00000222726
+|           |  |  +--| (100)
+|           |  |  |  +---Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA168122
+|           |  +--| (61)
+|           |     |                  +--Hsap_ENST00000303450
+|           |     |               +--| (100)
+|           |     |               |  +--Hsap_ENST00000249499
+|           |     |            +--| (100)
+|           |     |            |  |     +--Hsap_ENST00000343483
+|           |     |            |  |  +--| (100)
+|           |     |            |  |  |  +--Hsap_ENST00000470747
+|           |     |            |  +--| (100)
+|           |     |            |     +--Hsap_ENST00000311177
+|           |     |        +---| (99)
+|           |     |        |   |       +---Hsap_ENST00000283921
+|           |     |        |   |    +--| (100)
+|           |     |        |   |    |  +--Hsap_ENST00000249501
+|           |     |        |   +----| (100)
+|           |     |        |        +--Hsap_ENST00000303460
+|           |     |     +--| (94)
+|           |     |     |  |      +--Hsap_ENST00000006015
+|           |     |     |  +------| (100)
+|           |     |     |         +--Hsap_ENST00000249504
+|           |     |  +--| (100)
+|           |     |  |  |         +----Tcas_TC000889_002
+|           |     |  |  |  +------| (100)
+|           |     |  |  |  |      +--Dmel_FBtr0083384
+|           |     |  |  +--| (70)
+|           |     |  |     |        +----------------------Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA70154
+|           |     |  |     |     +--| (70)
+|           |     |  |     |     |  |           +--Hsap_ENST00000649031
+|           |     |  |     |     |  |        +--| (97)
+|           |     |  |     |     |  |        |  +---Hsap_ENST00000290295
+|           |     |  |     |     |  |     +--| (71)
+|           |     |  |     |     |  |     |  +--Hsap_ENST00000243056
+|           |     |  |     |     |  +-----| (99)
+|           |     |  |     |     |        +--Hsap_ENST00000392539
+|           |     |  |     |  +--| (71)
+|           |     |  |     |  |  |         +--Hsap_ENST00000406506
+|           |     |  |     |  |  +---------| (100)
+|           |     |  |     |  |            +----Hsap_ENST00000243103
+|           |     |  |     +--| (70)
+|           |     |  |        +----------Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA126009
+|           |     +--| (99)
+|           |        |         +---Tcas_TC032769_002
+|           |        |      +--| (98)
+|           |        |      |  |  +-----Dmel_FBtr0335152
+|           |        |      |  +--| (99)
+|           |        |      |     +----Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA109027
+|           |        +------| (100)
+|           |               |  +-----Hsap_ENST00000373514
+|           |               +--| (65)
+|           |                  |  +---Hsap_ENST00000231656
+|           |                  +--| (100)
+|           |                     +--Hsap_ENST00000381020
+|        +--| (61)
+|        |  |           +--------Gasp_gasp1.m3.27871.m1
+|        |  |  +--------| (100)
+|        |  |  |        +--------Morvir_scaffold189.g37.t1
+|        |  +--| (93)
+|        |     |  +-----Hsap_ENST00000381033
+|        |     +--| (100)
+|        |        +-----Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA196539
+|     +--| (98)
+|     |  |         +-------------Xesp_009185-T1
+|     |  |      +--| (84)
+|     |  |      |  +-------Xesp_009182-T1
+|     |  |  +---| (91)
+|     |  |  |   +---------Gasp_gasp1.m3.12179.m1
+|     |  +--| (63)
+|     |     +------------Morvir_scaffold70.g45.t1
+|  +--| (99)
+|  |  |      +---Morvir_scaffold340.g1.t1
+|  |  +------| (100)
+|  |         +--Morvir_scaffold45.g78.t1
++--| (100)
+   +----------Morvir_scaffold216.g16.t1
+
+
+Consensus tree in newick format: 
+
+(Xesp_013872-T1:0.4540594391,Gasp_gasp1.m3.14269.m1:0.1964081958,((((((((((Tcas_TC006888_001:0.2837122883,Dmel_FBtr0333875:0.5712069899)100:0.1313064155,(Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA156652:0.5201110558,(Hsap_ENST00000302945:0.2179264354,Hsap_ENST00000326902:0.2128206717)100:0.1569660149)88:0.0728308496)100:0.2728318219,((Hhon_g10818.t1:0.0541558664,Tadh_TriadT33728:0.0629831701)100:0.3181410362,((Xesp_015649-T1:0.0000021370,Xesp_025417-T1:0.0000021370)100:0.5748624265,(Morvir_scaffold348.g20.t1:0.1804415532,Gasp_gasp1.m3.27866.m1:0.4898487809)100:0.0842842976)100:0.0751873392)100:0.0800924306)100:0.2313010668,(((((((((((Morvir_scaffold98.g48.t1:0.6958863051,(((Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA79123:0.0431641233,(Dmel_FBtr0082941:0.4597944319,Tcas_TC013614_001:0.2606442090)100:0.0940849647)100:0.0582851966,Gasp_gasp1.m3.24581.m1:0.3201655554)99:0.1833786604,Xesp_013923-T1:0.6307729399)92:0.0632380418)99:0.1927446561,(((((Gasp_gasp1.m3.987.m1:0.2155732981,Xesp_013920-T1:0.4159445301)100:0.0535476099,(Hhon_g07172.t1:0.0972588583,Tadh_TriadT50928:0.0155952773)100:0.5726046824)84:0.0485305950,((Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA80758:0.0282192059,Tcas_TC012136_001:0.1209053831)99:0.0989848238,Dmel_FBtr0330386:0.2486900437)99:0.0959088118)52:0.0212678610,((Hsap_ENST00000357878:0.2040273737,Hsap_ENST00000339992:0.3442673858)68:0.0488083846,((Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA80782:0.0000021370,Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA81827:0.0000021370)100:0.6461467439,Hsap_ENST00000400677:0.0000024837)53:0.4054053557)51:0.0445752146)100:0.5597168271,((Gasp_gasp1.m3.21838.m1:0.1269555703,(Morvir_scaffold42.g46.t1:0.7036955642,Xesp_013949-T1:0.9996689556)99:0.1988289324)99:0.2180207256,((Hsap_ENST00000295886:0.1115990267,(((Hhon_g07174.t1:0.0370225704,Tadh_TriadT31334:0.1707862741)100:0.9617370614,Hsap_ENST00000368592:0.0383608122)57:0.0251130271,Hsap_ENST00000518699:0.4538367308)70:0.0644901935)72:0.0615310011,(Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA6193:0.2182010000,(Dmel_FBtr0075720:0.1920366874,Tcas_TC014200_001:0.2289655310)100:0.0577438304)87:0.0877735269)96:0.0937679583)100:0.5680775847)62:0.0518316820)75:0.1394554009,(((((((((Gasp_gasp1.m3.682.m1:0.0000024403,Gasp_gasp1.m3.10613.m1:1.5202753851)100:0.4395317004,Xesp_012798-T1:0.5065477989)100:0.2087086334,Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA29749:0.1840774130)90:0.0661492190,(Hsap_ENST00000370193:0.0510624038,Hsap_ENST00000377566:0.7050941737)92:0.1611576106)99:0.1744275084,(Tcas_TC011748_001:0.1690065037,(Dmel_FBtr0332438:0.2130835719,Dmel_FBtr0084091:0.1587877142)100:0.1298519945)99:0.0640197435)100:0.4643386382,(((Gasp_gasp1.m3.11755.m1:0.3376374437,(((Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA110019:0.0000021370,Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA129537:0.0000021370)100:0.4626321989,Hsap_ENST00000282728:0.1299346385)52:0.0810785594,((Hhon_g07171.t1:0.2529671154,Tadh_TriadT9560:0.1592568829)100:0.6257291900,Morvir_scaffold11.g90.t1:0.8959804123)49:0.1002579900)54:0.1374541377)35:0.0038875654,Xesp_013947-T1:0.3906904432)94:0.1498773971,(Tcas_TC004555_001:0.7047511375,Dmel_FBtr0084037:0.7544317922)97:0.1813579586)100:0.6717985437)61:0.0601732664,((((((Tcas_TC011749_001:0.0626622603,Dmel_FBtr0084111:0.1245557023)100:0.0808519177,Morvir_scaffold99.g69.t1:0.6839860484)99:0.0956057780,Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA222072:0.1639077475)98:0.1386723763,Hsap_ENST00000370196:0.0705407481)79:0.0064387660,Hsap_ENST00000233638:0.1933199281)79:0.0680090288,Hsap_ENST00000296921:0.0000025883)100:0.8629520174)43:0.0040482504,((((Gasp_gasp1.m3.29873.m1:0.2002939941,Gasp_gasp1.m3.18420.m1:0.0815965210)100:0.9346864431,((Xesp_014792-T1:0.0000022770,Xesp_014794-T1:0.0585852986)100:1.4516739748,Hsap_ENST00000325980:0.4450569860)93:0.2399589093)92:0.0849799432,(Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA121761:1.6087707465,Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA208832:0.3884339459)100:0.5138827744)99:0.2269274104,(Hsap_ENST00000229307:0.0000021370,Hsap_ENST00000528386:0.0044101090)100:1.0305104698)97:0.1576266339)75:0.0612061614,(((((((((((((Gasp_gasp1.m3.4134.m1:0.1654002823,Morvir_scaffold46.g33.t1:1.1206656614)51:0.1265241747,(Gasp_gasp1.m3.4129.m1:0.6015744974,Xesp_022051-T1:0.6750836894)93:0.2849706920)30:0.0000025622,Xesp_021545-T1:0.9175441992)47:0.0590091153,(Gasp_gasp1.m3.4132.m1:0.1892833808,Gasp_gasp1.m3.4130.m1:0.4881688416)99:0.0837608262)62:0.0926510938,(Xesp_016908-T1:0.0477897512,Xesp_021558-T1:0.0000021235)100:0.6114622079)61:0.1013083295,((((Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA70572:0.0237611430,Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA221803:0.0808743177)100:0.1237910585,Hsap_ENST00000258829:0.5070237327)100:0.1297939911,Hsap_ENST00000377142:0.1364707297)100:0.1787895211,(Dmel_FBtr0070110:0.2176726911,Tcas_TC007014_001:0.2622389789)100:0.1266607908)100:0.0779755856)31:0.0000024608,(Tadh_TriadT9561:0.2722621772,(Morvir_scaffold83.g2.t1:0.7603562457,Morvir_scaffold273.g2.t1:0.8702060475)57:0.0652270956)97:0.4050670352)60:0.0525063658,((((Dmel_FBtr0113751:0.0819712732,Tcas_TC008996_001:0.0466325640)82:0.1627002614,(Hsap_ENST00000351817:0.0675602188,Hsap_ENST00000354822:0.1192724144)100:0.0945109670)81:0.0939000736,(Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA40416:0.0783110034,Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA172338:0.3795236807)100:0.1405352518)68:0.0550102614,(Hhon_g07292.t1:0.0000029942,Tadh_TriadT9507:0.0485726344)100:0.7115079799)94:0.0951797810)99:0.0900637421,(((Hsap_ENST00000329198:0.2038584958,Hsap_ENST00000325017:0.2833699619)100:0.1009264406,Hsap_ENST00000344586:0.1148004812)100:0.0820548427,(Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA170007:0.3033205244,Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA220898:0.1621305227)100:0.2207040899)100:0.1779444908)84:0.0711940324,((Gasp_gasp1.m3.679.m1:0.1208803226,Xesp_013044-T1:0.3149774381)100:0.2177412800,Morvir_scaffold11.g115.t1:0.4786403391)94:0.1864473482)74:0.0536365461,(Tcas_TC011745_001:0.6607242095,Dmel_FBtr0084086:0.4727150648)40:0.0357810017)97:0.1870209803,((((Gasp_gasp1.m3.680.m1:0.2843391726,(Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA79432:0.0637576214,(Tcas_TC012743_001:0.3277263301,Dmel_FBtr0084087:0.4550056623)100:0.0532143861)95:0.1704089780)65:0.1144669683,(Xesp_013038-T1:0.3306228757,Morvir_scaffold477.g8.t1:1.2920025031)84:0.2135116341)33:0.0606345257,Hsap_ENST00000382438:0.2297877866)88:0.1088683515,Hsap_ENST00000380871:0.6415335801)100:0.3611587115)100:0.2616921520,((((Gasp_gasp1.m3.4135.m1:0.4408680321,Tadh_TriadT51739:1.5082538212)99:0.1008145489,(Tcas_TC015928_001:0.2472433906,Dmel_FBtr0083968:0.7797388154)100:0.5082043025)94:0.0691514616,(Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA70959:0.7244143385,((Morvir_scaffold188.g35.t1:0.6306011315,(((Xesp_022106-T1:0.0000021370,Xesp_022121-T1:0.0421310016)99:0.0862035074,((Xesp_017090-T1:0.1207798279,Xesp_022100-T1:0.0245716442)100:0.1554413299,Xesp_022099-T1:0.0741880360)100:0.1300584451)80:0.0388598581,Xesp_022116-T1:0.0060310293)100:0.5649306050)100:0.1684223734,Gasp_gasp1.m3.4133.m1:1.0380704962)99:0.1913262403)96:0.0412456880)100:0.3558529318,((((Gasp_gasp1.m3.677.m1:0.1959589768,Xesp_013039-T1:0.4589694516)93:0.0594570981,(Hsap_ENST00000382723:0.0869187979,Hsap_ENST00000239243:0.1208636297)100:0.0728945149)85:0.0199645648,(Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA176625:0.3534391662,Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA87981:0.0214986231)99:0.1626916353)68:0.0448807246,(Tcas_TC012748_001:0.4172702851,(Tcas_TC011744_001:0.2049664340,Dmel_FBtr0085441:0.2900867325)100:0.0774037591)100:0.1401795266)100:0.2745490612)100:0.5370505506)60:0.0923160696)51:0.0292293720)58:0.0495491064,(((((((((Morvir_scaffold85.g37.t1:1.7561709166,Tcas_TC034733_001:0.0753970453)45:0.0943233246,Dmel_FBtr0290136:0.1323007323)43:0.1160502275,((Hsap_ENST00000524983:0.1612697034,Hsap_ENST00000332700:0.7087612505)90:0.0457429757,Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA220261:0.2250316028)87:0.0651833844)56:0.0272087201,(Hhon_g08608.t1:0.0758535452,Tadh_TriadT18102:0.0395937236)100:0.7384952098)100:0.6243405622,(((Xesp_009987-T1:0.6505034224,(Gasp_gasp1.m3.12691.m1:0.5108500478,Gasp_gasp1.m3.30352.m1:0.2112055637)68:0.1000232908)100:0.2960223257,Gasp_gasp1.m3.14501.m1:0.9690092581)98:0.2677120483,((Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA173964:0.3185282000,Hsap_ENST00000366903:0.3729473105)50:0.1147908322,Tcas_TC031113_001:0.5893642520)63:0.0783778394)92:0.0674394665)72:0.0664376765,Dmel_FBtr0079227:0.5828024437)94:0.1626588192,Morvir_scaffold95.g3.t1:0.5067985236)100:0.3780502150,((((((Gasp_gasp1.m3.24801.m1:0.1304762675,(Gasp_gasp1.m3.24803.m1:0.4578259996,Gasp_gasp1.m3.16233.m1:0.1993867985)56:0.0554095573)100:0.2354631671,Xesp_004967-T1:0.4595468776)100:0.1348290186,Morvir_scaffold175.g50.t1:0.4283113223)100:0.1199456365,Xesp_015541-T1:0.9601585033)100:0.1026712207,(Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA80939:0.5690896293,(Hsap_ENST00000253968:0.3134133119,Hsap_ENST00000281437:0.4463821764)100:0.2784215341)100:0.5192424601)95:0.0626590701,(((Hsap_ENST00000343035:0.2032909972,Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA149569:0.5634121674)100:0.3241816179,Tcas_TC015394_001:0.3218549921)100:0.1127988352,Dmel_FBtr0089320:0.4079835215)100:0.3502580283)99:0.1398139960)95:0.0670332736,(((((Gasp_gasp1.m3.4695.m1:0.3543048853,Xesp_010138-T1:0.4318158883)95:0.1227320938,Morvir_scaffold140.g36.t1:0.6426292921)94:0.0880923632,(((Hsap_ENST00000361725:0.1079623392,Hsap_ENST00000240306:0.6679263833)94:0.0533705354,Hsap_ENST00000518156:0.1455874111)100:0.0940889350,(Hsap_ENST00000648378:0.1266295398,(Hsap_ENST00000234198:0.3330003271,Hsap_ENST00000434704:0.2469606367)100:0.0732354622)100:0.3184662448)99:0.0611364654)99:0.0578083479,(((Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA40403:0.0000021370,Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA74740:0.0985678015)100:0.4830744317,Dmel_FBtr0300076:0.1379103273)90:0.0117695723,Tcas_TC009351_001:0.0867552802)100:0.3531508468)100:0.1034918649,(Morvir_scaffold140.g33.t1:0.6713052110,(Hhon_g08887.t1:0.1116541573,Tadh_TriadT49530:0.0260558584)100:0.5673250224)99:0.0320654287)100:0.4210776228)88:0.1019821966)48:0.0387621822,(((((((Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA174957:0.0000021116,Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA30874:0.0000021370)100:0.1802607175,(Tcas_TC031415_001:0.1614094582,(Dmel_FBtr0074429:0.1351062486,Dmel_FBtr0074430:0.2753091432)100:0.0724995636)100:0.1616933211)100:0.1894968887,Hsap_ENST00000370445:0.0722097265)51:0.0382945809,Hsap_ENST00000263610:0.1189772036)98:0.3603821760,((Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA48054:0.0000021655,Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA187461:0.0000022931)100:0.5970672168,(Dmel_FBtr0073656:0.2286331858,Tcas_TC000424_001:0.0783002401)100:0.2157460140)100:0.5260928813)100:0.3757166647,(((((Gasp_gasp1.m3.10379.m1:0.2551457895,Xesp_007977-T1:0.5867596852)100:0.0458132592,Xesp_007810-T1:0.8458621561)100:0.2044525366,((Gasp_gasp1.m3.10374.m1:0.1431892966,Gasp_gasp1.m3.10375.m1:0.1958366557)100:0.1326410012,Xesp_007812-T1:0.3783850654)99:0.1037674533)81:0.1169088075,Gasp_gasp1.m3.10369.m1:0.4421014048)72:0.2340333335,Xesp_007813-T1:0.7507264158)97:0.2257300875)70:0.0428894093,(((Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA30886:0.0000027268,Morvir_scaffold21.g122.t1:0.4645139256)98:0.1695760208,Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA78648:0.0000021370)67:0.0000026696,(((Gasp_gasp1.m3.982.m1:0.2036722218,Xesp_013922-T1:0.2778813447)81:0.0355248717,(Dmel_FBtr0330389:0.2831900922,Tcas_TC012332_001:0.2083052724)99:0.1378963589)78:0.0227037479,(Hsap_ENST00000422806:0.1376533574,Hsap_ENST00000451024:0.4359530795)96:0.0518481304)78:0.0927251281)100:0.6961092843)62:0.0593329461)65:0.0449143451,(((((((((Gasp_gasp1.m3.16096.m1:0.8538387826,Gasp_gasp1.m3.23770.m1:0.6624380390)96:0.3879692991,(Gasp_gasp1.m3.970.m1:0.0000029455,Gasp_gasp1.m1b.1230.m1:0.4578001447)100:0.5389643235)84:0.0515966087,Xesp_020407-T1:0.6886156381)90:0.2009072853,(((((Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA88560:0.0074648792,(Tcas_TC000483_001:0.1029039427,Dmel_FBtr0083571:0.4579888800)100:0.4485567443)99:0.3537039130,Gasp_gasp1.m3.2245.m1:0.6491445509)69:0.0472305471,Gasp_gasp1.m3.13464.m1:0.2243878630)66:0.0751391316,Xesp_013856-T1:0.6870693173)92:0.1578864262,(Hhon_g10555.t1:0.0606477230,Tadh_TriadT49524:0.0912246265)100:0.4633195142)90:0.0856880734)70:0.0405242270,(Gasp_gasp1.m3.2233.m1:1.3244594632,Morvir_scaffold149.g55.t1:0.6199084399)62:0.1081047945)80:0.0405927617,(Gasp_gasp1.m3.28194.m1:1.7486554537,(Gasp_gasp1.m3.2249.m1:0.6632034284,(Gasp_gasp1.m1b.2861.m1:1.3711270350,Hsap_ENST00000398468:0.6891944150)97:0.1307298039)89:0.0990510393)54:0.0083142766)97:0.0763161642,((((Gasp_gasp1.m3.23164.m1:0.4985951191,Xesp_013885-T1:0.4161455364)100:0.6342760863,(Gasp_gasp1.m3.22638.m1:0.3965839656,Xesp_013548-T1:1.3761358531)100:0.9047278162)97:0.2846663608,(((Gasp_gasp1.m3.23161.m1:0.3118407702,Morvir_scaffold5.g160.t1:0.8379972523)96:0.0962146410,Gasp_gasp1.m1b.17996.m1:0.7196023946)100:0.1791423868,(((Dmel_FBtr0082880:0.2715318607,(Tcas_TC011763_001:0.1175173967,Dmel_FBtr0082863:0.3193772463)95:0.0400098657)96:0.0981553235,(Hsap_ENST00000258106:0.1775812697,Hsap_ENST00000553456:0.0543804390)100:0.3157837170)48:0.0153244309,(Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA25827:0.5173323131,Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA183448:0.2236452413)93:0.1545593448)93:0.2124925322)92:0.1757998380)98:0.1095757732,(Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA80769:0.5566854518,(Hsap_ENST00000369206:0.2529050691,Hsap_ENST00000234392:0.0947016745)100:0.2598623170)100:0.6528232024)87:0.0652658592)98:0.1551575592,(((((Gasp_gasp1.m3.15756.m1:0.1184230036,(Gasp_gasp1.m3.26136.m1:0.1142271553,Gasp_gasp1.m3.26141.m1:0.2321706553)100:0.0263376631)100:0.3440727951,Gasp_gasp1.m3.12286.m1:0.3451863732)100:0.1820098648,Gasp_gasp1.m3.12289.m1:0.4878401652)99:0.1789643202,Gasp_gasp1.m3.12287.m1:0.3112371199)100:0.3989164566,Xesp_007966-T1:1.4829401488)89:0.1898680730)47:0.0232770679,(((Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA171492:0.6076887242,Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA147353:0.3684341925)90:0.2401424851,Dmel_FBtr0072224:1.3480706984)91:0.0624684155,(Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA154864:0.3686834768,Gasp_gasp1.m3.16169.m1:1.2691774862)90:0.2376234586)100:0.5786882773)53:0.0922524595)54:0.0106660357,(((((Gasp_gasp1.m3.4690.m1:0.4403655063,Gasp_gasp1.m1b.6286.m1:0.4135515766)97:0.1420165640,(Xesp_010136-T1:0.5778311089,Xesp_010137-T1:0.9778816566)75:0.0996545040)80:0.0412703831,(Tcas_TC033532_001:0.2956281590,Dmel_FBtr0342701:0.5088937376)99:0.3117793087)97:0.1828537441,((Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA127720:0.5445503315,Tcas_TC001164_001:0.0000020933)100:0.3569668853,Dmel_FBtr0308948:0.3215049046)100:0.6351024550)81:0.0879148983,((((Tcas_TC009896_001:0.0910594663,Dmel_FBtr0088068:0.1956065589)100:0.0835555493,(Dmel_FBtr0088095:0.2956965650,Tcas_TC008952_001:0.1621958840)94:0.1054243679)100:0.2329926933,(Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA152545:0.2294911083,Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA152542:0.7322385461)56:0.1069049325)38:0.0258822550,(Hsap_ENST00000295206:0.1996504329,Hsap_ENST00000297375:0.1134166960)100:0.1123183065)100:0.8365797576)64:0.1163066366)46:0.0000021114,Dmel_FBtr0081668:2.4708241527)94:0.0975870089,(((((((Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA127728:0.0000021370,Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA159948:0.0000029825)95:0.0000020398,Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA137362:0.0168790505)100:0.3400692009,(Dmel_FBtr0085090:0.1444722325,Tcas_TC030553_001:0.3975993372)98:0.1819298601)100:0.1336312792,(Gasp_gasp1.m3.12193.m1:0.2041296247,Xesp_009291-T1:0.3813312986)72:0.0176276700)100:0.3461863382,(Gasp_gasp1.m3.12181.m1:0.4000056307,((((Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA70992:0.0000021370,Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA99816:0.0000021370)100:0.1655328536,Tcas_TC009469_001:0.1147068448)98:0.2758919210,Dmel_FBtr0088390:0.1831489281)98:0.1841936573,(Hsap_ENST00000308618:0.1916393694,Hsap_ENST00000496902:0.2070966959)100:0.1188148511)100:0.6475911997)100:0.4621262525)78:0.1394372524,((((((((Gasp_gasp1.m3.3944.m1:0.1637124780,Gasp_gasp1.m3.3946.m1:0.6488116494)76:0.0914974130,(Gasp_gasp1.m3.3948.m1:0.2703063517,Xesp_010186-T1:0.3908380182)76:0.2664290002)98:0.0964589859,Gasp_gasp1.m3.3947.m1:0.4594655959)54:0.0938806875,(Hsap_ENST00000262041:0.3855808056,Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA173096:0.4235159137)51:0.1610841097)41:0.1519273167,Hsap_ENST00000318579:0.5090580503)39:0.0502108420,(Tcas_TC030982_001:0.1422159416,Dmel_FBtr0084278:0.9058264549)98:0.2665901834)98:0.1711563851,Morvir_scaffold59.g41.t1:0.3090869322)100:0.3898295060,(((Gasp_gasp1.m3.12278.m1:0.3818640104,(Dmel_FBtr0088586:0.1534230661,(Tcas_TC009309_001:0.2064766097,Xesp_001248-T1:0.9821935239)100:0.1522680284)100:0.1300869495)100:0.3193967583,(Hsap_ENST00000306318:0.1661113502,Hsap_ENST00000297537:0.1618642212)100:0.1154498571)81:0.0378712104,Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA151262:0.3025199439)100:0.5922650813)79:0.0689999200)57:0.0000023953,(((Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA41929:0.0951696544,Hsap_ENST00000252971:0.1577687707)100:0.1423252917,(Tcas_TC009461_001:0.2676041540,Dmel_FBtr0076751:0.3100083866)78:0.0000020063)97:0.4229663595,(Hhon_g09133.t1:0.1595505722,Tadh_TriadT50911:0.0000028736)100:0.6514537430)97:0.1608618672)94:0.0928944531)94:0.0401447075,(((((Tcas_TC000926_001:0.1933516927,Dmel_FBtr0081696:0.5084717476)100:0.1057237089,((Hsap_ENST00000239174:0.3464617867,Hsap_ENST00000643460:0.1402530342)100:0.1514819934,Hsap_ENST00000331462:0.2317106485)100:0.1774010845)100:0.1508479109,Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA219807:0.2687412078)100:0.1666076557,(Morvir_scaffold27.g7.t1:0.5416108531,(Gasp_gasp1.m3.12183.m1:0.3315512133,Xesp_009187-T1:0.6571832125)100:0.2188064447)100:0.4912625073)100:0.0890519642,Morvir_scaffold70.g42.t1:1.2340912714)59:0.0554396672)97:0.0513768225,(Dmel_FBtr0081670:0.5859418220,Dmel_FBtr0081671:0.4887045563)100:0.2451241588)93:0.0462286066)93:0.0308785599,(((Gasp_gasp1.m3.12182.m1:0.9793029906,(((Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA94911:0.1929419107,(Dmel_FBtr0089276:0.3489325704,Tcas_TC000925_001:0.3697232025)92:0.0758742100)92:0.0661127730,(Hsap_ENST00000222718:0.1382943454,Hsap_ENST00000330070:0.2393706898)100:0.1553114910)100:0.3478274872,Xesp_009184-T1:0.7042728312)94:0.0430479147)99:0.1157384461,((((Hsap_ENST00000311626:0.1720985138,Hsap_ENST00000317201:0.1388722094)100:0.0679421631,Hsap_ENST00000249440:0.1260256148)100:0.2752070794,Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA219808:0.6280052814)100:0.2003221376,(Tcas_TC000921_001:0.4202799575,Tcas_TC000922_001:0.3378493960)100:0.4582396619)98:0.1155894087)94:0.1002189185,(Gasp_gasp1.m3.12180.m1:0.4730429153,Xesp_009183-T1:0.3280915989)100:0.4268865172)94:0.0776727593)99:0.0303808790,((((((Tcas_TC000916_001:0.4785999327,Dmel_FBtr0081625:0.9271396198)98:0.0965842177,Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA168125:0.4951451539)92:0.0556782370,((((Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA94879:0.1258355316,((((Tcas_TC000894_001:0.1393456807,Dmel_FBtr0083388:0.0772950283)100:0.3939373226,Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA225442:0.2837821376)76:0.0200694337,(Tcas_TC000903_001:0.0640865841,Dmel_FBtr0083347:0.1478967088)100:0.4075398510)76:0.0398409030,Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA94902:0.2227822902)100:0.1997597437)99:0.0789354350,(Hsap_ENST00000239144:0.1065096186,(Hsap_ENST00000040584:0.1324327797,Hsap_ENST00000313173:0.1201456223)99:0.0899754125)100:0.4848031463)92:0.0252980133,((Tcas_TC000912_001:0.1661820705,Dmel_FBtr0081647:0.1727902395)100:0.3180051859,(Hsap_ENST00000242159:0.1324816650,Hsap_ENST00000239165:0.1747049793)100:0.1985201570)93:0.1374183574)100:0.0610532739,(Hsap_ENST00000225648:0.1635940657,(Hsap_ENST00000222728:0.1572194060,Hsap_ENST00000243108:0.3774326218)100:0.1028495044)100:0.2188437442)100:0.1581087645)66:0.0429895890,(((Dmel_FBtr0474171:0.2573227222,Tcas_TC000917_001:0.0413269622)100:0.3831530802,(((Dmel_FBtr0081621:0.3190819715,Tcas_TC000920_001:0.1808020119)100:0.1835832032,((Hsap_ENST00000332503:0.1282145068,(Hsap_ENST00000303406:0.1414921644,Hsap_ENST00000306324:0.1949688346)100:0.0731879598)100:0.0457770674,Hsap_ENST00000360046:0.2027253804)100:0.2102694386)97:0.0573212575,Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA149640:0.2825097784)100:0.2281849116)50:0.0981941731,((Hsap_ENST00000513209:0.3019105649,Hsap_ENST00000312492:0.0000025164)100:0.3231087689,(Hsap_ENST00000239151:0.1437597595,Hsap_ENST00000222726:0.0669032217)100:0.0590434467)100:0.2096146256)21:0.0233128955)61:0.0507446319,Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA168122:0.3482228064)100:0.0649414515,((((((Hsap_ENST00000303450:0.2016334373,Hsap_ENST00000249499:0.0934298060)100:0.1014290671,((Hsap_ENST00000343483:0.0000025164,Hsap_ENST00000470747:0.0000021370)100:0.2138613335,Hsap_ENST00000311177:0.2441057335)100:0.0571050428)100:0.2655379941,((Hsap_ENST00000283921:0.2952074320,Hsap_ENST00000249501:0.1384825895)100:0.1115912540,Hsap_ENST00000303460:0.1174066538)100:0.3779207285)99:0.3404457710,(Hsap_ENST00000006015:0.1826075962,Hsap_ENST00000249504:0.2155278215)100:0.5562453494)94:0.2173681621,((Tcas_TC000889_002:0.3840658347,Dmel_FBtr0083384:0.0654044797)100:0.5194249061,(((Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA70154:1.6351400016,(((Hsap_ENST00000649031:0.1230899487,Hsap_ENST00000290295:0.3034514532)97:0.0606343009,Hsap_ENST00000243056:0.1696888722)71:0.0928886967,Hsap_ENST00000392539:0.2100688700)99:0.4935090080)70:0.2019152278,(Hsap_ENST00000406506:0.2694600622,Hsap_ENST00000243103:0.3567558486)100:0.7500122166)71:0.2374780194,Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA126009:0.7933139676)70:0.1571227872)70:0.0810631371)100:0.1835909783,((Tcas_TC032769_002:0.3069878383,(Dmel_FBtr0335152:0.4849952437,Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA109027:0.4015235038)99:0.0467438141)98:0.0733166844,(Hsap_ENST00000373514:0.4311175536,(Hsap_ENST00000231656:0.2862937678,Hsap_ENST00000381020:0.1972727414)100:0.0817253278)65:0.0963252747)100:0.5305674034)99:0.1711326844)61:0.0793378976)49:0.0220459999,((Gasp_gasp1.m3.27871.m1:0.6629762484,Morvir_scaffold189.g37.t1:0.6789851609)100:0.6544049756,(Hsap_ENST00000381033:0.4504918704,Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA196539:0.4723174970)100:0.2245255817)93:0.2109087298)61:0.0812149531,(((Xesp_009185-T1:0.9972680208,Xesp_009182-T1:0.5700252370)84:0.0980257266,Gasp_gasp1.m3.12179.m1:0.7363605232)91:0.3365393127,Morvir_scaffold70.g45.t1:0.9788033916)63:0.0921163074)98:0.0984211967,(Morvir_scaffold340.g1.t1:0.3130090441,Morvir_scaffold45.g78.t1:0.2574525360)100:0.5220244424)99:0.0524489512,Morvir_scaffold216.g16.t1:0.8088953938)100:0.1950376475);
+
+TIME STAMP
+----------
+
+Date and time: Wed Mar 10 12:51:07 2021
+Total CPU time used: 20523.4264 seconds (5h:42m:3s)
+Total wall-clock time used: 10414.25434 seconds (2h:53m:34s)
+

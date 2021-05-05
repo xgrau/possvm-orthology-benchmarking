@@ -1,0 +1,2093 @@
+IQ-TREE multicore version 2.1.0 for Linux 64-bit built Jul 18 2020
+Developed by Bui Quang Minh, James Barbetti, Nguyen Lam Tung,
+Olga Chernomor, Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    node-hp0415.linux.crg.es (AVX, 125 GB RAM)
+Command: /users/asebe/xgraubove/Programes/iqtree-2.1.0-Linux/bin/iqtree2 -s results_trees/downsampling_alignment/downsample_0.20-r20.genes.lt.fasta -m TEST -mset LG,WAG,JTT -nt AUTO -ntmax 4 -bb 1000 -pre results_trees/downsampling_alignment/downsample_0.20-r20.genes.lt.iqtree -nm 10000 -nstop 200 -cptime 1800
+Seed:    209445 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Tue Mar  9 23:19:21 2021
+Kernel:  AVX - auto-detect threads (4 CPU cores detected)
+
+Reading alignment file results_trees/downsampling_alignment/downsample_0.20-r20.genes.lt.fasta ... Fasta format detected
+Alignment most likely contains protein sequences
+Alignment has 1207 sequences with 216 columns, 216 distinct patterns
+216 parsimony-informative, 0 singleton sites, 0 constant sites
+                                         Gap/Ambiguity  Composition  p-value
+   1  Aaur_scaffold1387.g2.t1                   22.22%    passed     47.95%
+   2  Exapal_XM_021039887.2                     26.39%    passed      5.58%
+   3  Fspp_ffun1.m4.6493.m1                     24.07%    passed     14.60%
+   4  Gasp_gasp1.m3.14269.m1                    24.07%    passed     13.94%
+   5  Spis_XP_022784688_1                       23.61%    passed     16.31%
+   6  Gfas_gfas1.m1.13208.m1                    23.61%    passed     12.00%
+   7  Apimel_XM_001120954                       26.85%    passed      8.34%
+   8  Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA156652   25.93%    passed     28.09%
+   9  Bflo_XM_035827166.1                       27.78%    passed     40.81%
+  10  Cgig_XM_011427836.3                       25.00%    passed     30.91%
+  11  Hsap_ENST00000302945                      26.85%    passed     23.18%
+  12  Mmus_ENSMUST00000065382                   26.85%    passed     25.53%
+  13  Xentro_ENSXETT00000089294                 28.24%    passed     12.43%
+  14  Xentro_ENSXETT00000045469                 28.24%    passed     62.70%
+  15  Hsap_ENST00000326902                      25.46%    passed     76.78%
+  16  Mmus_ENSMUST00000040477                   25.46%    passed     71.93%
+  17  Skow_XM_002732004.2                       28.24%    passed     59.35%
+  18  Spur_XM_779393.5                          23.15%    passed     30.91%
+  19  Hhon_g10818.t1                            32.87%    passed     28.34%
+  20  Tadh_TriadT33728                          32.87%    passed     51.40%
+  21  Dmel_FBtr0333875                          23.61%    passed      5.59%
+  22  Morvir_scaffold348.g20.t1                 37.04%    passed     16.87%
+  23  Aaur_scaffold1413.g2.t1                   47.69%    passed     46.78%
+  24  Morvir_scaffold98.g48.t1                  40.74%    passed     19.76%
+  25  Aaur_scaffold260.g3.t1                    67.13%    failed      1.87%
+  26  Morvir_scaffold85.g37.t1                  46.30%    passed     27.77%
+  27  Apimel_XM_006565160                       26.39%    passed     97.74%
+  28  Hhon_g08608.t1                            39.35%    passed     53.89%
+  29  Tadh_TriadT18102                          74.07%    passed     27.74%
+  30  Skow_NM_001164898.1                       34.26%    passed     79.45%
+  31  Spur_XM_001198056.3                       28.24%    passed     19.53%
+  32  Dmel_FBtr0290136                          25.00%    passed     36.19%
+  33  Xentro_ENSXETT00000030999                 29.17%    passed     49.42%
+  34  Hsap_ENST00000524983                      29.63%    passed     26.05%
+  35  Mmus_ENSMUST00000032717                   31.02%    passed     53.86%
+  36  Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA220261   28.24%    passed     42.63%
+  37  Cgig_XM_034483480.1                       32.87%    passed     25.69%
+  38  Bflo_XM_035817632.1                       27.78%    passed     71.40%
+  39  Bflo_XM_035832886.1                       22.69%    failed      4.11%
+  40  Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA173964   58.80%    passed     13.54%
+  41  Hsap_ENST00000366903                      20.37%    passed     38.26%
+  42  Mmus_ENSMUST00000048572                   20.37%    passed     55.63%
+  43  Xentro_ENSXETT00000005952                 31.02%    passed     64.18%
+  44  Skow_XM_006816183.1                       30.09%    passed     32.10%
+  45  Exapal_XM_021037513.2                     37.50%    passed     83.62%
+  46  Exapal_XM_021046966.2                     53.24%    passed     74.29%
+  47  Exapal_XM_021057757.2                     35.65%    passed     66.09%
+  48  Fspp_ffun1.m4.22959.m1                    33.33%    passed     36.64%
+  49  Spis_XP_022803267_1                       31.48%    passed     84.63%
+  50  Gfas_gfas1.m1.4174.m1                     42.13%    passed     77.54%
+  51  Gasp_gasp1.m3.12691.m1                    35.65%    passed     56.33%
+  52  Nvec_v1g100892                            36.57%    passed     79.67%
+  53  Fspp_ffun1.m4.13287.m1                    39.35%    passed     98.26%
+  54  Gasp_gasp1.m3.30352.m1                    39.35%    passed     96.10%
+  55  Spis_XP_022789944_1                       39.81%    passed     97.76%
+  56  Adig_XM_015902979.1                       37.04%    passed     72.96%
+  57  Adig_XM_015903087.1                       38.43%    passed     84.39%
+  58  Gasp_gasp1.m3.24801.m1                    37.96%    passed     71.73%
+  59  Spis_XP_022808078_1                       38.43%    passed     29.23%
+  60  Gfas_gfas1.m1.2337.m1                     25.93%    failed      3.38%
+  61  Gasp_gasp1.m3.24803.m1                    37.50%    passed     64.44%
+  62  Fspp_ffun1.m4.20261.m1                    40.74%    passed     60.67%
+  63  Spis_XP_022808246_1                       38.43%    passed     49.33%
+  64  Exapal_XM_021049432.2                     30.09%    passed     76.89%
+  65  Nvec_v1g123745                            47.69%    passed     45.77%
+  66  Adig_XM_015909001.1                       33.33%    passed     94.13%
+  67  Fspp_ffun1.m4.10292.m1                    39.35%    passed     90.07%
+  68  Gasp_gasp1.m3.16233.m1                    33.33%    passed     53.66%
+  69  Spis_XP_022782991_1                       33.33%    passed     66.72%
+  70  Gfas_gfas1.m1.2230.m1                     33.33%    passed     91.23%
+  71  Nvec_v1g39924                             32.41%    passed     89.99%
+  72  Exapal_XM_021049433.2                     38.43%    passed     63.26%
+  73  Nvec_v1g123764                            39.35%    passed     19.98%
+  74  Exapal_XM_021038953.2                     31.48%    passed     82.60%
+  75  Adig_XM_015909101.1                       40.74%    passed     57.40%
+  76  Spis_XP_022793160_1                       45.83%    passed     56.63%
+  77  Bflo_XM_035840895.1                       30.09%    passed     17.72%
+  78  Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA80939    75.00%    passed      8.58%
+  79  Spur_XM_030978505.1                       27.78%    passed     85.34%
+  80  Skow_XM_006815239.1                       27.78%    passed     47.37%
+  81  Skow_XM_006822703.1                       49.54%    passed     16.69%
+  82  Hsap_ENST00000253968                      31.94%    failed      4.10%
+  83  Mmus_ENSMUST00000021813                   31.94%    passed      5.83%
+  84  Xentro_ENSXETT00000086444                 32.87%    passed     20.02%
+  85  Cgig_XM_034444004.1                       41.20%    passed     95.13%
+  86  Hsap_ENST00000281437                      30.56%    passed     37.30%
+  87  Mmus_ENSMUST00000116615                   30.09%    passed     31.26%
+  88  Xentro_ENSXETT00000077545                 30.09%    passed     27.95%
+  89  Apimel_XM_001121415                       28.24%    passed     33.80%
+  90  Bflo_XM_035828927.1                       34.26%    passed     25.76%
+  91  Cgig_XM_011421518.3                       36.11%    passed     30.27%
+  92  Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA174957   52.78%    passed     22.97%
+  93  Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA30874    76.39%    passed     68.81%
+  94  Cgig_XM_011421520.3                       36.57%    passed     43.79%
+  95  Spur_XM_030998177.1                       35.65%    passed     14.42%
+  96  Spur_XM_780421.4                          33.33%    passed      8.11%
+  97  Skow_XM_006813696.1                       28.24%    failed      0.54%
+  98  Hsap_ENST00000370445                      31.48%    passed     80.32%
+  99  Mmus_ENSMUST00000086795                   31.48%    passed     81.73%
+ 100  Xentro_ENSXETT00000051744                 31.02%    passed     73.38%
+ 101  Hsap_ENST00000263610                      32.41%    passed     83.61%
+ 102  Mmus_ENSMUST00000050776                   32.41%    passed     75.46%
+ 103  Xentro_ENSXETT00000104161                 32.41%    passed     75.63%
+ 104  Skow_NM_001164914.1                       29.63%    passed     24.72%
+ 105  Dmel_FBtr0074429                          14.81%    failed      0.39%
+ 106  Cgig_XM_034446789.1                       40.74%    passed     70.91%
+ 107  Cgig_XM_011421521.3                       39.35%    passed     68.50%
+ 108  Dmel_FBtr0074430                          22.22%    passed      6.37%
+ 109  Apimel_XM_396835                          44.44%    passed     84.27%
+ 110  Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA48054    68.98%    passed     55.89%
+ 111  Dmel_FBtr0073656                          37.96%    passed     60.00%
+ 112  Skow_XM_006817477.1                       37.50%    passed     63.09%
+ 113  Cgig_XM_020071785.2                       31.48%    passed     66.82%
+ 114  Bflo_XM_035828188.1                       38.43%    failed      0.52%
+ 115  Hsap_ENST00000343035                      35.19%    passed     75.66%
+ 116  Mmus_ENSMUST00000067375                   35.19%    passed     85.39%
+ 117  Xentro_ENSXETT00000036924                 34.72%    passed     82.78%
+ 118  Dmel_FBtr0089320                          22.22%    passed     34.25%
+ 119  Skow_NM_001164896.1                       28.70%    passed     55.25%
+ 120  Bflo_XM_035815783.1                       35.65%    passed     84.64%
+ 121  Cgig_XM_011457020.3                       35.65%    passed     60.88%
+ 122  Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA149569   43.98%    passed     38.65%
+ 123  Apimel_XM_001120703                       28.70%    passed      9.06%
+ 124  Adig_XM_015915192.1                       27.31%    passed     62.01%
+ 125  Gfas_gfas1.m1.9044.m1                     37.50%    passed     34.90%
+ 126  Fspp_ffun1.m4.4455.m1                     37.50%    passed     62.20%
+ 127  Gasp_gasp1.m3.682.m1                      38.43%    passed     82.75%
+ 128  Spis_XP_022782910_1                       37.50%    passed     87.68%
+ 129  Exapal_XM_021044239.2                     37.96%    passed     76.73%
+ 130  Nvec_v1g164989                            58.80%    passed     25.39%
+ 131  Apimel_XM_016917914                       34.26%    passed     78.18%
+ 132  Bflo_XM_035816607.1                       29.63%    passed     14.85%
+ 133  Cgig_XM_011447529.3                       31.48%    passed      5.96%
+ 134  Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA29749    60.65%    passed     30.69%
+ 135  Hsap_ENST00000370193                      28.70%    passed     75.93%
+ 136  Mmus_ENSMUST00000099401                   28.70%    passed     70.58%
+ 137  Xentro_ENSXETT00000089841                 29.17%    passed     93.90%
+ 138  Skow_NM_001165028.1                       34.72%    passed     10.75%
+ 139  Dmel_FBtr0332438                          28.70%    passed     92.49%
+ 140  Spur_XM_011676188.2                       25.93%    passed     11.72%
+ 141  Dmel_FBtr0084091                          28.24%    failed      4.18%
+ 142  Hsap_ENST00000377566                      33.80%    failed      0.44%
+ 143  Mmus_ENSMUST00000041265                   33.80%    failed      2.84%
+ 144  Aaur_scaffold304.g16.t1                   22.22%    passed     91.74%
+ 145  Adig_XM_015912975.1                       21.76%    passed     43.70%
+ 146  Fspp_ffun1.m4.12736.m1                    21.76%    passed     51.32%
+ 147  Gasp_gasp1.m3.987.m1                      21.76%    passed     85.30%
+ 148  Spis_XP_022794697_1                       21.76%    passed     73.12%
+ 149  Gfas_gfas1.m1.573.m1                      21.76%    passed     44.38%
+ 150  Apimel_XM_016916887                       22.22%    passed     74.73%
+ 151  Bflo_XM_035817320.1                       32.41%    passed     89.85%
+ 152  Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA80758    68.98%    passed     81.23%
+ 153  Skow_XM_002731905.2                       33.80%    passed     88.78%
+ 154  Xentro_ENSXETT00000094587                 28.24%    passed     70.31%
+ 155  Hsap_ENST00000357878                      27.31%    passed     78.81%
+ 156  Mmus_ENSMUST00000046093                   27.31%    passed     82.50%
+ 157  Xentro_ENSXETT00000021090                 28.24%    passed     44.30%
+ 158  Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA80782    69.91%    passed     78.44%
+ 159  Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA81827    69.91%    passed     78.44%
+ 160  Hsap_ENST00000400677                      20.37%    failed      0.00%
+ 161  Mmus_ENSMUST00000087674                   22.69%    failed      0.14%
+ 162  Dmel_FBtr0330386                          24.07%    passed     89.07%
+ 163  Exapal_XM_021044575.2                     21.76%    passed      5.34%
+ 164  Nvec_v1g82763                             22.22%    passed     11.34%
+ 165  Cgig_XM_011429997.3                       27.78%    passed     79.73%
+ 166  Spur_NM_214561.2                          21.30%    passed     27.81%
+ 167  Spur_XM_030985931.1                       21.30%    passed     27.81%
+ 168  Hsap_ENST00000339992                      21.30%    passed     52.55%
+ 169  Mmus_ENSMUST00000051997                   21.30%    passed     55.80%
+ 170  Xentro_ENSXETT00000057781                 23.15%    passed     69.37%
+ 171  Cgig_XM_011458680.3                       37.04%    passed     45.98%
+ 172  Adig_XM_015915222.1                       29.17%    passed      9.46%
+ 173  Bflo_XM_035818195.1                       26.39%    failed      1.14%
+ 174  Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA79123    62.50%    passed     36.18%
+ 175  Dmel_FBtr0082941                          17.13%    passed     40.71%
+ 176  Gfas_gfas1.m1.13832.m1                    30.56%    failed      0.37%
+ 177  Fspp_ffun1.m4.11751.m1                    30.56%    failed      1.44%
+ 178  Gasp_gasp1.m3.24581.m1                    30.56%    failed      1.25%
+ 179  Spis_XP_022802187_1                       35.19%    failed      1.58%
+ 180  Skow_XM_006824407.1                       25.00%    failed      2.98%
+ 181  Nvec_v1g48828                             32.87%    passed     23.10%
+ 182  Spur_XM_780913.5                          15.74%    failed      0.07%
+ 183  Cgig_XM_011424455.3                       25.93%    passed      8.49%
+ 184  Exapal_XM_021044589.2                     31.94%    failed      0.88%
+ 185  Xentro_ENSXETT00000065721                 26.85%    passed     83.60%
+ 186  Hhon_g07172.t1                            25.93%    passed     60.20%
+ 187  Tadh_TriadT50928                          25.46%    passed     65.48%
+ 188  Adig_XM_015897722.1                       39.35%    passed     86.29%
+ 189  Exapal_XM_021053893.2                     38.89%    passed     93.43%
+ 190  Nvec_v1g57885                             73.15%    passed     37.69%
+ 191  Gfas_gfas1.m1.16381.m1                    39.81%    passed     64.10%
+ 192  Fspp_ffun1.m4.31060.m1                    38.89%    passed     78.29%
+ 193  Spis_XP_022786402_1                       39.35%    passed     99.53%
+ 194  Gasp_gasp1.m3.10379.m1                    37.50%    passed     94.47%
+ 195  Spis_XP_022786406_1                       37.04%    passed     24.30%
+ 196  Fspp_ffun1.m4.17753.m1                    34.26%    passed     54.57%
+ 197  Adig_XM_015897727.1                       35.19%    passed     80.98%
+ 198  Gfas_gfas1.m1.16379.m1                    34.26%    passed     52.60%
+ 199  Adig_XM_015897726.1                       34.72%    passed     14.54%
+ 200  Gfas_gfas1.m1.16373.m1                    36.11%    passed     21.27%
+ 201  Fspp_ffun1.m4.33384.m1                    29.63%    passed     35.68%
+ 202  Gasp_gasp1.m3.10374.m1                    34.26%    passed     54.97%
+ 203  Spis_XP_022786436_1                       33.33%    passed     93.40%
+ 204  Gfas_gfas1.m1.16372.m1                    32.87%    passed      9.30%
+ 205  Gasp_gasp1.m3.10375.m1                    33.80%    passed     27.27%
+ 206  Spis_XP_022786405_1                       34.72%    passed     41.05%
+ 207  Adig_XM_015897724.1                       33.33%    passed     31.59%
+ 208  Exapal_XM_021055853.2                     33.80%    passed     52.40%
+ 209  Nvec_v1g6429                              33.80%    passed     77.51%
+ 210  Exapal_XM_021055858.2                     34.72%    passed     82.85%
+ 211  Nvec_v1g98238                             32.87%    passed     37.57%
+ 212  Fspp_ffun1.m4.31061.m1                    35.19%    failed      0.63%
+ 213  Fspp_ffun1.m4.17748.m1                    32.41%    passed     50.71%
+ 214  Gasp_gasp1.m3.10369.m1                    31.48%    passed     72.89%
+ 215  Gfas_gfas1.m1.16375.m1                    34.72%    passed     62.26%
+ 216  Adig_XM_015912978.1                       29.63%    passed     83.24%
+ 217  Bflo_XM_035819204.1                       32.41%    passed     85.25%
+ 218  Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA30886    71.76%    passed     37.19%
+ 219  Bflo_XM_035819270.1                       31.94%    passed     11.59%
+ 220  Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA78648    72.69%    passed     45.13%
+ 221  Skow_NM_001168137.1                       33.80%    passed     43.05%
+ 222  Cgig_XM_011453230.3                       36.11%    failed      1.90%
+ 223  Nvec_v1g197493                            30.09%    passed     67.13%
+ 224  Exapal_XM_021044584.2                     31.48%    passed     85.36%
+ 225  Fspp_ffun1.m4.12735.m1                    30.56%    passed     55.57%
+ 226  Gasp_gasp1.m3.982.m1                      30.09%    passed     67.96%
+ 227  Gfas_gfas1.m1.578.m1                      30.09%    passed     61.85%
+ 228  Spis_XP_022794677_1                       30.09%    passed     68.82%
+ 229  Apimel_XM_006560986                       28.24%    passed     54.89%
+ 230  Spur_NM_001009577.1                       29.17%    passed     46.92%
+ 231  Spur_XM_030985932.1                       29.17%    passed     46.92%
+ 232  Hsap_ENST00000422806                      24.54%    passed     12.72%
+ 233  Mmus_ENSMUST00000173348                   25.46%    passed     27.56%
+ 234  Xentro_ENSXETT00000008415                 26.39%    passed     61.57%
+ 235  Hsap_ENST00000451024                      29.17%    passed     49.03%
+ 236  Mmus_ENSMUST00000054562                   30.09%    passed     77.06%
+ 237  Dmel_FBtr0330389                          35.19%    passed      6.71%
+ 238  Morvir_scaffold21.g122.t1                 34.26%    passed     66.43%
+ 239  Xentro_ENSXETT00000096279                 30.56%    passed     65.53%
+ 240  Chem_TCONS_00029478                       27.31%    passed     41.03%
+ 241  Adig_XM_015902493.1                       35.65%    passed     60.42%
+ 242  Fspp_ffun1.m4.9245.m1                     35.65%    passed     77.54%
+ 243  Gasp_gasp1.m3.21838.m1                    36.11%    passed     59.34%
+ 244  Spis_XP_022800116_1                       36.11%    passed     66.48%
+ 245  Gfas_gfas1.m1.11375.m1                    35.65%    passed     53.96%
+ 246  Bflo_XM_035818048.1                       29.63%    passed     48.89%
+ 247  Hsap_ENST00000295886                      31.94%    passed     69.87%
+ 248  Mmus_ENSMUST00000044125                   31.94%    passed     56.03%
+ 249  Xentro_ENSXETT00000060579                 31.94%    passed     76.51%
+ 250  Hhon_g07174.t1                            51.85%    passed     10.79%
+ 251  Tadh_TriadT31334                          73.15%    passed     48.99%
+ 252  Xentro_ENSXETT00000050951                 32.87%    passed     44.66%
+ 253  Hsap_ENST00000368592                      32.87%    passed     11.10%
+ 254  Mmus_ENSMUST00000097974                   32.87%    passed      8.37%
+ 255  Spur_XM_777138.5                          27.31%    failed      0.03%
+ 256  Skow_NM_001168138.1                       31.48%    passed     82.83%
+ 257  Hsap_ENST00000518699                      32.87%    passed     23.99%
+ 258  Mmus_ENSMUST00000071588                   33.33%    passed     57.67%
+ 259  Xentro_ENSXETT00000082174                 34.72%    passed     40.11%
+ 260  Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA6193     70.83%    passed     55.63%
+ 261  Dmel_FBtr0075720                          29.63%    passed     21.63%
+ 262  Apimel_XM_006558625                       28.70%    failed      3.18%
+ 263  Cgig_XM_011440152.3                       38.43%    passed     89.02%
+ 264  Exapal_XM_021044583.2                     35.65%    passed     54.27%
+ 265  Nvec_v1g139174                            33.80%    passed     70.11%
+ 266  Morvir_scaffold42.g46.t1                  36.11%    passed     24.71%
+ 267  Adig_XM_015897690.1                       28.70%    passed     51.52%
+ 268  Fspp_ffun1.m4.29381.m1                    44.44%    passed     79.33%
+ 269  Gasp_gasp1.m3.16096.m1                    30.56%    failed      4.22%
+ 270  Spis_XP_022782838_1                       33.33%    passed     44.33%
+ 271  Adig_XM_015899343.1                       37.50%    passed     77.83%
+ 272  Fspp_ffun1.m4.15184.m1                    37.04%    passed     95.10%
+ 273  Gasp_gasp1.m3.23164.m1                    37.04%    passed     83.63%
+ 274  Spis_XP_022798990_1                       37.50%    passed     94.74%
+ 275  Gfas_gfas1.m1.14091.m1                    37.50%    passed     64.39%
+ 276  Exapal_XM_021058269.2                     41.20%    passed     58.35%
+ 277  Nvec_v1g117718                            54.17%    passed     68.15%
+ 278  Adig_XM_015899344.1                       43.06%    passed     64.03%
+ 279  Fspp_ffun1.m4.15187.m1                    44.44%    passed     79.01%
+ 280  Gasp_gasp1.m3.23161.m1                    61.57%    passed     65.06%
+ 281  Gfas_gfas1.m1.14093.m1                    43.52%    passed     67.25%
+ 282  Spis_XP_022799007_1                       44.91%    passed     56.55%
+ 283  Exapal_XM_021058183.2                     41.20%    passed      7.74%
+ 284  Nvec_v1g39913                             43.98%    passed     30.78%
+ 285  Adig_XM_015914462.1                       45.83%    passed     91.39%
+ 286  Exapal_XM_021046468.2                     50.46%    passed     48.04%
+ 287  Nvec_v1g123192                            64.81%    passed     76.05%
+ 288  Fspp_ffun1.m4.26587.m1                    60.65%    passed     73.83%
+ 289  Gasp_gasp1.m1b.17996.m1                   48.15%    passed     20.45%
+ 290  Spis_XP_022790523_1                       47.69%    passed     36.10%
+ 291  Spis_XP_022792175_1                       47.69%    passed     36.10%
+ 292  Gfas_gfas1.m1.21554.m1                    50.93%    passed     49.74%
+ 293  Bflo_XM_035841995.1                       29.63%    failed      1.63%
+ 294  Exapal_XM_021055424.2                     44.91%    passed     28.47%
+ 295  Nvec_v1g81309                             71.76%    failed      2.71%
+ 296  Chem_TCONS_00066748                       40.28%    passed     35.88%
+ 297  Chem_TCONS_00071932                       40.28%    passed     18.18%
+ 298  Cgig_XM_011448954.3                       44.91%    passed     34.32%
+ 299  Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA80769    73.15%    passed     66.22%
+ 300  Skow_NM_001164891.1                       38.89%    passed     11.36%
+ 301  Xentro_ENSXETT00000100033                 56.02%    passed     40.54%
+ 302  Hsap_ENST00000369206                      32.87%    passed      6.19%
+ 303  Mmus_ENSMUST00000172821                   32.41%    passed      9.67%
+ 304  Hsap_ENST00000234392                      35.19%    passed      8.26%
+ 305  Mmus_ENSMUST00000037807                   35.19%    passed     21.62%
+ 306  Xentro_ENSXETT00000088471                 35.65%    passed     42.27%
+ 307  Adig_XM_015907002.1                       36.11%    passed     14.35%
+ 308  Adig_XM_015914460.1                       40.74%    passed     85.36%
+ 309  Cgig_XM_011448831.3                       32.41%    passed     44.59%
+ 310  Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA88560    75.00%    passed     20.43%
+ 311  Exapal_XM_021037732.2                     42.59%    passed     96.09%
+ 312  Nvec_v1g81163                             70.37%    passed     86.26%
+ 313  Fspp_ffun1.m4.26584.m1                    42.59%    passed     86.63%
+ 314  Gasp_gasp1.m3.13464.m1                    42.59%    passed     84.23%
+ 315  Spis_XP_022790514_1                       42.13%    passed     97.75%
+ 316  Bflo_XM_035815881.1                       35.19%    passed     80.67%
+ 317  Spur_XM_011684036.2                       22.69%    passed     65.26%
+ 318  Exapal_XM_021041396.2                     41.20%    passed     25.10%
+ 319  Nvec_v1g4795                              71.76%    passed      9.42%
+ 320  Gasp_gasp1.m3.2245.m1                     37.50%    failed      4.82%
+ 321  Fspp_ffun1.m4.11764.m1                    30.56%    passed     17.24%
+ 322  Spis_XP_022791943_1                       36.11%    failed      3.90%
+ 323  Gasp_gasp1.m3.970.m1                      62.96%    passed     15.17%
+ 324  Exapal_XM_021044606.2                     43.52%    passed     89.57%
+ 325  Skow_XM_006824221.1                       33.33%    passed     29.90%
+ 326  Nvec_v1g118347                            42.59%    passed     53.68%
+ 327  Dmel_FBtr0083571                          24.07%    passed     10.17%
+ 328  Adig_XM_015907403.1                       39.35%    passed     84.77%
+ 329  Fspp_ffun1.m4.24397.m1                    41.20%    passed     82.91%
+ 330  Gasp_gasp1.m3.23770.m1                    62.04%    passed     57.43%
+ 331  Gfas_gfas1.m1.18035.m1                    39.81%    passed     59.46%
+ 332  Spis_XP_022796599_1                       43.06%    passed     75.82%
+ 333  Xentro_ENSXETT00000025770                 36.57%    passed     84.64%
+ 334  Exapal_XM_021042516.2                     47.69%    failed      0.41%
+ 335  Fspp_ffun1.m4.30998.m1                    46.76%    passed      6.84%
+ 336  Gasp_gasp1.m3.22638.m1                    46.76%    passed     11.77%
+ 337  Nvec_v1g117688                            46.30%    passed     15.63%
+ 338  Nvec_v1g91847                             74.54%    passed     15.26%
+ 339  Spis_XP_022790468_1                       46.76%    passed      5.33%
+ 340  Gfas_gfas1.m1.11508.m1                    46.76%    passed      6.86%
+ 341  Fspp_ffun1.m4.30483.m1                    64.81%    passed     52.49%
+ 342  Gasp_gasp1.m3.28194.m1                    31.48%    passed     65.30%
+ 343  Spis_XP_022799626_1                       43.98%    passed     70.82%
+ 344  Dmel_FBtr0082880                          20.83%    passed     51.65%
+ 345  Apimel_XM_624478                          20.83%    failed      0.29%
+ 346  Bflo_XM_035816462.1                       30.56%    failed      1.09%
+ 347  Bflo_XM_035841223.1                       29.63%    passed      9.33%
+ 348  Xentro_ENSXETT00000076634                 62.96%    passed     94.79%
+ 349  Hsap_ENST00000258106                      29.63%    passed      8.24%
+ 350  Mmus_ENSMUST00000045942                   29.63%    passed     22.81%
+ 351  Hsap_ENST00000553456                      30.56%    passed     23.24%
+ 352  Mmus_ENSMUST00000062216                   30.56%    passed     23.24%
+ 353  Xentro_ENSXETT00000047776                 31.94%    passed     59.01%
+ 354  Xentro_ENSXETT00000062441                 35.65%    passed      9.26%
+ 355  Skow_NM_001164889.1                       42.59%    passed     30.86%
+ 356  Spur_XM_777915.5                          27.31%    passed     77.56%
+ 357  Bflo_XM_035841216.1                       31.48%    passed     17.17%
+ 358  Cgig_XM_011416271.3                       31.02%    passed     86.06%
+ 359  Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA25827    39.35%    passed     28.94%
+ 360  Dmel_FBtr0082863                          21.76%    passed     61.35%
+ 361  Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA183448   30.56%    passed     59.30%
+ 362  Adig_XM_015912983.1                       34.26%    passed     88.80%
+ 363  Gfas_gfas1.m1.579.m1                      32.41%    passed     90.32%
+ 364  Fspp_ffun1.m4.16263.m1                    36.11%    passed     52.50%
+ 365  Gasp_gasp1.m1b.1230.m1                    36.11%    passed     83.84%
+ 366  Spis_XP_022799105_1                       36.57%    passed     21.29%
+ 367  Adig_XM_015899313.1                       49.07%    passed     84.55%
+ 368  Fspp_ffun1.m4.23130.m1                    45.83%    passed     86.47%
+ 369  Gasp_gasp1.m3.2233.m1                     45.83%    passed     41.99%
+ 370  Spis_XP_022791939_1                       44.91%    passed     85.52%
+ 371  Gfas_gfas1.m1.19739.m1                    47.69%    passed     77.21%
+ 372  Chem_TCONS_00054222                       26.39%    passed     42.82%
+ 373  Cgig_XM_011457272.3                       32.87%    passed     97.80%
+ 374  Adig_XM_015917756.1                       27.78%    passed     91.03%
+ 375  Fspp_ffun1.m4.29526.m1                    25.00%    passed     85.79%
+ 376  Gasp_gasp1.m3.4690.m1                     25.00%    passed     80.79%
+ 377  Spis_XP_022792040_1                       26.39%    passed     70.66%
+ 378  Gfas_gfas1.m1.14376.m1                    23.61%    passed     64.44%
+ 379  Apimel_XM_006560321                       23.61%    passed     51.12%
+ 380  Apimel_XM_016916875                       26.39%    passed     92.46%
+ 381  Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA127720   68.52%    passed     89.98%
+ 382  Spur_XM_001177706.4                       16.20%    passed      8.56%
+ 383  Spur_XM_031000064.1                       16.20%    passed      5.43%
+ 384  Skow_XM_002733661.2                       24.07%    passed     75.81%
+ 385  Bflo_XM_035844322.1                       31.94%    passed     95.92%
+ 386  Dmel_FBtr0308948                          35.19%    passed     58.52%
+ 387  Fspp_ffun1.m4.29465.m1                    29.17%    passed     46.94%
+ 388  Gasp_gasp1.m1b.6286.m1                    29.63%    passed     51.97%
+ 389  Spis_XP_022792033_1                       29.63%    passed     73.54%
+ 390  Dmel_FBtr0342701                          25.00%    passed     22.18%
+ 391  Exapal_XM_021049478.2                     27.78%    passed     76.94%
+ 392  Nvec_v1g59708                             30.56%    passed     60.76%
+ 393  Bflo_XM_035844349.1                       17.59%    passed     92.60%
+ 394  Bflo_XM_035844350.1                       20.37%    passed     93.87%
+ 395  Adig_XM_015905819.1                       29.17%    passed     86.81%
+ 396  Spis_XP_022794643_1                       31.02%    passed     98.48%
+ 397  Adig_XM_015905823.1                       35.65%    passed     88.30%
+ 398  Fspp_ffun1.m4.14112.m1                    42.13%    passed     59.47%
+ 399  Gasp_gasp1.m3.4134.m1                     50.93%    passed     74.78%
+ 400  Spis_XP_022794603_1                       35.65%    passed     78.43%
+ 401  Gfas_gfas1.m1.775.m1                      48.15%    passed     55.28%
+ 402  Exapal_XM_021051225.2                     39.35%    passed     99.79%
+ 403  Adig_XM_015905827.1                       30.56%    passed     87.26%
+ 404  Gasp_gasp1.m3.4132.m1                     33.33%    passed     53.03%
+ 405  Spis_XP_022794604_1                       33.33%    passed     43.67%
+ 406  Gfas_gfas1.m1.773.m1                      34.26%    passed     76.87%
+ 407  Apimel_XM_394578                          23.61%    passed     55.26%
+ 408  Bflo_XM_035823802.1                       27.31%    passed     71.66%
+ 409  Tadh_TriadT9561                           74.54%    passed     31.09%
+ 410  Cgig_XM_011439089.3                       30.56%    passed     90.74%
+ 411  Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA70572    70.83%    passed     32.12%
+ 412  Spur_NM_001129811.2                       25.46%    passed     21.59%
+ 413  Skow_NM_001164932.1                       23.15%    passed     77.30%
+ 414  Xentro_ENSXETT00000050714                 31.02%    passed     96.69%
+ 415  Hsap_ENST00000377142                      30.56%    passed     90.25%
+ 416  Mmus_ENSMUST00000067075                   30.56%    passed     90.91%
+ 417  Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA221803   28.24%    passed     27.04%
+ 418  Dmel_FBtr0113751                          25.46%    passed     91.82%
+ 419  Hhon_g07292.t1                            42.13%    passed     69.28%
+ 420  Tadh_TriadT9507                           75.00%    passed     34.39%
+ 421  Bflo_XM_035831872.1                       26.85%    passed     52.51%
+ 422  Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA40416    62.50%    passed     59.69%
+ 423  Hsap_ENST00000351817                      23.15%    failed      0.25%
+ 424  Mmus_ENSMUST00000067020                   24.07%    failed      2.45%
+ 425  Cgig_XM_011453501.3                       26.39%    passed     80.91%
+ 426  Xentro_ENSXETT00000084717                 25.00%    passed     25.38%
+ 427  Xentro_ENSXETT00000066949                 24.54%    passed     31.11%
+ 428  Hsap_ENST00000354822                      24.54%    passed     20.53%
+ 429  Mmus_ENSMUST00000001536                   24.54%    passed     24.55%
+ 430  Spur_NM_214635.1                          26.39%    passed     76.39%
+ 431  Skow_NM_001164910.1                       28.24%    passed     14.95%
+ 432  Exapal_XM_021051229.2                     39.81%    passed     97.37%
+ 433  Nvec_v1g127891                            39.81%    passed     89.21%
+ 434  Dmel_FBtr0070110                          17.59%    failed      1.78%
+ 435  Hsap_ENST00000258829                      31.94%    failed      2.20%
+ 436  Mmus_ENSMUST00000072631                   32.41%    passed     22.50%
+ 437  Xentro_ENSXETT00000084212                 40.74%    passed     95.33%
+ 438  Apimel_XM_001121493                       32.41%    passed     76.74%
+ 439  Adig_XM_015905829.1                       31.48%    passed     98.60%
+ 440  Gfas_gfas1.m1.777.m1                      30.56%    passed     99.67%
+ 441  Fspp_ffun1.m4.14106.m1                    31.02%    passed     99.54%
+ 442  Gasp_gasp1.m3.4130.m1                     31.02%    passed     98.34%
+ 443  Spis_XP_022794618_1                       36.11%    passed     93.44%
+ 444  Exapal_XM_021051231.2                     33.80%    passed     50.02%
+ 445  Nvec_v1g48313                             30.09%    passed     96.66%
+ 446  Exapal_XM_021051226.2                     33.33%    passed     60.00%
+ 447  Bflo_XM_035818196.1                       30.09%    passed     37.82%
+ 448  Xentro_ENSXETT00000060367                 25.00%    passed     23.07%
+ 449  Hsap_ENST00000329198                      21.76%    failed      0.32%
+ 450  Mmus_ENSMUST00000015723                   23.15%    failed      1.37%
+ 451  Hsap_ENST00000344586                      18.98%    passed     25.29%
+ 452  Mmus_ENSMUST00000057178                   20.37%    passed     19.95%
+ 453  Xentro_ENSXETT00000089378                 20.83%    passed     45.48%
+ 454  Hsap_ENST00000325017                      26.85%    passed     28.56%
+ 455  Xentro_ENSXETT00000016948                 36.57%    passed     49.06%
+ 456  Mmus_ENSMUST00000062437                   28.24%    passed     48.62%
+ 457  Apimel_XM_001120208                       23.61%    passed     80.34%
+ 458  Nvec_v1g127828                            38.89%    passed     11.81%
+ 459  Skow_XM_006815396.1                       24.07%    passed     20.08%
+ 460  Nvec_v1g192469                            34.72%    passed     34.27%
+ 461  Adig_XM_015915184.1                       26.39%    passed     53.97%
+ 462  Fspp_ffun1.m4.4460.m1                     27.78%    passed     34.36%
+ 463  Gasp_gasp1.m3.679.m1                      26.85%    passed     30.15%
+ 464  Spis_XP_022782912_1                       26.85%    passed     31.05%
+ 465  Gfas_gfas1.m1.19176.m1                    27.31%    passed     43.44%
+ 466  Exapal_XM_021044212.2                     26.39%    passed     95.96%
+ 467  Nvec_v1g208035                            37.96%    passed     89.95%
+ 468  Cgig_XM_011456691.3                       18.98%    passed      9.82%
+ 469  Spur_XM_778030.4                          14.35%    passed     53.42%
+ 470  Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA170007   29.63%    passed     32.51%
+ 471  Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA220898   25.93%    failed      4.27%
+ 472  Adig_XM_015915185.1                       24.54%    passed     83.01%
+ 473  Fspp_ffun1.m4.4461.m1                     24.54%    passed     59.95%
+ 474  Gasp_gasp1.m3.680.m1                      24.54%    passed     87.70%
+ 475  Spis_XP_022782914_1                       24.54%    passed     80.89%
+ 476  Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA79432    63.43%    failed      1.31%
+ 477  Nvec_v1g208034                            23.15%    passed     33.09%
+ 478  Bflo_XM_035818757.1                       27.31%    passed     82.85%
+ 479  Exapal_XM_021044213.2                     24.07%    passed     85.97%
+ 480  Skow_NM_001165004.1                       25.00%    passed     43.13%
+ 481  Hsap_ENST00000382438                      26.39%    passed     27.75%
+ 482  Mmus_ENSMUST00000060820                   26.39%    passed     72.42%
+ 483  Xentro_ENSXETT00000094839                 24.07%    passed     63.40%
+ 484  Xentro_ENSXETT00000080534                 30.56%    passed     38.04%
+ 485  Spur_XM_779642.5                          20.83%    passed      8.02%
+ 486  Cgig_XM_011414579.3                       30.56%    passed     71.61%
+ 487  Apimel_XM_003251590                       25.93%    passed     21.51%
+ 488  Dmel_FBtr0084087                          26.39%    passed     88.83%
+ 489  Xentro_ENSXETT00000016949                 37.96%    passed     34.99%
+ 490  Hsap_ENST00000380871                      28.24%    passed     72.81%
+ 491  Mmus_ENSMUST00000022646                   27.31%    passed     75.87%
+ 492  Adig_XM_015905830.1                       39.35%    passed     87.91%
+ 493  Exapal_XM_021056278.2                     37.50%    passed     68.26%
+ 494  Fspp_ffun1.m4.14100.m1                    38.89%    passed     86.34%
+ 495  Gasp_gasp1.m3.4135.m1                     38.43%    passed     96.75%
+ 496  Spis_XP_022798368_1                       39.35%    passed     85.36%
+ 497  Nvec_v1g80394                             68.98%    passed     59.71%
+ 498  Exapal_XM_021056281.2                     45.83%    passed     63.40%
+ 499  Nvec_v1g80927                             63.89%    passed     35.95%
+ 500  Fspp_ffun1.m4.14099.m1                    33.80%    passed     83.91%
+ 501  Gfas_gfas1.m1.785.m1                      29.63%    passed     52.68%
+ 502  Spis_XP_022798377_1                       30.56%    passed     84.73%
+ 503  Bflo_XM_035840858.1                       27.31%    passed     42.76%
+ 504  Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA70959    75.46%    passed     31.05%
+ 505  Skow_XM_002741136.2                       29.63%    passed     41.58%
+ 506  Spur_XM_003726002.3                       22.69%    passed     87.62%
+ 507  Adig_XM_015905832.1                       33.33%    passed     95.98%
+ 508  Morvir_scaffold188.g35.t1                 37.50%    passed     15.29%
+ 509  Fspp_ffun1.m4.14104.m1                    30.56%    passed     47.42%
+ 510  Gasp_gasp1.m3.4133.m1                     24.07%    passed     69.22%
+ 511  Adig_XM_015915200.1                       23.61%    passed     92.47%
+ 512  Fspp_ffun1.m4.4458.m1                     24.07%    passed     98.62%
+ 513  Gasp_gasp1.m3.677.m1                      24.07%    passed     99.76%
+ 514  Spis_XP_022782913_1                       24.07%    passed     99.27%
+ 515  Gfas_gfas1.m1.5764.m1                     24.07%    passed     99.73%
+ 516  Bflo_XM_035819083.1                       23.15%    passed     72.77%
+ 517  Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA176625   28.70%    passed     94.03%
+ 518  Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA87981    62.96%    passed     19.44%
+ 519  Xentro_ENSXETT00000035005                 24.07%    passed     73.48%
+ 520  Hsap_ENST00000382723                      22.69%    passed      7.28%
+ 521  Mmus_ENSMUST00000063116                   22.69%    passed      6.03%
+ 522  Hsap_ENST00000239243                      24.54%    passed     18.79%
+ 523  Mmus_ENSMUST00000021922                   24.54%    passed     66.04%
+ 524  Xentro_ENSXETT00000020130                 24.54%    passed     86.89%
+ 525  Mmus_ENSMUST00000172775                   36.11%    passed      8.25%
+ 526  Cgig_XM_011442382.3                       23.15%    passed     80.69%
+ 527  Exapal_XM_021041692.2                     23.61%    passed     96.62%
+ 528  Nvec_v1g82785                             20.37%    passed     95.94%
+ 529  Spur_XM_030985280.1                       17.13%    passed     24.23%
+ 530  Skow_NM_001164931.1                       23.15%    passed     72.17%
+ 531  Apimel_NM_001115078                       14.35%    passed     56.39%
+ 532  Dmel_FBtr0085441                          20.37%    passed     94.16%
+ 533  Apimel_XM_001120268                       14.35%    passed     11.30%
+ 534  Chem_TCONS_00056354                       34.26%    passed      5.83%
+ 535  Dmel_FBtr0083968                          37.96%    passed     67.45%
+ 536  Spis_XP_022798373_1                       27.78%    passed     63.22%
+ 537  Chem_TCONS_00023949                       48.61%    passed     51.14%
+ 538  Hvul_g16557_1                             29.17%    failed      4.51%
+ 539  Morvir_scaffold477.g8.t1                  33.80%    failed      0.57%
+ 540  Chem_TCONS_00069782                       32.87%    failed      2.38%
+ 541  Exapal_XM_021040495.2                     26.39%    passed     37.07%
+ 542  Nvec_v1g58683                             57.87%    passed     37.87%
+ 543  Fspp_ffun1.m4.1442.m1                     27.78%    passed     91.53%
+ 544  Fspp_ffun1.m4.1443.m1                     32.41%    passed     84.93%
+ 545  Fspp_ffun1.m4.1448.m1                     32.41%    passed     49.41%
+ 546  Fspp_ffun1.m4.1445.m1                     32.41%    passed     61.92%
+ 547  Fspp_ffun1.m4.1446.m1                     32.41%    passed     61.56%
+ 548  Fspp_ffun1.m4.1444.m1                     32.41%    passed     77.13%
+ 549  Gasp_gasp1.m3.15756.m1                    27.31%    passed     79.06%
+ 550  Fspp_ffun1.m4.25254.m1                    35.19%    passed     35.38%
+ 551  Fspp_ffun1.m4.29242.m1                    35.19%    passed     86.47%
+ 552  Fspp_ffun1.m4.29243.m1                    35.19%    passed     59.88%
+ 553  Fspp_ffun1.m4.29244.m1                    35.19%    passed     87.22%
+ 554  Fspp_ffun1.m4.26302.m1                    59.72%    passed      7.37%
+ 555  Gasp_gasp1.m3.26136.m1                    32.41%    passed     55.58%
+ 556  Gasp_gasp1.m3.26141.m1                    50.46%    passed     12.29%
+ 557  Fspp_ffun1.m4.15421.m1                    32.87%    passed     67.33%
+ 558  Gasp_gasp1.m3.12286.m1                    40.74%    passed     59.09%
+ 559  Fspp_ffun1.m4.15426.m1                    31.02%    passed     96.94%
+ 560  Gfas_gfas1.m1.19699.m1                    25.00%    passed     23.27%
+ 561  Fspp_ffun1.m4.15423.m1                    22.22%    passed     33.71%
+ 562  Gasp_gasp1.m3.12287.m1                    32.41%    passed     35.60%
+ 563  Fspp_ffun1.m4.15427.m1                    21.76%    passed     87.33%
+ 564  Gasp_gasp1.m3.12289.m1                    34.72%    passed     96.02%
+ 565  Spis_XP_022791853_1                       27.78%    passed     49.79%
+ 566  Gfas_gfas1.m1.20899.m1                    27.31%    passed     75.18%
+ 567  Apimel_XM_001119904                       20.37%    passed     15.89%
+ 568  Dmel_FBtr0084111                          27.31%    passed     76.62%
+ 569  Bflo_XM_035816610.1                       24.54%    passed     66.53%
+ 570  Xentro_ENSXETT00000017635                 16.20%    passed     90.76%
+ 571  Hsap_ENST00000370196                      18.52%    passed     46.42%
+ 572  Mmus_ENSMUST00000026236                   18.52%    passed     46.27%
+ 573  Hsap_ENST00000296921                      19.91%    passed     25.69%
+ 574  Mmus_ENSMUST00000037746                   19.91%    passed     25.69%
+ 575  Xentro_ENSXETT00000039652                 18.52%    passed     30.86%
+ 576  Hsap_ENST00000233638                      18.52%    failed      0.15%
+ 577  Mmus_ENSMUST00000089641                   18.52%    failed      0.32%
+ 578  Xentro_ENSXETT00000102157                 34.26%    passed     38.78%
+ 579  Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA222072   18.52%    passed     31.42%
+ 580  Skow_NM_001164981.1                       25.93%    passed     45.99%
+ 581  Spur_XM_776648.5                          22.22%    passed     32.40%
+ 582  Cgig_XM_011416459.3                       24.54%    passed     94.31%
+ 583  Morvir_scaffold99.g69.t1                  31.94%    passed     49.63%
+ 584  Cgig_XM_011416447.3                       34.26%    passed     91.90%
+ 585  Aaur_scaffold329.g9.t1                    26.85%    passed     11.51%
+ 586  Adig_XM_015913000.1                       40.28%    passed     58.53%
+ 587  Gfas_gfas1.m1.565.m1                      39.35%    passed     62.03%
+ 588  Fspp_ffun1.m4.15317.m1                    39.81%    passed     56.78%
+ 589  Gasp_gasp1.m3.11755.m1                    39.81%    passed     73.83%
+ 590  Spis_XP_022794681_1                       40.28%    passed     92.92%
+ 591  Exapal_XM_021044594.2                     38.43%    passed     73.64%
+ 592  Nvec_v1g39891                             40.74%    passed     61.52%
+ 593  Bflo_XM_035819081.1                       30.09%    failed      1.78%
+ 594  Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA110019   71.30%    passed     48.75%
+ 595  Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA129537   71.30%    passed     48.75%
+ 596  Skow_NM_001164930.2                       31.94%    passed     39.20%
+ 597  Cgig_XM_011416274.3                       34.72%    passed     59.18%
+ 598  Hsap_ENST00000282728                      31.02%    passed     45.71%
+ 599  Mmus_ENSMUST00000025944                   31.02%    passed     40.78%
+ 600  Xentro_ENSXETT00000057734                 30.56%    passed     56.55%
+ 601  Hhon_g07171.t1                            37.96%    passed     69.42%
+ 602  Tadh_TriadT9560                           74.07%    passed     47.63%
+ 603  Spur_XM_030985857.1                       31.48%    passed     46.63%
+ 604  Spur_XM_776199.5                          31.48%    passed     46.63%
+ 605  Chem_TCONS_00038629                       32.87%    passed     66.28%
+ 606  Morvir_scaffold11.g90.t1                  31.02%    passed     75.61%
+ 607  Dmel_FBtr0084037                          31.02%    passed     30.19%
+ 608  Adig_XM_015918179.1                       36.57%    passed     41.11%
+ 609  Exapal_XM_021043048.2                     38.89%    passed     55.36%
+ 610  Nvec_v1g101611                            72.69%    passed     26.62%
+ 611  Gfas_gfas1.m1.13647.m1                    61.11%    passed     25.11%
+ 612  Fspp_ffun1.m4.18980.m1                    36.11%    passed     53.16%
+ 613  Gasp_gasp1.m3.12182.m1                    35.65%    passed     42.91%
+ 614  Spis_XP_022803778_1                       36.57%    passed     64.01%
+ 615  Exapal_XM_021043058.2                     35.19%    passed     49.81%
+ 616  Nvec_v1g205636                            40.28%    passed     10.62%
+ 617  Xentro_ENSXETT00000053914                 17.59%    passed     22.65%
+ 618  Cgig_XM_011426480.3                       27.78%    passed     48.55%
+ 619  Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA94911    67.59%    passed     97.15%
+ 620  Hsap_ENST00000222718                      23.61%    passed     95.76%
+ 621  Mmus_ENSMUST00000014848                   23.61%    passed     96.25%
+ 622  Xentro_ENSXETT00000001601                 24.54%    passed     92.95%
+ 623  Dmel_FBtr0089276                          28.70%    passed     44.33%
+ 624  Xentro_ENSXETT00000057087                 26.85%    passed     99.46%
+ 625  Hsap_ENST00000330070                      22.69%    failed      0.85%
+ 626  Mmus_ENSMUST00000100523                   22.69%    failed      1.27%
+ 627  Exapal_XM_021061853.2                     46.76%    passed     62.82%
+ 628  Exapal_XM_021061872.2                     40.28%    passed     92.24%
+ 629  Fspp_ffun1.m4.12105.m1                    35.65%    passed     87.97%
+ 630  Nvec_v1g91378                             75.93%    passed     32.40%
+ 631  Gasp_gasp1.m3.27871.m1                    35.65%    passed     77.28%
+ 632  Spis_XP_022801040_1                       34.72%    passed     93.90%
+ 633  Gfas_gfas1.m1.4550.m1                     36.57%    passed     94.69%
+ 634  Morvir_scaffold189.g37.t1                 37.04%    passed      9.34%
+ 635  Hsap_ENST00000311626                      17.13%    passed     16.94%
+ 636  Mmus_ENSMUST00000055334                   17.13%    passed      8.69%
+ 637  Xentro_ENSXETT00000047547                 17.59%    passed     21.24%
+ 638  Xentro_ENSXETT00000001602                 21.30%    passed     19.33%
+ 639  Hsap_ENST00000317201                      18.06%    failed      1.38%
+ 640  Mmus_ENSMUST00000114434                   18.06%    failed      3.61%
+ 641  Xentro_ENSXETT00000099847                 20.83%    passed     67.12%
+ 642  Hsap_ENST00000249440                      18.52%    passed     17.78%
+ 643  Mmus_ENSMUST00000047830                   18.52%    passed     21.59%
+ 644  Cgig_XM_011426481.3                       22.22%    passed     16.41%
+ 645  Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA219808   52.31%    passed     23.40%
+ 646  Apimel_NM_001011571                       36.11%    passed     62.16%
+ 647  Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA94879    62.96%    failed      4.38%
+ 648  Bflo_XM_035801584.1                       40.74%    passed     63.25%
+ 649  Hsap_ENST00000242159                      35.19%    passed     44.49%
+ 650  Mmus_ENSMUST00000048715                   35.65%    passed     63.25%
+ 651  Xentro_ENSXETT00000001606                 41.20%    passed     82.13%
+ 652  Xentro_ENSXETT00000089346                 38.89%    passed     51.75%
+ 653  Hsap_ENST00000239165                      38.43%    passed     13.25%
+ 654  Mmus_ENSMUST00000049352                   38.43%    passed     28.56%
+ 655  Dmel_FBtr0081647                          36.11%    failed      2.57%
+ 656  Hsap_ENST00000225648                      30.09%    passed     33.96%
+ 657  Mmus_ENSMUST00000000704                   30.09%    passed     30.18%
+ 658  Xentro_ENSXETT00000047588                 30.56%    passed     69.64%
+ 659  Hsap_ENST00000222728                      31.02%    passed     48.34%
+ 660  Mmus_ENSMUST00000062829                   31.02%    passed     41.17%
+ 661  Xentro_ENSXETT00000096565                 30.09%    passed     80.15%
+ 662  Apimel_XM_016917154                       26.85%    passed     66.09%
+ 663  Cgig_XM_011445847.3                       32.41%    passed     40.17%
+ 664  Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA94902    61.57%    passed     19.77%
+ 665  Dmel_FBtr0083388                          18.98%    passed      6.42%
+ 666  Spur_XM_011683941.2                       62.96%    passed      5.98%
+ 667  Spur_XM_788048.4                          39.81%    passed     22.25%
+ 668  Hsap_ENST00000243108                      27.31%    passed     36.08%
+ 669  Mmus_ENSMUST00000001711                   27.31%    passed     36.08%
+ 670  Xentro_ENSXETT00000050686                 27.31%    passed     13.09%
+ 671  Dmel_FBtr0474171                          19.44%    passed     12.89%
+ 672  Bflo_XM_035801587.1                       42.13%    passed     33.15%
+ 673  Apimel_XM_026445717                       31.02%    passed     40.42%
+ 674  Hsap_ENST00000303450                      31.94%    passed     82.19%
+ 675  Mmus_ENSMUST00000001706                   31.94%    passed     82.19%
+ 676  Xentro_ENSXETT00000016495                 64.35%    passed     27.70%
+ 677  Xentro_ENSXETT00000066357                 31.48%    passed     88.58%
+ 678  Xentro_ENSXETT00000078199                 34.26%    passed     63.15%
+ 679  Hsap_ENST00000249499                      32.41%    passed     39.35%
+ 680  Mmus_ENSMUST00000059272                   32.41%    passed     60.90%
+ 681  Hsap_ENST00000343483                      32.41%    passed     65.54%
+ 682  Mmus_ENSMUST00000048680                   32.41%    passed     62.30%
+ 683  Hsap_ENST00000470747                      55.56%    passed     39.85%
+ 684  Xentro_ENSXETT00000001611                 31.94%    passed     31.77%
+ 685  Hsap_ENST00000311177                      36.11%    passed     89.47%
+ 686  Mmus_ENSMUST00000000010                   36.11%    passed     81.38%
+ 687  Xentro_ENSXETT00000101088                 36.57%    passed     97.51%
+ 688  Hsap_ENST00000283921                      31.48%    passed     49.63%
+ 689  Xentro_ENSXETT00000001618                 61.11%    passed     35.51%
+ 690  Mmus_ENSMUST00000125581                   31.48%    passed     70.81%
+ 691  Xentro_ENSXETT00000050677                 29.63%    passed     42.26%
+ 692  Hsap_ENST00000303460                      30.09%    passed     48.80%
+ 693  Mmus_ENSMUST00000001699                   30.09%    passed     48.38%
+ 694  Hsap_ENST00000249501                      30.56%    passed     72.51%
+ 695  Mmus_ENSMUST00000061745                   30.56%    passed     72.51%
+ 696  Xentro_ENSXETT00000016491                 31.48%    passed     74.31%
+ 697  Hsap_ENST00000513209                      56.02%    passed     59.59%
+ 698  Xentro_ENSXETT00000050688                 42.13%    passed     64.77%
+ 699  Hsap_ENST00000312492                      42.13%    passed     59.49%
+ 700  Mmus_ENSMUST00000001709                   42.13%    passed     60.52%
+ 701  Hsap_ENST00000239151                      37.50%    passed     47.51%
+ 702  Mmus_ENSMUST00000049272                   37.50%    passed     43.69%
+ 703  Xentro_ENSXETT00000047578                 38.89%    passed     79.94%
+ 704  Hsap_ENST00000222726                      34.72%    passed     31.98%
+ 705  Mmus_ENSMUST00000048794                   34.72%    passed     24.03%
+ 706  Xentro_ENSXETT00000001604                 34.72%    passed     44.99%
+ 707  Dmel_FBtr0081621                          13.43%    failed      2.52%
+ 708  Hsap_ENST00000332503                      24.54%    passed     34.42%
+ 709  Mmus_ENSMUST00000049241                   25.00%    passed     41.99%
+ 710  Xentro_ENSXETT00000080023                 21.30%    passed     79.70%
+ 711  Hsap_ENST00000303406                      20.83%    passed     87.22%
+ 712  Mmus_ENSMUST00000100164                   20.83%    passed     86.84%
+ 713  Hsap_ENST00000306324                      22.22%    passed     57.24%
+ 714  Mmus_ENSMUST00000047904                   22.22%    passed     51.51%
+ 715  Xentro_ENSXETT00000003765                 24.54%    passed     71.26%
+ 716  Xentro_ENSXETT00000057392                 22.69%    passed     44.36%
+ 717  Hsap_ENST00000360046                      20.37%    passed     22.71%
+ 718  Mmus_ENSMUST00000101395                   20.83%    failed      3.50%
+ 719  Xentro_ENSXETT00000047559                 28.70%    passed     93.00%
+ 720  Apimel_XM_001120045                       17.59%    passed     29.05%
+ 721  Hsap_ENST00000239144                      30.56%    passed     80.61%
+ 722  Mmus_ENSMUST00000052650                   30.56%    passed     81.54%
+ 723  Xentro_ENSXETT00000063401                 30.56%    passed     66.13%
+ 724  Xentro_ENSXETT00000050682                 31.02%    passed     89.13%
+ 725  Hsap_ENST00000040584                      31.02%    passed     77.27%
+ 726  Mmus_ENSMUST00000001703                   31.02%    passed     77.27%
+ 727  Hsap_ENST00000313173                      31.48%    passed     93.71%
+ 728  Mmus_ENSMUST00000019749                   31.02%    passed     96.10%
+ 729  Xentro_ENSXETT00000070016                 33.80%    passed     68.57%
+ 730  Apimel_XM_006559367                       20.83%    failed      0.14%
+ 731  Bflo_XM_035844325.1                       36.57%    passed     86.73%
+ 732  Cgig_XM_011422313.3                       37.04%    passed     27.87%
+ 733  Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA70154    73.15%    failed      1.68%
+ 734  Spur_NM_214609.1                          32.87%    failed      0.63%
+ 735  Cgig_XM_011422319.3                       38.43%    passed     81.88%
+ 736  Cgig_XM_034459058.1                       38.43%    passed     81.88%
+ 737  Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA126009   63.43%    passed     34.08%
+ 738  Bflo_XM_035844330.1                       39.81%    passed     54.56%
+ 739  Dmel_FBtr0083384                          19.44%    failed      0.00%
+ 740  Apimel_XM_003249249                       29.17%    passed     65.00%
+ 741  Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA127728   67.13%    failed      4.70%
+ 742  Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA159948   50.46%    passed     88.48%
+ 743  Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA137362   67.13%    passed      6.53%
+ 744  Skow_XM_006821511.1                       25.00%    passed     54.27%
+ 745  Exapal_XM_021043064.2                     32.87%    passed     28.22%
+ 746  Nvec_v1g59496                             57.87%    passed     55.09%
+ 747  Fspp_ffun1.m4.20503.m1                    23.15%    passed     71.38%
+ 748  Gasp_gasp1.m3.12193.m1                    32.41%    passed     74.90%
+ 749  Spis_XP_022804238_1                       32.87%    passed     55.91%
+ 750  Gfas_gfas1.m1.10144.m1                    34.26%    passed     72.57%
+ 751  Spur_XM_011679176.2                       36.57%    failed      4.58%
+ 752  Dmel_FBtr0085090                          22.22%    passed      5.04%
+ 753  Bflo_XM_035802104.1                       68.52%    passed     43.73%
+ 754  Bflo_XM_035828549.1                        8.33%    passed     20.85%
+ 755  Adig_XM_015918189.1                       37.04%    passed     66.64%
+ 756  Gfas_gfas1.m1.13628.m1                    38.89%    passed     64.52%
+ 757  Spis_XP_022803993_1                       37.04%    passed     40.47%
+ 758  Apimel_XM_001122113                       29.63%    passed     79.29%
+ 759  Cgig_XM_011435248.3                       30.09%    passed     97.63%
+ 760  Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA41929    77.31%    passed     66.09%
+ 761  Skow_NM_001164925.1                       33.80%    passed     97.50%
+ 762  Spur_XM_777710.4                          30.56%    passed     29.39%
+ 763  Xentro_ENSXETT00000046719                 27.31%    passed     76.19%
+ 764  Hsap_ENST00000252971                      25.93%    passed     26.88%
+ 765  Mmus_ENSMUST00000001608                   25.93%    passed     32.06%
+ 766  Xentro_ENSXETT00000102628                 31.48%    passed     64.48%
+ 767  Bflo_XM_035840422.1                       54.63%    passed     39.84%
+ 768  Bflo_XM_035802305.1                       20.83%    passed     86.08%
+ 769  Dmel_FBtr0076751                          28.24%    failed      0.63%
+ 770  Exapal_XM_021043065.2                     45.37%    passed     52.48%
+ 771  Nvec_v1g101731                            38.43%    passed     63.91%
+ 772  Adig_XM_015908011.1                       35.65%    passed     81.27%
+ 773  Fspp_ffun1.m4.12110.m1                    34.72%    passed     92.66%
+ 774  Gasp_gasp1.m3.27866.m1                    34.72%    passed     97.25%
+ 775  Spis_XP_022800588_1                       34.26%    passed     87.75%
+ 776  Gfas_gfas1.m1.4539.m1                     36.11%    passed     83.92%
+ 777  Exapal_XM_021061837.2                     35.65%    passed     81.45%
+ 778  Nvec_v1g91593                             48.61%    passed     86.98%
+ 779  Chem_TCONS_00050614                       25.93%    passed     12.11%
+ 780  Hvul_g10051_1                             29.63%    passed     36.25%
+ 781  Adig_XM_015901484.1                       31.02%    passed     27.51%
+ 782  Fspp_ffun1.m4.11567.m1                    31.94%    passed     46.83%
+ 783  Gasp_gasp1.m3.3944.m1                     31.94%    passed     60.94%
+ 784  Spis_XP_022779308_1                       32.87%    passed     19.52%
+ 785  Gfas_gfas1.m1.7118.m1                     31.94%    passed     50.82%
+ 786  Exapal_XM_021039416.2                     35.65%    passed     17.39%
+ 787  Nvec_v1g128302                            37.04%    passed     44.92%
+ 788  Exapal_XM_021039430.2                     29.17%    passed     66.11%
+ 789  Fspp_ffun1.m4.11570.m1                    27.78%    passed     28.59%
+ 790  Gasp_gasp1.m3.3948.m1                     58.80%    passed     14.82%
+ 791  Spis_XP_022779237_1                       27.78%    passed     31.46%
+ 792  Gfas_gfas1.m1.7116.m1                     25.46%    passed     58.61%
+ 793  Nvec_v1g128275                            27.78%    passed     76.61%
+ 794  Exapal_XM_021039438.2                     34.26%    passed     71.12%
+ 795  Hsap_ENST00000262041                      29.17%    passed     31.26%
+ 796  Mmus_ENSMUST00000041183                   29.17%    passed     49.72%
+ 797  Xentro_ENSXETT00000011040                 29.17%    passed     64.74%
+ 798  Spur_XM_030972836.1                       28.70%    failed      1.75%
+ 799  Adig_XM_015901486.1                       31.02%    passed     75.02%
+ 800  Fspp_ffun1.m4.11569.m1                    31.94%    passed     84.05%
+ 801  Gasp_gasp1.m3.3946.m1                     31.94%    passed     81.96%
+ 802  Spis_XP_022779304_1                       32.87%    passed     93.22%
+ 803  Gfas_gfas1.m1.7119.m1                     32.41%    passed     77.04%
+ 804  Nvec_v1g128296                            34.72%    passed     21.10%
+ 805  Skow_NM_001164933.1                       23.15%    passed     94.33%
+ 806  Bflo_XM_035801524.1                       36.11%    passed     62.28%
+ 807  Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA173096   37.50%    passed     92.53%
+ 808  Hsap_ENST00000318579                      29.17%    passed     97.24%
+ 809  Mmus_ENSMUST00000057054                   30.09%    passed     95.69%
+ 810  Adig_XM_015918181.1                       40.74%    passed     88.03%
+ 811  Fspp_ffun1.m4.18981.m1                    40.28%    passed     62.48%
+ 812  Gasp_gasp1.m3.12179.m1                    47.69%    passed     60.30%
+ 813  Spis_XP_022804456_1                       40.28%    passed     76.29%
+ 814  Gfas_gfas1.m1.13639.m1                    40.28%    passed     96.38%
+ 815  Nvec_v1g196876                            49.54%    passed     19.75%
+ 816  Exapal_XM_021043043.2                     40.74%    passed     94.27%
+ 817  Adig_XM_015901485.1                       34.72%    passed     65.41%
+ 818  Fspp_ffun1.m4.11566.m1                    34.72%    passed     27.98%
+ 819  Spis_XP_022779303_1                       34.72%    passed     41.33%
+ 820  Gfas_gfas1.m1.7117.m1                     34.72%    passed     55.81%
+ 821  Bflo_XM_035801578.1                       23.61%    failed      4.94%
+ 822  Cgig_XM_011426484.3                       23.61%    passed     75.88%
+ 823  Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA149640   21.76%    passed     22.44%
+ 824  Skow_NM_001164913.1                       23.61%    passed     23.62%
+ 825  Skow_NM_001164938.1                       30.09%    passed     14.64%
+ 826  Cgig_XM_011426485.3                       25.00%    passed     12.73%
+ 827  Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA168122   25.00%    passed     49.08%
+ 828  Spur_XM_003727637.3                       27.78%    passed      8.35%
+ 829  Apimel_XM_026445701                       22.69%    failed      0.03%
+ 830  Dmel_FBtr0083347                          26.39%    passed      5.24%
+ 831  Bflo_XM_035826124.1                       19.44%    passed     18.92%
+ 832  Hsap_ENST00000381033                      20.83%    failed      1.57%
+ 833  Mmus_ENSMUST00000085591                   20.83%    passed      7.49%
+ 834  Xentro_ENSXETT00000025782                 23.15%    passed     59.28%
+ 835  Cgig_XM_011427832.3                       25.93%    passed      8.36%
+ 836  Spur_NM_214650.2                          15.28%    passed      8.92%
+ 837  Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA196539   25.46%    failed      4.74%
+ 838  Skow_XM_006824496.1                       25.46%    passed     31.09%
+ 839  Apimel_XM_006559348                       16.67%    passed      5.36%
+ 840  Bflo_XM_035801577.1                       24.07%    failed      1.16%
+ 841  Dmel_FBtr0081696                          15.28%    failed      0.00%
+ 842  Xentro_ENSXETT00000068002                 26.85%    passed     60.51%
+ 843  Hsap_ENST00000239174                      25.00%    passed     77.66%
+ 844  Mmus_ENSMUST00000019117                   25.00%    passed     77.00%
+ 845  Hsap_ENST00000643460                      23.15%    passed     67.91%
+ 846  Mmus_ENSMUST00000000964                   23.15%    passed     78.71%
+ 847  Xentro_ENSXETT00000001600                 23.61%    passed     93.24%
+ 848  Hsap_ENST00000331462                      25.93%    passed     28.93%
+ 849  Mmus_ENSMUST00000047793                   25.93%    passed     58.89%
+ 850  Xentro_ENSXETT00000003767                 24.54%    passed     73.77%
+ 851  Bflo_XM_035801567.1                       32.41%    passed      7.56%
+ 852  Spur_XM_030972985.1                       45.83%    passed      8.80%
+ 853  Aaur_scaffold460.g17.t1                   44.91%    failed      2.68%
+ 854  Adig_XM_015918185.1                       37.96%    failed      3.73%
+ 855  Gfas_gfas1.m1.13645.m1                    36.57%    passed      9.91%
+ 856  Fspp_ffun1.m4.18978.m1                    35.19%    passed     29.94%
+ 857  Gasp_gasp1.m3.12181.m1                    35.19%    passed     20.59%
+ 858  Spis_XP_022803981_1                       35.65%    passed     24.48%
+ 859  Apimel_NM_001252428                       33.33%    passed     38.04%
+ 860  Bflo_XM_035802195.1                       31.48%    passed     24.91%
+ 861  Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA70992    74.07%    passed     36.10%
+ 862  Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA99816    74.07%    passed     36.10%
+ 863  Dmel_FBtr0088390                          36.57%    failed      2.80%
+ 864  Xentro_ENSXETT00000072471                 22.69%    passed      6.95%
+ 865  Hsap_ENST00000308618                      18.52%    failed      0.00%
+ 866  Mmus_ENSMUST00000173623                   17.59%    failed      0.00%
+ 867  Hsap_ENST00000496902                      19.91%    failed      0.00%
+ 868  Mmus_ENSMUST00000031787                   19.91%    failed      0.00%
+ 869  Xentro_ENSXETT00000060604                 21.30%    failed      1.60%
+ 870  Skow_NM_001171223.1                       33.33%    passed     46.21%
+ 871  Cgig_XM_011428337.3                       31.48%    passed     33.43%
+ 872  Cgig_XM_011428340.3                       34.72%    passed     81.25%
+ 873  Bflo_XM_035844295.1                       50.93%    passed      9.90%
+ 874  Spur_XM_011677053.2                       20.37%    passed     25.18%
+ 875  Nvec_v1g101680                            45.83%    passed     11.28%
+ 876  Exapal_XM_021037512.2                     41.67%    passed     65.63%
+ 877  Adig_XM_015925334.1                       31.94%    passed     14.59%
+ 878  Adig_XM_015925335.1                       35.19%    passed     71.66%
+ 879  Gfas_gfas1.m1.13632.m1                    32.41%    failed      2.68%
+ 880  Fspp_ffun1.m4.18984.m1                    31.94%    passed     13.40%
+ 881  Gasp_gasp1.m3.12180.m1                    31.94%    passed     21.57%
+ 882  Spis_XP_022804770_1                       32.41%    passed      5.65%
+ 883  Spis_XP_022804023_1                       36.57%    passed     20.62%
+ 884  Spis_XP_022804634_1                       47.69%    passed     20.54%
+ 885  Exapal_XM_021043041.2                     30.56%    passed     20.51%
+ 886  Nvec_v1g90956                             34.26%    passed     17.19%
+ 887  Apimel_XM_026445909                       30.56%    failed      1.56%
+ 888  Gasp_gasp1.m3.3947.m1                     50.93%    passed     26.78%
+ 889  Bflo_XM_035801586.1                       30.09%    passed     93.73%
+ 890  Exapal_XM_021039415.2                     31.94%    failed      3.17%
+ 891  Nvec_v1g128289                            38.43%    passed     92.48%
+ 892  Skow_NM_001164912.1                       21.76%    passed     45.00%
+ 893  Apimel_XM_006564275                       31.48%    passed      9.86%
+ 894  Dmel_FBtr0084278                          40.74%    passed     19.07%
+ 895  Morvir_scaffold59.g41.t1                  26.39%    failed      0.21%
+ 896  Hvul_g24401_1                             32.41%    passed     13.60%
+ 897  Adig_XM_015895990.1                       31.94%    passed     74.02%
+ 898  Fspp_ffun1.m4.15422.m1                    32.41%    passed     87.45%
+ 899  Gasp_gasp1.m3.12278.m1                    32.41%    passed     68.08%
+ 900  Spis_XP_022791842_1                       32.41%    passed     88.89%
+ 901  Gfas_gfas1.m1.20981.m1                    34.26%    passed     36.64%
+ 902  Dmel_FBtr0088586                          18.98%    passed     73.99%
+ 903  Apimel_XM_001121332                       25.00%    failed      4.86%
+ 904  Exapal_XM_021061705.2                     33.33%    passed     69.63%
+ 905  Nvec_v1g27862                             33.33%    passed     45.05%
+ 906  Bflo_XM_035808158.1                       31.02%    passed     21.19%
+ 907  Hsap_ENST00000306318                      26.39%    passed     91.92%
+ 908  Mmus_ENSMUST00000036954                   26.39%    passed     91.92%
+ 909  Xentro_ENSXETT00000007133                 25.93%    passed     96.16%
+ 910  Xentro_ENSXETT00000007145                 25.93%    passed     94.09%
+ 911  Hsap_ENST00000297537                      25.00%    passed      5.68%
+ 912  Mmus_ENSMUST00000088311                   25.00%    passed      5.68%
+ 913  Cgig_XM_011416143.3                       28.24%    passed     34.40%
+ 914  Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA151262   29.17%    passed     20.81%
+ 915  Skow_NM_001164886.1                       30.09%    passed     93.38%
+ 916  Apimel_XM_006557259                       40.28%    failed      0.13%
+ 917  Cgig_XM_011419062.3                       22.69%    passed      6.68%
+ 918  Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA171492   43.52%    passed     29.54%
+ 919  Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA147353   58.33%    passed     28.17%
+ 920  Dmel_FBtr0072224                          36.57%    passed     48.58%
+ 921  Fspp_ffun1.m4.4260.m1                     35.19%    passed     94.55%
+ 922  Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA154864   27.78%    passed      5.63%
+ 923  Spur_XM_030972991.1                       38.43%    failed      0.18%
+ 924  Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA187461   58.33%    passed     45.33%
+ 925  Morvir_scaffold83.g2.t1                   43.98%    failed      0.04%
+ 926  Adig_XM_015917750.1                       25.00%    passed     77.51%
+ 927  Gfas_gfas1.m1.17187.m1                    25.00%    passed     21.26%
+ 928  Fspp_ffun1.m4.29467.m1                    25.46%    passed     40.52%
+ 929  Gasp_gasp1.m3.4695.m1                     24.54%    passed     25.71%
+ 930  Spis_XP_022792039_1                       25.00%    passed     83.34%
+ 931  Exapal_XM_021049473.2                     26.85%    passed     40.16%
+ 932  Nvec_v1g89029                             29.17%    passed     81.68%
+ 933  Apimel_XM_016915684                       22.22%    failed      0.00%
+ 934  Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA40403    71.30%    passed     16.66%
+ 935  Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA74740    40.28%    passed     39.01%
+ 936  Dmel_FBtr0300076                          22.22%    failed      0.30%
+ 937  Skow_NM_001164899.1                       25.00%    passed      5.96%
+ 938  Hsap_ENST00000361725                      22.69%    failed      0.11%
+ 939  Mmus_ENSMUST00000037119                   22.69%    failed      0.13%
+ 940  Bflo_XM_035844348.1                       24.54%    passed     21.52%
+ 941  Hsap_ENST00000518156                      24.07%    failed      1.68%
+ 942  Mmus_ENSMUST00000160937                   24.07%    failed      3.79%
+ 943  Xentro_ENSXETT00000090592                 25.00%    passed      5.67%
+ 944  Cgig_XM_011443268.3                       26.85%    failed      0.04%
+ 945  Xentro_ENSXETT00000072778                 24.54%    passed     35.95%
+ 946  Xentro_ENSXETT00000103078                 18.06%    failed      0.21%
+ 947  Hsap_ENST00000240306                      29.63%    passed     12.28%
+ 948  Mmus_ENSMUST00000021241                   30.09%    failed      2.03%
+ 949  Spur_NM_001129810.1                       24.07%    passed      7.99%
+ 950  Hsap_ENST00000648378                      17.13%    failed      2.36%
+ 951  Mmus_ENSMUST00000052609                   17.13%    failed      1.40%
+ 952  Xentro_ENSXETT00000036133                 18.52%    passed      7.56%
+ 953  Hsap_ENST00000234198                      17.59%    failed      1.90%
+ 954  Mmus_ENSMUST00000024159                   17.59%    failed      2.98%
+ 955  Xentro_ENSXETT00000016414                 20.83%    passed     18.74%
+ 956  Hsap_ENST00000434704                      18.52%    passed      9.67%
+ 957  Mmus_ENSMUST00000092768                   18.52%    passed     14.80%
+ 958  Xentro_ENSXETT00000047434                 44.91%    passed     65.01%
+ 959  Morvir_scaffold140.g36.t1                 31.02%    passed     80.08%
+ 960  Chem_TCONS_00017798                       26.85%    passed     23.41%
+ 961  Hvul_g6880_1                              29.17%    failed      0.48%
+ 962  Chem_TCONS_00000458                       23.15%    failed      1.87%
+ 963  Hvul_g18245_1                             25.93%    failed      3.21%
+ 964  Morvir_scaffold140.g33.t1                 28.70%    failed      4.10%
+ 965  Hhon_g08887.t1                            18.98%    failed      0.00%
+ 966  Tadh_TriadT49530                          24.07%    failed      0.00%
+ 967  Hsap_ENST00000332700                      18.52%    passed     28.12%
+ 968  Mmus_ENSMUST00000054244                   24.07%    passed     11.68%
+ 969  Xentro_ENSXETT00000063234                 30.09%    passed     96.86%
+ 970  Adig_XM_015910647.1                       38.89%    passed     95.30%
+ 971  Fspp_ffun1.m4.31229.m1                    50.93%    passed     60.89%
+ 972  Gasp_gasp1.m3.14501.m1                    42.59%    passed     97.81%
+ 973  Gfas_gfas1.m1.855.m1                      43.06%    passed     40.27%
+ 974  Spis_XP_022805326_1                       42.13%    passed     52.72%
+ 975  Exapal_XM_021061774.2                     51.39%    passed     13.37%
+ 976  Nvec_v1g60933                             45.37%    passed     73.32%
+ 977  Adig_XM_015910650.1                       54.17%    failed      1.56%
+ 978  Spur_XM_030998581.1                       40.74%    passed     34.97%
+ 979  Apimel_XM_006561860                       34.72%    passed     93.99%
+ 980  Dmel_FBtr0079227                          18.06%    passed      9.59%
+ 981  Morvir_scaffold340.g1.t1                  26.39%    passed     44.08%
+ 982  Morvir_scaffold45.g78.t1                  25.46%    passed     13.79%
+ 983  Aaur_scaffold1851.g1.t1                   55.56%    passed     33.56%
+ 984  Dmel_FBtr0081625                          17.59%    passed     13.38%
+ 985  Bflo_XM_035801576.1                       24.07%    passed     97.85%
+ 986  Bflo_XM_035844336.1                       44.44%    passed     81.80%
+ 987  Skow_NM_001164941.1                       37.04%    passed     63.30%
+ 988  Spur_XM_030973092.1                       28.70%    failed      0.10%
+ 989  Bflo_XM_035802805.1                       26.39%    failed      3.29%
+ 990  Skow_XM_006811515.1                       29.17%    failed      1.42%
+ 991  Spur_XM_030972960.1                       31.94%    passed     65.52%
+ 992  Bflo_XM_035801580.1                       31.94%    passed     91.16%
+ 993  Hsap_ENST00000006015                      34.26%    passed     98.57%
+ 994  Mmus_ENSMUST00000048026                   34.26%    passed     97.86%
+ 995  Xentro_ENSXETT00000001623                 36.11%    passed     53.86%
+ 996  Xentro_ENSXETT00000097247                 34.26%    passed     36.22%
+ 997  Mmus_ENSMUST00000001701                   33.80%    passed     42.42%
+ 998  Xentro_ENSXETT00000060673                 37.04%    passed     28.95%
+ 999  Hsap_ENST00000249504                      34.72%    passed     25.56%
+1000  Mmus_ENSMUST00000142312                   34.72%    failed      2.24%
+1001  Spur_XM_003727638.3                       30.56%    passed     53.81%
+1002  Aaur_scaffold919.g4.t1                    27.31%    passed     61.50%
+1003  Chem_TCONS_00060494                       23.61%    passed     60.13%
+1004  Hvul_g24998_1                             31.02%    passed     10.38%
+1005  Hvul_g3831_1                              39.35%    passed     44.89%
+1006  Morvir_scaffold216.g16.t1                 25.00%    passed     81.04%
+1007  Morvir_scaffold70.g42.t1                  40.28%    passed     79.74%
+1008  Cgig_XM_011457262.3                       32.41%    passed     19.00%
+1009  Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA225442   36.11%    passed     50.55%
+1010  Cgig_XM_011445848.3                       37.50%    passed     84.95%
+1011  Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA168125   26.85%    passed     47.24%
+1012  Skow_NM_001164908.1                       28.24%    passed     58.69%
+1013  Spur_NM_214560.1                          25.00%    passed      7.78%
+1014  Skow_XM_002730729.1                       31.02%    passed     18.11%
+1015  Apimel_NM_001252430                       16.20%    passed     24.74%
+1016  Dmel_FBtr0335152                          19.44%    failed      0.19%
+1017  Bflo_XM_035825097.1                       20.83%    passed     75.27%
+1018  Hsap_ENST00000373514                      25.93%    passed     90.49%
+1019  Mmus_ENSMUST00000033689                   25.93%    passed     87.91%
+1020  Xentro_ENSXETT00000009980                 30.09%    passed     92.15%
+1021  Xentro_ENSXETT00000022650                 26.39%    passed     41.67%
+1022  Hsap_ENST00000231656                      25.93%    failed      0.44%
+1023  Mmus_ENSMUST00000025521                   25.46%    failed      0.01%
+1024  Hsap_ENST00000381020                      20.83%    passed      7.57%
+1025  Mmus_ENSMUST00000031650                   21.30%    passed     11.95%
+1026  Xentro_ENSXETT00000073774                 28.70%    passed     31.70%
+1027  Spur_XM_784065.5                          23.61%    failed      0.13%
+1028  Skow_NM_001164943.1                       21.76%    failed      0.00%
+1029  Cgig_XM_011421958.3                       25.46%    passed     39.70%
+1030  Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA109027   25.46%    passed     28.03%
+1031  Morvir_scaffold175.g50.t1                 30.56%    passed     90.47%
+1032  Fspp_ffun1.m4.20257.m1                    35.19%    passed     82.80%
+1033  Hvul_g32708_1                             40.28%    passed      5.99%
+1034  Spur_XM_030978838.1                       24.54%    passed     57.21%
+1035  Chem_TCONS_00070484                       38.89%    passed     42.13%
+1036  Skow_NM_001164909.1                       29.63%    failed      0.13%
+1037  Skow_NM_001164942.1                       37.04%    passed     31.08%
+1038  Spur_XM_011681997.2                       25.46%    passed     25.39%
+1039  Spur_XM_776557.4                          38.43%    passed     70.94%
+1040  Adig_XM_015895991.1                       31.48%    passed     76.91%
+1041  Apimel_XM_006571083                       24.54%    passed     17.25%
+1042  Bflo_XM_035801619.1                       30.09%    passed     74.17%
+1043  Cgig_XM_011416150.3                       34.72%    passed     45.27%
+1044  Cgig_XM_034466211.1                       34.72%    passed     45.27%
+1045  Hsap_ENST00000295206                      21.76%    passed      9.60%
+1046  Mmus_ENSMUST00000079721                   21.76%    passed     36.60%
+1047  Xentro_ENSXETT00000078593                 27.31%    passed     54.58%
+1048  Hsap_ENST00000297375                      23.61%    passed     65.45%
+1049  Mmus_ENSMUST00000036177                   23.61%    passed     67.74%
+1050  Dmel_FBtr0088068                          17.13%    failed      2.54%
+1051  Dmel_FBtr0088095                          16.67%    passed     40.47%
+1052  Cgig_XM_011416152.3                       35.19%    passed     62.66%
+1053  Cgig_XM_034466313.1                       35.19%    passed     62.66%
+1054  Skow_NM_001164900.1                       31.48%    passed     42.72%
+1055  Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA152545   25.46%    passed     29.72%
+1056  Apimel_XM_026444941                       18.98%    passed     58.57%
+1057  Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA152542   29.63%    passed     20.60%
+1058  Spur_XM_031000060.1                       27.31%    passed     66.67%
+1059  Spur_XM_789660.4                          27.31%    passed     66.67%
+1060  Nvec_v1g129868                            37.04%    passed     75.07%
+1061  Aaur_scaffold529.g2.t1                    33.33%    passed     55.53%
+1062  Morvir_scaffold149.g55.t1                 39.81%    passed     11.29%
+1063  Hvul_g11736_1                             40.28%    passed     13.52%
+1064  Exapal_XM_021051502.2                     38.89%    passed     89.74%
+1065  Nvec_v1g8907                              39.81%    passed     99.61%
+1066  Apimel_XM_003249830                       29.63%    passed     10.99%
+1067  Gasp_gasp1.m3.2249.m1                     39.35%    passed     20.62%
+1068  Spis_XP_022791916_1                       39.35%    passed     34.28%
+1069  Hhon_g10555.t1                            31.02%    passed     24.66%
+1070  Tadh_TriadT49524                          30.56%    passed     15.31%
+1071  Aaur_scaffold28.g36.t1                    33.33%    passed     61.07%
+1072  Chem_TCONS_00025396                       32.41%    passed     15.55%
+1073  Adig_XM_015897305.1                       43.52%    passed     28.47%
+1074  Gasp_gasp1.m3.29873.m1                    59.26%    passed     31.83%
+1075  Spis_XP_022796024_1                       39.35%    passed     46.02%
+1076  Gfas_gfas1.m1.6139.m1                     44.44%    passed      9.41%
+1077  Fspp_ffun1.m4.7310.m1                     37.50%    passed     16.84%
+1078  Gasp_gasp1.m3.18420.m1                    39.35%    passed      8.85%
+1079  Spis_XP_022796023_1                       36.11%    passed      5.53%
+1080  Gfas_gfas1.m1.17647.m1                    35.19%    passed     45.78%
+1081  Chem_TCONS_00071866                       36.11%    passed     30.74%
+1082  Hvul_g30386_1                             45.83%    passed     50.67%
+1083  Bflo_XM_035819300.1                       30.56%    passed     20.74%
+1084  Bflo_XM_035819308.1                       32.87%    passed     22.65%
+1085  Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA121761   63.43%    passed     44.51%
+1086  Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA208832   35.19%    passed     66.84%
+1087  Bflo_XM_035819400.1                       35.65%    passed     40.32%
+1088  Exapal_XM_021042471.2                     34.72%    passed     51.37%
+1089  Skow_NM_001168018.1                       31.48%    passed     95.48%
+1090  Skow_NM_001168019.1                       35.19%    passed     87.08%
+1091  Exapal_XM_021044596.2                     37.96%    failed      4.96%
+1092  Nvec_v1g114232                            34.26%    passed     27.93%
+1093  Nvec_v1g47299                             34.26%    passed      7.41%
+1094  Xentro_ENSXETT00000056262                 19.91%    passed     47.48%
+1095  Xentro_ENSXETT00000056265                 19.91%    passed     50.85%
+1096  Xentro_ENSXETT00000019491                 26.39%    passed     61.09%
+1097  Xentro_ENSXETT00000062188                 23.61%    passed     43.63%
+1098  Cgig_XM_011425274.3                       23.15%    passed     51.12%
+1099  Chem_TCONS_00008773                       16.67%    passed     58.77%
+1100  Xentro_ENSXETT00000062960                 25.00%    passed     30.33%
+1101  Xentro_ENSXETT00000065382                 23.15%    passed     67.27%
+1102  Nvec_v1g19034                             35.65%    passed     28.20%
+1103  Exapal_XM_021049467.2                     30.09%    passed      9.16%
+1104  Nvec_v1g200278                            25.46%    passed      5.67%
+1105  Chem_TCONS_00047310                       41.67%    passed     28.64%
+1106  Aaur_scaffold2956.g1.t1                   37.04%    passed     18.03%
+1107  Chem_TCONS_00070249                       31.02%    failed      1.37%
+1108  Morvir_scaffold46.g33.t1                  32.41%    passed     50.37%
+1109  Adig_XM_015905817.1                       31.94%    passed     21.74%
+1110  Gfas_gfas1.m1.776.m1                      31.48%    passed     15.35%
+1111  Fspp_ffun1.m4.14105.m1                    30.09%    failed      3.89%
+1112  Gasp_gasp1.m3.4129.m1                     29.17%    failed      4.75%
+1113  Spis_XP_022794616_1                       30.09%    passed     63.08%
+1114  Exapal_XM_021051233.2                     32.41%    passed     37.73%
+1115  Nvec_v1g68616                             29.63%    passed     71.13%
+1116  Chem_TCONS_00016211                       25.46%    failed      1.92%
+1117  Hvul_g31954_1                             32.41%    failed      0.05%
+1118  Morvir_scaffold11.g115.t1                 29.63%    passed      9.46%
+1119  Dmel_FBtr0084086                          22.69%    passed      9.50%
+1120  Morvir_scaffold273.g2.t1                  43.98%    failed      3.24%
+1121  Chem_TCONS_00013206                       23.61%    passed     94.12%
+1122  Skow_NM_001164937.1                       22.69%    passed      5.94%
+1123  Aaur_scaffold389.g8.t1                    30.09%    passed     25.61%
+1124  Morvir_scaffold27.g7.t1                   33.80%    passed     27.85%
+1125  Chem_TCONS_00061956                       28.24%    failed      0.68%
+1126  Adig_XM_015918195.1                       25.00%    passed     37.65%
+1127  Gfas_gfas1.m1.13638.m1                    25.93%    passed     31.25%
+1128  Fspp_ffun1.m4.18979.m1                    25.93%    passed     28.51%
+1129  Gasp_gasp1.m3.12183.m1                    25.93%    passed     36.80%
+1130  Spis_XP_022804334_1                       26.39%    passed     59.63%
+1131  Exapal_XM_021041218.2                     29.63%    passed     46.31%
+1132  Dmel_FBtr0081670                          32.87%    passed     67.43%
+1133  Spur_XM_003727639.3                       21.30%    passed     40.05%
+1134  Skow_NM_001164907.1                       30.56%    passed     42.37%
+1135  Exapal_XM_021048171.2                     39.81%    passed     77.11%
+1136  Nvec_v1g81436                             38.43%    passed     78.44%
+1137  Spur_XM_030999997.1                       24.54%    passed      5.35%
+1138  Adig_XM_015899310.1                       40.28%    passed     70.38%
+1139  Fspp_ffun1.m4.23128.m1                    37.96%    passed      7.78%
+1140  Gasp_gasp1.m1b.2861.m1                    36.57%    passed     25.87%
+1141  Spis_XP_022791938_1                       37.50%    passed     94.36%
+1142  Hsap_ENST00000649031                      37.96%    passed     63.56%
+1143  Mmus_ENSMUST00000047993                   37.96%    passed     64.04%
+1144  Xentro_ENSXETT00000001626                 38.43%    passed     62.63%
+1145  Hsap_ENST00000290295                      39.81%    passed     74.29%
+1146  Mmus_ENSMUST00000062709                   39.81%    passed     62.97%
+1147  Xentro_ENSXETT00000100718                 37.04%    passed     43.78%
+1148  Hsap_ENST00000243056                      37.04%    passed     27.98%
+1149  Mmus_ENSMUST00000001700                   37.04%    passed     27.98%
+1150  Hsap_ENST00000392539                      38.89%    passed     73.56%
+1151  Mmus_ENSMUST00000001872                   38.89%    passed     69.67%
+1152  Xentro_ENSXETT00000016487                 38.89%    passed     31.13%
+1153  Hsap_ENST00000406506                      38.89%    passed     52.63%
+1154  Mmus_ENSMUST00000001878                   39.81%    passed     67.27%
+1155  Xentro_ENSXETT00000050671                 38.43%    passed     83.59%
+1156  Hsap_ENST00000243103                      36.57%    failed      3.88%
+1157  Mmus_ENSMUST00000055562                   36.57%    passed     37.29%
+1158  Aaur_scaffold706.g5.t1                    25.46%    passed     51.43%
+1159  Morvir_scaffold5.g160.t1                  28.70%    passed     12.47%
+1160  Gasp_gasp1.m3.10613.m1                    50.93%    failed      2.68%
+1161  Nvec_v1g5943                              40.28%    passed     11.97%
+1162  Cgig_XM_011426479.3                       31.02%    passed     28.90%
+1163  Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA219807   28.24%    passed      6.43%
+1164  Cgig_XM_011416272.3                       24.54%    passed     22.65%
+1165  Nvec_v1g80405                             42.13%    passed     59.42%
+1166  Hsap_ENST00000398468                      33.33%    failed      0.70%
+1167  Mmus_ENSMUST00000089578                   31.94%    passed     58.39%
+1168  Cgig_XM_011434051.3                       21.76%    passed     66.96%
+1169  Hvul_g2253_1                              37.50%    passed     10.86%
+1170  Hvul_g26228_1                             30.09%    passed     21.97%
+1171  Hhon_g09133.t1                            30.09%    passed     46.94%
+1172  Tadh_TriadT50911                          29.17%    passed     38.09%
+1173  Exapal_XM_021051250.2                     37.96%    passed     78.58%
+1174  Hsap_ENST00000229307                      32.41%    passed      9.05%
+1175  Hsap_ENST00000528386                      32.41%    passed      8.87%
+1176  Mmus_ENSMUST00000012540                   32.41%    passed     14.58%
+1177  Skow_XM_006811339.1                       42.59%    passed     58.60%
+1178  Nvec_v1g197288                            40.28%    passed     33.65%
+1179  Spur_XM_030997211.1                       30.09%    passed     58.08%
+1180  Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA172338   52.78%    passed     95.89%
+1181  Dmel_FBtr0081668                          43.52%    passed     23.13%
+1182  Gasp_gasp1.m3.16169.m1                    41.67%    passed     71.71%
+1183  Gfas_gfas1.m1.2443.m1                     54.17%    passed     97.45%
+1184  Nvec_v1g69041                             44.91%    passed     48.27%
+1185  Skow_XM_006815656.1                       56.02%    passed     56.16%
+1186  Skow_XM_006819480.1                       41.67%    passed     21.94%
+1187  Skow_XM_006819482.1                       56.02%    passed     56.16%
+1188  Skow_XM_006820387.1                       40.74%    passed     21.92%
+1189  Skow_XM_006819478.1                       56.02%    passed     70.65%
+1190  Skow_XM_002731799.2                       37.04%    passed     90.10%
+1191  Mmus_ENSMUST00000027778                   43.52%    passed     10.14%
+1192  Skow_NM_001171216.1                       37.04%    passed     60.83%
+1193  Hsap_ENST00000325980                      31.94%    passed      5.55%
+1194  Apimel_XM_016917155                       20.83%    failed      0.00%
+1195  Dmel_FBtr0081671                          42.59%    passed     36.85%
+1196  Morvir_scaffold70.g45.t1                  36.11%    passed     82.86%
+1197  Bflo_XM_035802726.1                       35.19%    passed     24.70%
+1198  Skow_XM_006825612.1                       44.44%    passed     78.52%
+1199  Hvul_g4503_1                              34.26%    failed      0.06%
+1200  Xentro_ENSXETT00000080894                 31.02%    passed     55.19%
+1201  Chem_TCONS_00045729                       29.63%    passed     16.37%
+1202  Apimel_XM_016916047                       43.06%    failed      0.17%
+1203  Hvul_g24677_1                             32.41%    passed      9.97%
+1204  Morvir_scaffold95.g3.t1                   41.67%    passed     99.68%
+1205  Tadh_TriadT51739                          35.19%    passed     16.48%
+1206  Bflo_XM_035839431.1                       42.59%    passed     21.52%
+1207  Bflo_XM_035811165.1                       36.57%    passed     30.63%
+WARNING: 95 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                                     33.69%  129 sequences failed composition chi2 test (p-value<5%; df=19)
+NOTE: Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA81827 is identical to Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA80782 but kept for subsequent analysis
+NOTE: Spur_XM_030985931.1 is identical to Spur_NM_214561.2 but kept for subsequent analysis
+NOTE: Spur_XM_030985932.1 is identical to Spur_NM_001009577.1 but kept for subsequent analysis
+NOTE: Spis_XP_022792175_1 is identical to Spis_XP_022790523_1 but kept for subsequent analysis
+NOTE: Mmus_ENSMUST00000062216 is identical to Hsap_ENST00000553456 but kept for subsequent analysis
+NOTE: Mmus_ENSMUST00000037746 is identical to Hsap_ENST00000296921 but kept for subsequent analysis
+NOTE: Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA129537 is identical to Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA110019 but kept for subsequent analysis
+NOTE: Spur_XM_776199.5 is identical to Spur_XM_030985857.1 but kept for subsequent analysis
+NOTE: Mmus_ENSMUST00000001711 is identical to Hsap_ENST00000243108 but kept for subsequent analysis
+NOTE: Mmus_ENSMUST00000001706 is identical to Hsap_ENST00000303450 but kept for subsequent analysis
+NOTE: Mmus_ENSMUST00000061745 is identical to Hsap_ENST00000249501 but kept for subsequent analysis
+NOTE: Mmus_ENSMUST00000001703 is identical to Hsap_ENST00000040584 but kept for subsequent analysis
+NOTE: Cgig_XM_034459058.1 is identical to Cgig_XM_011422319.3 but kept for subsequent analysis
+NOTE: Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA99816 is identical to Ctel_gnl_WGS_AMQN_CAPTEDRAFT_mRNA70992 but kept for subsequent analysis
+NOTE: Mmus_ENSMUST00000036954 is identical to Hsap_ENST00000306318 but kept for subsequent analysis
+NOTE: Cgig_XM_034466211.1 is identical to Cgig_XM_011416150.3 but kept for subsequent analysis
+NOTE: Cgig_XM_034466313.1 is identical to Cgig_XM_011416152.3 but kept for subsequent analysis
+NOTE: Spur_XM_789660.4 is identical to Spur_XM_031000060.1 but kept for subsequent analysis
+NOTE: Mmus_ENSMUST00000001700 is identical to Hsap_ENST00000243056 but kept for subsequent analysis
+NOTE: Skow_XM_006819482.1 is identical to Skow_XM_006815656.1 but kept for subsequent analysis
+
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 1.238 seconds
+Measuring multi-threading efficiency up to 4 CPU cores
+3 trees examined
+Threads: 1 / Time: 5.278 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -377285
+Threads: 2 / Time: 3.513 sec / Speedup: 1.503 / Efficiency: 75% / LogL: -377285
+Threads: 3 / Time: 2.872 sec / Speedup: 1.838 / Efficiency: 61% / LogL: -377285
+Threads: 4 / Time: 2.500 sec / Speedup: 2.111 / Efficiency: 53% / LogL: -377285
+BEST NUMBER OF THREADS: 4
+
+Perform fast likelihood tree search using LG+G model...
+Estimate model parameters (epsilon = 5.000)
+Perform nearest neighbor interchange...
+Estimate model parameters (epsilon = 1.000)
+1. Initial log-likelihood: -213680.818
+Optimal log-likelihood: -213680.680
+Gamma shape alpha: 0.933
+Parameters optimization took 1 rounds (1.964 sec)
+Time for fast ML tree search: 38.089 seconds
+
+NOTE: ModelFinder requires 176 MB RAM!
+ModelFinder will test up to 12 protein models (sample size: 216) ...
+ No. Model         -LnL         df  AIC          AICc         BIC
+  1  LG            229190.365   2411 463202.730   12093866.730 471340.526
+  2  LG+G4         213680.690   2412 432185.381   12072497.381 440326.553
+  4  LG+F+G4       212969.112   2431 430800.224   12255184.224 439005.526
+  6  WAG+G4        213638.856   2412 432101.713   12072413.713 440242.884
+  8  WAG+F+G4      214333.086   2431 433528.172   12257912.172 441733.474
+ 10  JTT+G4        212852.545   2412 430529.090   12070841.090 438670.261
+ 12  JTT+F+G4      212940.147   2431 430742.294   12255126.294 438947.595
+Akaike Information Criterion:           JTT+G4
+Corrected Akaike Information Criterion: JTT+G4
+Bayesian Information Criterion:         JTT+G4
+Best-fit model: JTT+G4 chosen according to BIC
+
+All model information printed to results_trees/downsampling_alignment/downsample_0.20-r20.genes.lt.iqtree.model.gz
+CPU time for ModelFinder: 354.790 seconds (0h:5m:54s)
+Wall-clock time for ModelFinder: 99.495 seconds (0h:1m:39s)
+Generating 1000 samples for ultrafast bootstrap (seed: 209445)...
+
+NOTE: 176 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -212852.545
+Optimal log-likelihood: -212852.543
+Gamma shape alpha: 0.720
+Parameters optimization took 1 rounds (1.272 sec)
+Computing ML distances based on estimated model parameters...
+Computing ML distances took 64.595790 sec (of wall-clock time) 255.391349 sec(of CPU time)
+WARNING: Some pairwise ML distances are too long (saturated)
+Computing RapidNJ tree took 0.192757 sec (of wall-clock time) 0.437162 sec (of CPU time)
+Log-likelihood of RapidNJ tree: -215402.124
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 120.040 second
+Computing log-likelihood of 98 initial trees ... 86.425 seconds
+Current best score: -212852.543
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -212675.734
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 2: -212557.796
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 3: -212550.141
+Iteration 10 / LogL: -212898.404 / Time: 0h:11m:9s
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 18: -212512.986
+Iteration 20 / LogL: -212813.247 / Time: 0h:18m:24s
+Finish initializing candidate tree set (20)
+Current best tree score: -212512.986 / CPU time: 1024.345
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 21: -212410.679
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 25: -212374.876
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 26: -212309.615
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 27: -212303.221
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 28: -212294.469
+Iteration 30 / LogL: -212379.546 / Time: 0h:22m:41s (2h:34m:55s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 31: -212259.633
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 36: -212244.395
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 39: -212227.337
+Iteration 40 / LogL: -212266.466 / Time: 0h:26m:38s (2h:15m:56s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 45: -212223.899
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 48: -212201.098
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 49: -212172.298
+Iteration 50 / LogL: -212236.317 / Time: 0h:30m:24s (2h:3m:28s left)
+Log-likelihood cutoff on original alignment: -212386.225
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 60: -212162.159
+Iteration 60 / LogL: -212162.159 / Time: 0h:34m:21s (1h:56m:26s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 67: -212151.280
+Iteration 70 / LogL: -212189.478 / Time: 0h:38m:14s (1h:49m:11s left)
+Iteration 80 / LogL: -212215.540 / Time: 0h:42m:15s (1h:40m:2s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 86: -212142.994
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 87: -212135.500
+Iteration 90 / LogL: -212155.260 / Time: 0h:46m:4s (1h:41m:59s left)
+Iteration 100 / LogL: -212219.212 / Time: 0h:49m:39s (1h:33m:48s left)
+Log-likelihood cutoff on original alignment: -212317.419
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.922
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 108: -212134.976
+Iteration 110 / LogL: -212143.694 / Time: 0h:53m:37s (1h:37m:23s left)
+Iteration 120 / LogL: -212195.630 / Time: 0h:57m:19s (1h:30m:33s left)
+Iteration 130 / LogL: -212218.764 / Time: 1h:1m:2s (1h:24m:13s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 131: -212134.033
+Iteration 140 / LogL: -212228.622 / Time: 1h:4m:51s (1h:29m:7s left)
+Iteration 150 / LogL: -212190.394 / Time: 1h:8m:38s (1h:23m:22s left)
+Log-likelihood cutoff on original alignment: -212317.419
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 152: -212132.716
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 153: -212130.509
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 158: -212118.400
+Iteration 160 / LogL: -212219.567 / Time: 1h:12m:46s (1h:30m:37s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 168: -212109.983
+Iteration 170 / LogL: -212205.678 / Time: 1h:16m:33s (1h:29m:41s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 174: -212107.586
+Iteration 180 / LogL: -212261.999 / Time: 1h:20m:30s (1h:27m:14s left)
+Iteration 190 / LogL: -212169.265 / Time: 1h:24m:22s (1h:22m:8s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 199: -212105.778
+Iteration 200 / LogL: -212192.539 / Time: 1h:28m:17s (1h:28m:17s left)
+Log-likelihood cutoff on original alignment: -212295.387
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.969
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 201: -212102.346
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 207: -212099.776
+Iteration 210 / LogL: -212153.811 / Time: 1h:32m:31s (1h:27m:13s left)
+Iteration 220 / LogL: -212148.591 / Time: 1h:36m:25s (1h:22m:20s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 228: -212096.914
+Iteration 230 / LogL: -212174.111 / Time: 1h:40m:17s (1h:26m:43s left)
+Iteration 240 / LogL: -212176.201 / Time: 1h:44m:22s (1h:22m:6s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 246: -212092.209
+Iteration 250 / LogL: -212121.384 / Time: 1h:48m:22s (1h:25m:18s left)
+Log-likelihood cutoff on original alignment: -212295.387
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 259: -212092.007
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 260: -212083.332
+Iteration 260 / LogL: -212083.332 / Time: 1h:52m:39s (1h:26m:59s left)
+Iteration 270 / LogL: -212121.444 / Time: 1h:56m:36s (1h:22m:21s left)
+Iteration 280 / LogL: -212139.282 / Time: 2h:0m:40s (1h:17m:51s left)
+Iteration 290 / LogL: -212092.431 / Time: 2h:4m:33s (1h:13m:16s left)
+Iteration 300 / LogL: -212104.087 / Time: 2h:8m:38s (1h:8m:50s left)
+Log-likelihood cutoff on original alignment: -212294.811
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.966
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 310 / LogL: -212173.809 / Time: 2h:12m:49s (1h:4m:28s left)
+Iteration 320 / LogL: -212127.401 / Time: 2h:16m:44s (1h:0m:0s left)
+Iteration 330 / LogL: -212122.279 / Time: 2h:20m:44s (0h:55m:36s left)
+Iteration 340 / LogL: -212108.913 / Time: 2h:24m:43s (0h:51m:13s left)
+Iteration 350 / LogL: -212203.480 / Time: 2h:28m:50s (0h:46m:54s left)
+Log-likelihood cutoff on original alignment: -212294.811
+Iteration 360 / LogL: -212125.098 / Time: 2h:33m:2s (0h:42m:37s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 367: -212080.073
+Iteration 370 / LogL: -212122.837 / Time: 2h:37m:9s (1h:23m:54s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 371: -212071.832
+Iteration 380 / LogL: -212212.201 / Time: 2h:41m:29s (1h:21m:22s left)
+Iteration 390 / LogL: -212137.634 / Time: 2h:45m:30s (1h:17m:0s left)
+Iteration 400 / LogL: -212228.218 / Time: 2h:49m:40s (1h:12m:43s left)
+Log-likelihood cutoff on original alignment: -212294.811
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.978
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 410 / LogL: -212199.577 / Time: 2h:53m:56s (1h:8m:28s left)
+Iteration 420 / LogL: -212218.086 / Time: 2h:57m:48s (1h:4m:4s left)
+Iteration 430 / LogL: -212256.016 / Time: 3h:1m:54s (0h:59m:47s left)
+Iteration 440 / LogL: -212177.288 / Time: 3h:5m:51s (0h:55m:27s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 445: -212061.242
+Iteration 450 / LogL: -212137.485 / Time: 3h:9m:55s (1h:22m:29s left)
+Log-likelihood cutoff on original alignment: -212294.811
+Iteration 460 / LogL: -212177.952 / Time: 3h:14m:2s (1h:18m:12s left)
+Iteration 470 / LogL: -212095.868 / Time: 3h:18m:15s (1h:13m:58s left)
+Iteration 480 / LogL: -212129.179 / Time: 3h:22m:28s (1h:9m:44s left)
+Iteration 490 / LogL: -212142.418 / Time: 3h:26m:26s (1h:5m:26s left)
+Iteration 500 / LogL: -212141.406 / Time: 3h:30m:23s (1h:1m:8s left)
+Log-likelihood cutoff on original alignment: -212294.811
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.982
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 510 / LogL: -212094.285 / Time: 3h:34m:18s (0h:56m:50s left)
+Iteration 520 / LogL: -212159.457 / Time: 3h:38m:14s (0h:52m:33s left)
+Iteration 530 / LogL: -212151.126 / Time: 3h:42m:10s (0h:48m:17s left)
+Iteration 540 / LogL: -212141.467 / Time: 3h:46m:17s (0h:44m:4s left)
+Iteration 550 / LogL: -212122.418 / Time: 3h:50m:9s (0h:39m:49s left)
+Log-likelihood cutoff on original alignment: -212294.811
+Iteration 560 / LogL: -212105.908 / Time: 3h:54m:22s (0h:35m:38s left)
+Iteration 570 / LogL: -212118.062 / Time: 3h:58m:26s (0h:31m:25s left)
+Iteration 580 / LogL: -212189.563 / Time: 4h:2m:23s (0h:27m:12s left)
+Iteration 590 / LogL: -212095.706 / Time: 4h:6m:24s (0h:23m:0s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 599: -212055.458
+Iteration 600 / LogL: -212128.071 / Time: 4h:10m:20s (1h:23m:10s left)
+Log-likelihood cutoff on original alignment: -212294.811
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.985
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 610 / LogL: -212165.527 / Time: 4h:14m:18s (1h:18m:55s left)
+Iteration 620 / LogL: -212135.223 / Time: 4h:18m:1s (1h:14m:36s left)
+Iteration 630 / LogL: -212198.099 / Time: 4h:21m:51s (1h:10m:21s left)
+Iteration 640 / LogL: -212115.760 / Time: 4h:25m:46s (1h:6m:7s left)
+Iteration 650 / LogL: -212105.283 / Time: 4h:29m:19s (1h:1m:49s left)
+Log-likelihood cutoff on original alignment: -212218.886
+Iteration 660 / LogL: -212155.642 / Time: 4h:33m:16s (0h:57m:38s left)
+Iteration 670 / LogL: -212139.644 / Time: 4h:36m:59s (0h:53m:24s left)
+Iteration 680 / LogL: -212097.554 / Time: 4h:40m:44s (0h:49m:12s left)
+Iteration 690 / LogL: -212110.580 / Time: 4h:44m:23s (0h:44m:59s left)
+Iteration 700 / LogL: -212142.676 / Time: 4h:48m:12s (0h:40m:49s left)
+Log-likelihood cutoff on original alignment: -212218.886
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.982
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 710 / LogL: -212072.235 / Time: 4h:52m:15s (0h:37m:5s left)
+Iteration 720 / LogL: -212133.678 / Time: 4h:56m:6s (0h:32m:56s left)
+Iteration 730 / LogL: -212103.149 / Time: 5h:0m:8s (0h:28m:49s left)
+Iteration 740 / LogL: -212105.764 / Time: 5h:3m:57s (0h:24m:40s left)
+Iteration 750 / LogL: -212085.763 / Time: 5h:7m:52s (0h:20m:33s left)
+Log-likelihood cutoff on original alignment: -212218.886
+Iteration 760 / LogL: -212143.014 / Time: 5h:11m:43s (0h:16m:25s left)
+Iteration 770 / LogL: -212199.452 / Time: 5h:15m:31s (0h:12m:18s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 778: -212053.128
+Iteration 780 / LogL: -212129.247 / Time: 5h:19m:23s (1h:21m:10s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 785: -212044.200
+Iteration 790 / LogL: -212162.428 / Time: 5h:23m:25s (1h:19m:55s left)
+Iteration 800 / LogL: -212149.887 / Time: 5h:27m:15s (1h:15m:46s left)
+Log-likelihood cutoff on original alignment: -212218.886
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.979
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 810 / LogL: -212058.850 / Time: 5h:31m:25s (1h:11m:41s left)
+Iteration 820 / LogL: -212095.339 / Time: 5h:35m:15s (1h:7m:32s left)
+Iteration 830 / LogL: -212080.677 / Time: 5h:39m:11s (1h:3m:25s left)
+Iteration 840 / LogL: -212060.775 / Time: 5h:42m:59s (0h:59m:16s left)
+Iteration 850 / LogL: -212117.280 / Time: 5h:46m:51s (0h:55m:9s left)
+Log-likelihood cutoff on original alignment: -212218.886
+Iteration 860 / LogL: -212140.997 / Time: 5h:50m:43s (0h:51m:2s left)
+Iteration 870 / LogL: -212126.627 / Time: 5h:54m:49s (0h:46m:57s left)
+Iteration 880 / LogL: -212094.641 / Time: 5h:58m:51s (0h:42m:51s left)
+Iteration 890 / LogL: -212130.983 / Time: 6h:2m:51s (0h:38m:46s left)
+Iteration 900 / LogL: -212094.442 / Time: 6h:6m:49s (0h:34m:40s left)
+Log-likelihood cutoff on original alignment: -212218.886
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.979
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 910 / LogL: -212067.192 / Time: 6h:10m:49s (0h:36m:42s left)
+Iteration 920 / LogL: -212075.785 / Time: 6h:14m:57s (0h:32m:38s left)
+Iteration 930 / LogL: -212058.367 / Time: 6h:19m:8s (0h:28m:34s left)
+Iteration 940 / LogL: -212199.846 / Time: 6h:23m:14s (0h:24m:29s left)
+Iteration 950 / LogL: -212078.986 / Time: 6h:27m:9s (0h:20m:23s left)
+Log-likelihood cutoff on original alignment: -212218.886
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 955: -212042.377
+Iteration 960 / LogL: -212083.566 / Time: 6h:31m:14s (1h:19m:33s left)
+Iteration 970 / LogL: -212098.074 / Time: 6h:35m:22s (1h:15m:29s left)
+Iteration 980 / LogL: -212124.652 / Time: 6h:39m:27s (1h:11m:24s left)
+Iteration 990 / LogL: -212151.430 / Time: 6h:43m:29s (1h:7m:18s left)
+Iteration 1000 / LogL: -212144.250 / Time: 6h:47m:23s (1h:3m:12s left)
+Log-likelihood cutoff on original alignment: -212218.886
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.977
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 1010 / LogL: -212067.013 / Time: 6h:51m:43s (0h:59m:10s left)
+Iteration 1020 / LogL: -212109.097 / Time: 6h:55m:40s (0h:55m:4s left)
+Iteration 1030 / LogL: -212074.687 / Time: 6h:59m:44s (0h:50m:59s left)
+Iteration 1040 / LogL: -212109.931 / Time: 7h:3m:50s (0h:46m:54s left)
+Iteration 1050 / LogL: -212076.053 / Time: 7h:7m:42s (0h:42m:48s left)
+Log-likelihood cutoff on original alignment: -212209.700
+Iteration 1060 / LogL: -212084.345 / Time: 7h:12m:1s (0h:38m:45s left)
+Iteration 1070 / LogL: -212085.095 / Time: 7h:15m:55s (0h:34m:39s left)
+Iteration 1080 / LogL: -212074.074 / Time: 7h:19m:55s (0h:30m:34s left)
+Iteration 1090 / LogL: -212125.112 / Time: 7h:23m:49s (0h:26m:29s left)
+Iteration 1100 / LogL: -212084.120 / Time: 7h:28m:0s (0h:22m:25s left)
+Log-likelihood cutoff on original alignment: -212209.700
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.975
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 1110 / LogL: -212087.793 / Time: 7h:32m:24s (0h:36m:42s left)
+Iteration 1120 / LogL: -212089.585 / Time: 7h:36m:17s (0h:32m:37s left)
+Iteration 1130 / LogL: -212134.995 / Time: 7h:40m:26s (0h:28m:32s left)
+Iteration 1140 / LogL: -212157.192 / Time: 7h:44m:25s (0h:24m:27s left)
+Iteration 1150 / LogL: -212068.822 / Time: 7h:48m:28s (0h:20m:23s left)
+Log-likelihood cutoff on original alignment: -212209.700
+Iteration 1160 / LogL: -212193.705 / Time: 7h:52m:34s (0h:16m:18s left)
+Iteration 1170 / LogL: -212115.618 / Time: 7h:56m:37s (0h:12m:13s left)
+Iteration 1180 / LogL: -212140.937 / Time: 8h:0m:45s (0h:8m:9s left)
+Iteration 1190 / LogL: -212102.295 / Time: 8h:5m:0s (0h:4m:4s left)
+Iteration 1200 / LogL: -212138.454 / Time: 8h:9m:7s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -212209.700
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.980
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1207: -212033.656
+Iteration 1210 / LogL: -212148.302 / Time: 8h:13m:25s (1h:20m:24s left)
+Iteration 1220 / LogL: -212091.529 / Time: 8h:17m:24s (1h:16m:18s left)
+Iteration 1230 / LogL: -212120.779 / Time: 8h:21m:32s (1h:12m:13s left)
+Iteration 1240 / LogL: -212069.683 / Time: 8h:25m:25s (1h:8m:7s left)
+Iteration 1250 / LogL: -212079.202 / Time: 8h:29m:40s (1h:4m:3s left)
+Log-likelihood cutoff on original alignment: -212209.700
+Iteration 1260 / LogL: -212053.496 / Time: 8h:34m:1s (1h:0m:1s left)
+Iteration 1270 / LogL: -212094.724 / Time: 8h:38m:5s (0h:55m:55s left)
+Iteration 1280 / LogL: -212057.993 / Time: 8h:42m:14s (0h:51m:51s left)
+Iteration 1290 / LogL: -212106.136 / Time: 8h:46m:13s (0h:47m:45s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1296: -212025.609
+Iteration 1300 / LogL: -212093.648 / Time: 8h:50m:17s (1h:20m:0s left)
+Log-likelihood cutoff on original alignment: -212209.700
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.980
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 1310 / LogL: -212162.069 / Time: 8h:54m:37s (1h:15m:58s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1317: -212021.024
+Iteration 1320 / LogL: -212090.702 / Time: 8h:58m:50s (1h:20m:28s left)
+Iteration 1330 / LogL: -212103.112 / Time: 9h:2m:57s (1h:16m:23s left)
+Iteration 1340 / LogL: -212097.464 / Time: 9h:7m:16s (1h:12m:20s left)
+Iteration 1350 / LogL: -212066.176 / Time: 9h:11m:23s (1h:8m:15s left)
+Log-likelihood cutoff on original alignment: -212209.700
+Iteration 1360 / LogL: -212066.876 / Time: 9h:15m:55s (1h:4m:13s left)
+Iteration 1370 / LogL: -212078.490 / Time: 9h:20m:17s (1h:0m:9s left)
+Iteration 1380 / LogL: -212100.181 / Time: 9h:24m:16s (0h:56m:3s left)
+Iteration 1390 / LogL: -212129.584 / Time: 9h:28m:17s (0h:51m:57s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1399: -212016.022
+Iteration 1400 / LogL: -212039.416 / Time: 9h:32m:34s (1h:21m:26s left)
+Log-likelihood cutoff on original alignment: -212153.531
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.980
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 1410 / LogL: -212032.050 / Time: 9h:36m:43s (1h:17m:21s left)
+Iteration 1420 / LogL: -212056.058 / Time: 9h:40m:43s (1h:13m:15s left)
+Iteration 1430 / LogL: -212045.031 / Time: 9h:44m:42s (1h:9m:8s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1432: -212004.872
+Iteration 1440 / LogL: -212160.586 / Time: 9h:48m:45s (1h:18m:33s left)
+Iteration 1450 / LogL: -212066.995 / Time: 9h:52m:41s (1h:14m:26s left)
+Log-likelihood cutoff on original alignment: -212153.531
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1458: -211993.464
+Iteration 1460 / LogL: -212069.391 / Time: 9h:56m:55s (1h:21m:0s left)
+Iteration 1470 / LogL: -212065.307 / Time: 10h:0m:52s (1h:16m:53s left)
+Iteration 1480 / LogL: -212152.895 / Time: 10h:5m:8s (1h:12m:49s left)
+Iteration 1490 / LogL: -212009.064 / Time: 10h:9m:10s (1h:8m:43s left)
+Iteration 1500 / LogL: -212038.043 / Time: 10h:13m:19s (1h:4m:38s left)
+Log-likelihood cutoff on original alignment: -212151.865
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.972
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 1510 / LogL: -212042.551 / Time: 10h:17m:50s (1h:0m:35s left)
+Iteration 1520 / LogL: -212018.583 / Time: 10h:21m:53s (0h:56m:29s left)
+Iteration 1530 / LogL: -212062.243 / Time: 10h:26m:1s (0h:52m:24s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1538: -211991.682
+Iteration 1540 / LogL: -212124.910 / Time: 10h:30m:7s (1h:21m:4s left)
+Iteration 1550 / LogL: -212072.293 / Time: 10h:34m:21s (1h:16m:59s left)
+Log-likelihood cutoff on original alignment: -212151.865
+Iteration 1560 / LogL: -212099.957 / Time: 10h:38m:26s (1h:12m:53s left)
+Iteration 1570 / LogL: -212035.913 / Time: 10h:42m:51s (1h:8m:49s left)
+Iteration 1580 / LogL: -212077.940 / Time: 10h:46m:59s (1h:4m:44s left)
+Iteration 1590 / LogL: -212033.103 / Time: 10h:51m:9s (1h:0m:38s left)
+Iteration 1600 / LogL: -212024.976 / Time: 10h:55m:12s (0h:56m:32s left)
+Log-likelihood cutoff on original alignment: -212151.865
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.966
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 1610 / LogL: -212004.451 / Time: 10h:59m:33s (0h:52m:28s left)
+Iteration 1620 / LogL: -212006.723 / Time: 11h:3m:46s (0h:48m:22s left)
+Iteration 1630 / LogL: -212033.884 / Time: 11h:7m:54s (0h:44m:16s left)
+Iteration 1640 / LogL: -212086.958 / Time: 11h:11m:45s (0h:40m:9s left)
+Iteration 1650 / LogL: -212026.300 / Time: 11h:15m:53s (0h:36m:4s left)
+Log-likelihood cutoff on original alignment: -212151.865
+Iteration 1660 / LogL: -212072.902 / Time: 11h:20m:2s (0h:31m:58s left)
+Iteration 1670 / LogL: -212060.910 / Time: 11h:24m:9s (0h:27m:52s left)
+Iteration 1680 / LogL: -212112.511 / Time: 11h:28m:26s (0h:23m:46s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1683: -211988.714
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1686: -211987.620
+Iteration 1690 / LogL: -212089.517 / Time: 11h:32m:48s (1h:20m:23s left)
+Iteration 1700 / LogL: -212049.531 / Time: 11h:36m:48s (1h:16m:17s left)
+Log-likelihood cutoff on original alignment: -212151.865
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.958
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 1710 / LogL: -212053.309 / Time: 11h:41m:10s (1h:12m:12s left)
+Iteration 1720 / LogL: -212025.435 / Time: 11h:45m:34s (1h:8m:8s left)
+Iteration 1730 / LogL: -212078.760 / Time: 11h:49m:48s (1h:4m:2s left)
+Iteration 1740 / LogL: -212053.274 / Time: 11h:54m:15s (0h:59m:57s left)
+Iteration 1750 / LogL: -212070.823 / Time: 11h:58m:49s (0h:55m:53s left)
+Log-likelihood cutoff on original alignment: -212151.865
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1759: -211968.257
+Iteration 1760 / LogL: -212197.102 / Time: 12h:3m:16s (1h:21m:49s left)
+Iteration 1770 / LogL: -212021.176 / Time: 12h:7m:36s (1h:17m:44s left)
+Iteration 1780 / LogL: -212084.872 / Time: 12h:12m:6s (1h:13m:39s left)
+Iteration 1790 / LogL: -212012.192 / Time: 12h:16m:16s (1h:9m:33s left)
+Iteration 1800 / LogL: -212075.920 / Time: 12h:20m:32s (1h:5m:27s left)
+Log-likelihood cutoff on original alignment: -212132.712
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.955
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 1810 / LogL: -212148.989 / Time: 12h:25m:1s (1h:1m:21s left)
+Iteration 1820 / LogL: -212113.456 / Time: 12h:29m:10s (0h:57m:14s left)
+Iteration 1830 / LogL: -212039.293 / Time: 12h:33m:16s (0h:53m:7s left)
+Iteration 1840 / LogL: -212054.403 / Time: 12h:37m:31s (0h:49m:1s left)
+Iteration 1850 / LogL: -212060.738 / Time: 12h:41m:41s (0h:44m:54s left)
+Log-likelihood cutoff on original alignment: -212132.712
+Iteration 1860 / LogL: -212029.258 / Time: 12h:46m:4s (0h:40m:47s left)
+Iteration 1870 / LogL: -212080.412 / Time: 12h:50m:25s (0h:36m:41s left)
+Iteration 1880 / LogL: -212059.847 / Time: 12h:54m:50s (0h:32m:34s left)
+Iteration 1890 / LogL: -212065.897 / Time: 12h:59m:2s (0h:28m:27s left)
+Iteration 1900 / LogL: -212053.738 / Time: 13h:3m:14s (0h:24m:20s left)
+Log-likelihood cutoff on original alignment: -212132.712
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.956
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 1910 / LogL: -212055.371 / Time: 13h:7m:33s (0h:37m:7s left)
+Iteration 1920 / LogL: -212002.021 / Time: 13h:12m:8s (0h:33m:1s left)
+Iteration 1930 / LogL: -212006.716 / Time: 13h:16m:16s (0h:28m:53s left)
+Iteration 1940 / LogL: -212057.611 / Time: 13h:20m:33s (0h:24m:46s left)
+Iteration 1950 / LogL: -211999.668 / Time: 13h:24m:46s (0h:20m:38s left)
+Log-likelihood cutoff on original alignment: -212132.712
+Iteration 1960 / LogL: -212022.193 / Time: 13h:29m:0s (0h:16m:31s left)
+Iteration 1970 / LogL: -212038.167 / Time: 13h:33m:3s (0h:12m:23s left)
+Iteration 1980 / LogL: -212044.790 / Time: 13h:37m:18s (0h:8m:15s left)
+Iteration 1990 / LogL: -211997.706 / Time: 13h:41m:27s (0h:4m:7s left)
+Iteration 2000 / LogL: -212128.811 / Time: 13h:45m:39s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -212131.248
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.958
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 2010 / LogL: -212004.183 / Time: 13h:50m:1s (0h:37m:11s left)
+Iteration 2020 / LogL: -212049.079 / Time: 13h:54m:8s (0h:33m:3s left)
+Iteration 2030 / LogL: -212126.682 / Time: 13h:58m:18s (0h:28m:55s left)
+Iteration 2040 / LogL: -212089.643 / Time: 14h:2m:26s (0h:24m:47s left)
+Iteration 2050 / LogL: -212040.938 / Time: 14h:6m:29s (0h:20m:39s left)
+Log-likelihood cutoff on original alignment: -212131.248
+Iteration 2060 / LogL: -212036.225 / Time: 14h:10m:43s (0h:16m:31s left)
+Iteration 2070 / LogL: -212090.090 / Time: 14h:15m:4s (0h:12m:23s left)
+Iteration 2080 / LogL: -211994.832 / Time: 14h:19m:13s (0h:8m:15s left)
+Iteration 2090 / LogL: -212028.927 / Time: 14h:23m:16s (0h:4m:7s left)
+Iteration 2100 / LogL: -212018.767 / Time: 14h:27m:41s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -212131.248
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.955
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 2110 / LogL: -212003.787 / Time: 14h:32m:9s (0h:37m:13s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 2116: -211966.682
+Iteration 2120 / LogL: -212115.350 / Time: 14h:36m:27s (1h:21m:4s left)
+Iteration 2130 / LogL: -212036.996 / Time: 14h:40m:45s (1h:16m:56s left)
+Iteration 2140 / LogL: -212057.940 / Time: 14h:44m:52s (1h:12m:48s left)
+Iteration 2150 / LogL: -212035.817 / Time: 14h:49m:3s (1h:8m:40s left)
+Log-likelihood cutoff on original alignment: -212128.622
+Iteration 2160 / LogL: -212016.662 / Time: 14h:53m:24s (1h:4m:33s left)
+Iteration 2170 / LogL: -212085.088 / Time: 14h:57m:37s (1h:0m:25s left)
+Iteration 2180 / LogL: -212027.552 / Time: 15h:1m:59s (0h:56m:17s left)
+Iteration 2190 / LogL: -211998.702 / Time: 15h:6m:21s (0h:52m:10s left)
+Iteration 2200 / LogL: -211991.569 / Time: 15h:10m:34s (0h:48m:2s left)
+Log-likelihood cutoff on original alignment: -212124.489
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.954
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 2210 / LogL: -212194.387 / Time: 15h:15m:0s (0h:43m:54s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 2219: -211963.793
+Iteration 2220 / LogL: -212003.440 / Time: 15h:19m:24s (1h:22m:27s left)
+Iteration 2230 / LogL: -212000.939 / Time: 15h:23m:40s (1h:18m:19s left)
+Iteration 2240 / LogL: -211974.615 / Time: 15h:27m:44s (1h:14m:10s left)
+Iteration 2250 / LogL: -212073.230 / Time: 15h:31m:55s (1h:10m:1s left)
+Log-likelihood cutoff on original alignment: -212124.489
+Iteration 2260 / LogL: -211999.225 / Time: 15h:36m:28s (1h:5m:54s left)
+Iteration 2270 / LogL: -212033.526 / Time: 15h:40m:48s (1h:1m:46s left)
+Iteration 2280 / LogL: -212034.747 / Time: 15h:44m:53s (0h:57m:37s left)
+Iteration 2290 / LogL: -211983.440 / Time: 15h:49m:4s (0h:53m:29s left)
+Iteration 2300 / LogL: -212049.984 / Time: 15h:53m:10s (0h:49m:20s left)
+Log-likelihood cutoff on original alignment: -212124.489
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.951
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 2310 / LogL: -211975.904 / Time: 15h:57m:33s (0h:45m:12s left)
+Iteration 2320 / LogL: -212043.669 / Time: 16h:1m:57s (0h:41m:3s left)
+Iteration 2330 / LogL: -212077.785 / Time: 16h:6m:25s (0h:36m:55s left)
+Iteration 2340 / LogL: -212038.545 / Time: 16h:10m:43s (0h:32m:47s left)
+Iteration 2350 / LogL: -211993.378 / Time: 16h:15m:6s (0h:28m:38s left)
+Log-likelihood cutoff on original alignment: -212124.489
+Iteration 2360 / LogL: -212053.903 / Time: 16h:19m:41s (0h:24m:30s left)
+Iteration 2370 / LogL: -212037.043 / Time: 16h:23m:49s (0h:20m:20s left)
+Iteration 2380 / LogL: -212015.244 / Time: 16h:28m:6s (0h:16m:11s left)
+Iteration 2390 / LogL: -212078.061 / Time: 16h:32m:31s (0h:12m:2s left)
+Iteration 2400 / LogL: -212053.472 / Time: 16h:36m:39s (0h:7m:53s left)
+Log-likelihood cutoff on original alignment: -212124.489
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.951
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 2408: -211962.482
+Iteration 2410 / LogL: -211998.762 / Time: 16h:41m:11s (1h:22m:17s left)
+Iteration 2420 / LogL: -212064.841 / Time: 16h:45m:20s (1h:18m:8s left)
+Iteration 2430 / LogL: -212036.172 / Time: 16h:49m:41s (1h:13m:59s left)
+Iteration 2440 / LogL: -211993.104 / Time: 16h:54m:1s (1h:9m:50s left)
+Iteration 2450 / LogL: -212022.127 / Time: 16h:58m:28s (1h:5m:42s left)
+Log-likelihood cutoff on original alignment: -212124.489
+Iteration 2460 / LogL: -211986.428 / Time: 17h:2m:52s (1h:1m:33s left)
+Iteration 2470 / LogL: -212000.814 / Time: 17h:7m:18s (0h:57m:25s left)
+Iteration 2480 / LogL: -212070.286 / Time: 17h:11m:38s (0h:53m:16s left)
+Iteration 2490 / LogL: -211994.454 / Time: 17h:15m:45s (0h:49m:6s left)
+Iteration 2500 / LogL: -211992.034 / Time: 17h:20m:12s (0h:44m:57s left)
+Log-likelihood cutoff on original alignment: -212124.489
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.950
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 2510 / LogL: -212005.436 / Time: 17h:24m:35s (0h:40m:48s left)
+Iteration 2520 / LogL: -212025.786 / Time: 17h:28m:52s (0h:36m:38s left)
+Iteration 2530 / LogL: -211999.940 / Time: 17h:33m:2s (0h:32m:28s left)
+Iteration 2540 / LogL: -211995.643 / Time: 17h:37m:25s (0h:28m:19s left)
+Iteration 2550 / LogL: -211995.143 / Time: 17h:41m:45s (0h:24m:9s left)
+Log-likelihood cutoff on original alignment: -212124.489
+Iteration 2560 / LogL: -212030.837 / Time: 17h:46m:11s (0h:19m:59s left)
+Iteration 2570 / LogL: -212084.218 / Time: 17h:50m:26s (0h:15m:50s left)
+Iteration 2580 / LogL: -212015.024 / Time: 17h:54m:54s (0h:11m:40s left)
+Iteration 2590 / LogL: -212010.494 / Time: 17h:59m:21s (0h:7m:30s left)
+Iteration 2600 / LogL: -212010.467 / Time: 18h:3m:35s (0h:3m:20s left)
+Log-likelihood cutoff on original alignment: -212124.489
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.952
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 2610 / LogL: -212068.064 / Time: 18h:7m:54s (0h:37m:31s left)
+Iteration 2620 / LogL: -212012.455 / Time: 18h:12m:5s (0h:33m:21s left)
+Iteration 2630 / LogL: -212047.093 / Time: 18h:16m:34s (0h:29m:11s left)
+Iteration 2640 / LogL: -212034.899 / Time: 18h:21m:6s (0h:25m:2s left)
+Iteration 2650 / LogL: -212039.529 / Time: 18h:25m:25s (0h:20m:51s left)
+Log-likelihood cutoff on original alignment: -212124.489
+Iteration 2660 / LogL: -212019.189 / Time: 18h:29m:43s (0h:16m:41s left)
+Iteration 2670 / LogL: -212071.724 / Time: 18h:34m:6s (0h:12m:31s left)
+Iteration 2680 / LogL: -212114.557 / Time: 18h:38m:30s (0h:8m:21s left)
+Iteration 2690 / LogL: -212008.770 / Time: 18h:42m:52s (0h:4m:10s left)
+Iteration 2700 / LogL: -212045.973 / Time: 18h:47m:11s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -212124.489
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.957
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 2710 / LogL: -212035.917 / Time: 18h:51m:29s (0h:37m:35s left)
+Iteration 2720 / LogL: -212018.493 / Time: 18h:56m:8s (0h:33m:25s left)
+Iteration 2730 / LogL: -212028.869 / Time: 19h:0m:26s (0h:29m:15s left)
+Iteration 2740 / LogL: -212039.091 / Time: 19h:4m:51s (0h:25m:4s left)
+Iteration 2750 / LogL: -212002.420 / Time: 19h:9m:17s (0h:20m:54s left)
+Log-likelihood cutoff on original alignment: -212124.489
+Iteration 2760 / LogL: -212057.273 / Time: 19h:13m:35s (0h:16m:43s left)
+Iteration 2770 / LogL: -212066.825 / Time: 19h:17m:50s (0h:12m:32s left)
+Iteration 2780 / LogL: -211987.116 / Time: 19h:22m:6s (0h:8m:21s left)
+Iteration 2790 / LogL: -212000.769 / Time: 19h:26m:35s (0h:4m:10s left)
+Iteration 2800 / LogL: -211982.594 / Time: 19h:31m:3s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -212124.489
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.960
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 2810 / LogL: -212012.208 / Time: 19h:35m:21s (0h:37m:39s left)
+Iteration 2820 / LogL: -212003.436 / Time: 19h:40m:4s (0h:33m:29s left)
+Iteration 2830 / LogL: -212062.274 / Time: 19h:44m:27s (0h:29m:18s left)
+Iteration 2840 / LogL: -211995.306 / Time: 19h:48m:46s (0h:25m:7s left)
+Iteration 2850 / LogL: -212096.071 / Time: 19h:53m:7s (0h:20m:56s left)
+Log-likelihood cutoff on original alignment: -212124.489
+Iteration 2860 / LogL: -211989.218 / Time: 19h:57m:36s (0h:16m:45s left)
+Iteration 2870 / LogL: -212296.377 / Time: 20h:1m:53s (0h:12m:34s left)
+Iteration 2880 / LogL: -211987.691 / Time: 20h:6m:10s (0h:8m:22s left)
+Iteration 2890 / LogL: -212086.598 / Time: 20h:10m:29s (0h:4m:11s left)
+Iteration 2900 / LogL: -212009.158 / Time: 20h:14m:59s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -212124.489
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.965
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 2910 / LogL: -211990.304 / Time: 20h:19m:22s (0h:37m:43s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 2912: -211960.221
+Iteration 2920 / LogL: -212037.724 / Time: 20h:23m:39s (1h:20m:29s left)
+Iteration 2930 / LogL: -212048.062 / Time: 20h:28m:0s (1h:16m:18s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 2934: -211956.592
+Iteration 2940 / LogL: -212042.504 / Time: 20h:32m:28s (1h:21m:21s left)
+Iteration 2950 / LogL: -212022.361 / Time: 20h:36m:54s (1h:17m:10s left)
+Log-likelihood cutoff on original alignment: -212124.489
+Iteration 2960 / LogL: -212028.759 / Time: 20h:41m:18s (1h:12m:59s left)
+Iteration 2970 / LogL: -212011.502 / Time: 20h:45m:37s (1h:8m:48s left)
+Iteration 2980 / LogL: -212011.069 / Time: 20h:50m:9s (1h:4m:37s left)
+Iteration 2990 / LogL: -212128.642 / Time: 20h:54m:38s (1h:0m:26s left)
+Iteration 3000 / LogL: -212083.954 / Time: 20h:58m:49s (0h:56m:14s left)
+Log-likelihood cutoff on original alignment: -212124.489
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.967
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 3010 / LogL: -211995.670 / Time: 21h:3m:30s (0h:52m:4s left)
+Iteration 3020 / LogL: -211991.411 / Time: 21h:7m:54s (0h:47m:52s left)
+Iteration 3030 / LogL: -212033.527 / Time: 21h:12m:22s (0h:43m:41s left)
+Iteration 3040 / LogL: -212029.022 / Time: 21h:16m:43s (0h:39m:29s left)
+Iteration 3050 / LogL: -212030.976 / Time: 21h:21m:2s (0h:35m:17s left)
+Log-likelihood cutoff on original alignment: -212124.489
+Iteration 3060 / LogL: -212012.862 / Time: 21h:25m:37s (0h:31m:6s left)
+Iteration 3070 / LogL: -212079.214 / Time: 21h:29m:48s (0h:26m:53s left)
+Iteration 3080 / LogL: -211993.983 / Time: 21h:34m:14s (0h:22m:41s left)
+Iteration 3090 / LogL: -212073.820 / Time: 21h:38m:30s (0h:18m:29s left)
+Iteration 3100 / LogL: -212033.373 / Time: 21h:42m:47s (0h:14m:17s left)
+Log-likelihood cutoff on original alignment: -212124.489
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.972
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 3110 / LogL: -212015.480 / Time: 21h:47m:12s (0h:37m:50s left)
+Iteration 3120 / LogL: -212088.626 / Time: 21h:51m:35s (0h:33m:38s left)
+Iteration 3130 / LogL: -212036.835 / Time: 21h:55m:55s (0h:29m:26s left)
+Iteration 3140 / LogL: -212007.888 / Time: 22h:0m:20s (0h:25m:14s left)
+Iteration 3150 / LogL: -212057.203 / Time: 22h:4m:54s (0h:21m:2s left)
+Log-likelihood cutoff on original alignment: -212124.489
+Iteration 3160 / LogL: -212036.786 / Time: 22h:9m:26s (0h:16m:50s left)
+Iteration 3170 / LogL: -212040.279 / Time: 22h:14m:5s (0h:12m:37s left)
+Iteration 3180 / LogL: -212044.413 / Time: 22h:18m:24s (0h:8m:25s left)
+Iteration 3190 / LogL: -212029.595 / Time: 22h:22m:45s (0h:4m:12s left)
+Iteration 3200 / LogL: -212021.043 / Time: 22h:27m:9s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -212124.489
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.974
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 3210 / LogL: -212088.293 / Time: 22h:31m:32s (0h:37m:54s left)
+Iteration 3220 / LogL: -212018.459 / Time: 22h:35m:58s (0h:33m:41s left)
+Iteration 3230 / LogL: -212035.807 / Time: 22h:40m:22s (0h:29m:29s left)
+Iteration 3240 / LogL: -211983.134 / Time: 22h:44m:41s (0h:25m:16s left)
+Iteration 3250 / LogL: -211994.772 / Time: 22h:49m:10s (0h:21m:4s left)
+Log-likelihood cutoff on original alignment: -212124.489
+Iteration 3260 / LogL: -211979.775 / Time: 22h:53m:34s (0h:16m:51s left)
+Iteration 3270 / LogL: -211976.401 / Time: 22h:57m:51s (0h:12m:38s left)
+Iteration 3280 / LogL: -212038.213 / Time: 23h:2m:16s (0h:8m:25s left)
+Iteration 3290 / LogL: -212127.555 / Time: 23h:6m:43s (0h:4m:12s left)
+Iteration 3300 / LogL: -211984.831 / Time: 23h:11m:8s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -212124.489
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.976
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 3310 / LogL: -212034.502 / Time: 23h:15m:48s (0h:37m:57s left)
+Iteration 3320 / LogL: -212076.432 / Time: 23h:20m:9s (0h:33m:44s left)
+Iteration 3330 / LogL: -212021.846 / Time: 23h:24m:35s (0h:29m:32s left)
+Iteration 3340 / LogL: -211997.235 / Time: 23h:28m:56s (0h:25m:19s left)
+Iteration 3350 / LogL: -212119.316 / Time: 23h:33m:21s (0h:21m:6s left)
+Log-likelihood cutoff on original alignment: -212124.489
+Iteration 3360 / LogL: -212052.180 / Time: 23h:37m:58s (0h:16m:53s left)
+Iteration 3370 / LogL: -211985.406 / Time: 23h:42m:23s (0h:12m:39s left)
+Iteration 3380 / LogL: -212067.378 / Time: 23h:46m:49s (0h:8m:26s left)
+Iteration 3390 / LogL: -212053.302 / Time: 23h:51m:23s (0h:4m:13s left)
+Iteration 3400 / LogL: -211995.719 / Time: 23h:55m:44s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -212124.489
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.976
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 3410 / LogL: -212042.739 / Time: 24h:0m:18s (0h:38m:1s left)
+Iteration 3420 / LogL: -212098.300 / Time: 24h:4m:40s (0h:33m:48s left)
+Iteration 3430 / LogL: -211983.426 / Time: 24h:8m:59s (0h:29m:34s left)
+Iteration 3440 / LogL: -212010.038 / Time: 24h:13m:34s (0h:25m:21s left)
+Iteration 3450 / LogL: -212036.170 / Time: 24h:17m:59s (0h:21m:8s left)
+Log-likelihood cutoff on original alignment: -212124.489
+Iteration 3460 / LogL: -212006.176 / Time: 24h:22m:30s (0h:16m:54s left)
+Iteration 3470 / LogL: -212008.405 / Time: 24h:27m:2s (0h:12m:41s left)
+Iteration 3480 / LogL: -212078.211 / Time: 24h:31m:28s (0h:8m:27s left)
+Iteration 3490 / LogL: -212003.837 / Time: 24h:35m:44s (0h:4m:13s left)
+Iteration 3500 / LogL: -212090.055 / Time: 24h:40m:12s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -212124.489
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.976
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 3510 / LogL: -212004.398 / Time: 24h:44m:49s (0h:38m:4s left)
+Iteration 3520 / LogL: -212015.331 / Time: 24h:49m:5s (0h:33m:51s left)
+Iteration 3530 / LogL: -211990.056 / Time: 24h:53m:30s (0h:29m:37s left)
+Iteration 3540 / LogL: -212034.813 / Time: 24h:58m:5s (0h:25m:23s left)
+Iteration 3550 / LogL: -212048.237 / Time: 25h:2m:33s (0h:21m:10s left)
+Log-likelihood cutoff on original alignment: -212124.489
+Iteration 3560 / LogL: -211982.286 / Time: 25h:7m:11s (0h:16m:56s left)
+Iteration 3570 / LogL: -212025.862 / Time: 25h:11m:34s (0h:12m:42s left)
+Iteration 3580 / LogL: -212006.642 / Time: 25h:15m:54s (0h:8m:28s left)
+Iteration 3590 / LogL: -211984.590 / Time: 25h:20m:21s (0h:4m:14s left)
+Iteration 3600 / LogL: -212010.686 / Time: 25h:24m:56s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -212124.489
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.978
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 3610 / LogL: -211970.926 / Time: 25h:29m:47s (0h:38m:8s left)
+Iteration 3620 / LogL: -212091.759 / Time: 25h:34m:16s (0h:33m:54s left)
+Iteration 3630 / LogL: -211985.859 / Time: 25h:38m:46s (0h:29m:40s left)
+Iteration 3640 / LogL: -212005.798 / Time: 25h:43m:12s (0h:25m:26s left)
+Iteration 3650 / LogL: -212167.085 / Time: 25h:47m:38s (0h:21m:12s left)
+Log-likelihood cutoff on original alignment: -212124.489
+Iteration 3660 / LogL: -212046.616 / Time: 25h:52m:4s (0h:16m:58s left)
+Iteration 3670 / LogL: -212020.703 / Time: 25h:56m:38s (0h:12m:43s left)
+Iteration 3680 / LogL: -211973.593 / Time: 26h:1m:10s (0h:8m:29s left)
+Iteration 3690 / LogL: -212029.931 / Time: 26h:5m:32s (0h:4m:14s left)
+Iteration 3700 / LogL: -211980.761 / Time: 26h:10m:22s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -212124.489
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.980
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 3710 / LogL: -212064.593 / Time: 26h:15m:7s (0h:38m:13s left)
+Iteration 3720 / LogL: -212021.202 / Time: 26h:19m:42s (0h:33m:58s left)
+Iteration 3730 / LogL: -211986.224 / Time: 26h:24m:5s (0h:29m:44s left)
+Iteration 3740 / LogL: -212023.614 / Time: 26h:28m:36s (0h:25m:29s left)
+Iteration 3750 / LogL: -211988.602 / Time: 26h:33m:0s (0h:21m:14s left)
+Log-likelihood cutoff on original alignment: -212124.489
+Iteration 3760 / LogL: -211980.939 / Time: 26h:37m:38s (0h:17m:0s left)
+Iteration 3770 / LogL: -212009.287 / Time: 26h:42m:0s (0h:12m:45s left)
+Iteration 3780 / LogL: -212031.064 / Time: 26h:46m:30s (0h:8m:30s left)
+Iteration 3790 / LogL: -212000.689 / Time: 26h:50m:57s (0h:4m:15s left)
+Iteration 3800 / LogL: -211989.407 / Time: 26h:55m:25s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -212124.489
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.981
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 3810 / LogL: -212066.265 / Time: 26h:59m:47s (0h:38m:16s left)
+Iteration 3820 / LogL: -212055.384 / Time: 27h:4m:14s (0h:34m:1s left)
+Iteration 3830 / LogL: -212041.778 / Time: 27h:8m:35s (0h:29m:46s left)
+Iteration 3840 / LogL: -212019.968 / Time: 27h:13m:14s (0h:25m:31s left)
+Iteration 3850 / LogL: -212091.994 / Time: 27h:17m:47s (0h:21m:16s left)
+Log-likelihood cutoff on original alignment: -212124.489
+Iteration 3860 / LogL: -211978.758 / Time: 27h:22m:32s (0h:17m:1s left)
+Iteration 3870 / LogL: -212050.495 / Time: 27h:26m:55s (0h:12m:46s left)
+Iteration 3880 / LogL: -212032.222 / Time: 27h:31m:24s (0h:8m:30s left)
+Iteration 3890 / LogL: -212087.669 / Time: 27h:35m:41s (0h:4m:15s left)
+Iteration 3900 / LogL: -211995.397 / Time: 27h:40m:21s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -212124.489
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.982
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 3910 / LogL: -211990.699 / Time: 27h:44m:50s (0h:38m:19s left)
+Iteration 3920 / LogL: -212040.968 / Time: 27h:49m:19s (0h:34m:4s left)
+Iteration 3930 / LogL: -212039.985 / Time: 27h:53m:55s (0h:29m:49s left)
+Iteration 3940 / LogL: -212053.243 / Time: 27h:58m:16s (0h:25m:33s left)
+Iteration 3950 / LogL: -211990.215 / Time: 28h:2m:40s (0h:21m:18s left)
+Log-likelihood cutoff on original alignment: -212124.489
+Iteration 3960 / LogL: -212016.909 / Time: 28h:7m:17s (0h:17m:2s left)
+Iteration 3970 / LogL: -212057.364 / Time: 28h:11m:46s (0h:12m:47s left)
+Iteration 3980 / LogL: -212005.106 / Time: 28h:16m:18s (0h:8m:31s left)
+Iteration 3990 / LogL: -212102.905 / Time: 28h:20m:51s (0h:4m:15s left)
+Iteration 4000 / LogL: -212028.134 / Time: 28h:25m:26s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -212124.489
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.983
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 4010 / LogL: -211994.818 / Time: 28h:30m:0s (0h:38m:23s left)
+Iteration 4020 / LogL: -212059.384 / Time: 28h:34m:31s (0h:34m:7s left)
+Iteration 4030 / LogL: -212019.026 / Time: 28h:38m:59s (0h:29m:51s left)
+Iteration 4040 / LogL: -212034.507 / Time: 28h:43m:39s (0h:25m:36s left)
+Iteration 4050 / LogL: -212091.729 / Time: 28h:48m:8s (0h:21m:20s left)
+Log-likelihood cutoff on original alignment: -212124.489
+Iteration 4060 / LogL: -212033.069 / Time: 28h:52m:42s (0h:17m:4s left)
+Iteration 4070 / LogL: -211990.246 / Time: 28h:57m:7s (0h:12m:48s left)
+Iteration 4080 / LogL: -212011.500 / Time: 29h:1m:49s (0h:8m:32s left)
+Iteration 4090 / LogL: -212061.577 / Time: 29h:6m:20s (0h:4m:16s left)
+Iteration 4100 / LogL: -212110.231 / Time: 29h:10m:46s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -212124.489
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.984
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 4110 / LogL: -211997.026 / Time: 29h:15m:36s (0h:38m:27s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 4120: -211953.103
+Iteration 4120 / LogL: -211953.103 / Time: 29h:20m:10s (1h:25m:27s left)
+Iteration 4130 / LogL: -212001.979 / Time: 29h:24m:36s (1h:21m:12s left)
+Iteration 4140 / LogL: -211991.532 / Time: 29h:28m:55s (1h:16m:55s left)
+Iteration 4150 / LogL: -212028.520 / Time: 29h:33m:26s (1h:12m:39s left)
+Log-likelihood cutoff on original alignment: -212124.489
+Iteration 4160 / LogL: -212020.772 / Time: 29h:38m:2s (1h:8m:24s left)
+Iteration 4170 / LogL: -212053.269 / Time: 29h:42m:32s (1h:4m:8s left)
+Iteration 4180 / LogL: -212057.833 / Time: 29h:47m:11s (0h:59m:52s left)
+Iteration 4190 / LogL: -211992.376 / Time: 29h:51m:47s (0h:55m:36s left)
+Iteration 4200 / LogL: -211962.843 / Time: 29h:56m:14s (0h:51m:19s left)
+Log-likelihood cutoff on original alignment: -212124.489
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.985
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 4210 / LogL: -212039.106 / Time: 30h:0m:47s (0h:47m:3s left)
+Iteration 4220 / LogL: -211975.193 / Time: 30h:5m:23s (0h:42m:47s left)
+Iteration 4230 / LogL: -212049.675 / Time: 30h:9m:50s (0h:38m:30s left)
+Iteration 4240 / LogL: -212122.075 / Time: 30h:14m:16s (0h:34m:14s left)
+Iteration 4250 / LogL: -211989.372 / Time: 30h:18m:44s (0h:29m:57s left)
+Log-likelihood cutoff on original alignment: -212124.489
+Iteration 4260 / LogL: -212001.173 / Time: 30h:23m:23s (0h:25m:41s left)
+Iteration 4270 / LogL: -212026.368 / Time: 30h:27m:55s (0h:21m:24s left)
+Iteration 4280 / LogL: -211995.712 / Time: 30h:32m:30s (0h:17m:7s left)
+Iteration 4290 / LogL: -211997.168 / Time: 30h:36m:53s (0h:12m:50s left)
+Iteration 4300 / LogL: -212036.803 / Time: 30h:41m:23s (0h:8m:33s left)
+Log-likelihood cutoff on original alignment: -212124.489
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.986
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 4310 / LogL: -212016.503 / Time: 30h:45m:57s (0h:38m:33s left)
+Iteration 4320 / LogL: -212054.159 / Time: 30h:50m:21s (0h:34m:16s left)
+Iteration 4330 / LogL: -212004.911 / Time: 30h:55m:1s (0h:29m:59s left)
+Iteration 4340 / LogL: -212011.087 / Time: 30h:59m:25s (0h:25m:42s left)
+Iteration 4350 / LogL: -212124.035 / Time: 31h:4m:1s (0h:21m:25s left)
+Log-likelihood cutoff on original alignment: -212124.489
+Iteration 4360 / LogL: -211990.923 / Time: 31h:8m:32s (0h:17m:8s left)
+Iteration 4370 / LogL: -212035.113 / Time: 31h:13m:18s (0h:12m:51s left)
+Iteration 4380 / LogL: -212069.917 / Time: 31h:17m:54s (0h:8m:34s left)
+Iteration 4390 / LogL: -212073.013 / Time: 31h:22m:30s (0h:4m:17s left)
+Iteration 4400 / LogL: -211985.319 / Time: 31h:27m:4s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -212124.489
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.989
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 4410 / LogL: -212007.152 / Time: 31h:31m:38s (0h:38m:36s left)
+Iteration 4420 / LogL: -212042.842 / Time: 31h:36m:7s (0h:34m:19s left)
+Iteration 4430 / LogL: -212009.343 / Time: 31h:40m:41s (0h:30m:2s left)
+Iteration 4440 / LogL: -211988.655 / Time: 31h:45m:35s (0h:25m:45s left)
+Iteration 4450 / LogL: -212042.810 / Time: 31h:49m:59s (0h:21m:27s left)
+Log-likelihood cutoff on original alignment: -212124.489
+Iteration 4460 / LogL: -211980.905 / Time: 31h:54m:37s (0h:17m:10s left)
+Iteration 4470 / LogL: -211997.204 / Time: 31h:59m:0s (0h:12m:52s left)
+Iteration 4480 / LogL: -212019.953 / Time: 32h:3m:37s (0h:8m:35s left)
+Iteration 4490 / LogL: -212060.373 / Time: 32h:8m:11s (0h:4m:17s left)
+Iteration 4500 / LogL: -212046.141 / Time: 32h:12m:49s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -212124.489
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.991
+TREE SEARCH COMPLETED AFTER 4500 ITERATIONS / Time: 32h:12m:59s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -211953.103
+2. Current log-likelihood: -211953.009
+3. Current log-likelihood: -211952.969
+Optimal log-likelihood: -211952.966
+Gamma shape alpha: 0.679
+Parameters optimization took 3 rounds (5.066 sec)
+BEST SCORE FOUND : -211952.966
+Creating bootstrap support values...
+Split supports printed to NEXUS file results_trees/downsampling_alignment/downsample_0.20-r20.genes.lt.iqtree.splits.nex
+Total tree length: 337.822
+
+Total number of iterations: 4500
+CPU time used for tree search: 418820.388 sec (116h:20m:20s)
+Wall-clock time used for tree search: 115899.703 sec (32h:11m:39s)
+Total CPU time used: 419159.300 sec (116h:25m:59s)
+Total wall-clock time used: 115993.477 sec (32h:13m:13s)
+
+Computing bootstrap consensus tree...
+Reading input file results_trees/downsampling_alignment/downsample_0.20-r20.genes.lt.iqtree.splits.nex...
+1207 taxa and 5775 splits.
+Consensus tree written to results_trees/downsampling_alignment/downsample_0.20-r20.genes.lt.iqtree.contree
+Reading input trees file results_trees/downsampling_alignment/downsample_0.20-r20.genes.lt.iqtree.contree
+Log-likelihood of consensus tree: -212258.898
+
+Analysis results written to: 
+  IQ-TREE report:                results_trees/downsampling_alignment/downsample_0.20-r20.genes.lt.iqtree.iqtree
+  Maximum-likelihood tree:       results_trees/downsampling_alignment/downsample_0.20-r20.genes.lt.iqtree.treefile
+  Likelihood distances:          results_trees/downsampling_alignment/downsample_0.20-r20.genes.lt.iqtree.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          results_trees/downsampling_alignment/downsample_0.20-r20.genes.lt.iqtree.splits.nex
+  Consensus tree:                results_trees/downsampling_alignment/downsample_0.20-r20.genes.lt.iqtree.contree
+  Screen log file:               results_trees/downsampling_alignment/downsample_0.20-r20.genes.lt.iqtree.log
+
+Date and Time: Thu Mar 11 07:34:59 2021

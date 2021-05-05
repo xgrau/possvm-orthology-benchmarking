@@ -1,0 +1,2038 @@
+IQ-TREE 2.1.0 COVID-edition built Jul 18 2020
+
+Input file name: results_trees/downsampling_alignment/downsample_0.70-r11.genes.lt.fasta
+Type of analysis: ModelFinder + tree reconstruction + ultrafast bootstrap (1000 replicates)
+Random seed number: 534643
+
+REFERENCES
+----------
+
+To cite IQ-TREE please use:
+
+Bui Quang Minh, Heiko A. Schmidt, Olga Chernomor, Dominik Schrempf,
+Michael D. Woodhams, Arndt von Haeseler, and Robert Lanfear (2020)
+IQ-TREE 2: New models and efficient methods for phylogenetic inference
+in the genomic era. Mol. Biol. Evol., in press.
+https://doi.org/10.1093/molbev/msaa015
+
+To cite ModelFinder please use: 
+
+Subha Kalyaanamoorthy, Bui Quang Minh, Thomas KF Wong, Arndt von Haeseler,
+and Lars S Jermiin (2017) ModelFinder: Fast model selection for
+accurate phylogenetic estimates. Nature Methods, 14:587–589.
+https://doi.org/10.1038/nmeth.4285
+
+Since you used ultrafast bootstrap (UFBoot) please also cite: 
+
+Diep Thi Hoang, Olga Chernomor, Arndt von Haeseler, Bui Quang Minh,
+and Le Sy Vinh (2018) UFBoot2: Improving the ultrafast bootstrap
+approximation. Mol. Biol. Evol., 35:518–522.
+https://doi.org/10.1093/molbev/msx281
+
+SEQUENCE ALIGNMENT
+------------------
+
+Input data: 464 sequences with 216 amino-acid sites
+Number of constant sites: 1 (= 0.462963% of all sites)
+Number of invariant (constant or ambiguous constant) sites: 1 (= 0.462963% of all sites)
+Number of parsimony informative sites: 215
+Number of distinct site patterns: 216
+
+ModelFinder
+-----------
+
+Best-fit model according to BIC: JTT+F+I+G4
+
+List of models sorted by BIC scores: 
+
+Model                  LogL         AIC      w-AIC        AICc     w-AICc         BIC      w-BIC
+JTT+F+I+G4       -97954.643  197801.286 +        1 1989525.286 -        0  200994.300 +        1
+LG+F+I+G4        -97997.005  197886.010 -    4e-19 1989610.010 -        0  201079.023 -    4e-19
+JTT+I+G4         -98096.625  198047.250 - 3.89e-54 1918559.250 -        0  201176.133 - 3.28e-40
+LG+I+G4          -98471.670  198797.340 - 5.13e-217 1919309.340 -        0  201926.223 - 4.32e-203
+LG+G4            -98484.439  198820.878 - 3.97e-222 1915624.878 +        1  201946.385 - 1.81e-207
+WAG+I+G4         -98524.127  198902.253 - 8.47e-240 1919414.253 -        0  202031.136 - 7.14e-226
+WAG+F+I+G4       -98660.773  199213.545 - 2.15e-307 1990937.545 -        0  202406.559 - 2.15e-307
+LG+I            -104796.008  211444.015 -        0 1928248.015 -        0  214569.523 -        0
+LG              -105041.130  211932.260 -        0 1925032.260 -        0  215054.393 -        0
+
+AIC, w-AIC   : Akaike information criterion scores and weights.
+AICc, w-AICc : Corrected AIC scores and weights.
+BIC, w-BIC   : Bayesian information criterion scores and weights.
+
+Plus signs denote the 95% confidence sets.
+Minus signs denote significant exclusion.
+
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JTT+F+I+G4
+
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.0633
+  pi(R) = 0.0833
+  pi(N) = 0.0412
+  pi(D) = 0.0361
+  pi(C) = 0.0090
+  pi(Q) = 0.0603
+  pi(E) = 0.0714
+  pi(G) = 0.0396
+  pi(H) = 0.0238
+  pi(I) = 0.0323
+  pi(L) = 0.0734
+  pi(K) = 0.0842
+  pi(M) = 0.0234
+  pi(F) = 0.0374
+  pi(P) = 0.0778
+  pi(S) = 0.1074
+  pi(T) = 0.0629
+  pi(W) = 0.0075
+  pi(Y) = 0.0312
+  pi(V) = 0.0346
+
+Model of rate heterogeneity: Invar+Gamma with 4 categories
+Proportion of invariable sites: 0.0046
+Gamma shape alpha: 0.6965
+
+ Category  Relative_rate  Proportion
+  0         0              0.0046
+  1         0.0738         0.2488
+  2         0.3636         0.2488
+  3         0.9279         0.2488
+  4         2.6534         0.2488
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -97591.0330 (s.e. 3021.7395)
+Unconstrained log-likelihood (without tree): -1161.0601
+Number of free parameters (#branches + #model parameters): 946
+Akaike information criterion (AIC) score: 197074.0661
+Corrected Akaike information criterion (AICc) score: 1988798.0661
+Bayesian information criterion (BIC) score: 200267.0795
+
+**************************** WARNING ****************************
+Number of parameters (K, model parameters and branch lengths): 946
+Sample size (n, alignment length): 216
+
+Given that K>=n, the parameter estimates might be inaccurate.
+Thus, phylogenetic estimates should be interpreted with caution.
+
+Ideally, it is desirable that n >> K. When selecting optimal models,
+1. use AIC or BIC if n > 40K;
+2. use AICc or BIC if 40K >= n > K;
+3. be extremely cautious if n <= K
+
+To improve the situation (3), consider the following options:
+  1. Increase the sample size (n)
+  2. Decrease the number of parameters (K) to be estimated. If
+     possible:
+     a. Remove the least important sequences from the alignment
+     b. Specify some of the parameter values for the substitution
+        model (e.g., the nucleotide or amino acid frequencies)
+     c. Specify some of the parameter values for the rates-across-
+        sites model (e.g., the shape parameter for the discrete
+        Gamma distribution, the proportion of invariable sites, or
+        the rates of change for different rate categories under
+        the FreeRate model)
+
+Reference:
+Burnham KR, Anderson DR (2002). Model Selection and Multimodel
+Inference: A Practical Information-Theoretic Approach. Springer,
+New York.
+************************ END OF WARNING ***********************
+
+Total tree length (sum of branch lengths): 197.6576
+Sum of internal branch lengths: 88.5392 (44.7942% of tree length)
+
+WARNING: 11 near-zero internal branches (<0.0046) should be treated with caution
+         Such branches are denoted by '**' in the figure below
+
+NOTE: Tree is UNROOTED although outgroup taxon 'Fspp_ffun1.m4.6493.m1' is drawn at root
+Numbers in parentheses are  ultrafast bootstrap support (%)
+
++------Fspp_ffun1.m4.6493.m1
+|
+|                                   +--Hsap_ENST00000302945
+|                                +--| (100)
+|                                |  +--Xentro_ENSXETT00000089294
+|                             +--| (75)
+|                             |  |  +--Xentro_ENSXETT00000045469
+|                             |  +--| (76)
+|                             |     +--Hsap_ENST00000326902
+|                       +-----| (100)
+|                       |     +----Skow_XM_002732004.2
+|                    +--| (90)
+|                    |  +-----Tadh_TriadT33728
+|                 +--| (100)
+|                 |  |     +--Morvir_scaffold348.g20.t1
+|                 |  |  +--| (94)
+|                 |  |  |  |  +--Chem_TCONS_00050614
+|                 |  |  |  +--| (100)
+|                 |  |  |     +----Hvul_g10051_1
+|                 |  +--| (92)
+|                 |     |      +**Adig_XM_015908011.1
+|                 |     +------| (100)
+|                 |            +--Fspp_ffun1.m4.12110.m1
+|              +--| (79)
+|              |  |                 +--Adig_XM_015918179.1
+|              |  |        +--------| (100)
+|              |  |        |        +--Fspp_ffun1.m4.18980.m1
+|              |  |     +--| (83)
+|              |  |     |  |      +--Xentro_ENSXETT00000053914
+|              |  |     |  |  +---| (99)
+|              |  |     |  |  |   |        +--Hsap_ENST00000311626
+|              |  |     |  |  |   |     +--| (100)
+|              |  |     |  |  |   |     |  +--Xentro_ENSXETT00000047547
+|              |  |     |  |  |   |  +--| (92)
+|              |  |     |  |  |   |  |  |  +--Xentro_ENSXETT00000001602
+|              |  |     |  |  |   |  |  +--| (100)
+|              |  |     |  |  |   |  |     +--Hsap_ENST00000317201
+|              |  |     |  |  |   +--| (92)
+|              |  |     |  |  |      |  +--Xentro_ENSXETT00000099847
+|              |  |     |  |  |      +--| (100)
+|              |  |     |  |  |         +--Hsap_ENST00000249440
+|              |  |     |  +--| (58)
+|              |  |     |     |          +--Hsap_ENST00000222718
+|              |  |     |     |       +--| (100)
+|              |  |     |     |       |  +--Xentro_ENSXETT00000001601
+|              |  |     |     |    +--| (64)
+|              |  |     |     |    |  |  +--Xentro_ENSXETT00000057087
+|              |  |     |     |    |  +--| (56)
+|              |  |     |     |    |     +--Hsap_ENST00000330070
+|              |  |     |     +----| (100)
+|              |  |     |          +------------Skow_NM_001164937.1
+|              |  |  +--| (91)
+|              |  |  |  |            +---Adig_XM_015925334.1
+|              |  |  |  |         +--| (100)
+|              |  |  |  |         |  +--Adig_XM_015925335.1
+|              |  |  |  +---------| (100)
+|              |  |  |            +--Fspp_ffun1.m4.18984.m1
+|              |  +--| (21)
+|              |     |                  +--Hsap_ENST00000242159
+|              |     |               +--| (69)
+|              |     |               |  +--Xentro_ENSXETT00000001606
+|              |     |           +---| (100)
+|              |     |           |   |  +--Xentro_ENSXETT00000089346
+|              |     |           |   +--| (100)
+|              |     |           |      +--Hsap_ENST00000239165
+|              |     |        +--| (67)
+|              |     |        |  |             +--Hsap_ENST00000239144
+|              |     |        |  |          +--| (100)
+|              |     |        |  |          |  +--Xentro_ENSXETT00000063401
+|              |     |        |  |       +--| (98)
+|              |     |        |  |       |  |  +--Hsap_ENST00000313173
+|              |     |        |  |       |  +--| (100)
+|              |     |        |  |       |     +--Xentro_ENSXETT00000070016
+|              |     |        |  |  +----| (100)
+|              |     |        |  |  |    |  +--Xentro_ENSXETT00000050682
+|              |     |        |  |  |    +--| (100)
+|              |     |        |  |  |       +--Hsap_ENST00000040584
+|              |     |        |  +--| (100)
+|              |     |        |     |  +----Skow_NM_001164908.1
+|              |     |        |     +--| (100)
+|              |     |        |        +----Skow_XM_002730729.1
+|              |     |     +--| (100)
+|              |     |     |  |      +--Hsap_ENST00000225648
+|              |     |     |  |   +--| (100)
+|              |     |     |  |   |  +--Xentro_ENSXETT00000047588
+|              |     |     |  +---| (100)
+|              |     |     |      |     +--Hsap_ENST00000222728
+|              |     |     |      |  +--| (100)
+|              |     |     |      |  |  +--Xentro_ENSXETT00000096565
+|              |     |     |      +--| (66)
+|              |     |     |         |    +**Hsap_ENST00000243108
+|              |     |     |         +----| (100)
+|              |     |     |              +--Xentro_ENSXETT00000050686
+|              |     |  +--| (92)
+|              |     |  |  |            +---Hsap_ENST00000513209
+|              |     |  |  |         +**| (91)
+|              |     |  |  |         |  +--Xentro_ENSXETT00000050688
+|              |     |  |  |     +---| (100)
+|              |     |  |  |     |   +--Hsap_ENST00000312492
+|              |     |  |  |  +--| (94)
+|              |     |  |  |  |  |     +--Hsap_ENST00000239151
+|              |     |  |  |  |  |  +--| (100)
+|              |     |  |  |  |  |  |  +--Xentro_ENSXETT00000047578
+|              |     |  |  |  |  +--| (94)
+|              |     |  |  |  |     |  +--Hsap_ENST00000222726
+|              |     |  |  |  |     +--| (96)
+|              |     |  |  |  |        +--Xentro_ENSXETT00000001604
+|              |     |  |  +--| (92)
+|              |     |  |     +------Skow_NM_001164938.1
+|              |     +--| (100)
+|              |        |           +--Hsap_ENST00000332503
+|              |        |        +--| (55)
+|              |        |        |  +---Xentro_ENSXETT00000047559
+|              |        |     +--| (56)
+|              |        |     |  |     +--Xentro_ENSXETT00000080023
+|              |        |     |  |  +--| (100)
+|              |        |     |  |  |  +--Hsap_ENST00000303406
+|              |        |     |  +--| (100)
+|              |        |     |     |  +--Hsap_ENST00000306324
+|              |        |     |     +--| (100)
+|              |        |     |        +--Xentro_ENSXETT00000003765
+|              |        |  +--| (100)
+|              |        |  |  |  +--Xentro_ENSXETT00000057392
+|              |        |  |  +--| (100)
+|              |        |  |     +--Hsap_ENST00000360046
+|              |        +--| (100)
+|              |           +---Skow_NM_001164913.1
+|           +--| (10)
+|           |  |                          +-----------Morvir_scaffold98.g48.t1
+|           |  |                    +-----| (99)
+|           |  |                    |     |     +--Adig_XM_015915222.1
+|           |  |                    |     |  +--| (100)
+|           |  |                    |     |  |  +--Fspp_ffun1.m4.11751.m1
+|           |  |                    |     +--| (100)
+|           |  |                    |        +----Skow_XM_006824407.1
+|           |  |                 +--| (67)
+|           |  |                 |  |                                  +--Skow_XM_006813696.1
+|           |  |                 |  |                               +--| (100)
+|           |  |                 |  |                               |  +--Skow_NM_001164914.1
+|           |  |                 |  |                            +--| (62)
+|           |  |                 |  |                            |  |  +--Hsap_ENST00000263610
+|           |  |                 |  |                            |  +--| (100)
+|           |  |                 |  |                            |     +--Xentro_ENSXETT00000104161
+|           |  |                 |  |                       +----| (97)
+|           |  |                 |  |                       |    |  +**Hsap_ENST00000370445
+|           |  |                 |  |                       |    +--| (65)
+|           |  |                 |  |                       |       +--Xentro_ENSXETT00000051744
+|           |  |                 |  |                 +-----| (98)
+|           |  |                 |  |                 |     +--------------Skow_XM_006817477.1
+|           |  |                 |  |              +--| (96)
+|           |  |                 |  |              |  +----------------Chem_TCONS_00025396
+|           |  |                 |  |           +--| (68)
+|           |  |                 |  |           |  |                        +--Adig_XM_015897722.1
+|           |  |                 |  |           |  |              +---------| (100)
+|           |  |                 |  |           |  |              |         +**Fspp_ffun1.m4.31060.m1
+|           |  |                 |  |           |  |           +--| (82)
+|           |  |                 |  |           |  |           |  |        +--Fspp_ffun1.m4.17753.m1
+|           |  |                 |  |           |  |           |  |     +--| (75)
+|           |  |                 |  |           |  |           |  |     |  +--Adig_XM_015897727.1
+|           |  |                 |  |           |  |           |  |  +--| (73)
+|           |  |                 |  |           |  |           |  |  |  +--Adig_XM_015897726.1
+|           |  |                 |  |           |  |           |  +--| (97)
+|           |  |                 |  |           |  |           |     |  +--Fspp_ffun1.m4.33384.m1
+|           |  |                 |  |           |  |           |     +--| (64)
+|           |  |                 |  |           |  |           |        +---Adig_XM_015897724.1
+|           |  |                 |  |           |  |        +--| (91)
+|           |  |                 |  |           |  |        |  +----Fspp_ffun1.m4.31061.m1
+|           |  |                 |  |           |  |  +-----| (99)
+|           |  |                 |  |           |  |  |     +-----Fspp_ffun1.m4.17748.m1
+|           |  |                 |  |           |  +--| (72)
+|           |  |                 |  |           |     |  +---------Skow_XM_002733661.2
+|           |  |                 |  |           |     +--| (98)
+|           |  |                 |  |           |        |               +--Fspp_ffun1.m4.1442.m1
+|           |  |                 |  |           |        |            +--| (100)
+|           |  |                 |  |           |        |            |  |              +--Fspp_ffun1.m4.1443.m1
+|           |  |                 |  |           |        |            |  |           +**| (98)
+|           |  |                 |  |           |        |            |  |           |  +--Fspp_ffun1.m4.1445.m1
+|           |  |                 |  |           |        |            |  |        +--| (99)
+|           |  |                 |  |           |        |            |  |        |  +--Fspp_ffun1.m4.1448.m1
+|           |  |                 |  |           |        |            |  |     +--| (99)
+|           |  |                 |  |           |        |            |  |     |  +--Fspp_ffun1.m4.1446.m1
+|           |  |                 |  |           |        |            |  |  +--| (100)
+|           |  |                 |  |           |        |            |  |  |  +--Fspp_ffun1.m4.1444.m1
+|           |  |                 |  |           |        |            |  +--| (100)
+|           |  |                 |  |           |        |            |     |           +--Fspp_ffun1.m4.25254.m1
+|           |  |                 |  |           |        |            |     |        +--| (97)
+|           |  |                 |  |           |        |            |     |        |  +--Fspp_ffun1.m4.29242.m1
+|           |  |                 |  |           |        |            |     |     +--| (97)
+|           |  |                 |  |           |        |            |     |     |  +--Fspp_ffun1.m4.29243.m1
+|           |  |                 |  |           |        |            |     |  +--| (91)
+|           |  |                 |  |           |        |            |     |  |  +--Fspp_ffun1.m4.29244.m1
+|           |  |                 |  |           |        |            |     +--| (100)
+|           |  |                 |  |           |        |            |        +--Fspp_ffun1.m4.26302.m1
+|           |  |                 |  |           |        |         +--| (100)
+|           |  |                 |  |           |        |         |  |  +--Fspp_ffun1.m4.15421.m1
+|           |  |                 |  |           |        |         |  +--| (100)
+|           |  |                 |  |           |        |         |     +--Fspp_ffun1.m4.15426.m1
+|           |  |                 |  |           |        |      +--| (94)
+|           |  |                 |  |           |        |      |  +---Fspp_ffun1.m4.15423.m1
+|           |  |                 |  |           |        |   +--| (100)
+|           |  |                 |  |           |        |   |  +----Fspp_ffun1.m4.15427.m1
+|           |  |                 |  |           |        +---| (100)
+|           |  |                 |  |           |            +--------Adig_XM_015895991.1
+|           |  |                 |  |        +**| (33)
+|           |  |                 |  |        |  |                     +----Adig_XM_015905830.1
+|           |  |                 |  |        |  |               +-----| (100)
+|           |  |                 |  |        |  |               |     +--Fspp_ffun1.m4.14100.m1
+|           |  |                 |  |        |  |            +--| (91)
+|           |  |                 |  |        |  |            |  |        +--Fspp_ffun1.m4.14099.m1
+|           |  |                 |  |        |  |            |  |     +--| (100)
+|           |  |                 |  |        |  |            |  |     |  +-----Adig_XM_015905832.1
+|           |  |                 |  |        |  |            |  |  +--| (100)
+|           |  |                 |  |        |  |            |  |  |  +-------------Fspp_ffun1.m4.14104.m1
+|           |  |                 |  |        |  |            |  +--| (100)
+|           |  |                 |  |        |  |            |     |  +-----Skow_XM_002741136.2
+|           |  |                 |  |        |  |            |     +--| (99)
+|           |  |                 |  |        |  |            |        |         +--Morvir_scaffold188.g35.t1
+|           |  |                 |  |        |  |            |        +---------| (100)
+|           |  |                 |  |        |  |            |                  +---------Chem_TCONS_00023949
+|           |  |                 |  |        |  |     +------| (100)
+|           |  |                 |  |        |  |     |      +-------------------Tadh_TriadT51739
+|           |  |                 |  |        |  +-----| (100)
+|           |  |                 |  |        |        |            +--Adig_XM_015915200.1
+|           |  |                 |  |        |        |         +--| (100)
+|           |  |                 |  |        |        |         |  +--Fspp_ffun1.m4.4458.m1
+|           |  |                 |  |        |        |      +--| (99)
+|           |  |                 |  |        |        |      |  +---Skow_NM_001164931.1
+|           |  |                 |  |        |        |  +---| (99)
+|           |  |                 |  |        |        |  |   |     +--Xentro_ENSXETT00000035005
+|           |  |                 |  |        |        |  |   |  +--| (100)
+|           |  |                 |  |        |        |  |   |  |  +--Hsap_ENST00000382723
+|           |  |                 |  |        |        |  |   +--| (100)
+|           |  |                 |  |        |        |  |      |  +--Hsap_ENST00000239243
+|           |  |                 |  |        |        |  |      +--| (100)
+|           |  |                 |  |        |        |  |         +--Xentro_ENSXETT00000020130
+|           |  |                 |  |        |        +--| (45)
+|           |  |                 |  |        |           |   +---Chem_TCONS_00056354
+|           |  |                 |  |        |           +---| (99)
+|           |  |                 |  |        |               +---Hvul_g16557_1
+|           |  |                 |  |     +--| (69)
+|           |  |                 |  |     |  |                    +--Adig_XM_015912978.1
+|           |  |                 |  |     |  |                 +--| (100)
+|           |  |                 |  |     |  |                 |  +--Fspp_ffun1.m4.12735.m1
+|           |  |                 |  |     |  |              +--| (100)
+|           |  |                 |  |     |  |              |  +----Skow_NM_001168137.1
+|           |  |                 |  |     |  |           +--| (97)
+|           |  |                 |  |     |  |           |  |  +--Hsap_ENST00000422806
+|           |  |                 |  |     |  |           |  +--| (95)
+|           |  |                 |  |     |  |           |     +--Xentro_ENSXETT00000008415
+|           |  |                 |  |     |  |        +--| (97)
+|           |  |                 |  |     |  |        |  +---Hsap_ENST00000451024
+|           |  |                 |  |     |  +--------| (100)
+|           |  |                 |  |     |           |     +------Morvir_scaffold21.g122.t1
+|           |  |                 |  |     |           |  +--| (100)
+|           |  |                 |  |     |           |  |  |  +--Chem_TCONS_00029478
+|           |  |                 |  |     |           |  |  +--| (100)
+|           |  |                 |  |     |           |  |     +-------------------Hvul_g2253_1
+|           |  |                 |  |     |           +**| (63)
+|           |  |                 |  |     |              +-------Xentro_ENSXETT00000096279
+|           |  |                 |  |  +**| (21)
+|           |  |                 |  |  |  |                  +--Adig_XM_015912975.1
+|           |  |                 |  |  |  |               +--| (100)
+|           |  |                 |  |  |  |               |  +--Fspp_ffun1.m4.12736.m1
+|           |  |                 |  |  |  |            +--| (99)
+|           |  |                 |  |  |  |            |  |     +---Skow_XM_002731905.2
+|           |  |                 |  |  |  |            |  |  +--| (96)
+|           |  |                 |  |  |  |            |  |  |  |     +--Xentro_ENSXETT00000094587
+|           |  |                 |  |  |  |            |  |  |  |  +--| (100)
+|           |  |                 |  |  |  |            |  |  |  |  |  +---Hsap_ENST00000400677
+|           |  |                 |  |  |  |            |  |  |  +--| (100)
+|           |  |                 |  |  |  |            |  |  |     |  +--Hsap_ENST00000357878
+|           |  |                 |  |  |  |            |  |  |     +--| (100)
+|           |  |                 |  |  |  |            |  |  |        +--Xentro_ENSXETT00000021090
+|           |  |                 |  |  |  |            |  +--| (99)
+|           |  |                 |  |  |  |            |     |     +--Hsap_ENST00000339992
+|           |  |                 |  |  |  |            |     |  +--| (100)
+|           |  |                 |  |  |  |            |     |  |  +--Xentro_ENSXETT00000057781
+|           |  |                 |  |  |  |            |     +--| (100)
+|           |  |                 |  |  |  |            |        +------Xentro_ENSXETT00000065721
+|           |  |                 |  |  |  |        +---| (100)
+|           |  |                 |  |  |  |        |   +-------Tadh_TriadT50928
+|           |  |                 |  |  |  |     +--| (53)
+|           |  |                 |  |  |  |     |  +------------Chem_TCONS_00047310
+|           |  |                 |  |  |  |  +--| (94)
+|           |  |                 |  |  |  |  |  +---------------------Chem_TCONS_00069782
+|           |  |                 |  |  |  +--| (48)
+|           |  |                 |  |  |     |         +----Adig_XM_015917756.1
+|           |  |                 |  |  |     |      +--| (100)
+|           |  |                 |  |  |     |      |  +---Fspp_ffun1.m4.29526.m1
+|           |  |                 |  |  |     |   +--| (90)
+|           |  |                 |  |  |     |   |  +------Fspp_ffun1.m4.29465.m1
+|           |  |                 |  |  |     +---| (95)
+|           |  |                 |  |  |         +-----------------------Skow_XM_006811339.1
+|           |  |                 |  +--| (34)
+|           |  |                 |     |                    +--Adig_XM_015895990.1
+|           |  |                 |     |             +------| (100)
+|           |  |                 |     |             |      +--Fspp_ffun1.m4.15422.m1
+|           |  |                 |     |          +--| (100)
+|           |  |                 |     |          |  +--Skow_NM_001164886.1
+|           |  |                 |     +----------| (100)
+|           |  |                 |                |     +--Hsap_ENST00000306318
+|           |  |                 |                |  +--| (99)
+|           |  |                 |                |  |  |  +**Xentro_ENSXETT00000007133
+|           |  |                 |                |  |  +--| (99)
+|           |  |                 |                |  |     +--Xentro_ENSXETT00000007145
+|           |  |                 |                +--| (98)
+|           |  |                 |                   +--Hsap_ENST00000297537
+|           |  |              +--| (31)
+|           |  |              |  |                                +---------------------Morvir_scaffold85.g37.t1
+|           |  |              |  |                         +------| (100)
+|           |  |              |  |                         |      |  +-----Tadh_TriadT18102
+|           |  |              |  |                         |      +--| (81)
+|           |  |              |  |                         |         |  +--Skow_NM_001164898.1
+|           |  |              |  |                         |         +--| (81)
+|           |  |              |  |                         |            |     +--Xentro_ENSXETT00000030999
+|           |  |              |  |                         |            |  +--| (100)
+|           |  |              |  |                         |            |  |  +--Hsap_ENST00000524983
+|           |  |              |  |                         |            +--| (85)
+|           |  |              |  |                         |               |        +**Hsap_ENST00000332700
+|           |  |              |  |                         |               +--------| (100)
+|           |  |              |  |                         |                        +---Xentro_ENSXETT00000063234
+|           |  |              |  |                      +--| (71)
+|           |  |              |  |                      |  |      +--Hsap_ENST00000366903
+|           |  |              |  |                      |  |   +--| (100)
+|           |  |              |  |                      |  |   |  +--Xentro_ENSXETT00000005952
+|           |  |              |  |                      |  +---| (100)
+|           |  |              |  |                      |      +-----Skow_XM_006816183.1
+|           |  |              |  |                   +--| (67)
+|           |  |              |  |                   |  |       +---Fspp_ffun1.m4.22959.m1
+|           |  |              |  |                   |  +-------| (100)
+|           |  |              |  |                   |          +---Fspp_ffun1.m4.13287.m1
+|           |  |              |  |                +--| (83)
+|           |  |              |  |                |  |           +--Adig_XM_015910647.1
+|           |  |              |  |                |  |       +---| (100)
+|           |  |              |  |                |  |       |   +--Fspp_ffun1.m4.31229.m1
+|           |  |              |  |                |  +-------| (98)
+|           |  |              |  |                |          +-----------------Adig_XM_015910650.1
+|           |  |              |  |           +----| (100)
+|           |  |              |  |           |    +-------Morvir_scaffold95.g3.t1
+|           |  |              |  |        +--| (98)
+|           |  |              |  |        |  |               +---Adig_XM_015902979.1
+|           |  |              |  |        |  |            +--| (98)
+|           |  |              |  |        |  |            |  +------------Fspp_ffun1.m4.20257.m1
+|           |  |              |  |        |  |        +---| (100)
+|           |  |              |  |        |  |        |   |     +--Adig_XM_015903087.1
+|           |  |              |  |        |  |        |   |  +--| (100)
+|           |  |              |  |        |  |        |   |  |  +--Fspp_ffun1.m4.20261.m1
+|           |  |              |  |        |  |        |   +--| (82)
+|           |  |              |  |        |  |        |      |  +--Adig_XM_015909001.1
+|           |  |              |  |        |  |        |      +--| (100)
+|           |  |              |  |        |  |        |         +--Fspp_ffun1.m4.10292.m1
+|           |  |              |  |        |  |     +--| (100)
+|           |  |              |  |        |  |     |  |  +--Morvir_scaffold175.g50.t1
+|           |  |              |  |        |  |     |  +--| (100)
+|           |  |              |  |        |  |     |     +--------------Hvul_g32708_1
+|           |  |              |  |        |  |  +--| (100)
+|           |  |              |  |        |  |  |  |     +------------Adig_XM_015909101.1
+|           |  |              |  |        |  |  |  +-----| (100)
+|           |  |              |  |        |  |  |        |        +--Skow_XM_006815239.1
+|           |  |              |  |        |  |  |        |  +-----| (100)
+|           |  |              |  |        |  |  |        |  |     +**Skow_XM_006822703.1
+|           |  |              |  |        |  |  |        +--| (100)
+|           |  |              |  |        |  |  |           |     +--Hsap_ENST00000253968
+|           |  |              |  |        |  |  |           |  +--| (100)
+|           |  |              |  |        |  |  |           |  |  +--Xentro_ENSXETT00000086444
+|           |  |              |  |        |  |  |           +--| (100)
+|           |  |              |  |        |  |  |              |     +--Hsap_ENST00000281437
+|           |  |              |  |        |  |  |              +-----| (100)
+|           |  |              |  |        |  |  |                    +--Xentro_ENSXETT00000077545
+|           |  |              |  |        |  +--| (96)
+|           |  |              |  |        |     |             +--Hsap_ENST00000343035
+|           |  |              |  |        |     |     +-------| (100)
+|           |  |              |  |        |     |     |       +--Xentro_ENSXETT00000036924
+|           |  |              |  |        |     +-----| (100)
+|           |  |              |  |        |           +--Skow_NM_001164896.1
+|           |  |              |  |     +--| (59)
+|           |  |              |  |     |  |                           +--Adig_XM_015915192.1
+|           |  |              |  |     |  |                   +-------| (100)
+|           |  |              |  |     |  |                   |       +--Fspp_ffun1.m4.4455.m1
+|           |  |              |  |     |  |                +--| (92)
+|           |  |              |  |     |  |                |  +---Skow_NM_001165028.1
+|           |  |              |  |     |  |     +----------| (100)
+|           |  |              |  |     |  |     |          |     +--Hsap_ENST00000370193
+|           |  |              |  |     |  |     |          |  +--| (100)
+|           |  |              |  |     |  |     |          |  |  +--Xentro_ENSXETT00000089841
+|           |  |              |  |     |  |     |          +--| (99)
+|           |  |              |  |     |  |     |             +-------Hsap_ENST00000377566
+|           |  |              |  |     |  |  +--| (85)
+|           |  |              |  |     |  |  |  |                   +**Adig_XM_015902493.1
+|           |  |              |  |     |  |  |  |                +--| (98)
+|           |  |              |  |     |  |  |  |                |  |  +-------------Tadh_TriadT31334
+|           |  |              |  |     |  |  |  |                |  +--| (98)
+|           |  |              |  |     |  |  |  |                |     +---------Morvir_scaffold42.g46.t1
+|           |  |              |  |     |  |  |  |             +--| (99)
+|           |  |              |  |     |  |  |  |             |  +--Fspp_ffun1.m4.9245.m1
+|           |  |              |  |     |  |  |  |     +-------| (100)
+|           |  |              |  |     |  |  |  |     |       |        +--Hsap_ENST00000295886
+|           |  |              |  |     |  |  |  |     |       |     +--| (100)
+|           |  |              |  |     |  |  |  |     |       |     |  +--Xentro_ENSXETT00000060579
+|           |  |              |  |     |  |  |  |     |       |  +--| (79)
+|           |  |              |  |     |  |  |  |     |       |  |  |     +--Xentro_ENSXETT00000050951
+|           |  |              |  |     |  |  |  |     |       |  |  |  +--| (100)
+|           |  |              |  |     |  |  |  |     |       |  |  |  |  +--Hsap_ENST00000368592
+|           |  |              |  |     |  |  |  |     |       |  |  +--| (79)
+|           |  |              |  |     |  |  |  |     |       |  |     |    +--Hsap_ENST00000518699
+|           |  |              |  |     |  |  |  |     |       |  |     +----| (100)
+|           |  |              |  |     |  |  |  |     |       |  |          +--Xentro_ENSXETT00000082174
+|           |  |              |  |     |  |  |  |     |       +--| (99)
+|           |  |              |  |     |  |  |  |     |          +---Skow_NM_001168138.1
+|           |  |              |  |     |  |  |  |  +--| (100)
+|           |  |              |  |     |  |  |  |  |  |                  +--Xentro_ENSXETT00000017635
+|           |  |              |  |     |  |  |  |  |  |               +--| (99)
+|           |  |              |  |     |  |  |  |  |  |               |  +--Hsap_ENST00000370196
+|           |  |              |  |     |  |  |  |  |  |            +--| (100)
+|           |  |              |  |     |  |  |  |  |  |            |  +--Xentro_ENSXETT00000102157
+|           |  |              |  |     |  |  |  |  |  |         +--| (84)
+|           |  |              |  |     |  |  |  |  |  |         |  |  +--Hsap_ENST00000233638
+|           |  |              |  |     |  |  |  |  |  |         |  +--| (83)
+|           |  |              |  |     |  |  |  |  |  |         |     |  +--Skow_NM_001164981.1
+|           |  |              |  |     |  |  |  |  |  |         |     +--| (90)
+|           |  |              |  |     |  |  |  |  |  |         |        |    +-----Morvir_scaffold99.g69.t1
+|           |  |              |  |     |  |  |  |  |  |         |        +----| (98)
+|           |  |              |  |     |  |  |  |  |  |         |             +----------------Chem_TCONS_00070484
+|           |  |              |  |     |  |  |  |  |  |      +--| (82)
+|           |  |              |  |     |  |  |  |  |  |      |  +--Xentro_ENSXETT00000039652
+|           |  |              |  |     |  |  |  |  |  +------| (100)
+|           |  |              |  |     |  |  |  |  |         +--Hsap_ENST00000296921
+|           |  |              |  |     |  |  |  +--| (86)
+|           |  |              |  |     |  |  |     |               +**Adig_XM_015913000.1
+|           |  |              |  |     |  |  |     |          +----| (100)
+|           |  |              |  |     |  |  |     |          |    +--Fspp_ffun1.m4.15317.m1
+|           |  |              |  |     |  |  |     |       +--| (98)
+|           |  |              |  |     |  |  |     |       |  |         +---Chem_TCONS_00038629
+|           |  |              |  |     |  |  |     |       |  |      +--| (100)
+|           |  |              |  |     |  |  |     |       |  |      |  +------Hvul_g24677_1
+|           |  |              |  |     |  |  |     |       |  +------| (100)
+|           |  |              |  |     |  |  |     |       |         +-------Morvir_scaffold11.g90.t1
+|           |  |              |  |     |  |  |     +-------| (100)
+|           |  |              |  |     |  |  |             |  +---Skow_NM_001164930.2
+|           |  |              |  |     |  |  |             +--| (99)
+|           |  |              |  |     |  |  |                |     +--Hsap_ENST00000282728
+|           |  |              |  |     |  |  |                |  +--| (100)
+|           |  |              |  |     |  |  |                |  |  +--Xentro_ENSXETT00000057734
+|           |  |              |  |     |  |  |                +--| (98)
+|           |  |              |  |     |  |  |                   +------------Tadh_TriadT9560
+|           |  |              |  |     |  +--| (67)
+|           |  |              |  |     |     |                      +-----------Adig_XM_015897305.1
+|           |  |              |  |     |     |         +------------| (100)
+|           |  |              |  |     |     |         |            +--Fspp_ffun1.m4.7310.m1
+|           |  |              |  |     |     |      +--| (80)
+|           |  |              |  |     |     |      |  |                   +--Xentro_ENSXETT00000056262
+|           |  |              |  |     |     |      |  |            +------| (100)
+|           |  |              |  |     |     |      |  |            |      +**Xentro_ENSXETT00000056265
+|           |  |              |  |     |     |      |  |         +--| (95)
+|           |  |              |  |     |     |      |  |         |  |             +--Xentro_ENSXETT00000062960
+|           |  |              |  |     |     |      |  |         |  +-------------| (100)
+|           |  |              |  |     |     |      |  |         |                +--Xentro_ENSXETT00000065382
+|           |  |              |  |     |     |      |  |   +-----| (99)
+|           |  |              |  |     |     |      |  |   |     |         +--Xentro_ENSXETT00000019491
+|           |  |              |  |     |     |      |  |   |     +---------| (100)
+|           |  |              |  |     |     |      |  |   |               +--Xentro_ENSXETT00000062188
+|           |  |              |  |     |     |      |  +---| (100)
+|           |  |              |  |     |     |      |      +-------Hsap_ENST00000325980
+|           |  |              |  |     |     |  +---| (80)
+|           |  |              |  |     |     |  |   |        +--Chem_TCONS_00071866
+|           |  |              |  |     |     |  |   +--------| (100)
+|           |  |              |  |     |     |  |            +---Hvul_g30386_1
+|           |  |              |  |     |     +--| (72)
+|           |  |              |  |     |        |      +----Skow_NM_001168018.1
+|           |  |              |  |     |        |   +--| (80)
+|           |  |              |  |     |        |   |  +------Skow_NM_001168019.1
+|           |  |              |  |     |        +---| (100)
+|           |  |              |  |     |            +------------Skow_XM_002731799.2
+|           |  |              |  |  +--| (63)
+|           |  |              |  |  |  |                            +----Adig_XM_015905819.1
+|           |  |              |  |  |  |                         +--| (78)
+|           |  |              |  |  |  |                         |  |            +----Adig_XM_015905817.1
+|           |  |              |  |  |  |                         |  +------------| (100)
+|           |  |              |  |  |  |                         |               +**Fspp_ffun1.m4.14105.m1
+|           |  |              |  |  |  |                      +--| (79)
+|           |  |              |  |  |  |                      |  |   +--Adig_XM_015905823.1
+|           |  |              |  |  |  |                      |  +---| (100)
+|           |  |              |  |  |  |                      |      +--Fspp_ffun1.m4.14112.m1
+|           |  |              |  |  |  |                   +--| (81)
+|           |  |              |  |  |  |                   |  |  +--Adig_XM_015905827.1
+|           |  |              |  |  |  |                   |  +--| (98)
+|           |  |              |  |  |  |                   |     |     +--Adig_XM_015905829.1
+|           |  |              |  |  |  |                   |     +-----| (100)
+|           |  |              |  |  |  |                   |           +--Fspp_ffun1.m4.14106.m1
+|           |  |              |  |  |  |                +--| (78)
+|           |  |              |  |  |  |                |  |     +--Skow_NM_001164932.1
+|           |  |              |  |  |  |                |  |  +--| (100)
+|           |  |              |  |  |  |                |  |  |  |  +**Xentro_ENSXETT00000050714
+|           |  |              |  |  |  |                |  |  |  +--| (100)
+|           |  |              |  |  |  |                |  |  |     +--Hsap_ENST00000377142
+|           |  |              |  |  |  |                |  +--| (98)
+|           |  |              |  |  |  |                |     |    +--Hsap_ENST00000258829
+|           |  |              |  |  |  |                |     +----| (100)
+|           |  |              |  |  |  |                |          +--Xentro_ENSXETT00000084212
+|           |  |              |  |  |  |             +--| (57)
+|           |  |              |  |  |  |             |  |     +---Tadh_TriadT9561
+|           |  |              |  |  |  |             |  |  +--| (60)
+|           |  |              |  |  |  |             |  |  |  |     +--------Tadh_TriadT9507
+|           |  |              |  |  |  |             |  |  |  |  +--| (58)
+|           |  |              |  |  |  |             |  |  |  |  |  +----------Morvir_scaffold273.g2.t1
+|           |  |              |  |  |  |             |  |  |  +--| (57)
+|           |  |              |  |  |  |             |  |  |     +----------Morvir_scaffold83.g2.t1
+|           |  |              |  |  |  |             |  +--| (86)
+|           |  |              |  |  |  |             |     |         +--Chem_TCONS_00070249
+|           |  |              |  |  |  |             |     |  +------| (100)
+|           |  |              |  |  |  |             |     |  |      +----Morvir_scaffold46.g33.t1
+|           |  |              |  |  |  |             |     +--| (92)
+|           |  |              |  |  |  |             |        +-----------Chem_TCONS_00013206
+|           |  |              |  |  |  |          +--| (89)
+|           |  |              |  |  |  |          |  |           +--Hsap_ENST00000351817
+|           |  |              |  |  |  |          |  |        +--| (89)
+|           |  |              |  |  |  |          |  |        |  +--Xentro_ENSXETT00000084717
+|           |  |              |  |  |  |          |  |     +--| (88)
+|           |  |              |  |  |  |          |  |     |  |  +--Xentro_ENSXETT00000066949
+|           |  |              |  |  |  |          |  |     |  +--| (100)
+|           |  |              |  |  |  |          |  |     |     +--Hsap_ENST00000354822
+|           |  |              |  |  |  |          |  |  +--| (92)
+|           |  |              |  |  |  |          |  |  |  +--Skow_NM_001164910.1
+|           |  |              |  |  |  |          |  +**| (75)
+|           |  |              |  |  |  |          |     +-----------Xentro_ENSXETT00000080894
+|           |  |              |  |  |  |       +--| (65)
+|           |  |              |  |  |  |       |  |      +--Adig_XM_015915184.1
+|           |  |              |  |  |  |       |  |  +---| (100)
+|           |  |              |  |  |  |       |  |  |   +--Fspp_ffun1.m4.4460.m1
+|           |  |              |  |  |  |       |  +--| (81)
+|           |  |              |  |  |  |       |     |      +---Chem_TCONS_00016211
+|           |  |              |  |  |  |       |     |   +--| (100)
+|           |  |              |  |  |  |       |     |   |  +----Hvul_g31954_1
+|           |  |              |  |  |  |       |     +---| (100)
+|           |  |              |  |  |  |       |         +--Morvir_scaffold11.g115.t1
+|           |  |              |  |  |  |   +---| (98)
+|           |  |              |  |  |  |   |   |           +--Xentro_ENSXETT00000060367
+|           |  |              |  |  |  |   |   |        +--| (100)
+|           |  |              |  |  |  |   |   |        |  +--Hsap_ENST00000329198
+|           |  |              |  |  |  |   |   |     +--| (100)
+|           |  |              |  |  |  |   |   |     |  |  +--Hsap_ENST00000344586
+|           |  |              |  |  |  |   |   |     |  +--| (100)
+|           |  |              |  |  |  |   |   |     |     +--Xentro_ENSXETT00000089378
+|           |  |              |  |  |  |   |   |  +--| (100)
+|           |  |              |  |  |  |   |   |  |  |  +--Hsap_ENST00000325017
+|           |  |              |  |  |  |   |   |  |  +--| (100)
+|           |  |              |  |  |  |   |   |  |     +--Xentro_ENSXETT00000016948
+|           |  |              |  |  |  |   |   +--| (97)
+|           |  |              |  |  |  |   |      +--Skow_XM_006815396.1
+|           |  |              |  |  |  +---| (100)
+|           |  |              |  |  |      |           +--Adig_XM_015915185.1
+|           |  |              |  |  |      |        +--| (100)
+|           |  |              |  |  |      |        |  +--Fspp_ffun1.m4.4461.m1
+|           |  |              |  |  |      |     +--| (100)
+|           |  |              |  |  |      |     |  |        +--Skow_NM_001165004.1
+|           |  |              |  |  |      |     |  |     +--| (83)
+|           |  |              |  |  |      |     |  |     |  +-------------------Morvir_scaffold477.g8.t1
+|           |  |              |  |  |      |     |  |  +--| (97)
+|           |  |              |  |  |      |     |  |  |  |  +--Hsap_ENST00000382438
+|           |  |              |  |  |      |     |  |  |  +--| (86)
+|           |  |              |  |  |      |     |  |  |     +--Xentro_ENSXETT00000094839
+|           |  |              |  |  |      |     |  +--| (98)
+|           |  |              |  |  |      |     |     +---Xentro_ENSXETT00000080534
+|           |  |              |  |  |      +-----| (100)
+|           |  |              |  |  |            |  +---Xentro_ENSXETT00000016949
+|           |  |              |  |  |            +--| (100)
+|           |  |              |  |  |               +-----Hsap_ENST00000380871
+|           |  |              |  +--| (74)
+|           |  |              |     |                    +--Adig_XM_015917750.1
+|           |  |              |     |               +----| (100)
+|           |  |              |     |               |    +--Fspp_ffun1.m4.29467.m1
+|           |  |              |     |            +--| (74)
+|           |  |              |     |            |  |     +---Skow_NM_001164899.1
+|           |  |              |     |            |  |  +--| (100)
+|           |  |              |     |            |  |  |  |     +--Hsap_ENST00000361725
+|           |  |              |     |            |  |  |  |  +--| (100)
+|           |  |              |     |            |  |  |  |  |  +---Xentro_ENSXETT00000103078
+|           |  |              |     |            |  |  |  +--| (99)
+|           |  |              |     |            |  |  |     |     +--Hsap_ENST00000518156
+|           |  |              |     |            |  |  |     |  +--| (100)
+|           |  |              |     |            |  |  |     |  |  +--Xentro_ENSXETT00000090592
+|           |  |              |     |            |  |  |     +--| (99)
+|           |  |              |     |            |  |  |        |  +--Xentro_ENSXETT00000072778
+|           |  |              |     |            |  |  |        +--| (99)
+|           |  |              |     |            |  |  |           +-------Hsap_ENST00000240306
+|           |  |              |     |            |  +--| (100)
+|           |  |              |     |            |     |       +--Hsap_ENST00000648378
+|           |  |              |     |            |     |    +--| (100)
+|           |  |              |     |            |     |    |  +--Xentro_ENSXETT00000036133
+|           |  |              |     |            |     +----| (100)
+|           |  |              |     |            |          |     +--Hsap_ENST00000234198
+|           |  |              |     |            |          |  +--| (100)
+|           |  |              |     |            |          |  |  +--Xentro_ENSXETT00000016414
+|           |  |              |     |            |          +--| (100)
+|           |  |              |     |            |             |  +--Hsap_ENST00000434704
+|           |  |              |     |            |             +--| (100)
+|           |  |              |     |            |                +--Xentro_ENSXETT00000047434
+|           |  |              |     |         +--| (98)
+|           |  |              |     |         |  |  +-----Morvir_scaffold140.g36.t1
+|           |  |              |     |         |  +--| (100)
+|           |  |              |     |         |     |  +----Chem_TCONS_00017798
+|           |  |              |     |         |     +--| (100)
+|           |  |              |     |         |        +--------Hvul_g6880_1
+|           |  |              |     |      +--| (78)
+|           |  |              |     |      |  +--------Tadh_TriadT49530
+|           |  |              |     |  +---| (100)
+|           |  |              |     |  |   |   +--Chem_TCONS_00000458
+|           |  |              |     |  |   +---| (100)
+|           |  |              |     |  |       |  +--Hvul_g18245_1
+|           |  |              |     |  |       +--| (60)
+|           |  |              |     |  |          +------Morvir_scaffold140.g33.t1
+|           |  |              |     +--| (70)
+|           |  |              |        |                +**Hsap_ENST00000229307
+|           |  |              |        |  +-------------| (100)
+|           |  |              |        |  |             +**Hsap_ENST00000528386
+|           |  |              |        +--| (77)
+|           |  |              |           +----------------Chem_TCONS_00045729
+|           |  |           +--| (88)
+|           |  |           |  |                               +---Adig_XM_015897690.1
+|           |  |           |  |                     +---------| (100)
+|           |  |           |  |                     |         +--Fspp_ffun1.m4.29381.m1
+|           |  |           |  |              +------| (100)
+|           |  |           |  |              |      |            +--Adig_XM_015907403.1
+|           |  |           |  |              |      +------------| (100)
+|           |  |           |  |              |                   +--Fspp_ffun1.m4.24397.m1
+|           |  |           |  |           +--| (69)
+|           |  |           |  |           |  +-------Tadh_TriadT49524
+|           |  |           |  |        +--| (71)
+|           |  |           |  |        |  |               +--Adig_XM_015907002.1
+|           |  |           |  |        |  |        +------| (100)
+|           |  |           |  |        |  |        |      +--Fspp_ffun1.m4.11764.m1
+|           |  |           |  |        |  |     +--| (84)
+|           |  |           |  |        |  |     |  +-------Skow_XM_006824221.1
+|           |  |           |  |        |  |  +--| (92)
+|           |  |           |  |        |  |  |  +--------Xentro_ENSXETT00000025770
+|           |  |           |  |        |  +--| (90)
+|           |  |           |  |        |     |   +--Adig_XM_015914460.1
+|           |  |           |  |        |     +---| (98)
+|           |  |           |  |        |         +--Fspp_ffun1.m4.26584.m1
+|           |  |           |  |     +--| (86)
+|           |  |           |  |     |  |                   +**Chem_TCONS_00066748
+|           |  |           |  |     |  |            +------| (100)
+|           |  |           |  |     |  |            |      +--Chem_TCONS_00071932
+|           |  |           |  |     |  |         +--| (100)
+|           |  |           |  |     |  |         |  +------Hvul_g11736_1
+|           |  |           |  |     |  |     +---| (100)
+|           |  |           |  |     |  |     |   +-----Morvir_scaffold149.g55.t1
+|           |  |           |  |     |  |  +--| (99)
+|           |  |           |  |     |  |  |  |   +---Adig_XM_015912983.1
+|           |  |           |  |     |  |  |  +---| (100)
+|           |  |           |  |     |  |  |      +-----Fspp_ffun1.m4.16263.m1
+|           |  |           |  |     |  +--| (62)
+|           |  |           |  |     |     |  +---------------Fspp_ffun1.m4.30483.m1
+|           |  |           |  |     |     +--| (83)
+|           |  |           |  |     |        |         +---Adig_XM_015899313.1
+|           |  |           |  |     |        +---------| (100)
+|           |  |           |  |     |                  +----Fspp_ffun1.m4.23130.m1
+|           |  |           |  |  +--| (94)
+|           |  |           |  |  |  |                      +----------------Fspp_ffun1.m4.4260.m1
+|           |  |           |  |  |  |     +----------------| (100)
+|           |  |           |  |  |  |     |                |                    +**Skow_XM_006815656.1
+|           |  |           |  |  |  |     |                |                 +**| (91)
+|           |  |           |  |  |  |     |                |                 |  +**Skow_XM_006819482.1
+|           |  |           |  |  |  |     |                |              +**| (88)
+|           |  |           |  |  |  |     |                |              |  |  +**Skow_XM_006819480.1
+|           |  |           |  |  |  |     |                |              |  +**| (98)
+|           |  |           |  |  |  |     |                |              |     +**Skow_XM_006820387.1
+|           |  |           |  |  |  |     |                +--------------| (100)
+|           |  |           |  |  |  |     |                               +--Skow_XM_006819478.1
+|           |  |           |  |  |  |  +--| (75)
+|           |  |           |  |  |  |  |  |       +---Adig_XM_015899310.1
+|           |  |           |  |  |  |  |  +-------| (100)
+|           |  |           |  |  |  |  |          +----Fspp_ffun1.m4.23128.m1
+|           |  |           |  |  |  +--| (76)
+|           |  |           |  |  |     +----------Hsap_ENST00000398468
+|           |  |           |  +--| (94)
+|           |  |           |     |                                   +--Adig_XM_015899343.1
+|           |  |           |     |                    +--------------| (100)
+|           |  |           |     |                    |              +--Fspp_ffun1.m4.15184.m1
+|           |  |           |     |                 +--| (100)
+|           |  |           |     |                 |  +---------------Fspp_ffun1.m4.30998.m1
+|           |  |           |     |           +-----| (90)
+|           |  |           |     |           |     |        +-----Skow_NM_001164891.1
+|           |  |           |     |           |     +--------| (100)
+|           |  |           |     |           |              |          +--Xentro_ENSXETT00000100033
+|           |  |           |     |           |              |       +--| (100)
+|           |  |           |     |           |              |       |  +--Hsap_ENST00000369206
+|           |  |           |     |           |              +-------| (100)
+|           |  |           |     |           |                      |  +--Hsap_ENST00000234392
+|           |  |           |     |           |                      +--| (100)
+|           |  |           |     |           |                         +--Xentro_ENSXETT00000088471
+|           |  |           |     |        +--| (83)
+|           |  |           |     |        |  |        +--Xentro_ENSXETT00000076634
+|           |  |           |     |        |  |     +--| (82)
+|           |  |           |     |        |  |     |  |     +**Hsap_ENST00000553456
+|           |  |           |     |        |  |     |  |  +--| (100)
+|           |  |           |     |        |  |     |  |  |  +--Xentro_ENSXETT00000047776
+|           |  |           |     |        |  |     |  +--| (100)
+|           |  |           |     |        |  |     |     +--Xentro_ENSXETT00000062441
+|           |  |           |     |        |  |  +--| (100)
+|           |  |           |     |        |  |  |  +--Hsap_ENST00000258106
+|           |  |           |     |        |  +--| (90)
+|           |  |           |     |        |     +--Skow_NM_001164889.1
+|           |  |           |     |   +----| (84)
+|           |  |           |     |   |    |         +--Adig_XM_015899344.1
+|           |  |           |     |   |    |  +------| (100)
+|           |  |           |     |   |    |  |      +--Fspp_ffun1.m4.15187.m1
+|           |  |           |     |   |    +--| (84)
+|           |  |           |     |   |       |             +--Adig_XM_015914462.1
+|           |  |           |     |   |       +-------------| (100)
+|           |  |           |     |   |                     +--Fspp_ffun1.m4.26587.m1
+|           |  |           |     +---| (96)
+|           |  |           |         |  +-----Chem_TCONS_00054222
+|           |  |           |         +--| (100)
+|           |  |           |            +------Morvir_scaffold5.g160.t1
+|           |  |        +--| (38)
+|           |  |        |  |                +-------Skow_XM_006821511.1
+|           |  |        |  |     +----------| (100)
+|           |  |        |  |     |          +--Fspp_ffun1.m4.20503.m1
+|           |  |        |  |  +--| (69)
+|           |  |        |  |  |  |          +--Adig_XM_015918185.1
+|           |  |        |  |  |  |      +---| (100)
+|           |  |        |  |  |  |      |   +**Fspp_ffun1.m4.18978.m1
+|           |  |        |  |  |  +------| (100)
+|           |  |        |  |  |         |            +--Xentro_ENSXETT00000072471
+|           |  |        |  |  |         |         +--| (100)
+|           |  |        |  |  |         |         |  +--Hsap_ENST00000308618
+|           |  |        |  |  |         |      +--| (100)
+|           |  |        |  |  |         |      |  |  +--Hsap_ENST00000496902
+|           |  |        |  |  |         |      |  +--| (100)
+|           |  |        |  |  |         |      |     +--Xentro_ENSXETT00000060604
+|           |  |        |  |  |         +------| (100)
+|           |  |        |  |  |                +-----Skow_NM_001171223.1
+|           |  |        |  +**| (11)
+|           |  |        |     |     +--------Adig_XM_015918189.1
+|           |  |        |     |  +--| (92)
+|           |  |        |     |  |  |       +----Skow_NM_001164925.1
+|           |  |        |     |  |  |    +--| (79)
+|           |  |        |     |  |  |    |  |  +--Xentro_ENSXETT00000046719
+|           |  |        |     |  |  |    |  +--| (96)
+|           |  |        |     |  |  |    |     +--Hsap_ENST00000252971
+|           |  |        |     |  |  +----| (100)
+|           |  |        |     |  |       +---Xentro_ENSXETT00000102628
+|           |  |        |     +--| (98)
+|           |  |        |        +----------Tadh_TriadT50911
+|           |  |     +--| (70)
+|           |  |     |  |                  +--Adig_XM_015901484.1
+|           |  |     |  |               +--| (100)
+|           |  |     |  |               |  +--Fspp_ffun1.m4.11567.m1
+|           |  |     |  |            +--| (86)
+|           |  |     |  |            |  +-----Fspp_ffun1.m4.11570.m1
+|           |  |     |  |         +--| (90)
+|           |  |     |  |         |  |     +---Adig_XM_015901486.1
+|           |  |     |  |         |  +-----| (100)
+|           |  |     |  |         |        +--Fspp_ffun1.m4.11569.m1
+|           |  |     |  |      +--| (79)
+|           |  |     |  |      |  |      +---Adig_XM_015901485.1
+|           |  |     |  |      |  +------| (100)
+|           |  |     |  |      |         +--Fspp_ffun1.m4.11566.m1
+|           |  |     |  |   +--| (99)
+|           |  |     |  |   |  |           +--Hsap_ENST00000262041
+|           |  |     |  |   |  |        +--| (100)
+|           |  |     |  |   |  |        |  +--Xentro_ENSXETT00000011040
+|           |  |     |  |   |  |  +-----| (100)
+|           |  |     |  |   |  |  |     +-------Skow_NM_001164933.1
+|           |  |     |  |   |  +--| (76)
+|           |  |     |  |   |     +----Hsap_ENST00000318579
+|           |  |     |  +---| (100)
+|           |  |     |      |  +----Morvir_scaffold59.g41.t1
+|           |  |     |      +--| (99)
+|           |  |     |         +-----Hvul_g24401_1
+|           |  |  +--| (73)
+|           |  |  |  |                    +--Hsap_ENST00000295206
+|           |  |  |  |                 +--| (84)
+|           |  |  |  |                 |  +-----Skow_NM_001164900.1
+|           |  |  |  |              +--| (84)
+|           |  |  |  |              |  +--Xentro_ENSXETT00000078593
+|           |  |  |  +--------------| (100)
+|           |  |  |                 +--Hsap_ENST00000297375
+|           |  +--| (69)
+|           |     |               +--Xentro_ENSXETT00000068002
+|           |     |            +--| (100)
+|           |     |            |  +--Hsap_ENST00000239174
+|           |     |         +--| (100)
+|           |     |         |  |     +--Hsap_ENST00000643460
+|           |     |         |  |  +--| (100)
+|           |     |         |  |  |  +--Xentro_ENSXETT00000001600
+|           |     |         |  +--| (92)
+|           |     |         |     |   +--Hsap_ENST00000331462
+|           |     |         |     +---| (100)
+|           |     |         |         +--Xentro_ENSXETT00000003767
+|           |     |     +---| (100)
+|           |     |     |   +----Skow_NM_001164912.1
+|           |     |  +--| (96)
+|           |     |  |  |        +----Morvir_scaffold27.g7.t1
+|           |     |  |  |    +---| (100)
+|           |     |  |  |    |   +--Chem_TCONS_00061956
+|           |     |  |  +----| (100)
+|           |     |  |       |       +--Adig_XM_015918195.1
+|           |     |  |       +-------| (100)
+|           |     |  |               +--Fspp_ffun1.m4.18979.m1
+|           |     +--| (92)
+|           |        |  +-------------Morvir_scaffold70.g42.t1
+|           |        +--| (96)
+|           |           +--------Skow_NM_001164907.1
+|        +--| (50)
+|        |  |           +------Fspp_ffun1.m4.12105.m1
+|        |  |  +--------| (100)
+|        |  |  |        +---------Morvir_scaffold189.g37.t1
+|        |  +--| (98)
+|        |     |         +--Hsap_ENST00000381033
+|        |     |    +----| (100)
+|        |     |    |    +--Xentro_ENSXETT00000025782
+|        |     +----| (100)
+|        |          +----Skow_XM_006824496.1
+|     +--| (81)
+|     |  +----------------Morvir_scaffold70.g45.t1
+|  +--| (96)
+|  |  |                                        +--Hsap_ENST00000303450
+|  |  |                                     +--| (99)
+|  |  |                                     |  |  +--Xentro_ENSXETT00000016495
+|  |  |                                     |  +--| (99)
+|  |  |                                     |     +**Xentro_ENSXETT00000066357
+|  |  |                                  +--| (97)
+|  |  |                                  |  +--Xentro_ENSXETT00000078199
+|  |  |                               +--| (97)
+|  |  |                               |  +--Hsap_ENST00000249499
+|  |  |                           +---| (98)
+|  |  |                           |   |        +**Hsap_ENST00000343483
+|  |  |                           |   |     +--| (100)
+|  |  |                           |   |     |  +**Hsap_ENST00000470747
+|  |  |                           |   |  +--| (100)
+|  |  |                           |   |  |  +--Xentro_ENSXETT00000001611
+|  |  |                           |   +--| (97)
+|  |  |                           |      |  +--Hsap_ENST00000311177
+|  |  |                           |      +--| (100)
+|  |  |                           |         +--Xentro_ENSXETT00000101088
+|  |  |                    +------| (100)
+|  |  |                    |      |           +--Hsap_ENST00000283921
+|  |  |                    |      |        +--| (100)
+|  |  |                    |      |        |  +--Xentro_ENSXETT00000001618
+|  |  |                    |      |     +--| (98)
+|  |  |                    |      |     |  |  +--Hsap_ENST00000249501
+|  |  |                    |      |     |  +--| (100)
+|  |  |                    |      |     |     +--Xentro_ENSXETT00000016491
+|  |  |                    |      +-----| (98)
+|  |  |                    |            |  +--Xentro_ENSXETT00000050677
+|  |  |                    |            +--| (100)
+|  |  |                    |               +--Hsap_ENST00000303460
+|  |  |                 +--| (99)
+|  |  |                 |  +--Skow_XM_006811515.1
+|  |  |              +--| (99)
+|  |  |              |  +---Skow_NM_001164941.1
+|  |  |           +--| (98)
+|  |  |           |  |  +---Skow_NM_001164909.1
+|  |  |           |  +--| (100)
+|  |  |           |     +---Skow_NM_001164942.1
+|  |  |        +--| (82)
+|  |  |        |  +--------Skow_XM_006825612.1
+|  |  |     +--| (54)
+|  |  |     |  |              +--Hsap_ENST00000006015
+|  |  |     |  |           +--| (99)
+|  |  |     |  |           |  +--Xentro_ENSXETT00000001623
+|  |  |     |  |     +-----| (99)
+|  |  |     |  |     |     |     +--Xentro_ENSXETT00000097247
+|  |  |     |  |     |     |  +--| (92)
+|  |  |     |  |     |     |  |  +--Xentro_ENSXETT00000060673
+|  |  |     |  |     |     +--| (99)
+|  |  |     |  |     |        +--Hsap_ENST00000249504
+|  |  |     |  |  +--| (87)
+|  |  |     |  |  |  |           +--Hsap_ENST00000649031
+|  |  |     |  |  |  |  +--------| (100)
+|  |  |     |  |  |  |  |        |  +--Xentro_ENSXETT00000001626
+|  |  |     |  |  |  |  |        +--| (95)
+|  |  |     |  |  |  |  |           |     +---Hsap_ENST00000290295
+|  |  |     |  |  |  |  |           |  +--| (96)
+|  |  |     |  |  |  |  |           |  |  |  +--Hsap_ENST00000392539
+|  |  |     |  |  |  |  |           |  |  +--| (100)
+|  |  |     |  |  |  |  |           |  |     +--Xentro_ENSXETT00000016487
+|  |  |     |  |  |  |  |           +--| (95)
+|  |  |     |  |  |  |  |              |  +--Xentro_ENSXETT00000100718
+|  |  |     |  |  |  |  |              +--| (100)
+|  |  |     |  |  |  |  |                 +--Hsap_ENST00000243056
+|  |  |     |  |  |  +--| (89)
+|  |  |     |  |  |     |           +---Hsap_ENST00000406506
+|  |  |     |  |  |     +-----------| (100)
+|  |  |     |  |  |                 |  +--Xentro_ENSXETT00000050671
+|  |  |     |  |  |                 +--| (100)
+|  |  |     |  |  |                    +--Hsap_ENST00000243103
+|  |  |     |  +--| (53)
+|  |  |     |     +--------------------Hvul_g4503_1
+|  |  |  +--| (86)
+|  |  |  |  |                       +---Hsap_ENST00000373514
+|  |  |  |  |                    +--| (98)
+|  |  |  |  |                    |  +----Xentro_ENSXETT00000009980
+|  |  |  |  |                 +--| (96)
+|  |  |  |  |                 |  +--Xentro_ENSXETT00000073774
+|  |  |  |  |              +--| (41)
+|  |  |  |  |              |  |  +--Xentro_ENSXETT00000022650
+|  |  |  |  |              |  +--| (47)
+|  |  |  |  |              |     |  +--Hsap_ENST00000231656
+|  |  |  |  |              |     +**| (42)
+|  |  |  |  |              |        +-------------------------------------Skow_NM_001171216.1
+|  |  |  |  |           +--| (41)
+|  |  |  |  |           |  +--Hsap_ENST00000381020
+|  |  |  |  +-----------| (97)
+|  |  |  |              +--Skow_NM_001164943.1
+|  |  +--| (83)
+|  |     |            +--Adig_XM_015918181.1
+|  |     +------------| (100)
+|  |                  +--Fspp_ffun1.m4.18981.m1
++--| (100)
+|  |     +--Morvir_scaffold340.g1.t1
+|  |  +--| (99)
+|  |  |  +---Morvir_scaffold45.g78.t1
+|  +--| (97)
+|     |  +------------------------Chem_TCONS_00008773
+|     +--| (95)
+|        +------Hvul_g26228_1
+|
+|        +-----Chem_TCONS_00060494
+|     +--| (87)
+|     |  +---Morvir_scaffold216.g16.t1
++-----| (100)
+      |    +--Hvul_g24998_1
+      +----| (100)
+           +--Hvul_g3831_1
+
+Tree in newick format:
+
+(Fspp_ffun1.m4.6493.m1:0.4606508283,(((((((((((Hsap_ENST00000302945:0.0621030372,Xentro_ENSXETT00000089294:0.0728823396)100:0.1732891549,(Xentro_ENSXETT00000045469:0.1025421722,Hsap_ENST00000326902:0.0771584087)76:0.1316144644)75:0.0544539498,Skow_XM_002732004.2:0.3405778500)100:0.3991023942,Tadh_TriadT33728:0.4102244657)90:0.0260489436,((Morvir_scaffold348.g20.t1:0.1679862001,(Chem_TCONS_00050614:0.2202141425,Hvul_g10051_1:0.3082749920)100:0.1573022402)94:0.0874421694,(Adig_XM_015908011.1:0.0000026714,Fspp_ffun1.m4.12110.m1:0.1029865479)100:0.4312561025)92:0.0728397489)100:0.2273144860,((((Adig_XM_015918179.1:0.0973693985,Fspp_ffun1.m4.18980.m1:0.0461060672)100:0.5472444362,((Xentro_ENSXETT00000053914:0.2107476869,(((Hsap_ENST00000311626:0.0825408217,Xentro_ENSXETT00000047547:0.0896822561)100:0.1138691660,(Xentro_ENSXETT00000001602:0.0318216870,Hsap_ENST00000317201:0.0717284623)100:0.0784521773)92:0.0187045770,(Xentro_ENSXETT00000099847:0.0523583577,Hsap_ENST00000249440:0.1066378437)100:0.0825939425)92:0.0977956415)99:0.2718592997,(((Hsap_ENST00000222718:0.0117619778,Xentro_ENSXETT00000001601:0.0471999109)100:0.1457776276,(Xentro_ENSXETT00000057087:0.0574412282,Hsap_ENST00000330070:0.1190804915)56:0.1032394947)64:0.1099242991,Skow_NM_001164937.1:0.8102084823)100:0.3539054707)58:0.0841758123)83:0.1645059046,((Adig_XM_015925334.1:0.2639388275,Adig_XM_015925335.1:0.1368916307)100:0.0495012057,Fspp_ffun1.m4.18984.m1:0.1758189534)100:0.6614978616)91:0.0823324655,((((((Hsap_ENST00000242159:0.0439736741,Xentro_ENSXETT00000001606:0.1283917733)69:0.0650378339,(Xentro_ENSXETT00000089346:0.1247879089,Hsap_ENST00000239165:0.0834565235)100:0.1277197605)100:0.2956729922,((((Hsap_ENST00000239144:0.0291459461,Xentro_ENSXETT00000063401:0.0280821235)100:0.1578544347,(Hsap_ENST00000313173:0.0438059526,Xentro_ENSXETT00000070016:0.1422478108)100:0.0648115388)98:0.0522577944,(Xentro_ENSXETT00000050682:0.0142162817,Hsap_ENST00000040584:0.0137647229)100:0.0781839043)100:0.3548392297,(Skow_NM_001164908.1:0.3592361130,Skow_XM_002730729.1:0.3340222969)100:0.2117312949)100:0.0655825499)67:0.0561657061,((Hsap_ENST00000225648:0.0688649805,Xentro_ENSXETT00000047588:0.0920098208)100:0.0940984812,((Hsap_ENST00000222728:0.0766245399,Xentro_ENSXETT00000096565:0.1155280783)100:0.0974305737,(Hsap_ENST00000243108:0.0000020850,Xentro_ENSXETT00000050686:0.0930686528)100:0.3436732841)66:0.0969233980)100:0.2523021456)100:0.1426454834,((((Hsap_ENST00000513209:0.2675216570,Xentro_ENSXETT00000050688:0.1397743382)91:0.0017295484,Hsap_ENST00000312492:0.0127778387)100:0.3012742678,((Hsap_ENST00000239151:0.0079010712,Xentro_ENSXETT00000047578:0.0925953951)100:0.1397477890,(Hsap_ENST00000222726:0.0165828742,Xentro_ENSXETT00000001604:0.0450620249)96:0.0557324893)94:0.0520148163)94:0.0682282524,Skow_NM_001164938.1:0.4776596307)92:0.0786886065)92:0.0965187695,((((Hsap_ENST00000332503:0.1373261733,Xentro_ENSXETT00000047559:0.2443674550)55:0.0132376859,((Xentro_ENSXETT00000080023:0.0813940312,Hsap_ENST00000303406:0.0724341909)100:0.0592989960,(Hsap_ENST00000306324:0.0406425396,Xentro_ENSXETT00000003765:0.0887948078)100:0.1530832283)100:0.0510241731)56:0.0402596199,(Xentro_ENSXETT00000057392:0.1020680761,Hsap_ENST00000360046:0.1582592262)100:0.0704079351)100:0.1770757652,Skow_NM_001164913.1:0.2608998375)100:0.2160209634)100:0.1685132070)21:0.0606750844)79:0.0886557143,((((((((Morvir_scaffold98.g48.t1:0.7475630270,((Adig_XM_015915222.1:0.0422765239,Fspp_ffun1.m4.11751.m1:0.1222162492)100:0.1712555176,Skow_XM_006824407.1:0.3381206068)100:0.2325323104)99:0.4138655797,((((((((((Skow_XM_006813696.1:0.1306229175,Skow_NM_001164914.1:0.2176193163)100:0.1461262678,(Hsap_ENST00000263610:0.0273852021,Xentro_ENSXETT00000104161:0.0212330232)100:0.1168446339)62:0.0282422511,(Hsap_ENST00000370445:0.0038010079,Xentro_ENSXETT00000051744:0.0484894202)65:0.0529976049)97:0.3286447221,Skow_XM_006817477.1:0.9276737800)98:0.3974449455,Chem_TCONS_00025396:1.0631309654)96:0.1882217596,(((((Adig_XM_015897722.1:0.1026285619,Fspp_ffun1.m4.31060.m1:0.0000024439)100:0.6333921967,(((Fspp_ffun1.m4.17753.m1:0.2021174476,Adig_XM_015897727.1:0.2077266264)75:0.0933687887,Adig_XM_015897726.1:0.2214245762)73:0.0350378595,(Fspp_ffun1.m4.33384.m1:0.1087816676,Adig_XM_015897724.1:0.2582906325)64:0.0392583084)97:0.0614468130)82:0.0806123401,Fspp_ffun1.m4.31061.m1:0.3169659465)91:0.0827234785,Fspp_ffun1.m4.17748.m1:0.3818071234)99:0.3759698825,(Skow_XM_002733661.2:0.6279583184,(((((Fspp_ffun1.m4.1442.m1:0.1992041140,(((((Fspp_ffun1.m4.1443.m1:0.0247927336,Fspp_ffun1.m4.1445.m1:0.0449107771)98:0.0030028326,Fspp_ffun1.m4.1448.m1:0.0188272733)99:0.0046822969,Fspp_ffun1.m4.1446.m1:0.0376023980)99:0.0047599706,Fspp_ffun1.m4.1444.m1:0.0240751854)100:0.1125100743,((((Fspp_ffun1.m4.25254.m1:0.0364142202,Fspp_ffun1.m4.29242.m1:0.0285689662)97:0.0149346071,Fspp_ffun1.m4.29243.m1:0.0286210193)97:0.0204039760,Fspp_ffun1.m4.29244.m1:0.0061935769)91:0.0070164558,Fspp_ffun1.m4.26302.m1:0.0937366340)100:0.0520263316)100:0.2142834205)100:0.1533266390,(Fspp_ffun1.m4.15421.m1:0.1447646259,Fspp_ffun1.m4.15426.m1:0.0997927284)100:0.1444582908)100:0.2040075925,Fspp_ffun1.m4.15423.m1:0.2870623837)94:0.1091539649,Fspp_ffun1.m4.15427.m1:0.3440760229)100:0.1736157937,Adig_XM_015895991.1:0.5622573108)100:0.2486052201)98:0.1686380752)72:0.0532415802)68:0.0439682483,((((Adig_XM_015905830.1:0.3123564587,Fspp_ffun1.m4.14100.m1:0.0146071750)100:0.3808314517,(((Fspp_ffun1.m4.14099.m1:0.2112704809,Adig_XM_015905832.1:0.3919836964)100:0.1958550882,Fspp_ffun1.m4.14104.m1:0.8996416339)100:0.2325619336,(Skow_XM_002741136.2:0.4186183708,(Morvir_scaffold188.g35.t1:0.1799787387,Chem_TCONS_00023949:0.6401004352)100:0.6218602221)99:0.1423160259)100:0.1270409815)91:0.0552375886,Tadh_TriadT51739:1.2560639202)100:0.4614866601,((((Adig_XM_015915200.1:0.0746305936,Fspp_ffun1.m4.4458.m1:0.0111283145)100:0.1961056768,Skow_NM_001164931.1:0.2775785677)99:0.0357187068,((Xentro_ENSXETT00000035005:0.0793488516,Hsap_ENST00000382723:0.0266099528)100:0.0422870260,(Hsap_ENST00000239243:0.0403150171,Xentro_ENSXETT00000020130:0.0792735067)100:0.0922264957)100:0.0804167396)99:0.2995674878,(Chem_TCONS_00056354:0.2626524553,Hvul_g16557_1:0.2558207572)99:0.2646391890)45:0.0478279379)100:0.4106575350)33:0.0000027556,(((((Adig_XM_015912978.1:0.0602726088,Fspp_ffun1.m4.12735.m1:0.0249420105)100:0.1474750510,Skow_NM_001168137.1:0.3461945721)100:0.0771892805,(Hsap_ENST00000422806:0.1024873510,Xentro_ENSXETT00000008415:0.1300737438)95:0.0554966926)97:0.0530537926,Hsap_ENST00000451024:0.2999288116)97:0.1092934845,((Morvir_scaffold21.g122.t1:0.4583705796,(Chem_TCONS_00029478:0.1567209162,Hvul_g2253_1:1.2324730668)100:0.1854630491)100:0.0903429674,Xentro_ENSXETT00000096279:0.4988745300)63:0.0000024089)100:0.5870172699)69:0.0632341796,((((((Adig_XM_015912975.1:0.1190655337,Fspp_ffun1.m4.12736.m1:0.0484616087)100:0.1723479597,((Skow_XM_002731905.2:0.2713387122,((Xentro_ENSXETT00000094587:0.1424961046,Hsap_ENST00000400677:0.2799378898)100:0.1168730497,(Hsap_ENST00000357878:0.0686806821,Xentro_ENSXETT00000021090:0.0820213087)100:0.1092233096)100:0.0970512000)96:0.0075618107,((Hsap_ENST00000339992:0.0819951178,Xentro_ENSXETT00000057781:0.1648200487)100:0.1407024527,Xentro_ENSXETT00000065721:0.4843821907)100:0.1531037363)99:0.1084358791)99:0.0512407229,Tadh_TriadT50928:0.5047501280)100:0.2611218938,Chem_TCONS_00047310:0.7979241339)53:0.0626826452,Chem_TCONS_00069782:1.3780258808)94:0.1522029725,(((Adig_XM_015917756.1:0.3377104463,Fspp_ffun1.m4.29526.m1:0.2738793843)100:0.1252779900,Fspp_ffun1.m4.29465.m1:0.4731385753)90:0.0312069233,Skow_XM_006811339.1:1.4673350615)95:0.2434779999)48:0.1485681417)21:0.0000028518,(((Adig_XM_015895990.1:0.0530827364,Fspp_ffun1.m4.15422.m1:0.0739925211)100:0.4514780478,Skow_NM_001164886.1:0.1944389912)100:0.1870857893,((Hsap_ENST00000306318:0.0184810609,(Xentro_ENSXETT00000007133:0.0000021183,Xentro_ENSXETT00000007145:0.0116853339)99:0.0698732827)99:0.1186809034,Hsap_ENST00000297537:0.1457032837)98:0.0770502194)100:0.6714807679)34:0.0755211961)67:0.0680090210,(((((((((Morvir_scaffold85.g37.t1:1.3369641903,(Tadh_TriadT18102:0.4239725630,(Skow_NM_001164898.1:0.1413254945,((Xentro_ENSXETT00000030999:0.0258338677,Hsap_ENST00000524983:0.0811677322)100:0.0641014799,(Hsap_ENST00000332700:0.0000028351,Xentro_ENSXETT00000063234:0.2989729800)100:0.5721963567)85:0.1016728806)81:0.0737939971)81:0.1088793366)100:0.4737349596,((Hsap_ENST00000366903:0.1189247196,Xentro_ENSXETT00000005952:0.0929362851)100:0.1516640016,Skow_XM_006816183.1:0.3964074247)100:0.3028323284)71:0.0722467655,(Fspp_ffun1.m4.22959.m1:0.2746827358,Fspp_ffun1.m4.13287.m1:0.2618168843)100:0.4943486077)67:0.0636893636,((Adig_XM_015910647.1:0.0200587099,Fspp_ffun1.m4.31229.m1:0.1878399145)100:0.2837257555,Adig_XM_015910650.1:1.1425064751)98:0.5390972289)83:0.0598705841,Morvir_scaffold95.g3.t1:0.5287354119)100:0.3124978304,(((((Adig_XM_015902979.1:0.2836587876,Fspp_ffun1.m4.20257.m1:0.8158713862)98:0.2388264544,((Adig_XM_015903087.1:0.0429889857,Fspp_ffun1.m4.20261.m1:0.0882541922)100:0.1046390319,(Adig_XM_015909001.1:0.1333042077,Fspp_ffun1.m4.10292.m1:0.0622699310)100:0.1674201370)82:0.0264655566)100:0.2829128893,(Morvir_scaffold175.g50.t1:0.1363828461,Hvul_g32708_1:0.9432918732)100:0.2360117788)100:0.1838672290,(Adig_XM_015909101.1:0.8138637374,((Skow_XM_006815239.1:0.1205318907,Skow_XM_006822703.1:0.0000025148)100:0.3991781298,((Hsap_ENST00000253968:0.0467705798,Xentro_ENSXETT00000086444:0.0763070191)100:0.2376434338,(Hsap_ENST00000281437:0.0609772432,Xentro_ENSXETT00000077545:0.0931254773)100:0.3837702207)100:0.1099283932)100:0.1306328657)100:0.4058435469)100:0.1929219357,((Hsap_ENST00000343035:0.1065296351,Xentro_ENSXETT00000036924:0.0212075001)100:0.4961481816,Skow_NM_001164896.1:0.0122914971)100:0.4039818123)96:0.0787214565)98:0.2026585287,(((((Adig_XM_015915192.1:0.0745421257,Fspp_ffun1.m4.4455.m1:0.0459113088)100:0.4935417173,Skow_NM_001165028.1:0.2954827676)92:0.0183763978,((Hsap_ENST00000370193:0.0387266938,Xentro_ENSXETT00000089841:0.0451838767)100:0.1128648061,Hsap_ENST00000377566:0.5424885598)99:0.1277535848)100:0.7170828554,(((((Adig_XM_015902493.1:0.0000025488,(Tadh_TriadT31334:0.8952372612,Morvir_scaffold42.g46.t1:0.6555513517)98:0.2085052766)98:0.1243826572,Fspp_ffun1.m4.9245.m1:0.1110766120)99:0.1797447912,(((Hsap_ENST00000295886:0.0156220745,Xentro_ENSXETT00000060579:0.0216377012)100:0.0851404269,((Xentro_ENSXETT00000050951:0.0414354597,Hsap_ENST00000368592:0.0492473260)100:0.0399586679,(Hsap_ENST00000518699:0.1022145790,Xentro_ENSXETT00000082174:0.1819356077)100:0.3553058978)79:0.0611001627)79:0.0478375736,Skow_NM_001168138.1:0.2475963424)99:0.1470081797)100:0.5389459567,(((((Xentro_ENSXETT00000017635:0.0396524518,Hsap_ENST00000370196:0.0514509502)99:0.0282039694,Xentro_ENSXETT00000102157:0.2261713411)100:0.0362978915,(Hsap_ENST00000233638:0.1723513957,(Skow_NM_001164981.1:0.0121854702,(Morvir_scaffold99.g69.t1:0.3697698905,Chem_TCONS_00070484:1.0563999108)98:0.3493235841)90:0.1387286425)83:0.0129422300)84:0.0523811829,Xentro_ENSXETT00000039652:0.0389986786)82:0.0095309517,Hsap_ENST00000296921:0.0245087301)100:0.4733223133)100:0.2033445801,(((Adig_XM_015913000.1:0.0000028139,Fspp_ffun1.m4.15317.m1:0.0244489624)100:0.3200832750,((Chem_TCONS_00038629:0.2723028269,Hvul_g24677_1:0.4731248637)100:0.1906567521,Morvir_scaffold11.g90.t1:0.4895553849)100:0.4757603515)98:0.0464505732,(Skow_NM_001164930.2:0.2741345545,((Hsap_ENST00000282728:0.0507410438,Xentro_ENSXETT00000057734:0.0299465378)100:0.0551302080,Tadh_TriadT9560:0.8466769591)98:0.0152829263)99:0.1707343252)100:0.5078595594)86:0.0488968516)85:0.0688983808,((((Adig_XM_015897305.1:0.7730709567,Fspp_ffun1.m4.7310.m1:0.0322219517)100:0.8299307799,((((Xentro_ENSXETT00000056262:0.0064705370,Xentro_ENSXETT00000056265:0.0005922891)100:0.4408658403,(Xentro_ENSXETT00000062960:0.2413842430,Xentro_ENSXETT00000065382:0.0820187302)100:0.8737322024)95:0.1222297294,(Xentro_ENSXETT00000019491:0.0357603743,Xentro_ENSXETT00000062188:0.0335911143)100:0.6071211858)99:0.3691066135,Hsap_ENST00000325980:0.5332229657)100:0.2908090359)80:0.0903948366,(Chem_TCONS_00071866:0.2400332879,Hvul_g30386_1:0.2844949072)100:0.5473782432)80:0.2592413009,((Skow_NM_001168018.1:0.3631888134,Skow_NM_001168019.1:0.4501254901)80:0.0676676224,Skow_XM_002731799.2:0.8175307672)100:0.2683635136)72:0.1068976251)67:0.0299209529)59:0.0575455852,(((((((((Adig_XM_015905819.1:0.3108107298,(Adig_XM_015905817.1:0.3106712234,Fspp_ffun1.m4.14105.m1:0.0000028143)100:0.8060270210)78:0.0781156887,(Adig_XM_015905823.1:0.0410385260,Fspp_ffun1.m4.14112.m1:0.1367096231)100:0.2843344927)79:0.0676759099,(Adig_XM_015905827.1:0.1953228715,(Adig_XM_015905829.1:0.1182140291,Fspp_ffun1.m4.14106.m1:0.0849081762)100:0.3881676993)98:0.0693418826)81:0.1393827943,((Skow_NM_001164932.1:0.1891171381,(Xentro_ENSXETT00000050714:0.0000024300,Hsap_ENST00000377142:0.0586726358)100:0.1677710866)100:0.0881872107,(Hsap_ENST00000258829:0.1738928518,Xentro_ENSXETT00000084212:0.2083743824)100:0.3428783106)98:0.1536799302)78:0.0488792374,((Tadh_TriadT9561:0.2628478773,((Tadh_TriadT9507:0.5807289894,Morvir_scaffold273.g2.t1:0.6926638485)58:0.0581332294,Morvir_scaffold83.g2.t1:0.7048857644)57:0.0475774464)60:0.1800826983,((Chem_TCONS_00070249:0.2038542459,Morvir_scaffold46.g33.t1:0.3399862697)100:0.4646714374,Chem_TCONS_00013206:0.7861922547)92:0.1889610819)86:0.1864824438)57:0.0782487887,((((Hsap_ENST00000351817:0.0753991959,Xentro_ENSXETT00000084717:0.0587842967)89:0.0501229446,(Xentro_ENSXETT00000066949:0.0299839737,Hsap_ENST00000354822:0.0627244861)100:0.0285097647)88:0.0864224867,Skow_NM_001164910.1:0.2316411355)92:0.2180135965,Xentro_ENSXETT00000080894:0.7286005051)75:0.0002844606)89:0.0993332728,((Adig_XM_015915184.1:0.0240666850,Fspp_ffun1.m4.4460.m1:0.0106567397)100:0.2924404419,((Chem_TCONS_00016211:0.2613924031,Hvul_g31954_1:0.3438992149)100:0.1862507455,Morvir_scaffold11.g115.t1:0.2023318553)100:0.2772857774)81:0.1097082895)65:0.0268782944,((((Xentro_ENSXETT00000060367:0.0564576704,Hsap_ENST00000329198:0.1597385958)100:0.1246078492,(Hsap_ENST00000344586:0.1653444568,Xentro_ENSXETT00000089378:0.0774509298)100:0.0482966606)100:0.0733297011,(Hsap_ENST00000325017:0.1988686129,Xentro_ENSXETT00000016948:0.1812958826)100:0.0728950762)100:0.1142835722,Skow_XM_006815396.1:0.1845434529)97:0.1812909309)98:0.2870808562,(((Adig_XM_015915185.1:0.0696716998,Fspp_ffun1.m4.4461.m1:0.0510341760)100:0.2117854384,(((Skow_NM_001165004.1:0.1062131520,Morvir_scaffold477.g8.t1:1.2144508611)83:0.2378666647,(Hsap_ENST00000382438:0.1170957265,Xentro_ENSXETT00000094839:0.0652321492)86:0.1646476627)97:0.0515585941,Xentro_ENSXETT00000080534:0.2593152348)98:0.0929241384)100:0.1056878447,(Xentro_ENSXETT00000016949:0.2780476040,Hsap_ENST00000380871:0.3971895495)100:0.2312218511)100:0.3924439109)100:0.2688469866)63:0.0519437298,((((((Adig_XM_015917750.1:0.0763004510,Fspp_ffun1.m4.29467.m1:0.0702696445)100:0.3457657357,((Skow_NM_001164899.1:0.2521609978,((Hsap_ENST00000361725:0.0464285168,Xentro_ENSXETT00000103078:0.2664023513)100:0.1090987001,((Hsap_ENST00000518156:0.0357035616,Xentro_ENSXETT00000090592:0.0250888902)100:0.0807244308,(Xentro_ENSXETT00000072778:0.1103093315,Hsap_ENST00000240306:0.4858775515)99:0.1441020274)99:0.0694144583)99:0.0524317703)100:0.0788864069,((Hsap_ENST00000648378:0.0609821792,Xentro_ENSXETT00000036133:0.0485023963)100:0.0924719243,((Hsap_ENST00000234198:0.1060242843,Xentro_ENSXETT00000016414:0.0803463971)100:0.2350018440,(Hsap_ENST00000434704:0.0430792294,Xentro_ENSXETT00000047434:0.2180634522)100:0.1753706989)100:0.0710890704)100:0.3207646438)100:0.1326689369)74:0.0252078051,(Morvir_scaffold140.g36.t1:0.4237095147,(Chem_TCONS_00017798:0.3390074959,Hvul_g6880_1:0.5840496973)100:0.0672362630)100:0.0847319570)98:0.1099826570,Tadh_TriadT49530:0.5755138035)78:0.0311063742,(Chem_TCONS_00000458:0.1168153021,(Hvul_g18245_1:0.1651294240,Morvir_scaffold140.g33.t1:0.4383366292)60:0.1098826156)100:0.2592288519)100:0.2642596908,((Hsap_ENST00000229307:0.0000028727,Hsap_ENST00000528386:0.0044598782)100:0.8895841921,Chem_TCONS_00045729:1.0337756715)77:0.2109532816)70:0.1115332979)74:0.0170678489)31:0.0632494841,(((((((Adig_XM_015897690.1:0.2908751031,Fspp_ffun1.m4.29381.m1:0.1908034728)100:0.6122187166,(Adig_XM_015907403.1:0.1945830346,Fspp_ffun1.m4.24397.m1:0.0738000495)100:0.8063038995)100:0.4770333885,Tadh_TriadT49524:0.5041079819)69:0.1381901547,((((Adig_XM_015907002.1:0.2297212915,Fspp_ffun1.m4.11764.m1:0.1172969496)100:0.4660394362,Skow_XM_006824221.1:0.5119316270)84:0.0334763597,Xentro_ENSXETT00000025770:0.5824626738)92:0.1850661991,(Adig_XM_015914460.1:0.1180489733,Fspp_ffun1.m4.26584.m1:0.0599385177)98:0.2696395925)90:0.1410916611)71:0.0313070451,(((((Chem_TCONS_00066748:0.0000024785,Chem_TCONS_00071932:0.0259908325)100:0.4358127706,Hvul_g11736_1:0.4562454321)100:0.0981816959,Morvir_scaffold149.g55.t1:0.3672565042)100:0.2739684398,(Adig_XM_015912983.1:0.2987291841,Fspp_ffun1.m4.16263.m1:0.3873682377)100:0.2916380079)99:0.1572216769,(Fspp_ffun1.m4.30483.m1:0.9720983809,(Adig_XM_015899313.1:0.2910999582,Fspp_ffun1.m4.23130.m1:0.3342504931)100:0.6641049938)83:0.1350428780)62:0.0610425117)86:0.0989317058,(((Fspp_ffun1.m4.4260.m1:1.0847342729,(((Skow_XM_006815656.1:0.0000010000,Skow_XM_006819482.1:0.0000010000)91:0.0000028201,(Skow_XM_006819480.1:0.0000010000,Skow_XM_006820387.1:0.0000010000)98:0.0000010000)88:0.0000029669,Skow_XM_006819478.1:0.0082052212)100:0.9514030933)100:1.0905437640,(Adig_XM_015899310.1:0.2575965289,Fspp_ffun1.m4.23128.m1:0.3102877372)100:0.5111532319)75:0.0763845542,Hsap_ENST00000398468:0.6798651289)76:0.0999155790)94:0.0976347686,((((((Adig_XM_015899343.1:0.0862825023,Fspp_ffun1.m4.15184.m1:0.0200542070)100:0.9440022411,Fspp_ffun1.m4.30998.m1:0.9706755136)100:0.2009312689,(Skow_NM_001164891.1:0.3873102425,((Xentro_ENSXETT00000100033:0.1051675677,Hsap_ENST00000369206:0.0352700138)100:0.0775762077,(Hsap_ENST00000234392:0.0671826265,Xentro_ENSXETT00000088471:0.1237571213)100:0.1573392763)100:0.5290348400)100:0.6028122663)90:0.3679268783,(((Xentro_ENSXETT00000076634:0.0187743296,((Hsap_ENST00000553456:0.0022021412,Xentro_ENSXETT00000047776:0.0295321373)100:0.0990666464,Xentro_ENSXETT00000062441:0.2330080703)100:0.0436427948)82:0.0112885964,Hsap_ENST00000258106:0.0646928671)100:0.2387428892,Skow_NM_001164889.1:0.1100420128)90:0.0158860556)83:0.1627221343,((Adig_XM_015899344.1:0.0881538044,Fspp_ffun1.m4.15187.m1:0.0205867901)100:0.4818981320,(Adig_XM_015914462.1:0.0832278453,Fspp_ffun1.m4.26587.m1:0.1189383963)100:0.8711220575)84:0.0423446730)84:0.3189418490,(Chem_TCONS_00054222:0.3714422676,Morvir_scaffold5.g160.t1:0.4416295725)100:0.2083684635)96:0.2864096955)94:0.1790362551)88:0.0432142033,(((Skow_XM_006821511.1:0.5166955222,Fspp_ffun1.m4.20503.m1:0.0913376133)100:0.7165050086,((Adig_XM_015918185.1:0.1397243221,Fspp_ffun1.m4.18978.m1:0.0000020028)100:0.2991523513,(((Xentro_ENSXETT00000072471:0.0897191798,Hsap_ENST00000308618:0.0815346629)100:0.0801677629,(Hsap_ENST00000496902:0.0987447805,Xentro_ENSXETT00000060604:0.1135449875)100:0.1549655967)100:0.1783930491,Skow_NM_001171223.1:0.3804854604)100:0.4821438161)100:0.4390898691)69:0.1634703151,((Adig_XM_015918189.1:0.5529303440,((Skow_NM_001164925.1:0.3480181382,(Xentro_ENSXETT00000046719:0.0725322107,Hsap_ENST00000252971:0.0433615434)96:0.0862373505)79:0.0449179030,Xentro_ENSXETT00000102628:0.2595000328)100:0.3561207615)92:0.1827221145,Tadh_TriadT50911:0.7207103693)98:0.1246561457)11:0.0000022716)38:0.0215051813,((((((Adig_XM_015901484.1:0.1627755728,Fspp_ffun1.m4.11567.m1:0.0514710682)100:0.1724768590,Fspp_ffun1.m4.11570.m1:0.3733261015)86:0.0984889364,(Adig_XM_015901486.1:0.2712124347,Fspp_ffun1.m4.11569.m1:0.1235182910)100:0.3791945090)90:0.2195538524,(Adig_XM_015901485.1:0.2571225303,Fspp_ffun1.m4.11566.m1:0.0530639156)100:0.4736787463)79:0.0774130477,(((Hsap_ENST00000262041:0.0108677871,Xentro_ENSXETT00000011040:0.0687380567)100:0.1903423241,Skow_NM_001164933.1:0.5094464401)100:0.4055678622,Hsap_ENST00000318579:0.3439604292)76:0.1193451014)99:0.1382361238,(Morvir_scaffold59.g41.t1:0.3160471893,Hvul_g24401_1:0.3737859060)99:0.0880803094)100:0.2844754002)70:0.0642212097,(((Hsap_ENST00000295206:0.1876105598,Skow_NM_001164900.1:0.4212271202)84:0.0282539613,Xentro_ENSXETT00000078593:0.0588848074)84:0.0522041669,Hsap_ENST00000297375:0.0275807481)100:0.9450678155)73:0.0459175160,(((((Xentro_ENSXETT00000068002:0.1526721418,Hsap_ENST00000239174:0.2230895324)100:0.0890541483,((Hsap_ENST00000643460:0.0458432689,Xentro_ENSXETT00000001600:0.0979249294)100:0.0968409541,(Hsap_ENST00000331462:0.1830367278,Xentro_ENSXETT00000003767:0.1654589720)100:0.2433588019)92:0.0532254345)100:0.1578260923,Skow_NM_001164912.1:0.3065789128)100:0.2906712224,((Morvir_scaffold27.g7.t1:0.3303087155,Chem_TCONS_00061956:0.2357249449)100:0.2531191261,(Adig_XM_015918195.1:0.0796007877,Fspp_ffun1.m4.18979.m1:0.0955201269)100:0.4954365979)100:0.3120332997)96:0.0896262711,(Morvir_scaffold70.g42.t1:0.8715762147,Skow_NM_001164907.1:0.5869799939)96:0.1709427222)92:0.0911978427)69:0.0375469152)10:0.0246334052,((Fspp_ffun1.m4.12105.m1:0.4310275608,Morvir_scaffold189.g37.t1:0.6227117459)100:0.5720201570,((Hsap_ENST00000381033:0.0373559905,Xentro_ENSXETT00000025782:0.1581669231)100:0.3162616984,Skow_XM_006824496.1:0.3568656976)100:0.3519509562)98:0.1858220007)50:0.0092697403,Morvir_scaffold70.g45.t1:1.0384592284)81:0.0355865079,((((((((((((Hsap_ENST00000303450:0.0458041970,(Xentro_ENSXETT00000016495:0.0133874061,Xentro_ENSXETT00000066357:0.0000022727)99:0.0599293551)99:0.1338610708,Xentro_ENSXETT00000078199:0.0930153467)97:0.0470796866,Hsap_ENST00000249499:0.0908523393)97:0.1107707945,(((Hsap_ENST00000343483:0.0000025270,Hsap_ENST00000470747:0.0000010000)100:0.0539789641,Xentro_ENSXETT00000001611:0.1001328986)100:0.1016979866,(Hsap_ENST00000311177:0.0943164592,Xentro_ENSXETT00000101088:0.0940192236)100:0.1638171605)97:0.0360192365)98:0.2806304861,(((Hsap_ENST00000283921:0.0355279301,Xentro_ENSXETT00000001618:0.0295134967)100:0.2152790961,(Hsap_ENST00000249501:0.0309361898,Xentro_ENSXETT00000016491:0.0217899252)100:0.1385719400)98:0.0742611063,(Xentro_ENSXETT00000050677:0.0939971735,Hsap_ENST00000303460:0.0652236270)100:0.0801363198)98:0.3750772744)100:0.4524399177,Skow_XM_006811515.1:0.1669631378)99:0.1701711433,Skow_NM_001164941.1:0.3025607422)99:0.1496787526,(Skow_NM_001164909.1:0.2469103462,Skow_NM_001164942.1:0.2784880318)100:0.2014954659)98:0.0909571720,Skow_XM_006825612.1:0.5598328657)82:0.0738186883,((((Hsap_ENST00000006015:0.0588906831,Xentro_ENSXETT00000001623:0.0534446525)99:0.0943868371,((Xentro_ENSXETT00000097247:0.2139161876,Xentro_ENSXETT00000060673:0.1229533831)92:0.0769891637,Hsap_ENST00000249504:0.1796610047)99:0.0656535250)99:0.3892834625,((Hsap_ENST00000649031:0.0325486703,(Xentro_ENSXETT00000001626:0.0534014154,((Hsap_ENST00000290295:0.2642189184,(Hsap_ENST00000392539:0.0530560230,Xentro_ENSXETT00000016487:0.0488391251)100:0.2237924154)96:0.0304176047,(Xentro_ENSXETT00000100718:0.1172944206,Hsap_ENST00000243056:0.0432932189)100:0.1419920858)95:0.0983097572)95:0.0165178097)100:0.5881767290,(Hsap_ENST00000406506:0.2777949375,(Xentro_ENSXETT00000050671:0.1031579755,Hsap_ENST00000243103:0.0538129084)100:0.2068374631)100:0.7791011198)89:0.1292016679)87:0.0756217913,Hvul_g4503_1:1.2766821701)53:0.1010926965)54:0.0586618419,(((((Hsap_ENST00000373514:0.2791161561,Xentro_ENSXETT00000009980:0.3236711889)98:0.1362579304,Xentro_ENSXETT00000073774:0.1897853204)96:0.0851935352,(Xentro_ENSXETT00000022650:0.1366829985,(Hsap_ENST00000231656:0.1560201146,Skow_NM_001171216.1:2.3186913604)42:0.0000023048)47:0.1015633840)41:0.0373347604,Hsap_ENST00000381020:0.1324504143)41:0.1639996463,Skow_NM_001164943.1:0.2366135106)97:0.7404833947)86:0.0671461987,(Adig_XM_015918181.1:0.0532373734,Fspp_ffun1.m4.18981.m1:0.0860449308)100:0.8202427434)83:0.0469831746)96:0.0568984025,((Morvir_scaffold340.g1.t1:0.2399948735,Morvir_scaffold45.g78.t1:0.2462952690)99:0.2129002959,(Chem_TCONS_00008773:1.5567802380,Hvul_g26228_1:0.4300646690)95:0.1096824674)97:0.2150696561)100:0.1031345351,((Chem_TCONS_00060494:0.4069934150,Morvir_scaffold216.g16.t1:0.3006376463)87:0.1169385889,(Hvul_g24998_1:0.2086390939,Hvul_g3831_1:0.0881391326)100:0.3043392400)100:0.4081132203);
+
+CONSENSUS TREE
+--------------
+
+Consensus tree is constructed from 1000 bootstrap trees
+Log-likelihood of consensus tree: -97725.685657
+Robinson-Foulds distance between ML tree and consensus tree: 22
+
+Branches with support >0.000000% are kept (extended consensus)
+Branch lengths are optimized by maximum likelihood on original alignment
+Numbers in parentheses are bootstrap supports (%)
+
++-------Fspp_ffun1.m4.6493.m1
+|
+|                                        +--Hsap_ENST00000302945
+|                                     +--| (100)
+|                                     |  +--Xentro_ENSXETT00000089294
+|                                  +--| (75)
+|                                  |  |  +--Xentro_ENSXETT00000045469
+|                                  |  +--| (76)
+|                                  |     +--Hsap_ENST00000326902
+|                           +------| (100)
+|                           |      +----Skow_XM_002732004.2
+|                        +--| (90)
+|                        |  +-------Tadh_TriadT33728
+|                    +---| (100)
+|                    |   |     +--Morvir_scaffold348.g20.t1
+|                    |   |  +--| (94)
+|                    |   |  |  |  +--Chem_TCONS_00050614
+|                    |   |  |  +--| (100)
+|                    |   |  |     +----Hvul_g10051_1
+|                    |   +--| (92)
+|                    |      |      +--Adig_XM_015908011.1
+|                    |      +------| (100)
+|                    |             +--Fspp_ffun1.m4.12110.m1
+|                 +--| (62)
+|                 |  |                +--Adig_XM_015918179.1
+|                 |  |     +----------| (100)
+|                 |  |     |          +--Fspp_ffun1.m4.18980.m1
+|                 |  |  +--| (83)
+|                 |  |  |  |       +--Xentro_ENSXETT00000053914
+|                 |  |  |  |  +----| (99)
+|                 |  |  |  |  |    |        +--Hsap_ENST00000311626
+|                 |  |  |  |  |    |     +--| (100)
+|                 |  |  |  |  |    |     |  +--Xentro_ENSXETT00000047547
+|                 |  |  |  |  |    |  +--| (92)
+|                 |  |  |  |  |    |  |  |  +--Xentro_ENSXETT00000001602
+|                 |  |  |  |  |    |  |  +--| (100)
+|                 |  |  |  |  |    |  |     +--Hsap_ENST00000317201
+|                 |  |  |  |  |    +--| (92)
+|                 |  |  |  |  |       |  +--Xentro_ENSXETT00000099847
+|                 |  |  |  |  |       +--| (100)
+|                 |  |  |  |  |          +--Hsap_ENST00000249440
+|                 |  |  |  +--| (58)
+|                 |  |  |     |           +--Hsap_ENST00000222718
+|                 |  |  |     |        +--| (100)
+|                 |  |  |     |        |  +--Xentro_ENSXETT00000001601
+|                 |  |  |     |     +--| (64)
+|                 |  |  |     |     |  |  +--Xentro_ENSXETT00000057087
+|                 |  |  |     |     |  +--| (56)
+|                 |  |  |     |     |     +--Hsap_ENST00000330070
+|                 |  |  |     +-----| (100)
+|                 |  |  |           +-------------Skow_NM_001164937.1
+|                 |  +--| (91)
+|                 |     |             +---Adig_XM_015925334.1
+|                 |     |          +--| (100)
+|                 |     |          |  +--Adig_XM_015925335.1
+|                 |     +----------| (100)
+|                 |                +--Fspp_ffun1.m4.18984.m1
+|              +--| (79)
+|              |  |                   +--Hsap_ENST00000242159
+|              |  |                +--| (69)
+|              |  |                |  +--Xentro_ENSXETT00000001606
+|              |  |           +----| (100)
+|              |  |           |    |  +--Xentro_ENSXETT00000089346
+|              |  |           |    +--| (100)
+|              |  |           |       +--Hsap_ENST00000239165
+|              |  |        +--| (67)
+|              |  |        |  |              +--Hsap_ENST00000239144
+|              |  |        |  |           +--| (100)
+|              |  |        |  |           |  +--Xentro_ENSXETT00000063401
+|              |  |        |  |        +--| (98)
+|              |  |        |  |        |  |  +--Hsap_ENST00000313173
+|              |  |        |  |        |  +--| (100)
+|              |  |        |  |        |     +--Xentro_ENSXETT00000070016
+|              |  |        |  |  +-----| (100)
+|              |  |        |  |  |     |  +--Xentro_ENSXETT00000050682
+|              |  |        |  |  |     +--| (100)
+|              |  |        |  |  |        +--Hsap_ENST00000040584
+|              |  |        |  +--| (100)
+|              |  |        |     |   +-----Skow_NM_001164908.1
+|              |  |        |     +---| (100)
+|              |  |        |         +-----Skow_XM_002730729.1
+|              |  |     +--| (100)
+|              |  |     |  |      +--Hsap_ENST00000225648
+|              |  |     |  |   +--| (100)
+|              |  |     |  |   |  +--Xentro_ENSXETT00000047588
+|              |  |     |  +---| (100)
+|              |  |     |      |     +--Hsap_ENST00000222728
+|              |  |     |      |  +--| (100)
+|              |  |     |      |  |  +--Xentro_ENSXETT00000096565
+|              |  |     |      +--| (66)
+|              |  |     |         |     +--Hsap_ENST00000243108
+|              |  |     |         +-----| (100)
+|              |  |     |               +--Xentro_ENSXETT00000050686
+|              |  |  +--| (92)
+|              |  |  |  |             +---Hsap_ENST00000513209
+|              |  |  |  |          +--| (91)
+|              |  |  |  |          |  +--Xentro_ENSXETT00000050688
+|              |  |  |  |     +----| (100)
+|              |  |  |  |     |    +--Hsap_ENST00000312492
+|              |  |  |  |  +--| (94)
+|              |  |  |  |  |  |     +--Hsap_ENST00000239151
+|              |  |  |  |  |  |  +--| (100)
+|              |  |  |  |  |  |  |  +--Xentro_ENSXETT00000047578
+|              |  |  |  |  |  +--| (94)
+|              |  |  |  |  |     |  +--Hsap_ENST00000222726
+|              |  |  |  |  |     +--| (96)
+|              |  |  |  |  |        +--Xentro_ENSXETT00000001604
+|              |  |  |  +--| (92)
+|              |  |  |     +-------Skow_NM_001164938.1
+|              |  +--| (100)
+|              |     |           +--Hsap_ENST00000332503
+|              |     |        +--| (55)
+|              |     |        |  +---Xentro_ENSXETT00000047559
+|              |     |     +--| (56)
+|              |     |     |  |     +--Xentro_ENSXETT00000080023
+|              |     |     |  |  +--| (100)
+|              |     |     |  |  |  +--Hsap_ENST00000303406
+|              |     |     |  +--| (100)
+|              |     |     |     |  +--Hsap_ENST00000306324
+|              |     |     |     +--| (100)
+|              |     |     |        +--Xentro_ENSXETT00000003765
+|              |     |  +--| (100)
+|              |     |  |  |  +--Xentro_ENSXETT00000057392
+|              |     |  |  +--| (100)
+|              |     |  |     +--Hsap_ENST00000360046
+|              |     +--| (100)
+|              |        +---Skow_NM_001164913.1
+|           +--| (68)
+|           |  |             +-------Fspp_ffun1.m4.12105.m1
+|           |  |  +----------| (100)
+|           |  |  |          +-----------Morvir_scaffold189.g37.t1
+|           |  +--| (98)
+|           |     |         +--Hsap_ENST00000381033
+|           |     |    +----| (100)
+|           |     |    |    +--Xentro_ENSXETT00000025782
+|           |     +----| (100)
+|           |          +----Skow_XM_006824496.1
+|        +--| (50)
+|        |  |                                     +------------Morvir_scaffold98.g48.t1
+|        |  |                             +-------| (99)
+|        |  |                             |       |      +--Adig_XM_015915222.1
+|        |  |                             |       |   +--| (100)
+|        |  |                             |       |   |  +--Fspp_ffun1.m4.11751.m1
+|        |  |                             |       +---| (100)
+|        |  |                             |           +-----Skow_XM_006824407.1
+|        |  |                          +--| (37)
+|        |  |                          |  |                   +--Adig_XM_015912975.1
+|        |  |                          |  |                +--| (100)
+|        |  |                          |  |                |  +--Fspp_ffun1.m4.12736.m1
+|        |  |                          |  |             +--| (99)
+|        |  |                          |  |             |  |     +---Skow_XM_002731905.2
+|        |  |                          |  |             |  |  +--| (96)
+|        |  |                          |  |             |  |  |  |     +--Xentro_ENSXETT00000094587
+|        |  |                          |  |             |  |  |  |  +--| (100)
+|        |  |                          |  |             |  |  |  |  |  +----Hsap_ENST00000400677
+|        |  |                          |  |             |  |  |  +--| (100)
+|        |  |                          |  |             |  |  |     |  +--Hsap_ENST00000357878
+|        |  |                          |  |             |  |  |     +--| (100)
+|        |  |                          |  |             |  |  |        +--Xentro_ENSXETT00000021090
+|        |  |                          |  |             |  +--| (99)
+|        |  |                          |  |             |     |     +--Hsap_ENST00000339992
+|        |  |                          |  |             |     |  +--| (100)
+|        |  |                          |  |             |     |  |  +--Xentro_ENSXETT00000057781
+|        |  |                          |  |             |     +--| (100)
+|        |  |                          |  |             |        +--------Xentro_ENSXETT00000065721
+|        |  |                          |  |        +----| (100)
+|        |  |                          |  |        |    +--------Tadh_TriadT50928
+|        |  |                          |  |     +--| (53)
+|        |  |                          |  |     |  +-------------Chem_TCONS_00047310
+|        |  |                          |  |  +--| (94)
+|        |  |                          |  |  |  +-----------------------Chem_TCONS_00069782
+|        |  |                          |  +--| (48)
+|        |  |                          |     |        +-----Adig_XM_015917756.1
+|        |  |                          |     |     +--| (100)
+|        |  |                          |     |     |  +----Fspp_ffun1.m4.29526.m1
+|        |  |                          |     |  +--| (90)
+|        |  |                          |     |  |  +--------Fspp_ffun1.m4.29465.m1
+|        |  |                          |     +--| (95)
+|        |  |                          |        +-----------------------Skow_XM_006811339.1
+|        |  |                       +--| (35)
+|        |  |                       |  |                              +--Skow_XM_006813696.1
+|        |  |                       |  |                           +--| (100)
+|        |  |                       |  |                           |  +---Skow_NM_001164914.1
+|        |  |                       |  |                        +--| (62)
+|        |  |                       |  |                        |  |  +--Hsap_ENST00000263610
+|        |  |                       |  |                        |  +--| (100)
+|        |  |                       |  |                        |     +--Xentro_ENSXETT00000104161
+|        |  |                       |  |                  +-----| (97)
+|        |  |                       |  |                  |     |  +--Hsap_ENST00000370445
+|        |  |                       |  |                  |     +--| (65)
+|        |  |                       |  |                  |        +--Xentro_ENSXETT00000051744
+|        |  |                       |  |           +------| (98)
+|        |  |                       |  |           |      +----------------Skow_XM_006817477.1
+|        |  |                       |  |        +--| (96)
+|        |  |                       |  |        |  +----------------Chem_TCONS_00025396
+|        |  |                       |  |     +--| (68)
+|        |  |                       |  |     |  |                          +--Adig_XM_015897722.1
+|        |  |                       |  |     |  |              +-----------| (100)
+|        |  |                       |  |     |  |              |           +--Fspp_ffun1.m4.31060.m1
+|        |  |                       |  |     |  |           +--| (82)
+|        |  |                       |  |     |  |           |  |        +--Fspp_ffun1.m4.17753.m1
+|        |  |                       |  |     |  |           |  |     +--| (75)
+|        |  |                       |  |     |  |           |  |     |  +--Adig_XM_015897727.1
+|        |  |                       |  |     |  |           |  |  +--| (73)
+|        |  |                       |  |     |  |           |  |  |  +--Adig_XM_015897726.1
+|        |  |                       |  |     |  |           |  +--| (97)
+|        |  |                       |  |     |  |           |     |  +--Fspp_ffun1.m4.33384.m1
+|        |  |                       |  |     |  |           |     +--| (64)
+|        |  |                       |  |     |  |           |        +---Adig_XM_015897724.1
+|        |  |                       |  |     |  |        +--| (91)
+|        |  |                       |  |     |  |        |  +----Fspp_ffun1.m4.31061.m1
+|        |  |                       |  |     |  |  +-----| (99)
+|        |  |                       |  |     |  |  |     +------Fspp_ffun1.m4.17748.m1
+|        |  |                       |  |     |  +--| (72)
+|        |  |                       |  |     |     |  +----------Skow_XM_002733661.2
+|        |  |                       |  |     |     +--| (98)
+|        |  |                       |  |     |        |               +--Fspp_ffun1.m4.1442.m1
+|        |  |                       |  |     |        |            +--| (100)
+|        |  |                       |  |     |        |            |  |               +--Fspp_ffun1.m4.1443.m1
+|        |  |                       |  |     |        |            |  |            +--| (98)
+|        |  |                       |  |     |        |            |  |            |  +--Fspp_ffun1.m4.1445.m1
+|        |  |                       |  |     |        |            |  |         +--| (99)
+|        |  |                       |  |     |        |            |  |         |  +--Fspp_ffun1.m4.1448.m1
+|        |  |                       |  |     |        |            |  |      +--| (99)
+|        |  |                       |  |     |        |            |  |      |  +--Fspp_ffun1.m4.1446.m1
+|        |  |                       |  |     |        |            |  |   +--| (100)
+|        |  |                       |  |     |        |            |  |   |  +--Fspp_ffun1.m4.1444.m1
+|        |  |                       |  |     |        |            |  +---| (100)
+|        |  |                       |  |     |        |            |      |           +--Fspp_ffun1.m4.25254.m1
+|        |  |                       |  |     |        |            |      |        +--| (97)
+|        |  |                       |  |     |        |            |      |        |  +--Fspp_ffun1.m4.29242.m1
+|        |  |                       |  |     |        |            |      |     +--| (97)
+|        |  |                       |  |     |        |            |      |     |  +--Fspp_ffun1.m4.29243.m1
+|        |  |                       |  |     |        |            |      |  +--| (91)
+|        |  |                       |  |     |        |            |      |  |  +--Fspp_ffun1.m4.29244.m1
+|        |  |                       |  |     |        |            |      +--| (100)
+|        |  |                       |  |     |        |            |         +--Fspp_ffun1.m4.26302.m1
+|        |  |                       |  |     |        |         +--| (100)
+|        |  |                       |  |     |        |         |  |  +--Fspp_ffun1.m4.15421.m1
+|        |  |                       |  |     |        |         |  +--| (100)
+|        |  |                       |  |     |        |         |     +--Fspp_ffun1.m4.15426.m1
+|        |  |                       |  |     |        |      +--| (94)
+|        |  |                       |  |     |        |      |  +----Fspp_ffun1.m4.15423.m1
+|        |  |                       |  |     |        |   +--| (100)
+|        |  |                       |  |     |        |   |  +-----Fspp_ffun1.m4.15427.m1
+|        |  |                       |  |     |        +---| (100)
+|        |  |                       |  |     |            +---------Adig_XM_015895991.1
+|        |  |                       |  |  +--| (33)
+|        |  |                       |  |  |  |                             +----Adig_XM_015905830.1
+|        |  |                       |  |  |  |                      +------| (100)
+|        |  |                       |  |  |  |                      |      +--Fspp_ffun1.m4.14100.m1
+|        |  |                       |  |  |  |                   +--| (91)
+|        |  |                       |  |  |  |                   |  |          +---Fspp_ffun1.m4.14099.m1
+|        |  |                       |  |  |  |                   |  |      +---| (100)
+|        |  |                       |  |  |  |                   |  |      |   +------Adig_XM_015905832.1
+|        |  |                       |  |  |  |                   |  |  +---| (100)
+|        |  |                       |  |  |  |                   |  |  |   +---------------Fspp_ffun1.m4.14104.m1
+|        |  |                       |  |  |  |                   |  +--| (100)
+|        |  |                       |  |  |  |                   |     |  +------Skow_XM_002741136.2
+|        |  |                       |  |  |  |                   |     +--| (99)
+|        |  |                       |  |  |  |                   |        |          +--Morvir_scaffold188.g35.t1
+|        |  |                       |  |  |  |                   |        +----------| (100)
+|        |  |                       |  |  |  |                   |                   +-----------Chem_TCONS_00023949
+|        |  |                       |  |  |  |           +-------| (100)
+|        |  |                       |  |  |  |           |       +--------------------Tadh_TriadT51739
+|        |  |                       |  |  |  |        +--| (54)
+|        |  |                       |  |  |  |        |  |          +--Adig_XM_015915200.1
+|        |  |                       |  |  |  |        |  |       +--| (100)
+|        |  |                       |  |  |  |        |  |       |  +--Fspp_ffun1.m4.4458.m1
+|        |  |                       |  |  |  |        |  |    +--| (99)
+|        |  |                       |  |  |  |        |  |    |  +----Skow_NM_001164931.1
+|        |  |                       |  |  |  |        |  +----| (99)
+|        |  |                       |  |  |  |        |       |     +--Xentro_ENSXETT00000035005
+|        |  |                       |  |  |  |        |       |  +--| (100)
+|        |  |                       |  |  |  |        |       |  |  +--Hsap_ENST00000382723
+|        |  |                       |  |  |  |        |       +--| (100)
+|        |  |                       |  |  |  |        |          |  +--Hsap_ENST00000239243
+|        |  |                       |  |  |  |        |          +--| (100)
+|        |  |                       |  |  |  |        |             +--Xentro_ENSXETT00000020130
+|        |  |                       |  |  |  +--------| (100)
+|        |  |                       |  |  |           |   +----Chem_TCONS_00056354
+|        |  |                       |  |  |           +---| (99)
+|        |  |                       |  |  |               +---Hvul_g16557_1
+|        |  |                       |  +--| (69)
+|        |  |                       |     |                     +--Adig_XM_015912978.1
+|        |  |                       |     |                  +--| (100)
+|        |  |                       |     |                  |  +--Fspp_ffun1.m4.12735.m1
+|        |  |                       |     |               +--| (100)
+|        |  |                       |     |               |  +-----Skow_NM_001168137.1
+|        |  |                       |     |            +--| (97)
+|        |  |                       |     |            |  |  +--Hsap_ENST00000422806
+|        |  |                       |     |            |  +--| (95)
+|        |  |                       |     |            |     +--Xentro_ENSXETT00000008415
+|        |  |                       |     |         +--| (97)
+|        |  |                       |     |         |  +----Hsap_ENST00000451024
+|        |  |                       |     +---------| (100)
+|        |  |                       |               |     +-------Morvir_scaffold21.g122.t1
+|        |  |                       |               |  +--| (100)
+|        |  |                       |               |  |  |  +--Chem_TCONS_00029478
+|        |  |                       |               |  |  +--| (100)
+|        |  |                       |               |  |     +---------------------Hvul_g2253_1
+|        |  |                       |               +--| (63)
+|        |  |                       |                  +-------Xentro_ENSXETT00000096279
+|        |  |                    +--| (67)
+|        |  |                    |  |                     +--Adig_XM_015895990.1
+|        |  |                    |  |             +-------| (100)
+|        |  |                    |  |             |       +--Fspp_ffun1.m4.15422.m1
+|        |  |                    |  |          +--| (100)
+|        |  |                    |  |          |  +--Skow_NM_001164886.1
+|        |  |                    |  +----------| (100)
+|        |  |                    |             |     +--Hsap_ENST00000306318
+|        |  |                    |             |  +--| (99)
+|        |  |                    |             |  |  |  +--Xentro_ENSXETT00000007133
+|        |  |                    |             |  |  +--| (99)
+|        |  |                    |             |  |     +--Xentro_ENSXETT00000007145
+|        |  |                    |             +--| (98)
+|        |  |                    |                +--Hsap_ENST00000297537
+|        |  |                 +--| (49)
+|        |  |                 |  |                                 +-----Adig_XM_015897690.1
+|        |  |                 |  |                      +----------| (100)
+|        |  |                 |  |                      |          +--Fspp_ffun1.m4.29381.m1
+|        |  |                 |  |              +-------| (100)
+|        |  |                 |  |              |       |             +--Adig_XM_015907403.1
+|        |  |                 |  |              |       +-------------| (100)
+|        |  |                 |  |              |                     +--Fspp_ffun1.m4.24397.m1
+|        |  |                 |  |           +--| (69)
+|        |  |                 |  |           |  +--------Tadh_TriadT49524
+|        |  |                 |  |        +--| (71)
+|        |  |                 |  |        |  |                +--Adig_XM_015907002.1
+|        |  |                 |  |        |  |        +-------| (100)
+|        |  |                 |  |        |  |        |       +--Fspp_ffun1.m4.11764.m1
+|        |  |                 |  |        |  |     +--| (84)
+|        |  |                 |  |        |  |     |  +---------Skow_XM_006824221.1
+|        |  |                 |  |        |  |  +--| (92)
+|        |  |                 |  |        |  |  |  +----------Xentro_ENSXETT00000025770
+|        |  |                 |  |        |  +--| (90)
+|        |  |                 |  |        |     |    +--Adig_XM_015914460.1
+|        |  |                 |  |        |     +----| (98)
+|        |  |                 |  |        |          +--Fspp_ffun1.m4.26584.m1
+|        |  |                 |  |     +--| (86)
+|        |  |                 |  |     |  |                    +--Chem_TCONS_00066748
+|        |  |                 |  |     |  |            +-------| (100)
+|        |  |                 |  |     |  |            |       +--Chem_TCONS_00071932
+|        |  |                 |  |     |  |         +--| (100)
+|        |  |                 |  |     |  |         |  +-------Hvul_g11736_1
+|        |  |                 |  |     |  |     +---| (100)
+|        |  |                 |  |     |  |     |   +-----Morvir_scaffold149.g55.t1
+|        |  |                 |  |     |  |  +--| (99)
+|        |  |                 |  |     |  |  |  |    +----Adig_XM_015912983.1
+|        |  |                 |  |     |  |  |  +----| (100)
+|        |  |                 |  |     |  |  |       +------Fspp_ffun1.m4.16263.m1
+|        |  |                 |  |     |  +--| (62)
+|        |  |                 |  |     |     |  +----------------Fspp_ffun1.m4.30483.m1
+|        |  |                 |  |     |     +--| (83)
+|        |  |                 |  |     |        |          +----Adig_XM_015899313.1
+|        |  |                 |  |     |        +----------| (100)
+|        |  |                 |  |     |                   +----Fspp_ffun1.m4.23130.m1
+|        |  |                 |  |  +--| (94)
+|        |  |                 |  |  |  |                      +-----------------Fspp_ffun1.m4.4260.m1
+|        |  |                 |  |  |  |     +----------------| (100)
+|        |  |                 |  |  |  |     |                |                    +--Skow_XM_006815656.1
+|        |  |                 |  |  |  |     |                |                 +--| (91)
+|        |  |                 |  |  |  |     |                |                 |  +--Skow_XM_006819482.1
+|        |  |                 |  |  |  |     |                |              +--| (88)
+|        |  |                 |  |  |  |     |                |              |  |  +--Skow_XM_006819480.1
+|        |  |                 |  |  |  |     |                |              |  +--| (98)
+|        |  |                 |  |  |  |     |                |              |     +--Skow_XM_006820387.1
+|        |  |                 |  |  |  |     |                +--------------| (100)
+|        |  |                 |  |  |  |     |                               +--Skow_XM_006819478.1
+|        |  |                 |  |  |  |  +--| (75)
+|        |  |                 |  |  |  |  |  |         +---Adig_XM_015899310.1
+|        |  |                 |  |  |  |  |  +---------| (100)
+|        |  |                 |  |  |  |  |            +----Fspp_ffun1.m4.23128.m1
+|        |  |                 |  |  |  +--| (76)
+|        |  |                 |  |  |     +-----------Hsap_ENST00000398468
+|        |  |                 |  +--| (94)
+|        |  |                 |     |                                       +--Adig_XM_015899343.1
+|        |  |                 |     |                     +-----------------| (100)
+|        |  |                 |     |                     |                 +--Fspp_ffun1.m4.15184.m1
+|        |  |                 |     |                  +--| (100)
+|        |  |                 |     |                  |  +-----------------Fspp_ffun1.m4.30998.m1
+|        |  |                 |     |            +-----| (90)
+|        |  |                 |     |            |     |         +-------Skow_NM_001164891.1
+|        |  |                 |     |            |     +---------| (100)
+|        |  |                 |     |            |               |          +--Xentro_ENSXETT00000100033
+|        |  |                 |     |            |               |       +--| (100)
+|        |  |                 |     |            |               |       |  +--Hsap_ENST00000369206
+|        |  |                 |     |            |               +-------| (100)
+|        |  |                 |     |            |                       |  +--Hsap_ENST00000234392
+|        |  |                 |     |            |                       +--| (100)
+|        |  |                 |     |            |                          +--Xentro_ENSXETT00000088471
+|        |  |                 |     |         +--| (83)
+|        |  |                 |     |         |  |         +--Xentro_ENSXETT00000076634
+|        |  |                 |     |         |  |      +--| (82)
+|        |  |                 |     |         |  |      |  |     +--Hsap_ENST00000553456
+|        |  |                 |     |         |  |      |  |  +--| (100)
+|        |  |                 |     |         |  |      |  |  |  +--Xentro_ENSXETT00000047776
+|        |  |                 |     |         |  |      |  +--| (100)
+|        |  |                 |     |         |  |      |     +---Xentro_ENSXETT00000062441
+|        |  |                 |     |         |  |  +---| (100)
+|        |  |                 |     |         |  |  |   +--Hsap_ENST00000258106
+|        |  |                 |     |         |  +--| (90)
+|        |  |                 |     |         |     +--Skow_NM_001164889.1
+|        |  |                 |     |   +-----| (84)
+|        |  |                 |     |   |     |          +--Adig_XM_015899344.1
+|        |  |                 |     |   |     |  +-------| (100)
+|        |  |                 |     |   |     |  |       +--Fspp_ffun1.m4.15187.m1
+|        |  |                 |     |   |     +--| (84)
+|        |  |                 |     |   |        |              +--Adig_XM_015914462.1
+|        |  |                 |     |   |        +--------------| (100)
+|        |  |                 |     |   |                       +--Fspp_ffun1.m4.26587.m1
+|        |  |                 |     +---| (96)
+|        |  |                 |         |  +-----Chem_TCONS_00054222
+|        |  |                 |         +--| (100)
+|        |  |                 |            +------Morvir_scaffold5.g160.t1
+|        |  |              +--| (88)
+|        |  |              |  |                                 +----------------------Morvir_scaffold85.g37.t1
+|        |  |              |  |                         +-------| (100)
+|        |  |              |  |                         |       |  +------Tadh_TriadT18102
+|        |  |              |  |                         |       +--| (81)
+|        |  |              |  |                         |          |  +--Skow_NM_001164898.1
+|        |  |              |  |                         |          +--| (81)
+|        |  |              |  |                         |             |     +--Xentro_ENSXETT00000030999
+|        |  |              |  |                         |             |  +--| (100)
+|        |  |              |  |                         |             |  |  +--Hsap_ENST00000524983
+|        |  |              |  |                         |             +--| (85)
+|        |  |              |  |                         |                |         +--Hsap_ENST00000332700
+|        |  |              |  |                         |                +---------| (100)
+|        |  |              |  |                         |                          +----Xentro_ENSXETT00000063234
+|        |  |              |  |                      +--| (71)
+|        |  |              |  |                      |  |       +--Hsap_ENST00000366903
+|        |  |              |  |                      |  |    +--| (100)
+|        |  |              |  |                      |  |    |  +--Xentro_ENSXETT00000005952
+|        |  |              |  |                      |  +----| (100)
+|        |  |              |  |                      |       +------Skow_XM_006816183.1
+|        |  |              |  |                   +--| (67)
+|        |  |              |  |                   |  |       +---Fspp_ffun1.m4.22959.m1
+|        |  |              |  |                   |  +-------| (100)
+|        |  |              |  |                   |          +----Fspp_ffun1.m4.13287.m1
+|        |  |              |  |                +--| (83)
+|        |  |              |  |                |  |             +--Adig_XM_015910647.1
+|        |  |              |  |                |  |        +----| (100)
+|        |  |              |  |                |  |        |    +--Fspp_ffun1.m4.31229.m1
+|        |  |              |  |                |  +--------| (98)
+|        |  |              |  |                |           +-------------------Adig_XM_015910650.1
+|        |  |              |  |           +----| (100)
+|        |  |              |  |           |    +--------Morvir_scaffold95.g3.t1
+|        |  |              |  |        +--| (98)
+|        |  |              |  |        |  |                 +----Adig_XM_015902979.1
+|        |  |              |  |        |  |             +---| (98)
+|        |  |              |  |        |  |             |   +-------------Fspp_ffun1.m4.20257.m1
+|        |  |              |  |        |  |        +----| (100)
+|        |  |              |  |        |  |        |    |     +--Adig_XM_015903087.1
+|        |  |              |  |        |  |        |    |  +--| (100)
+|        |  |              |  |        |  |        |    |  |  +--Fspp_ffun1.m4.20261.m1
+|        |  |              |  |        |  |        |    +--| (82)
+|        |  |              |  |        |  |        |       |  +--Adig_XM_015909001.1
+|        |  |              |  |        |  |        |       +--| (100)
+|        |  |              |  |        |  |        |          +--Fspp_ffun1.m4.10292.m1
+|        |  |              |  |        |  |     +--| (100)
+|        |  |              |  |        |  |     |  |   +--Morvir_scaffold175.g50.t1
+|        |  |              |  |        |  |     |  +---| (100)
+|        |  |              |  |        |  |     |      +----------------Hvul_g32708_1
+|        |  |              |  |        |  |  +--| (100)
+|        |  |              |  |        |  |  |  |      +--------------Adig_XM_015909101.1
+|        |  |              |  |        |  |  |  +------| (100)
+|        |  |              |  |        |  |  |         |         +--Skow_XM_006815239.1
+|        |  |              |  |        |  |  |         |  +------| (100)
+|        |  |              |  |        |  |  |         |  |      +--Skow_XM_006822703.1
+|        |  |              |  |        |  |  |         +--| (100)
+|        |  |              |  |        |  |  |            |      +--Hsap_ENST00000253968
+|        |  |              |  |        |  |  |            |  +---| (100)
+|        |  |              |  |        |  |  |            |  |   +--Xentro_ENSXETT00000086444
+|        |  |              |  |        |  |  |            +--| (100)
+|        |  |              |  |        |  |  |               |     +--Hsap_ENST00000281437
+|        |  |              |  |        |  |  |               +-----| (100)
+|        |  |              |  |        |  |  |                     +--Xentro_ENSXETT00000077545
+|        |  |              |  |        |  +--| (96)
+|        |  |              |  |        |     |               +--Hsap_ENST00000343035
+|        |  |              |  |        |     |      +--------| (100)
+|        |  |              |  |        |     |      |        +--Xentro_ENSXETT00000036924
+|        |  |              |  |        |     +------| (100)
+|        |  |              |  |        |            +--Skow_NM_001164896.1
+|        |  |              |  |     +--| (59)
+|        |  |              |  |     |  |                             +--Adig_XM_015915192.1
+|        |  |              |  |     |  |                    +--------| (100)
+|        |  |              |  |     |  |                    |        +--Fspp_ffun1.m4.4455.m1
+|        |  |              |  |     |  |                 +--| (92)
+|        |  |              |  |     |  |                 |  +----Skow_NM_001165028.1
+|        |  |              |  |     |  |     +-----------| (100)
+|        |  |              |  |     |  |     |           |     +--Hsap_ENST00000370193
+|        |  |              |  |     |  |     |           |  +--| (100)
+|        |  |              |  |     |  |     |           |  |  +--Xentro_ENSXETT00000089841
+|        |  |              |  |     |  |     |           +--| (99)
+|        |  |              |  |     |  |     |              +---------Hsap_ENST00000377566
+|        |  |              |  |     |  |  +--| (85)
+|        |  |              |  |     |  |  |  |                     +--Adig_XM_015902493.1
+|        |  |              |  |     |  |  |  |                  +--| (98)
+|        |  |              |  |     |  |  |  |                  |  |  +--------------Tadh_TriadT31334
+|        |  |              |  |     |  |  |  |                  |  +--| (98)
+|        |  |              |  |     |  |  |  |                  |     +----------Morvir_scaffold42.g46.t1
+|        |  |              |  |     |  |  |  |               +--| (99)
+|        |  |              |  |     |  |  |  |               |  +--Fspp_ffun1.m4.9245.m1
+|        |  |              |  |     |  |  |  |     +---------| (100)
+|        |  |              |  |     |  |  |  |     |         |        +--Hsap_ENST00000295886
+|        |  |              |  |     |  |  |  |     |         |     +--| (100)
+|        |  |              |  |     |  |  |  |     |         |     |  +--Xentro_ENSXETT00000060579
+|        |  |              |  |     |  |  |  |     |         |  +--| (79)
+|        |  |              |  |     |  |  |  |     |         |  |  |     +--Xentro_ENSXETT00000050951
+|        |  |              |  |     |  |  |  |     |         |  |  |  +--| (100)
+|        |  |              |  |     |  |  |  |     |         |  |  |  |  +--Hsap_ENST00000368592
+|        |  |              |  |     |  |  |  |     |         |  |  +--| (79)
+|        |  |              |  |     |  |  |  |     |         |  |     |     +--Hsap_ENST00000518699
+|        |  |              |  |     |  |  |  |     |         |  |     +-----| (100)
+|        |  |              |  |     |  |  |  |     |         |  |           +--Xentro_ENSXETT00000082174
+|        |  |              |  |     |  |  |  |     |         +--| (99)
+|        |  |              |  |     |  |  |  |     |            +---Skow_NM_001168138.1
+|        |  |              |  |     |  |  |  |  +--| (100)
+|        |  |              |  |     |  |  |  |  |  |                   +--Xentro_ENSXETT00000017635
+|        |  |              |  |     |  |  |  |  |  |                +--| (99)
+|        |  |              |  |     |  |  |  |  |  |                |  +--Hsap_ENST00000370196
+|        |  |              |  |     |  |  |  |  |  |             +--| (100)
+|        |  |              |  |     |  |  |  |  |  |             |  +--Xentro_ENSXETT00000102157
+|        |  |              |  |     |  |  |  |  |  |          +--| (84)
+|        |  |              |  |     |  |  |  |  |  |          |  |  +--Hsap_ENST00000233638
+|        |  |              |  |     |  |  |  |  |  |          |  +--| (83)
+|        |  |              |  |     |  |  |  |  |  |          |     |  +--Skow_NM_001164981.1
+|        |  |              |  |     |  |  |  |  |  |          |     +--| (90)
+|        |  |              |  |     |  |  |  |  |  |          |        |     +------Morvir_scaffold99.g69.t1
+|        |  |              |  |     |  |  |  |  |  |          |        +-----| (98)
+|        |  |              |  |     |  |  |  |  |  |          |              +-----------------Chem_TCONS_00070484
+|        |  |              |  |     |  |  |  |  |  |       +--| (82)
+|        |  |              |  |     |  |  |  |  |  |       |  +--Xentro_ENSXETT00000039652
+|        |  |              |  |     |  |  |  |  |  +-------| (100)
+|        |  |              |  |     |  |  |  |  |          +--Hsap_ENST00000296921
+|        |  |              |  |     |  |  |  +--| (86)
+|        |  |              |  |     |  |  |     |                +--Adig_XM_015913000.1
+|        |  |              |  |     |  |  |     |           +----| (100)
+|        |  |              |  |     |  |  |     |           |    +--Fspp_ffun1.m4.15317.m1
+|        |  |              |  |     |  |  |     |        +--| (98)
+|        |  |              |  |     |  |  |     |        |  |          +----Chem_TCONS_00038629
+|        |  |              |  |     |  |  |     |        |  |       +--| (100)
+|        |  |              |  |     |  |  |     |        |  |       |  +--------Hvul_g24677_1
+|        |  |              |  |     |  |  |     |        |  +-------| (100)
+|        |  |              |  |     |  |  |     |        |          +--------Morvir_scaffold11.g90.t1
+|        |  |              |  |     |  |  |     +--------| (100)
+|        |  |              |  |     |  |  |              |  +----Skow_NM_001164930.2
+|        |  |              |  |     |  |  |              +--| (99)
+|        |  |              |  |     |  |  |                 |     +--Hsap_ENST00000282728
+|        |  |              |  |     |  |  |                 |  +--| (100)
+|        |  |              |  |     |  |  |                 |  |  +--Xentro_ENSXETT00000057734
+|        |  |              |  |     |  |  |                 +--| (98)
+|        |  |              |  |     |  |  |                    +--------------Tadh_TriadT9560
+|        |  |              |  |     |  +--| (67)
+|        |  |              |  |     |     |                      +------------Adig_XM_015897305.1
+|        |  |              |  |     |     |        +-------------| (100)
+|        |  |              |  |     |     |        |             +--Fspp_ffun1.m4.7310.m1
+|        |  |              |  |     |     |     +--| (80)
+|        |  |              |  |     |     |     |  |                    +--Xentro_ENSXETT00000056262
+|        |  |              |  |     |     |     |  |            +-------| (100)
+|        |  |              |  |     |     |     |  |            |       +--Xentro_ENSXETT00000056265
+|        |  |              |  |     |     |     |  |         +--| (95)
+|        |  |              |  |     |     |     |  |         |  |             +---Xentro_ENSXETT00000062960
+|        |  |              |  |     |     |     |  |         |  +-------------| (100)
+|        |  |              |  |     |     |     |  |         |                +--Xentro_ENSXETT00000065382
+|        |  |              |  |     |     |     |  |   +-----| (99)
+|        |  |              |  |     |     |     |  |   |     |         +--Xentro_ENSXETT00000019491
+|        |  |              |  |     |     |     |  |   |     +---------| (100)
+|        |  |              |  |     |     |     |  |   |               +--Xentro_ENSXETT00000062188
+|        |  |              |  |     |     |     |  +---| (100)
+|        |  |              |  |     |     |     |      +--------Hsap_ENST00000325980
+|        |  |              |  |     |     |  +--| (80)
+|        |  |              |  |     |     |  |  |        +---Chem_TCONS_00071866
+|        |  |              |  |     |     |  |  +--------| (100)
+|        |  |              |  |     |     |  |           +----Hvul_g30386_1
+|        |  |              |  |     |     +--| (72)
+|        |  |              |  |     |        |       +-----Skow_NM_001168018.1
+|        |  |              |  |     |        |    +--| (80)
+|        |  |              |  |     |        |    |  +-------Skow_NM_001168019.1
+|        |  |              |  |     |        +----| (100)
+|        |  |              |  |     |             +-------------Skow_XM_002731799.2
+|        |  |              |  |  +--| (63)
+|        |  |              |  |  |  |                            +----Adig_XM_015905819.1
+|        |  |              |  |  |  |                         +--| (78)
+|        |  |              |  |  |  |                         |  |             +----Adig_XM_015905817.1
+|        |  |              |  |  |  |                         |  +-------------| (100)
+|        |  |              |  |  |  |                         |                +--Fspp_ffun1.m4.14105.m1
+|        |  |              |  |  |  |                      +--| (79)
+|        |  |              |  |  |  |                      |  |    +--Adig_XM_015905823.1
+|        |  |              |  |  |  |                      |  +----| (100)
+|        |  |              |  |  |  |                      |       +--Fspp_ffun1.m4.14112.m1
+|        |  |              |  |  |  |                   +--| (81)
+|        |  |              |  |  |  |                   |  |  +---Adig_XM_015905827.1
+|        |  |              |  |  |  |                   |  +--| (98)
+|        |  |              |  |  |  |                   |     |      +--Adig_XM_015905829.1
+|        |  |              |  |  |  |                   |     +------| (100)
+|        |  |              |  |  |  |                   |            +--Fspp_ffun1.m4.14106.m1
+|        |  |              |  |  |  |                +--| (78)
+|        |  |              |  |  |  |                |  |     +--Skow_NM_001164932.1
+|        |  |              |  |  |  |                |  |  +--| (100)
+|        |  |              |  |  |  |                |  |  |  |  +--Xentro_ENSXETT00000050714
+|        |  |              |  |  |  |                |  |  |  +--| (100)
+|        |  |              |  |  |  |                |  |  |     +--Hsap_ENST00000377142
+|        |  |              |  |  |  |                |  +--| (98)
+|        |  |              |  |  |  |                |     |     +--Hsap_ENST00000258829
+|        |  |              |  |  |  |                |     +-----| (100)
+|        |  |              |  |  |  |                |           +---Xentro_ENSXETT00000084212
+|        |  |              |  |  |  |             +--| (57)
+|        |  |              |  |  |  |             |  |     +---Tadh_TriadT9561
+|        |  |              |  |  |  |             |  |  +--| (60)
+|        |  |              |  |  |  |             |  |  |  |     +--------Tadh_TriadT9507
+|        |  |              |  |  |  |             |  |  |  |  +--| (58)
+|        |  |              |  |  |  |             |  |  |  |  |  +-----------Morvir_scaffold273.g2.t1
+|        |  |              |  |  |  |             |  |  |  +--| (57)
+|        |  |              |  |  |  |             |  |  |     +-----------Morvir_scaffold83.g2.t1
+|        |  |              |  |  |  |             |  +--| (86)
+|        |  |              |  |  |  |             |     |          +--Chem_TCONS_00070249
+|        |  |              |  |  |  |             |     |  +-------| (100)
+|        |  |              |  |  |  |             |     |  |       +-----Morvir_scaffold46.g33.t1
+|        |  |              |  |  |  |             |     +--| (92)
+|        |  |              |  |  |  |             |        +------------Chem_TCONS_00013206
+|        |  |              |  |  |  |          +--| (89)
+|        |  |              |  |  |  |          |  |           +--Hsap_ENST00000351817
+|        |  |              |  |  |  |          |  |        +--| (89)
+|        |  |              |  |  |  |          |  |        |  +--Xentro_ENSXETT00000084717
+|        |  |              |  |  |  |          |  |     +--| (88)
+|        |  |              |  |  |  |          |  |     |  |  +--Xentro_ENSXETT00000066949
+|        |  |              |  |  |  |          |  |     |  +--| (100)
+|        |  |              |  |  |  |          |  |     |     +--Hsap_ENST00000354822
+|        |  |              |  |  |  |          |  |  +--| (92)
+|        |  |              |  |  |  |          |  |  |  +---Skow_NM_001164910.1
+|        |  |              |  |  |  |          |  +--| (75)
+|        |  |              |  |  |  |          |     +------------Xentro_ENSXETT00000080894
+|        |  |              |  |  |  |       +--| (65)
+|        |  |              |  |  |  |       |  |       +--Adig_XM_015915184.1
+|        |  |              |  |  |  |       |  |  +----| (100)
+|        |  |              |  |  |  |       |  |  |    +--Fspp_ffun1.m4.4460.m1
+|        |  |              |  |  |  |       |  +--| (81)
+|        |  |              |  |  |  |       |     |       +---Chem_TCONS_00016211
+|        |  |              |  |  |  |       |     |    +--| (100)
+|        |  |              |  |  |  |       |     |    |  +-----Hvul_g31954_1
+|        |  |              |  |  |  |       |     +----| (100)
+|        |  |              |  |  |  |       |          +--Morvir_scaffold11.g115.t1
+|        |  |              |  |  |  |   +---| (98)
+|        |  |              |  |  |  |   |   |           +--Xentro_ENSXETT00000060367
+|        |  |              |  |  |  |   |   |        +--| (100)
+|        |  |              |  |  |  |   |   |        |  +--Hsap_ENST00000329198
+|        |  |              |  |  |  |   |   |     +--| (100)
+|        |  |              |  |  |  |   |   |     |  |  +--Hsap_ENST00000344586
+|        |  |              |  |  |  |   |   |     |  +--| (100)
+|        |  |              |  |  |  |   |   |     |     +--Xentro_ENSXETT00000089378
+|        |  |              |  |  |  |   |   |  +--| (100)
+|        |  |              |  |  |  |   |   |  |  |  +--Hsap_ENST00000325017
+|        |  |              |  |  |  |   |   |  |  +--| (100)
+|        |  |              |  |  |  |   |   |  |     +--Xentro_ENSXETT00000016948
+|        |  |              |  |  |  |   |   +--| (97)
+|        |  |              |  |  |  |   |      +--Skow_XM_006815396.1
+|        |  |              |  |  |  +---| (100)
+|        |  |              |  |  |      |             +--Adig_XM_015915185.1
+|        |  |              |  |  |      |          +--| (100)
+|        |  |              |  |  |      |          |  +--Fspp_ffun1.m4.4461.m1
+|        |  |              |  |  |      |       +--| (100)
+|        |  |              |  |  |      |       |  |         +--Skow_NM_001165004.1
+|        |  |              |  |  |      |       |  |     +---| (83)
+|        |  |              |  |  |      |       |  |     |   +--------------------Morvir_scaffold477.g8.t1
+|        |  |              |  |  |      |       |  |  +--| (97)
+|        |  |              |  |  |      |       |  |  |  |  +--Hsap_ENST00000382438
+|        |  |              |  |  |      |       |  |  |  +--| (86)
+|        |  |              |  |  |      |       |  |  |     +--Xentro_ENSXETT00000094839
+|        |  |              |  |  |      |       |  +--| (98)
+|        |  |              |  |  |      |       |     +---Xentro_ENSXETT00000080534
+|        |  |              |  |  |      +-------| (100)
+|        |  |              |  |  |              |   +----Xentro_ENSXETT00000016949
+|        |  |              |  |  |              +---| (100)
+|        |  |              |  |  |                  +------Hsap_ENST00000380871
+|        |  |              |  +--| (74)
+|        |  |              |     |                     +--Adig_XM_015917750.1
+|        |  |              |     |               +-----| (100)
+|        |  |              |     |               |     +--Fspp_ffun1.m4.29467.m1
+|        |  |              |     |            +--| (74)
+|        |  |              |     |            |  |     +---Skow_NM_001164899.1
+|        |  |              |     |            |  |  +--| (100)
+|        |  |              |     |            |  |  |  |     +--Hsap_ENST00000361725
+|        |  |              |     |            |  |  |  |  +--| (100)
+|        |  |              |     |            |  |  |  |  |  +---Xentro_ENSXETT00000103078
+|        |  |              |     |            |  |  |  +--| (99)
+|        |  |              |     |            |  |  |     |     +--Hsap_ENST00000518156
+|        |  |              |     |            |  |  |     |  +--| (100)
+|        |  |              |     |            |  |  |     |  |  +--Xentro_ENSXETT00000090592
+|        |  |              |     |            |  |  |     +--| (99)
+|        |  |              |     |            |  |  |        |  +--Xentro_ENSXETT00000072778
+|        |  |              |     |            |  |  |        +--| (99)
+|        |  |              |     |            |  |  |           +-------Hsap_ENST00000240306
+|        |  |              |     |            |  +--| (100)
+|        |  |              |     |            |     |       +--Hsap_ENST00000648378
+|        |  |              |     |            |     |    +--| (100)
+|        |  |              |     |            |     |    |  +--Xentro_ENSXETT00000036133
+|        |  |              |     |            |     +----| (100)
+|        |  |              |     |            |          |      +--Hsap_ENST00000234198
+|        |  |              |     |            |          |  +---| (100)
+|        |  |              |     |            |          |  |   +--Xentro_ENSXETT00000016414
+|        |  |              |     |            |          +--| (100)
+|        |  |              |     |            |             |  +--Hsap_ENST00000434704
+|        |  |              |     |            |             +--| (100)
+|        |  |              |     |            |                +---Xentro_ENSXETT00000047434
+|        |  |              |     |         +--| (98)
+|        |  |              |     |         |  |  +------Morvir_scaffold140.g36.t1
+|        |  |              |     |         |  +--| (100)
+|        |  |              |     |         |     |  +-----Chem_TCONS_00017798
+|        |  |              |     |         |     +--| (100)
+|        |  |              |     |         |        +--------Hvul_g6880_1
+|        |  |              |     |      +--| (78)
+|        |  |              |     |      |  +----------Tadh_TriadT49530
+|        |  |              |     |  +---| (100)
+|        |  |              |     |  |   |   +--Chem_TCONS_00000458
+|        |  |              |     |  |   +---| (100)
+|        |  |              |     |  |       |  +--Hvul_g18245_1
+|        |  |              |     |  |       +--| (60)
+|        |  |              |     |  |          +------Morvir_scaffold140.g33.t1
+|        |  |              |     +--| (70)
+|        |  |              |        |                 +--Hsap_ENST00000229307
+|        |  |              |        |   +-------------| (100)
+|        |  |              |        |   |             +--Hsap_ENST00000528386
+|        |  |              |        +---| (77)
+|        |  |              |            +----------------Chem_TCONS_00045729
+|        |  |           +--| (27)
+|        |  |           |  |     +---------Adig_XM_015918189.1
+|        |  |           |  |  +--| (92)
+|        |  |           |  |  |  |         +-----Skow_NM_001164925.1
+|        |  |           |  |  |  |      +--| (79)
+|        |  |           |  |  |  |      |  |  +--Xentro_ENSXETT00000046719
+|        |  |           |  |  |  |      |  +--| (96)
+|        |  |           |  |  |  |      |     +--Hsap_ENST00000252971
+|        |  |           |  |  |  +------| (100)
+|        |  |           |  |  |         +--Xentro_ENSXETT00000102628
+|        |  |           |  +--| (98)
+|        |  |           |     +-----------Tadh_TriadT50911
+|        |  |        +--| (38)
+|        |  |        |  |               +--------Skow_XM_006821511.1
+|        |  |        |  |  +------------| (100)
+|        |  |        |  |  |            +--Fspp_ffun1.m4.20503.m1
+|        |  |        |  +--| (69)
+|        |  |        |     |           +--Adig_XM_015918185.1
+|        |  |        |     |      +----| (100)
+|        |  |        |     |      |    +--Fspp_ffun1.m4.18978.m1
+|        |  |        |     +------| (100)
+|        |  |        |            |              +--Xentro_ENSXETT00000072471
+|        |  |        |            |           +--| (100)
+|        |  |        |            |           |  +--Hsap_ENST00000308618
+|        |  |        |            |        +--| (100)
+|        |  |        |            |        |  |  +--Hsap_ENST00000496902
+|        |  |        |            |        |  +--| (100)
+|        |  |        |            |        |     +--Xentro_ENSXETT00000060604
+|        |  |        |            +--------| (100)
+|        |  |        |                     +-----Skow_NM_001171223.1
+|        |  |     +--| (70)
+|        |  |     |  |                   +--Adig_XM_015901484.1
+|        |  |     |  |                +--| (100)
+|        |  |     |  |                |  +--Fspp_ffun1.m4.11567.m1
+|        |  |     |  |             +--| (86)
+|        |  |     |  |             |  +-----Fspp_ffun1.m4.11570.m1
+|        |  |     |  |          +--| (90)
+|        |  |     |  |          |  |      +----Adig_XM_015901486.1
+|        |  |     |  |          |  +------| (100)
+|        |  |     |  |          |         +--Fspp_ffun1.m4.11569.m1
+|        |  |     |  |       +--| (79)
+|        |  |     |  |       |  |       +---Adig_XM_015901485.1
+|        |  |     |  |       |  +-------| (100)
+|        |  |     |  |       |          +--Fspp_ffun1.m4.11566.m1
+|        |  |     |  |    +--| (99)
+|        |  |     |  |    |  |            +--Hsap_ENST00000262041
+|        |  |     |  |    |  |         +--| (100)
+|        |  |     |  |    |  |         |  +--Xentro_ENSXETT00000011040
+|        |  |     |  |    |  |  +------| (100)
+|        |  |     |  |    |  |  |      +--------Skow_NM_001164933.1
+|        |  |     |  |    |  +--| (76)
+|        |  |     |  |    |     +-----Hsap_ENST00000318579
+|        |  |     |  +----| (100)
+|        |  |     |       |  +----Morvir_scaffold59.g41.t1
+|        |  |     |       +--| (99)
+|        |  |     |          +------Hvul_g24401_1
+|        |  |  +--| (73)
+|        |  |  |  |                      +--Hsap_ENST00000295206
+|        |  |  |  |                   +--| (84)
+|        |  |  |  |                   |  +-------Skow_NM_001164900.1
+|        |  |  |  |                +--| (84)
+|        |  |  |  |                |  +--Xentro_ENSXETT00000078593
+|        |  |  |  +----------------| (100)
+|        |  |  |                   +--Hsap_ENST00000297375
+|        |  +--| (69)
+|        |     |                +--Xentro_ENSXETT00000068002
+|        |     |             +--| (100)
+|        |     |             |  +--Hsap_ENST00000239174
+|        |     |          +--| (100)
+|        |     |          |  |     +--Hsap_ENST00000643460
+|        |     |          |  |  +--| (100)
+|        |     |          |  |  |  +--Xentro_ENSXETT00000001600
+|        |     |          |  +--| (92)
+|        |     |          |     |   +--Hsap_ENST00000331462
+|        |     |          |     +---| (100)
+|        |     |          |         +--Xentro_ENSXETT00000003767
+|        |     |     +----| (100)
+|        |     |     |    +----Skow_NM_001164912.1
+|        |     |  +--| (96)
+|        |     |  |  |       +----Morvir_scaffold27.g7.t1
+|        |     |  |  |   +---| (100)
+|        |     |  |  |   |   +---Chem_TCONS_00061956
+|        |     |  |  +---| (100)
+|        |     |  |      |        +--Adig_XM_015918195.1
+|        |     |  |      +--------| (100)
+|        |     |  |               +--Fspp_ffun1.m4.18979.m1
+|        |     +--| (92)
+|        |        |  +---------------Morvir_scaffold70.g42.t1
+|        |        +--| (96)
+|        |           +---------Skow_NM_001164907.1
+|     +--| (81)
+|     |  +----------------Morvir_scaffold70.g45.t1
+|  +--| (96)
+|  |  |                                          +--Hsap_ENST00000303450
+|  |  |                                       +--| (99)
+|  |  |                                       |  |  +--Xentro_ENSXETT00000016495
+|  |  |                                       |  +--| (99)
+|  |  |                                       |     +--Xentro_ENSXETT00000066357
+|  |  |                                    +--| (97)
+|  |  |                                    |  +--Xentro_ENSXETT00000078199
+|  |  |                                 +--| (97)
+|  |  |                                 |  +--Hsap_ENST00000249499
+|  |  |                            +----| (98)
+|  |  |                            |    |        +--Hsap_ENST00000343483
+|  |  |                            |    |     +--| (100)
+|  |  |                            |    |     |  +--Hsap_ENST00000470747
+|  |  |                            |    |  +--| (100)
+|  |  |                            |    |  |  +--Xentro_ENSXETT00000001611
+|  |  |                            |    +--| (97)
+|  |  |                            |       |  +--Hsap_ENST00000311177
+|  |  |                            |       +--| (100)
+|  |  |                            |          +--Xentro_ENSXETT00000101088
+|  |  |                    +-------| (100)
+|  |  |                    |       |            +--Hsap_ENST00000283921
+|  |  |                    |       |        +---| (100)
+|  |  |                    |       |        |   +--Xentro_ENSXETT00000001618
+|  |  |                    |       |     +--| (98)
+|  |  |                    |       |     |  |  +--Hsap_ENST00000249501
+|  |  |                    |       |     |  +--| (100)
+|  |  |                    |       |     |     +--Xentro_ENSXETT00000016491
+|  |  |                    |       +-----| (98)
+|  |  |                    |             |  +--Xentro_ENSXETT00000050677
+|  |  |                    |             +--| (100)
+|  |  |                    |                +--Hsap_ENST00000303460
+|  |  |                 +--| (99)
+|  |  |                 |  +--Skow_XM_006811515.1
+|  |  |              +--| (99)
+|  |  |              |  +----Skow_NM_001164941.1
+|  |  |           +--| (98)
+|  |  |           |  |  +----Skow_NM_001164909.1
+|  |  |           |  +--| (100)
+|  |  |           |     +----Skow_NM_001164942.1
+|  |  |        +--| (82)
+|  |  |        |  +----------Skow_XM_006825612.1
+|  |  |     +--| (54)
+|  |  |     |  |               +--Hsap_ENST00000006015
+|  |  |     |  |            +--| (99)
+|  |  |     |  |            |  +--Xentro_ENSXETT00000001623
+|  |  |     |  |     +------| (99)
+|  |  |     |  |     |      |     +--Xentro_ENSXETT00000097247
+|  |  |     |  |     |      |  +--| (92)
+|  |  |     |  |     |      |  |  +--Xentro_ENSXETT00000060673
+|  |  |     |  |     |      +--| (99)
+|  |  |     |  |     |         +--Hsap_ENST00000249504
+|  |  |     |  |  +--| (87)
+|  |  |     |  |  |  |             +--Hsap_ENST00000649031
+|  |  |     |  |  |  |  +----------| (100)
+|  |  |     |  |  |  |  |          |  +--Xentro_ENSXETT00000001626
+|  |  |     |  |  |  |  |          +--| (95)
+|  |  |     |  |  |  |  |             |     +---Hsap_ENST00000290295
+|  |  |     |  |  |  |  |             |  +--| (96)
+|  |  |     |  |  |  |  |             |  |  |   +--Hsap_ENST00000392539
+|  |  |     |  |  |  |  |             |  |  +---| (100)
+|  |  |     |  |  |  |  |             |  |      +--Xentro_ENSXETT00000016487
+|  |  |     |  |  |  |  |             +--| (95)
+|  |  |     |  |  |  |  |                |  +--Xentro_ENSXETT00000100718
+|  |  |     |  |  |  |  |                +--| (100)
+|  |  |     |  |  |  |  |                   +--Hsap_ENST00000243056
+|  |  |     |  |  |  +--| (89)
+|  |  |     |  |  |     |             +---Hsap_ENST00000406506
+|  |  |     |  |  |     +-------------| (100)
+|  |  |     |  |  |                   |  +--Xentro_ENSXETT00000050671
+|  |  |     |  |  |                   +--| (100)
+|  |  |     |  |  |                      +--Hsap_ENST00000243103
+|  |  |     |  +--| (53)
+|  |  |     |     +---------------------Hvul_g4503_1
+|  |  |  +--| (86)
+|  |  |  |  |                         +----Hsap_ENST00000373514
+|  |  |  |  |                      +--| (98)
+|  |  |  |  |                      |  +----Xentro_ENSXETT00000009980
+|  |  |  |  |                   +--| (96)
+|  |  |  |  |                   |  +--Xentro_ENSXETT00000073774
+|  |  |  |  |                +--| (37)
+|  |  |  |  |                |  |  +--Hsap_ENST00000381020
+|  |  |  |  |                |  +--| (37)
+|  |  |  |  |                |     +------Skow_NM_001164943.1
+|  |  |  |  |           +----| (49)
+|  |  |  |  |           |    |  +--Xentro_ENSXETT00000022650
+|  |  |  |  |           |    +--| (32)
+|  |  |  |  |           |       +--Hsap_ENST00000231656
+|  |  |  |  +-----------| (97)
+|  |  |  |              +--------------------------------Skow_NM_001171216.1
+|  |  +--| (83)
+|  |     |              +--Adig_XM_015918181.1
+|  |     +--------------| (100)
+|  |                    +--Fspp_ffun1.m4.18981.m1
++--| (100)
+|  |      +---Morvir_scaffold340.g1.t1
+|  |   +--| (99)
+|  |   |  +---Morvir_scaffold45.g78.t1
+|  +---| (97)
+|      |  +---------------------------Chem_TCONS_00008773
+|      +--| (95)
+|         +------Hvul_g26228_1
+|
+|         +------Chem_TCONS_00060494
+|      +--| (87)
+|      |  +---Morvir_scaffold216.g16.t1
++------| (100)
+       |    +--Hvul_g24998_1
+       +----| (100)
+            +--Hvul_g3831_1
+
+
+Consensus tree in newick format: 
+
+(Fspp_ffun1.m4.6493.m1:1.1247866862,((((((((((((Hsap_ENST00000302945:0.1120219660,Xentro_ENSXETT00000089294:0.1938718950)100:0.4156934530,(Xentro_ENSXETT00000045469:0.2304325624,Hsap_ENST00000326902:0.1782213341)76:0.3224258433)75:0.1766082069,Skow_XM_002732004.2:0.7727761031)100:1.0491462995,Tadh_TriadT33728:1.0967942111)90:0.0572691375,((Morvir_scaffold348.g20.t1:0.4000965700,(Chem_TCONS_00050614:0.5163440038,Hvul_g10051_1:0.7674830599)100:0.4085732297)94:0.2843710675,(Adig_XM_015908011.1:0.0000024804,Fspp_ffun1.m4.12110.m1:0.2461672010)100:1.0380391159)92:0.1905110328)100:0.5663482776,(((Adig_XM_015918179.1:0.2322481315,Fspp_ffun1.m4.18980.m1:0.1079818581)100:1.5075898424,((Xentro_ENSXETT00000053914:0.4765176593,(((Hsap_ENST00000311626:0.1851527174,Xentro_ENSXETT00000047547:0.2032753181)100:0.2573829983,(Xentro_ENSXETT00000001602:0.0707596403,Hsap_ENST00000317201:0.1575895747)100:0.1866462204)92:0.0411199434,(Xentro_ENSXETT00000099847:0.1269247022,Hsap_ENST00000249440:0.2356847872)100:0.1964109146)92:0.2545211436)99:0.7770470106,(((Hsap_ENST00000222718:0.0283493741,Xentro_ENSXETT00000001601:0.1126305664)100:0.3922380469,(Xentro_ENSXETT00000057087:0.1473409164,Hsap_ENST00000330070:0.2781655336)56:0.2235407826)64:0.3713013715,Skow_NM_001164937.1:1.9860882812)100:0.9115873946)58:0.1282715475)83:0.3829860946,((Adig_XM_015925334.1:0.6284214658,Adig_XM_015925335.1:0.3326110881)100:0.1238518680,Fspp_ffun1.m4.18984.m1:0.4123722916)100:1.5751324809)91:0.2235138530)62:0.1106847687,((((((Hsap_ENST00000242159:0.1303539120,Xentro_ENSXETT00000001606:0.3160051316)69:0.1349370611,(Xentro_ENSXETT00000089346:0.3057338035,Hsap_ENST00000239165:0.2232676668)100:0.3473988527)100:0.7106852951,((((Hsap_ENST00000239144:0.0573306617,Xentro_ENSXETT00000063401:0.0689493230)100:0.3617169996,(Hsap_ENST00000313173:0.0960374508,Xentro_ENSXETT00000070016:0.3400203360)100:0.1570652325)98:0.1045418069,(Xentro_ENSXETT00000050682:0.0268125730,Hsap_ENST00000040584:0.0337248567)100:0.1896752033)100:0.9467882154,(Skow_NM_001164908.1:0.8892642447,Skow_XM_002730729.1:0.8408073511)100:0.5575335166)100:0.1787385375)67:0.1534709301,((Hsap_ENST00000225648:0.1699037566,Xentro_ENSXETT00000047588:0.2237345496)100:0.1702542209,((Hsap_ENST00000222728:0.1921754539,Xentro_ENSXETT00000096565:0.2662713247)100:0.2269937705,(Hsap_ENST00000243108:0.0000021963,Xentro_ENSXETT00000050686:0.2156334750)100:0.8952892107)66:0.2986732307)100:0.6121708276)100:0.3523196914,((((Hsap_ENST00000513209:0.6382189297,Xentro_ENSXETT00000050688:0.3228635000)91:0.0000024547,Hsap_ENST00000312492:0.0340411401)100:0.7615057572,((Hsap_ENST00000239151:0.0183211114,Xentro_ENSXETT00000047578:0.2156920442)100:0.3334657527,(Hsap_ENST00000222726:0.0400263635,Xentro_ENSXETT00000001604:0.1031733442)96:0.1278835030)94:0.0943639377)94:0.1931067251,Skow_NM_001164938.1:1.2094642539)92:0.2757575830)92:0.2955154281,((((Hsap_ENST00000332503:0.3171513160,Xentro_ENSXETT00000047559:0.6078276919)55:0.0278782152,((Xentro_ENSXETT00000080023:0.1883635493,Hsap_ENST00000303406:0.1617671309)100:0.1484768520,(Hsap_ENST00000306324:0.0940034980,Xentro_ENSXETT00000003765:0.2056978763)100:0.3538291369)100:0.1170155054)56:0.1283541436,(Xentro_ENSXETT00000057392:0.2420885160,Hsap_ENST00000360046:0.3772563802)100:0.1475081183)100:0.4757996796,Skow_NM_001164913.1:0.6220410425)100:0.5168226281)100:0.4683799857)79:0.1805338699,((Fspp_ffun1.m4.12105.m1:1.1465799286,Morvir_scaffold189.g37.t1:1.6429574508)100:1.5244006346,((Hsap_ENST00000381033:0.1357634289,Xentro_ENSXETT00000025782:0.3285153203)100:0.7804627642,Skow_XM_006824496.1:0.8139961405)100:0.7786392029)98:0.4030613012)68:0.1170314315,(((((((((((Morvir_scaffold98.g48.t1:1.8685328168,((Adig_XM_015915222.1:0.1305960203,Fspp_ffun1.m4.11751.m1:0.2759455465)100:0.4875064861,Skow_XM_006824407.1:0.8412637102)100:0.5959663259)99:1.1312925976,((((((Adig_XM_015912975.1:0.2758991604,Fspp_ffun1.m4.12736.m1:0.1081671159)100:0.4372423500,((Skow_XM_002731905.2:0.6193273377,((Xentro_ENSXETT00000094587:0.2919193140,Hsap_ENST00000400677:0.7284907799)100:0.3187871890,(Hsap_ENST00000357878:0.1433839507,Xentro_ENSXETT00000021090:0.2204591944)100:0.2828195543)100:0.2499119129)96:0.0246042243,((Hsap_ENST00000339992:0.1877226786,Xentro_ENSXETT00000057781:0.3948678099)100:0.3739870201,Xentro_ENSXETT00000065721:1.2439766334)100:0.3579070833)99:0.2627719377)99:0.1432561110,Tadh_TriadT50928:1.2543370049)100:0.7304997951,Chem_TCONS_00047310:1.9826459901)53:0.1041768256,Chem_TCONS_00069782:3.3458044788)94:0.4592818883,(((Adig_XM_015917756.1:0.8511096390,Fspp_ffun1.m4.29526.m1:0.7037872642)100:0.3239701024,Fspp_ffun1.m4.29465.m1:1.2612461360)90:0.2238126127,Skow_XM_006811339.1:3.3001263554)95:0.5027739934)48:0.2101254602)37:0.2261428114,((((((((Skow_XM_006813696.1:0.3298851270,Skow_NM_001164914.1:0.5472009951)100:0.3812683150,(Hsap_ENST00000263610:0.0610138223,Xentro_ENSXETT00000104161:0.0617150276)100:0.3005013423)62:0.0676891060,(Hsap_ENST00000370445:0.0117135125,Xentro_ENSXETT00000051744:0.1184697393)65:0.1380037313)97:0.8961706471,Skow_XM_006817477.1:2.3486652204)98:1.0613105491,Chem_TCONS_00025396:2.3776989055)96:0.4005970784,(((((Adig_XM_015897722.1:0.2525754411,Fspp_ffun1.m4.31060.m1:0.0000021842)100:1.6341642498,(((Fspp_ffun1.m4.17753.m1:0.5047993954,Adig_XM_015897727.1:0.5036184167)75:0.2478075995,Adig_XM_015897726.1:0.5314909681)73:0.0879628322,(Fspp_ffun1.m4.33384.m1:0.2661054725,Adig_XM_015897724.1:0.6301093461)64:0.1058656360)97:0.2009256727)82:0.1349314064,Fspp_ffun1.m4.31061.m1:0.7365636968)91:0.2216004420,Fspp_ffun1.m4.17748.m1:0.9864134663)99:0.9137060986,(Skow_XM_002733661.2:1.5181571748,(((((Fspp_ffun1.m4.1442.m1:0.4870311195,(((((Fspp_ffun1.m4.1443.m1:0.0590953529,Fspp_ffun1.m4.1445.m1:0.1074448663)98:0.0078880705,Fspp_ffun1.m4.1448.m1:0.0452338892)99:0.0112656631,Fspp_ffun1.m4.1446.m1:0.0906866726)99:0.0083742277,Fspp_ffun1.m4.1444.m1:0.0619129791)100:0.2834595694,((((Fspp_ffun1.m4.25254.m1:0.0912878572,Fspp_ffun1.m4.29242.m1:0.0689658406)97:0.0372819810,Fspp_ffun1.m4.29243.m1:0.0702529984)97:0.0647212218,Fspp_ffun1.m4.29244.m1:0.0024234800)91:0.0191680641,Fspp_ffun1.m4.26302.m1:0.2313299732)100:0.1348026592)100:0.5470377664)100:0.3830781973,(Fspp_ffun1.m4.15421.m1:0.3504748963,Fspp_ffun1.m4.15426.m1:0.2663720597)100:0.3570749148)100:0.5394347875,Fspp_ffun1.m4.15423.m1:0.6790791577)94:0.2594464543,Fspp_ffun1.m4.15427.m1:0.9049499197)100:0.4442411619,Adig_XM_015895991.1:1.4028347428)100:0.5875774953)98:0.5363676704)72:0.1082988447)68:0.1077410317,(((((Adig_XM_015905830.1:0.7985494548,Fspp_ffun1.m4.14100.m1:0.0577777908)100:0.9815711826,(((Fspp_ffun1.m4.14099.m1:0.5805202407,Adig_XM_015905832.1:1.0017688636)100:0.5500076441,Fspp_ffun1.m4.14104.m1:2.2915898858)100:0.5874495158,(Skow_XM_002741136.2:1.0707044410,(Morvir_scaffold188.g35.t1:0.4818860097,Chem_TCONS_00023949:1.6743685368)100:1.6222018304)99:0.2975495417)100:0.2751251143)91:0.0866382778,Tadh_TriadT51739:2.9790800023)100:1.2064108366,(((Adig_XM_015915200.1:0.1776083725,Fspp_ffun1.m4.4458.m1:0.0272845468)100:0.4852254679,Skow_NM_001164931.1:0.6839727965)99:0.0831834269,((Xentro_ENSXETT00000035005:0.1849397309,Hsap_ENST00000382723:0.0660501254)100:0.1061742261,(Hsap_ENST00000239243:0.0944080176,Xentro_ENSXETT00000020130:0.1836573109)100:0.2138574918)100:0.1995241922)99:0.7797505276)54:0.0696739113,(Chem_TCONS_00056354:0.7251939667,Hvul_g16557_1:0.6206245722)99:0.6009742492)100:1.2486547358)33:0.0000027207,(((((Adig_XM_015912978.1:0.1314034863,Fspp_ffun1.m4.12735.m1:0.0661678963)100:0.3583230603,Skow_NM_001168137.1:0.8516592878)100:0.1978417240,(Hsap_ENST00000422806:0.2415725492,Xentro_ENSXETT00000008415:0.3152511022)95:0.1077533254)97:0.1436086022,Hsap_ENST00000451024:0.7645751021)97:0.3332889869,((Morvir_scaffold21.g122.t1:1.1703906738,(Chem_TCONS_00029478:0.4234164360,Hvul_g2253_1:3.0044995367)100:0.4410975221)100:0.2383861588,Xentro_ENSXETT00000096279:1.2202287005)63:0.0000022787)100:1.3797052136)69:0.1518625294)35:0.0127915022,(((Adig_XM_015895990.1:0.1298092130,Fspp_ffun1.m4.15422.m1:0.1766887479)100:1.1060839897,Skow_NM_001164886.1:0.4539567028)100:0.4104677466,((Hsap_ENST00000306318:0.0469574897,(Xentro_ENSXETT00000007133:0.0000021369,Xentro_ENSXETT00000007145:0.0274982807)99:0.1657670123)99:0.2578959044,Hsap_ENST00000297537:0.3854080654)98:0.2375632899)100:1.5908005342)67:0.3243890253,(((((((Adig_XM_015897690.1:0.8156277661,Fspp_ffun1.m4.29381.m1:0.4218041615)100:1.5503726887,(Adig_XM_015907403.1:0.4468004821,Fspp_ffun1.m4.24397.m1:0.2242368945)100:2.0089160069)100:1.1314472861,Tadh_TriadT49524:1.3157484516)69:0.3702942060,((((Adig_XM_015907002.1:0.5238048881,Fspp_ffun1.m4.11764.m1:0.3398075281)100:1.1002291683,Skow_XM_006824221.1:1.3915844529)84:0.0000020876,Xentro_ENSXETT00000025770:1.5676486111)92:0.5233572293,(Adig_XM_015914460.1:0.3096448851,Fspp_ffun1.m4.26584.m1:0.1305185639)98:0.7618511840)90:0.3920305782)71:0.1115422567,(((((Chem_TCONS_00066748:0.0000020509,Chem_TCONS_00071932:0.0633682760)100:1.1077988819,Hvul_g11736_1:1.1457673821)100:0.2498629644,Morvir_scaffold149.g55.t1:0.8981425956)100:0.6714878755,(Adig_XM_015912983.1:0.7903849209,Fspp_ffun1.m4.16263.m1:0.9849074536)100:0.7398739165)99:0.3394544837,(Fspp_ffun1.m4.30483.m1:2.3892903028,(Adig_XM_015899313.1:0.7627964215,Fspp_ffun1.m4.23130.m1:0.7657734670)100:1.5708985540)83:0.2897277872)62:0.1313147491)86:0.2779430778,(((Fspp_ffun1.m4.4260.m1:2.5031061460,(((Skow_XM_006815656.1:0.0000021369,Skow_XM_006819482.1:0.0000021369)91:0.0000021369,(Skow_XM_006819480.1:0.0000021369,Skow_XM_006820387.1:0.0000021369)98:0.0000024250)88:0.0000025088,Skow_XM_006819478.1:0.0182823988)100:2.1602451238)100:2.3884707498,(Adig_XM_015899310.1:0.6524346628,Fspp_ffun1.m4.23128.m1:0.7762000072)100:1.3587655261)75:0.1279468182,Hsap_ENST00000398468:1.7352211199)76:0.2158772540)94:0.2614067208,((((((Adig_XM_015899343.1:0.1804729728,Fspp_ffun1.m4.15184.m1:0.0869393990)100:2.5046634459,Fspp_ffun1.m4.30998.m1:2.5432600841)100:0.3455521680,(Skow_NM_001164891.1:1.0950390644,((Xentro_ENSXETT00000100033:0.2605877763,Hsap_ENST00000369206:0.0962657205)100:0.2020298266,(Hsap_ENST00000234392:0.1432236131,Xentro_ENSXETT00000088471:0.3082378399)100:0.3542753142)100:1.0922166717)100:1.3636110320)90:0.8764798520,(((Xentro_ENSXETT00000076634:0.0298922700,((Hsap_ENST00000553456:0.0056922609,Xentro_ENSXETT00000047776:0.0683003400)100:0.2430997324,Xentro_ENSXETT00000062441:0.5849214128)100:0.1030597110)82:0.0327572522,Hsap_ENST00000258106:0.1479837189)100:0.5679775796,Skow_NM_001164889.1:0.2916135363)90:0.1508752150)83:0.3825256587,((Adig_XM_015899344.1:0.1852543649,Fspp_ffun1.m4.15187.m1:0.0825947772)100:1.2178716627,(Adig_XM_015914462.1:0.2142366644,Fspp_ffun1.m4.26587.m1:0.3176672846)100:2.0954266217)84:0.0857681576)84:0.8302444517,(Chem_TCONS_00054222:0.9111694958,Morvir_scaffold5.g160.t1:1.0637547839)100:0.5039556242)96:0.6077683794)94:0.4471310076)49:0.0350520488,(((((((((Morvir_scaffold85.g37.t1:3.2485616236,(Tadh_TriadT18102:1.0089760568,(Skow_NM_001164898.1:0.3536008886,((Xentro_ENSXETT00000030999:0.0556765114,Hsap_ENST00000524983:0.2137384825)100:0.1762164184,(Hsap_ENST00000332700:0.0000025746,Xentro_ENSXETT00000063234:0.7054507882)100:1.4419758843)85:0.2500193561)81:0.1812426538)81:0.2882119361)100:1.1422400855,((Hsap_ENST00000366903:0.3616592991,Xentro_ENSXETT00000005952:0.1557432342)100:0.4516616671,Skow_XM_006816183.1:0.9801464506)100:0.7905180342)71:0.2341419533,(Fspp_ffun1.m4.22959.m1:0.6736299854,Fspp_ffun1.m4.13287.m1:0.7306818000)100:1.1259822477)67:0.1993775467,((Adig_XM_015910647.1:0.1228407592,Fspp_ffun1.m4.31229.m1:0.3781736539)100:0.8000009114,Adig_XM_015910650.1:2.8491415121)98:1.3563182905)83:0.0691785798,Morvir_scaffold95.g3.t1:1.2971381207)100:0.7489633522,(((((Adig_XM_015902979.1:0.7183753050,Fspp_ffun1.m4.20257.m1:1.9698813919)98:0.5437630650,((Adig_XM_015903087.1:0.1090631475,Fspp_ffun1.m4.20261.m1:0.2304285106)100:0.2401207321,(Adig_XM_015909001.1:0.3232626638,Fspp_ffun1.m4.10292.m1:0.1569457694)100:0.4383949438)82:0.0987342532)100:0.6857175821,(Morvir_scaffold175.g50.t1:0.3927767507,Hvul_g32708_1:2.3230673383)100:0.6261997790)100:0.4531504059,(Adig_XM_015909101.1:2.0727659070,((Skow_XM_006815239.1:0.3276242716,Skow_XM_006822703.1:0.0000029045)100:0.9965127463,((Hsap_ENST00000253968:0.1193350786,Xentro_ENSXETT00000086444:0.1701497728)100:0.6599193089,(Hsap_ENST00000281437:0.1478748538,Xentro_ENSXETT00000077545:0.2360833196)100:0.8886583561)100:0.2651573208)100:0.3295936798)100:1.0030085468)100:0.5267927797,((Hsap_ENST00000343035:0.2673857328,Xentro_ENSXETT00000036924:0.0521968143)100:1.2885299027,Skow_NM_001164896.1:0.0000025139)100:1.0475919287)96:0.2139114410)98:0.5160747180,(((((Adig_XM_015915192.1:0.1807611019,Fspp_ffun1.m4.4455.m1:0.1114308671)100:1.2221842365,Skow_NM_001165028.1:0.7966132172)92:0.0967542510,((Hsap_ENST00000370193:0.0848181113,Xentro_ENSXETT00000089841:0.1098756405)100:0.2772232084,Hsap_ENST00000377566:1.3924178738)99:0.2651755587)100:1.6980727328,(((((Adig_XM_015902493.1:0.0000029809,(Tadh_TriadT31334:2.1681689586,Morvir_scaffold42.g46.t1:1.5985677466)98:0.5111768353)98:0.2868542464,Fspp_ffun1.m4.9245.m1:0.2661059068)99:0.4194644765,(((Hsap_ENST00000295886:0.0508424669,Xentro_ENSXETT00000060579:0.0391644237)100:0.1877008035,((Xentro_ENSXETT00000050951:0.0995214960,Hsap_ENST00000368592:0.1140717581)100:0.0925822677,(Hsap_ENST00000518699:0.2385324255,Xentro_ENSXETT00000082174:0.4373837932)100:0.8883328026)79:0.1677245347)79:0.1257217696,Skow_NM_001168138.1:0.6022313186)99:0.4155976111)100:1.4019844931,(((((Xentro_ENSXETT00000017635:0.0957055014,Hsap_ENST00000370196:0.1139866291)99:0.0664369589,Xentro_ENSXETT00000102157:0.5246397181)100:0.0881123968,(Hsap_ENST00000233638:0.4037454348,(Skow_NM_001164981.1:0.0501794892,(Morvir_scaffold99.g69.t1:0.9916614475,Chem_TCONS_00070484:2.5438541105)98:0.8575121777)90:0.3273694479)83:0.0337558209)84:0.1209450882,Xentro_ENSXETT00000039652:0.0907104267)82:0.0000025585,Hsap_ENST00000296921:0.0756561263)100:1.1412137388)100:0.5096548248,(((Adig_XM_015913000.1:0.0000027265,Fspp_ffun1.m4.15317.m1:0.0616005852)100:0.8107686694,((Chem_TCONS_00038629:0.7304370514,Hvul_g24677_1:1.2472427507)100:0.4110572725,Morvir_scaffold11.g90.t1:1.2221322468)100:1.2056132576)98:0.1222477433,(Skow_NM_001164930.2:0.7047577864,((Hsap_ENST00000282728:0.0957585955,Xentro_ENSXETT00000057734:0.0900777539)100:0.0952995182,Tadh_TriadT9560:2.1599492423)98:0.0148977836)99:0.4872334068)100:1.2666357956)86:0.1327493715)85:0.2235067229,((((Adig_XM_015897305.1:1.8970267174,Fspp_ffun1.m4.7310.m1:0.0865214435)100:1.9426649615,((((Xentro_ENSXETT00000056262:0.0171196927,Xentro_ENSXETT00000056265:0.0000021369)100:1.1980848673,(Xentro_ENSXETT00000062960:0.5722324863,Xentro_ENSXETT00000065382:0.2145440620)100:2.0114487586)95:0.3908613088,(Xentro_ENSXETT00000019491:0.0800628932,Xentro_ENSXETT00000062188:0.0850569000)100:1.3895334757)99:0.9244195545,Hsap_ENST00000325980:1.3089950196)100:0.6615769238)80:0.2240529221,(Chem_TCONS_00071866:0.6722921744,Hvul_g30386_1:0.6951769056)100:1.2507265063)80:0.5147956614,((Skow_NM_001168018.1:0.8675237509,Skow_NM_001168019.1:1.1588197190)80:0.2120515758,Skow_XM_002731799.2:2.0316330655)100:0.6957157713)72:0.3377097529)67:0.0731519500)59:0.1510589815,(((((((((Adig_XM_015905819.1:0.7144534651,(Adig_XM_015905817.1:0.7249847036,Fspp_ffun1.m4.14105.m1:0.0199578056)100:1.9558009107)78:0.2269662530,(Adig_XM_015905823.1:0.0924743766,Fspp_ffun1.m4.14112.m1:0.3403629194)100:0.6991896015)79:0.1713195358,(Adig_XM_015905827.1:0.5810069606,(Adig_XM_015905829.1:0.3038839957,Fspp_ffun1.m4.14106.m1:0.1998374329)100:1.0052901150)98:0.1047875472)81:0.3490906278,((Skow_NM_001164932.1:0.4770167107,(Xentro_ENSXETT00000050714:0.0000023558,Hsap_ENST00000377142:0.1423412601)100:0.4096075748)100:0.2231522530,(Hsap_ENST00000258829:0.4297392326,Xentro_ENSXETT00000084212:0.5543117465)100:0.8291279721)98:0.3759364542)78:0.1479788985,((Tadh_TriadT9561:0.6414077422,((Tadh_TriadT9507:1.3519074098,Morvir_scaffold273.g2.t1:1.7510270471)58:0.1695982338,Morvir_scaffold83.g2.t1:1.7430504556)57:0.1296086538)60:0.4567469157,((Chem_TCONS_00070249:0.4320191061,Morvir_scaffold46.g33.t1:0.9247937678)100:1.1791954966,Chem_TCONS_00013206:1.8645724022)92:0.3699598060)86:0.4666002449)57:0.1875877344,((((Hsap_ENST00000351817:0.1891965578,Xentro_ENSXETT00000084717:0.1432213728)89:0.1273067612,(Xentro_ENSXETT00000066949:0.0737048062,Hsap_ENST00000354822:0.1479937968)100:0.0684318996)88:0.2355157721,Skow_NM_001164910.1:0.5469036298)92:0.5124680364,Xentro_ENSXETT00000080894:1.8095163471)75:0.0000026900)89:0.2372578661,((Adig_XM_015915184.1:0.0569310997,Fspp_ffun1.m4.4460.m1:0.0233983365)100:0.7266040396,((Chem_TCONS_00016211:0.6018615066,Hvul_g31954_1:0.8506237091)100:0.4854231561,Morvir_scaffold11.g115.t1:0.5086901786)100:0.6910652223)81:0.2264368340)65:0.0518514162,((((Xentro_ENSXETT00000060367:0.1317775645,Hsap_ENST00000329198:0.3852722391)100:0.3199445926,(Hsap_ENST00000344586:0.3852585000,Xentro_ENSXETT00000089378:0.1898649232)100:0.0916738706)100:0.1943487175,(Hsap_ENST00000325017:0.4717234968,Xentro_ENSXETT00000016948:0.4610755026)100:0.1856152837)100:0.3447380498,Skow_XM_006815396.1:0.3398952568)97:0.5125681587)98:0.6576175800,(((Adig_XM_015915185.1:0.1583420925,Fspp_ffun1.m4.4461.m1:0.1229491508)100:0.5113963482,(((Skow_NM_001165004.1:0.2746186861,Morvir_scaffold477.g8.t1:2.9614675329)83:0.5749645520,(Hsap_ENST00000382438:0.3162016626,Xentro_ENSXETT00000094839:0.1435946919)86:0.4203424751)97:0.1214495800,Xentro_ENSXETT00000080534:0.6512051649)98:0.2391391935)100:0.2638971485,(Xentro_ENSXETT00000016949:0.7057592538,Hsap_ENST00000380871:0.9968536647)100:0.5770600328)100:1.0949205054)100:0.5850032784)63:0.1418632107,((((((Adig_XM_015917750.1:0.1937152280,Fspp_ffun1.m4.29467.m1:0.1512244781)100:0.8464141527,((Skow_NM_001164899.1:0.6408225191,((Hsap_ENST00000361725:0.1277655188,Xentro_ENSXETT00000103078:0.6195643098)100:0.2467370332,((Hsap_ENST00000518156:0.0760679837,Xentro_ENSXETT00000090592:0.0572927717)100:0.1946786276,(Xentro_ENSXETT00000072778:0.2753928785,Hsap_ENST00000240306:1.2204203608)99:0.3198512603)99:0.1312889994)99:0.1049432018)100:0.2028185251,((Hsap_ENST00000648378:0.1163745797,Xentro_ENSXETT00000036133:0.1281584938)100:0.2574526435,((Hsap_ENST00000234198:0.2341609020,Xentro_ENSXETT00000016414:0.1883700758)100:0.5590591294,(Hsap_ENST00000434704:0.0539526864,Xentro_ENSXETT00000047434:0.5953831306)100:0.4646997664)100:0.1470466788)100:0.7697636015)100:0.3494888517)74:0.0692721190,(Morvir_scaffold140.g36.t1:0.9767721893,(Chem_TCONS_00017798:0.8652920852,Hvul_g6880_1:1.3551154051)100:0.1922536159)100:0.1806885073)98:0.3052006048,Tadh_TriadT49530:1.5586721114)78:0.0987637266,(Chem_TCONS_00000458:0.2388760889,(Hvul_g18245_1:0.4805616182,Morvir_scaffold140.g33.t1:1.0575294602)60:0.2535045876)100:0.6090929573)100:0.6481719376,((Hsap_ENST00000229307:0.0000021369,Hsap_ENST00000528386:0.0099854488)100:1.9327423048,Chem_TCONS_00045729:2.3825784374)77:0.5651030859)70:0.2482562181)74:0.0904915550)88:0.1457651998,((Adig_XM_015918189.1:1.4388060776,((Skow_NM_001164925.1:0.8373499438,(Xentro_ENSXETT00000046719:0.1561614735,Hsap_ENST00000252971:0.1119692319)96:0.2442177439)79:0.1674892071,Xentro_ENSXETT00000102628:0.5308541385)100:0.9986741353)92:0.5122268097,Tadh_TriadT50911:1.7634007370)98:0.3251953839)27:0.0000022611,((Skow_XM_006821511.1:1.3057477766,Fspp_ffun1.m4.20503.m1:0.2192283843)100:1.8964847301,((Adig_XM_015918185.1:0.3381760198,Fspp_ffun1.m4.18978.m1:0.0188725276)100:0.7246684208,(((Xentro_ENSXETT00000072471:0.2101968260,Hsap_ENST00000308618:0.1981595380)100:0.2608102549,(Hsap_ENST00000496902:0.2378739281,Xentro_ENSXETT00000060604:0.2739136909)100:0.3202042287)100:0.4339063197,Skow_NM_001171223.1:0.8625060677)100:1.2681083736)100:0.9837451457)69:0.3945007365)38:0.0851756957,((((((Adig_XM_015901484.1:0.3841632427,Fspp_ffun1.m4.11567.m1:0.1348387803)100:0.4628005897,Fspp_ffun1.m4.11570.m1:0.9354165905)86:0.2696198525,(Adig_XM_015901486.1:0.6820827073,Fspp_ffun1.m4.11569.m1:0.3692992639)100:0.9761543261)90:0.5425380461,(Adig_XM_015901485.1:0.6038518010,Fspp_ffun1.m4.11566.m1:0.1827142769)100:1.1974848225)79:0.1852674259,(((Hsap_ENST00000262041:0.0135257386,Xentro_ENSXETT00000011040:0.1662984156)100:0.5073775337,Skow_NM_001164933.1:1.3136215112)100:0.9618616404,Hsap_ENST00000318579:0.8952725235)76:0.3098740329)99:0.3749503321,(Morvir_scaffold59.g41.t1:0.7488585734,Hvul_g24401_1:0.9576571251)99:0.2364295502)100:0.7242941436)70:0.1910546765,(((Hsap_ENST00000295206:0.4995323287,Skow_NM_001164900.1:1.0860375213)84:0.0150486653,Xentro_ENSXETT00000078593:0.1463718871)84:0.1507732743,Hsap_ENST00000297375:0.0276262228)100:2.4114713653)73:0.1013932522,(((((Xentro_ENSXETT00000068002:0.3587784863,Hsap_ENST00000239174:0.5024063646)100:0.2434492168,((Hsap_ENST00000643460:0.1092123684,Xentro_ENSXETT00000001600:0.2066295972)100:0.1935961747,(Hsap_ENST00000331462:0.4389243148,Xentro_ENSXETT00000003767:0.3830116968)100:0.5933607719)92:0.1114940802)100:0.4428911696,Skow_NM_001164912.1:0.7145939088)100:0.7833321423,((Morvir_scaffold27.g7.t1:0.8124699100,Chem_TCONS_00061956:0.6042389907)100:0.6554751587,(Adig_XM_015918195.1:0.1864155741,Fspp_ffun1.m4.18979.m1:0.2312641082)100:1.2558117381)100:0.6361453548)96:0.2233624207,(Morvir_scaffold70.g42.t1:2.1851190804,Skow_NM_001164907.1:1.4180784605)96:0.3895432034)92:0.2152227119)69:0.1224980757)50:0.0400163391,Morvir_scaffold70.g45.t1:2.3209782462)81:0.0817091702,((((((((((((Hsap_ENST00000303450:0.1069801248,(Xentro_ENSXETT00000016495:0.0360268810,Xentro_ENSXETT00000066357:0.0000025099)99:0.1489720051)99:0.3283521817,Xentro_ENSXETT00000078199:0.2311797275)97:0.1128532808,Hsap_ENST00000249499:0.2226033203)97:0.3233142329,(((Hsap_ENST00000343483:0.0000025030,Hsap_ENST00000470747:0.0000021369)100:0.1338570300,Xentro_ENSXETT00000001611:0.2275677687)100:0.2655167910,(Hsap_ENST00000311177:0.1953709174,Xentro_ENSXETT00000101088:0.2573370439)100:0.4073461453)97:0.0361907188)98:0.7595477261,(((Hsap_ENST00000283921:0.0931649688,Xentro_ENSXETT00000001618:0.0772343095)100:0.5667352058,(Hsap_ENST00000249501:0.0713654192,Xentro_ENSXETT00000016491:0.0538287637)100:0.3442510308)98:0.1217814472,(Xentro_ENSXETT00000050677:0.2360251720,Hsap_ENST00000303460:0.1506207204)100:0.2635888025)98:0.9268261682)100:1.1187800721,Skow_XM_006811515.1:0.4214517315)99:0.4831599155,Skow_NM_001164941.1:0.7964470230)99:0.3868987875,(Skow_NM_001164909.1:0.7058064058,Skow_NM_001164942.1:0.6865705292)100:0.5136729276)98:0.2438171700,Skow_XM_006825612.1:1.4976638219)82:0.2048104299,((((Hsap_ENST00000006015:0.1317969159,Xentro_ENSXETT00000001623:0.1217284775)99:0.2868644394,((Xentro_ENSXETT00000097247:0.5286870973,Xentro_ENSXETT00000060673:0.2831199020)92:0.1716704127,Hsap_ENST00000249504:0.4518823026)99:0.1280073972)99:1.0742821839,((Hsap_ENST00000649031:0.0806067462,(Xentro_ENSXETT00000001626:0.1136120764,((Hsap_ENST00000290295:0.6701813940,(Hsap_ENST00000392539:0.1242011315,Xentro_ENSXETT00000016487:0.1246773868)100:0.5463640729)96:0.0506365552,(Xentro_ENSXETT00000100718:0.3018047336,Hsap_ENST00000243056:0.0779949368)100:0.3627260623)95:0.2398494538)95:0.0458564532)100:1.5125382932,(Hsap_ENST00000406506:0.6565131160,(Xentro_ENSXETT00000050671:0.2359623548,Hsap_ENST00000243103:0.1127645347)100:0.4837244750)100:1.9656019689)89:0.3590125234)87:0.3146192020,Hvul_g4503_1:3.0362695119)53:0.2165283802)54:0.0931875561,(((((Hsap_ENST00000373514:0.6985959433,Xentro_ENSXETT00000009980:0.7813027194)98:0.3385289022,Xentro_ENSXETT00000073774:0.4709272857)96:0.2262693766,(Hsap_ENST00000381020:0.3687674916,Skow_NM_001164943.1:1.0486030952)37:0.0194227162)37:0.2413575293,(Xentro_ENSXETT00000022650:0.3268602072,Hsap_ENST00000231656:0.3846673859)32:0.0157145787)49:0.7188564228,Skow_NM_001171216.1:4.5571800725)97:1.7407732706)86:0.2176877207,(Adig_XM_015918181.1:0.1216358005,Fspp_ffun1.m4.18981.m1:0.2174805191)100:2.0442236120)83:0.1246956182)96:0.1459602900,((Morvir_scaffold340.g1.t1:0.6026947834,Morvir_scaffold45.g78.t1:0.5615590900)99:0.3958552741,(Chem_TCONS_00008773:3.8369943500,Hvul_g26228_1:1.0415883701)95:0.3015226714)97:0.5664237226)100:0.2258883304,((Chem_TCONS_00060494:1.0667667982,Morvir_scaffold216.g16.t1:0.6604884566)87:0.3824529612,(Hvul_g24998_1:0.4842283877,Hvul_g3831_1:0.2070985449)100:0.7089474916)100:0.9745980067);
+
+TIME STAMP
+----------
+
+Date and time: Wed Mar 10 13:58:42 2021
+Total CPU time used: 28406.11825 seconds (7h:53m:26s)
+Total wall-clock time used: 14452.82228 seconds (4h:0m:52s)
+
