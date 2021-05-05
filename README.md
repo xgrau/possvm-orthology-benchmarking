@@ -18,7 +18,7 @@ If you use *Possvm*, please cite the following papers:
 * Species overlap algorithm: **[Huerta-Cepas *et al.* Genome Biolgy 2007](https://genomebiology.biomedcentral.com/articles/10.1186/gb-2007-8-6-r109)**.
 * *MCL* clustering: **[Enright *et al.* Nucleic Acids Research 2002](https://pubmed.ncbi.nlm.nih.gov/11917018/)**.
 
-## TALE homeobox classification
+## Homeobox classification
 
 Test the accuracy of *Possvm* using manually curated homeobox families from HomeoDB.
 
@@ -85,7 +85,7 @@ for i in results_trees/downsampling/downsample*newick ; do possvm -i $i -p $(bas
 Rscript s21_evaluate_permutations_all.R
 ```
 
-## Orthobench testing
+## Orthobench
 
 Test the accuracy of *Possvm* using manually curated orthologs from the [Orthobench 2.0 repository](https://github.com/davidemms/Open_Orthobench) (see [Emms et al. GBE 2020](https://academic.oup.com/gbe/article/12/12/2258/5918455)).
 
