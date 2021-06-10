@@ -24,54 +24,68 @@ Test the accuracy of *Possvm* using manually curated homeobox families from Home
 
 From the `**homeobox-test**` folder:
 
-1. Get TALE, PRD and ANTP sequences from [HomeoDB](http://homeodb.zoo.ox.ac.uk/) (as of 7th Feb 2021).
+1. Get ANTP sequences from [HomeoDB](http://homeodb.zoo.ox.ac.uk/) (as of 7th Feb 2021).
 
 2. Blast (diamond).
 
 ```bash
+# to bilateria+cnidaria dataset
+bash s01_get_trees-diamond.sh seed_ANTP.fasta ANTP proteomes/
+# UNUSED:
+# bash s01_get_trees-diamond.sh seed_PRD.fasta  PRD  proteomes/
+# bash s01_get_trees-diamond.sh seed_TALE.fasta TALE proteomes/
+
+# UNUSED:
 # to orthobench dataset (17 metazoan species)
 # bash s01_get_trees-diamond.sh seed_tale.fasta tale ../orthobench-test/proteomes/
 # bash s01_get_trees-diamond.sh seed_ANTP.fasta ANTP ../orthobench-test/proteomes/
 # bash s01_get_trees-diamond.sh seed_PRD.fasta PRD ../orthobench-test/proteomes/
-# to bilateria+cnidaria dataset
-bash s01_get_trees-diamond.sh seed_ANTP.fasta ANTP proteomes/
-bash s01_get_trees-diamond.sh seed_PRD.fasta  PRD  proteomes/
-bash s01_get_trees-diamond.sh seed_TALE.fasta TALE proteomes/
 ```
 
 3. Run *Possvm*.
 
 ```bash
 possvm -i results_trees/ANTP.genes.iqtree.treefile -p ANTP.possom -itermidroot 10
-possvm -i results_trees/PRD.genes.iqtree.treefile -p PRD.possom -itermidroot 10
-possvm -i results_trees/TALE.genes.iqtree.treefile -p TALE.possom -itermidroot 10
+# possvm -i results_trees/PRD.genes.iqtree.treefile -p PRD.possom -itermidroot 10
+# possvm -i results_trees/TALE.genes.iqtree.treefile -p TALE.possom -itermidroot 10
+possvm -i results_trees/ANTP.genes.iqtree.treefile -p ANTP.possom_mid 
 ```
 
 4. Evaluate using classification from blast to HomeoDB.
 
 ```bash
-Rscript s02_evaluate_homeodb.R
+# using one-to-one orthogroup assignments (i.e. only best possvm OG is considered)
+Rscript s02_evaluate_homeodb_one2one.R
+Rscript s02_evaluate_homeodb_one2many_mid.R
+# using one-to-many orthogroup assignments (i.e. all possvm OGs are considered)
+Rscript s02_evaluate_homeodb_one2many.R
+Rscript s02_evaluate_homeodb_one2many_mid.R
 ```
 
-5. Plot and annotate trees?
+5. Annotate trees with human genes:
 
 ```bash
+# using iterative rooting
 possvm -i results_trees/ANTP.genes.iqtree.treefile -p ANTP.possom -itermidroot 10 -r reference_ANTP.type.csv -refsps Hsap -o results_annotation -printallpairs -min_support_transfer 50
-possvm -i results_trees/PRD.genes.iqtree.treefile -p PRD.possom -itermidroot 10 -r reference_PRD.type.csv -refsps Hsap -o results_annotation -printallpairs -min_support_transfer 50
-possvm -i results_trees/TALE.genes.iqtree.treefile -p TALE.possom -itermidroot 10 -r reference_TALE.type.csv -refsps Hsap -o results_annotation -printallpairs -min_support_transfer 50
+# possvm -i results_trees/PRD.genes.iqtree.treefile -p PRD.possom -itermidroot 10 -r reference_PRD.type.csv -refsps Hsap -o results_annotation -printallpairs -min_support_transfer 50
+# possvm -i results_trees/TALE.genes.iqtree.treefile -p TALE.possom -itermidroot 10 -r reference_TALE.type.csv -refsps Hsap -o results_annotation -printallpairs -min_support_transfer 50
+
+# using midpoint rooting
+possvm -i results_trees/ANTP.genes.iqtree.treefile -p ANTP.possom_mid -r reference_ANTP.type.csv -refsps Hsap -o results_annotation -printallpairs -min_support_transfer 50
 ```
 
 6. Downsample ANTP trees, by downsampling dataset (always include Homo so that we have at least one reference species to evaluate, though):
 
 ```bash
+# UNUSED
 # create 20 versions of the original dataset downsampled to 10%, 20%, ... 70% of the species
-Rscript s10_downsample_fasta.R
-# launch trees
-for i in results_trees/downsampling_alignment/downsample_0.*.genes.lt.fasta ; do qsub -N tree-$(basename ${i}) -pe smp 4 qsub_iqtree.sh ${i} 4 ; done
-# call OGs
-for i in results_trees/downsampling_alignment/downsample*treefile ; do possvm -i $i -p $(basename ${i}) -itermidroot 10 -skipprint ; done
-# evaluate precision and recall
-# modify s05_evaluate_permutations_ref.R
+# Rscript s10_downsample_original_alignment.R
+# # launch trees
+# for i in results_trees/downsampling_alignment/downsample_0.*.genes.lt.fasta ; do qsub -N tree-$(basename ${i}) -pe smp 4 qsub_iqtree.sh ${i} 4 ; done
+# # call OGs
+# for i in results_trees/downsampling_alignment/downsample*treefile ; do possvm -i $i -p $(basename ${i}) -itermidroot 10 -skipprint ; done
+# # evaluate precision and recall
+# Rscript s11_evaluate_downsampling.R
 ```
 
 7. Evaluate effect of tree accuracy in ANTP classification, by permutating tip labels in the original tree
@@ -138,5 +152,8 @@ for i in results_orthology/*.treefile ; do possvm -i $i -p  $(basename ${i%%.*})
 6. Calculate accuracy relative to `refOGs.csv`:
 
 ```bash
-Rscript s02_evaluate_orthobench.R
+# using one-to-one orthogroup assignments (i.e. only best possvm OG is considered)
+Rscript s02_evaluate_orthobench_one2one.R
+# using one-to-many orthogroup assignments (i.e. all possvm OGs are considered)
+Rscript s02_evaluate_orthobench_one2many.R
 ```
