@@ -45,10 +45,16 @@ bash s01_get_trees-diamond.sh seed_ANTP.fasta ANTP proteomes/
 3. Run *Possvm*.
 
 ```bash
+# base run with iterative rooting
 possvm -i results_trees/ANTP.genes.iqtree.treefile -p ANTP.possom -itermidroot 10
+# run with iterative rooting, excluding cnidarians from the orthology graph
+possvm -i results_trees/ANTP.genes.iqtree.treefile -p ANTP.possom_nocni -itermidroot 10 --outgroup outgroups.txt
+# run with midpoint rooting
+possvm -i results_trees/ANTP.genes.iqtree.treefile -p ANTP.possom_mid
+
 # possvm -i results_trees/PRD.genes.iqtree.treefile -p PRD.possom -itermidroot 10
 # possvm -i results_trees/TALE.genes.iqtree.treefile -p TALE.possom -itermidroot 10
-possvm -i results_trees/ANTP.genes.iqtree.treefile -p ANTP.possom_mid 
+
 ```
 
 4. Evaluate using classification from blast to HomeoDB.
@@ -143,10 +149,16 @@ bash s01_get_trees-diamond.sh
 5. Run *Possvm* as follows:
 
 ```bash
-# find OGs in each tree with possom:
-for i in orthobench_trees/tight/*.tre ; do possvm -i $i -p  $(basename ${i%%.*}).possom -ogprefix "$(basename ${i%%.*})." ; done
+# find OGs in each tree with possom, using the original trees from orthobench:
 for i in orthobench_trees/raw/*.tre ; do possvm -i $i -p  $(basename ${i%%.*}).possom -ogprefix "$(basename ${i%%.*})." ; done
+for i in orthobench_trees/raw/*.tre ; do possvm -i $i -p  $(basename ${i%%.*}).possom_iter -ogprefix "$(basename ${i%%.*})." -itermidroot 10 ; done
+
+# find OGs in each tree with possom, using new expanded trees (necessary to assess the effect of iterative rooting)
 for i in results_orthology/*.treefile ; do possvm -i $i -p  $(basename ${i%%.*}).possom -ogprefix "$(basename ${i%%.*})." ; done
+for i in results_orthology/*.treefile ; do possvm -i $i -p $(basename ${i%%.*}).possom_iter -ogprefix "$(basename ${i%%.*})." -itermidroot 10 ; done
+
+# UNUSED
+# for i in orthobench_trees/tight/*.tre ; do possvm -i $i -p  $(basename ${i%%.*}).possom -ogprefix "$(basename ${i%%.*})." ; done # UNUSED
 ```
 
 6. Calculate accuracy relative to `refOGs.csv`:
