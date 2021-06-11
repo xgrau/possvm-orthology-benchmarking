@@ -215,5 +215,6 @@ fgrep -f <(grep -w ${i} refOGs.csv | cut -f2) results_phylomedb/dictionary_diamo
 fgrep -f results_phylomedb/${i}.diamond_phylome.human.txt ../phylome-data/phylome-0514-human/orthologs.txt > results_phylomedb/${i}.diamond_phylome.human_orthologs.csv
 done
 
-# get orthogroups
+# get orthogroups and evaluate estimates
+Rscript s20_orthogroups_from_phylomeDB.R
 ```
