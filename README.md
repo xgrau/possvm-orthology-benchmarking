@@ -139,29 +139,19 @@ ls <path>/Open_Orthobench/Supporting_Data/Additional_Files/proteomes/primary_tra
 # copy the fasta files into the `proteomes` folder in in the present directory and concatenate them...
 ```
 
-4. Run homology searches, MSAs and phylogenies:
-
-```bash
-# run from the present directory
-bash s01_get_trees-diamond.sh
-```
-
-5. Run *Possvm* as follows:
+4. Run *Possvm* as follows:
 
 ```bash
 # find OGs in each tree with possom, using the original trees from orthobench:
 for i in orthobench_trees/raw/*.tre ; do possvm -i $i -p  $(basename ${i%%.*}).possom -ogprefix "$(basename ${i%%.*})." ; done
 for i in orthobench_trees/raw/*.tre ; do possvm -i $i -p  $(basename ${i%%.*}).possom_iter -ogprefix "$(basename ${i%%.*})." -itermidroot 10 ; done
 
-# find OGs in each tree with possom, using new expanded trees (necessary to assess the effect of iterative rooting)
-for i in results_trees/*.treefile ; do possvm -i $i -p  $(basename ${i%%.*}).possom_mid -ogprefix "$(basename ${i%%.*})." ; done
-for i in results_trees/*.treefile ; do possvm -i $i -p $(basename ${i%%.*}).possom_iter -ogprefix "$(basename ${i%%.*})." -itermidroot 10 ; done
 
 # UNUSED
 # for i in orthobench_trees/tight/*.tre ; do possvm -i $i -p  $(basename ${i%%.*}).possom -ogprefix "$(basename ${i%%.*})." ; done # UNUSED
 ```
 
-6. Calculate accuracy relative to `refOGs.csv`:
+5. Calculate accuracy relative to `refOGs.csv`:
 
 ```bash
 # using one-to-one orthogroup assignments (i.e. only best possvm OG is considered)
@@ -169,6 +159,41 @@ Rscript s02_evaluate_orthobench_one2one.R
 # using one-to-many orthogroup assignments (i.e. all possvm OGs are considered)
 Rscript s02_evaluate_orthobench_one2many.R
 ```
+
+Run homology searches, MSAs and new phylogenies:
+
+```bash
+# # run from the present directory
+# bash s01_get_trees-diamond.sh
+
+# # find OGs in each tree with possom, using new expanded trees (necessary to assess the effect of iterative rooting?)
+# cp results_trees/*.treefile results_orthology/
+# for i in results_orthology/*.treefile ; do possvm -i $i -p  $(basename ${i%%.*}).possom -ogprefix "$(basename ${i%%.*})." ; done
+# for i in results_orthology/*.treefile ; do possvm -i $i -p $(basename ${i%%.*}).possom_iter -ogprefix "$(basename ${i%%.*})." -itermidroot 10 ; done
+
+# # evaluate iterative rooting accuracy:
+# # DEPRECATED
+# Rscript s03_evaluate_orthobench_one2one_iter.R
+# Rscript s04_compare_midroot_iterroot.R
+```
+
+### Effect of iterative rooting
+
+Based on raw Orthobench trees, let's increase the length of random internal branches to evaluate the effect of the iterative tree rooting procedure:
+
+1. Create collection of inflated trees (20 per original tree):
+
+```bash
+s05_create_inflated_trees.R
+```
+
+2. Run *Possvm* with and without iterative rooting:
+
+```bash
+for i in results_rooting_inflation/*.tre ; do possvm -i $i -p  $(basename ${i%%.*}).possom_mid -ogprefix "$(basename ${i%%.*})." ; done
+for i in results_rooting_inflation/*.tre ; do possvm -i $i -p  $(basename ${i%%.*}).possom_ite -ogprefix "$(basename ${i%%.*})." -itermidroot 10 ; done
+```
+
 
 ## Alternative methods
 
