@@ -21,7 +21,7 @@ diamond makedb --in ${input_fastas}/all_proteomes.fa -d ${input_fastas}/all_prot
 echo "# ${ref} | diamond search"
 diamond blastp \
         --more-sensitive \
-	--max-target-seqs 100 \
+		--max-target-seqs 100 \
         -d ${input_fastas}/all_proteomes.fa \
         -q ${seed_fasta} \
         -o ${searches}/${ref}.seed.diamond.csv \
