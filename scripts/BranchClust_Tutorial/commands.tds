@@ -1,0 +1,171 @@
+#leaf fg color l01
+#leaf bg color l02
+operation l01
+color blue
+ID EU from labelfile where cluster == 1
+color orange
+ID EU from labelfile where cluster == 2
+color magenta
+ID EU from labelfile where cluster == 3
+color SeaGreen1
+ID EU from labelfile where cluster == 4
+color violet
+ID EU from labelfile where cluster == 5
+color sienna3
+ID EU from labelfile where cluster == 6
+color purple
+ID EU from labelfile where cluster == 7
+color pink1
+ID EU from labelfile where cluster == 8
+color red3
+ID EU from labelfile where cluster == 9
+color purple4
+ID EU from labelfile where cluster == 10
+color yellow1
+ID EU from labelfile where cluster == 11
+color SpringGreen4
+ID EU from labelfile where cluster == 12
+color RoyalBlue1
+ID EU from labelfile where cluster == 13
+color plum4
+ID EU from labelfile where cluster == 14
+color SteelBlue4
+ID EU from labelfile where cluster == 15
+color salmon1
+ID EU from labelfile where cluster == 16
+color blue
+ID EU from labelfile where cluster == 17
+color orange
+ID EU from labelfile where cluster == 18
+color magenta
+ID EU from labelfile where cluster == 19
+color SeaGreen1
+ID EU from labelfile where cluster == 20
+color violet
+ID EU from labelfile where cluster == 21
+color sienna3
+ID EU from labelfile where cluster == 22
+color purple
+ID EU from labelfile where cluster == 23
+color pink1
+ID EU from labelfile where cluster == 24
+color red3
+ID EU from labelfile where cluster == 25
+color purple4
+ID EU from labelfile where cluster == 26
+color yellow1
+ID EU from labelfile where cluster == 27
+color SpringGreen4
+ID EU from labelfile where cluster == 28
+color RoyalBlue1
+ID EU from labelfile where cluster == 29
+color plum4
+ID EU from labelfile where cluster == 30
+color SteelBlue4
+ID EU from labelfile where cluster == 31
+color salmon1
+ID EU from labelfile where cluster == 32
+
+#node bg color - n01
+#node fg color - n00
+operation n00
+
+color blue
+ID EU from labelfile where cluster == 1
+color orange
+ID EU from labelfile where cluster == 2
+color magenta
+ID EU from labelfile where cluster == 3
+color SeaGreen1
+ID EU from labelfile where cluster == 4
+color violet
+ID EU from labelfile where cluster == 5
+color sienna3
+ID EU from labelfile where cluster == 6
+color purple
+ID EU from labelfile where cluster == 7
+color pink1
+ID EU from labelfile where cluster == 8
+color red3
+ID EU from labelfile where cluster == 9
+color purple4
+ID EU from labelfile where cluster == 10
+color yellow1
+ID EU from labelfile where cluster == 11
+color SpringGreen4
+ID EU from labelfile where cluster == 12
+color RoyalBlue1
+ID EU from labelfile where cluster == 13
+color plum4
+ID EU from labelfile where cluster == 14
+color SteelBlue4
+ID EU from labelfile where cluster == 15
+color salmon1
+ID EU from labelfile where cluster == 16
+color blue
+ID EU from labelfile where cluster == 17
+color orange
+ID EU from labelfile where cluster == 18
+color magenta
+ID EU from labelfile where cluster == 19
+color SeaGreen1
+ID EU from labelfile where cluster == 20
+color violet
+ID EU from labelfile where cluster == 21
+color sienna3
+ID EU from labelfile where cluster == 22
+color purple
+ID EU from labelfile where cluster == 23
+color pink1
+ID EU from labelfile where cluster == 24
+color red3
+ID EU from labelfile where cluster == 25
+color purple4
+ID EU from labelfile where cluster == 26
+color yellow1
+ID EU from labelfile where cluster == 27
+color SpringGreen4
+ID EU from labelfile where cluster == 28
+color RoyalBlue1
+ID EU from labelfile where cluster == 29
+color plum4
+ID EU from labelfile where cluster == 30
+color SteelBlue4
+ID EU from labelfile where cluster == 31
+color salmon1
+ID EU from labelfile where cluster == 32
+
+#leaf illustration juxtaposition
+operation l04
+
+color red
+symbol 21 8
+legend on
+tabulation + 100
+tabulation auto 0
+ID EU from labelfile where family == fam
+
+color green
+symbol 23 8
+legend on
+tabulation + 100
+tabulation auto 0
+ID EU from labelfile where family == inpar
+
+color blue
+symbol 22 8
+legend on
+tabulation + 100
+tabulation auto 0
+ID EU from labelfile where family == outpar
+legend off
+
+color black
+font {Times 10}
+AN LeavesAdd {labelfile {nu_cl}} {prefix "   "}
+
+font {Times 10}
+AN LeavesAdd {labelfile {nu_fam}} {prefix ":"}
+
+AN Columns {labelfile {taxa}}
+AN Columns {labelfile {name}}
