@@ -2,11 +2,11 @@ IQ-TREE multicore version 2.1.0 for Linux 64-bit built Jul 18 2020
 Developed by Bui Quang Minh, James Barbetti, Nguyen Lam Tung,
 Olga Chernomor, Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
 
-Host:    node-hp0304.linux.crg.es (AVX, 125 GB RAM)
-Command: /users/asebe/xgraubove/Programes/iqtree-2.1.0-Linux/bin/iqtree2 -s results_trees/RefOG067.genes.lt.fasta -m TEST -mset LG,WAG,JTT -nt AUTO -ntmax 8 -bb 1000 -pre results_trees/RefOG067.genes.iqtree -nm 10000 -nstop 200 -cptime 1800
-Seed:    951944 (Using SPRNG - Scalable Parallel Random Number Generator)
-Time:    Sat Feb  6 14:39:42 2021
-Kernel:  AVX - auto-detect threads (8 CPU cores detected)
+Host:    node-hp0207.linux.crg.es (AVX, 125 GB RAM)
+Command: /users/asebe/xgraubove/Programes/iqtree-2.1.0-Linux/bin/iqtree2 -s results_trees/RefOG067.genes.lt.fasta -m TEST -mset LG,WAG,JTT -nt AUTO -ntmax 4 -bb 1000 -pre results_trees/RefOG067.genes.iqtree -nm 10000 -nstop 200 -cptime 1800
+Seed:    966404 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Thu Jun 10 18:26:04 2021
+Kernel:  AVX - auto-detect threads (4 CPU cores detected)
 
 Reading alignment file results_trees/RefOG067.genes.lt.fasta ... Fasta format detected
 Alignment most likely contains protein sequences
@@ -37,68 +37,66 @@ NOTE: Pantro_ENSPTRP00000079066 is identical to Pantro_ENSPTRP00000002442 but ke
 
 
 Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.001 seconds
-Measuring multi-threading efficiency up to 8 CPU cores
+Measuring multi-threading efficiency up to 4 CPU cores
 Increase to 10 rounds for branch lengths
-273 trees examined
-Threads: 1 / Time: 8.002 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -1612
-Threads: 2 / Time: 4.780 sec / Speedup: 1.674 / Efficiency: 84% / LogL: -1612
-Threads: 3 / Time: 3.874 sec / Speedup: 2.066 / Efficiency: 69% / LogL: -1612
-Threads: 4 / Time: 3.425 sec / Speedup: 2.336 / Efficiency: 58% / LogL: -1612
-Threads: 5 / Time: 3.168 sec / Speedup: 2.526 / Efficiency: 51% / LogL: -1612
-Threads: 6 / Time: 3.102 sec / Speedup: 2.580 / Efficiency: 43% / LogL: -1612
-BEST NUMBER OF THREADS: 5
+125 trees examined
+Threads: 1 / Time: 4.007 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -1612
+Threads: 2 / Time: 2.438 sec / Speedup: 1.644 / Efficiency: 82% / LogL: -1612
+Threads: 3 / Time: 1.923 sec / Speedup: 2.083 / Efficiency: 69% / LogL: -1612
+Threads: 4 / Time: 1.706 sec / Speedup: 2.349 / Efficiency: 59% / LogL: -1612
+BEST NUMBER OF THREADS: 4
 
 Perform fast likelihood tree search using LG+I+G model...
 Estimate model parameters (epsilon = 5.000)
 Perform nearest neighbor interchange...
 Estimate model parameters (epsilon = 1.000)
-1. Initial log-likelihood: -1489.517
-Optimal log-likelihood: -1489.499
-Proportion of invariable sites: 0.074
-Gamma shape alpha: 2.868
-Parameters optimization took 1 rounds (0.008 sec)
+1. Initial log-likelihood: -1489.502
+Optimal log-likelihood: -1489.498
+Proportion of invariable sites: 0.073
+Gamma shape alpha: 2.826
+Parameters optimization took 1 rounds (0.009 sec)
 Time for fast ML tree search: 0.080 seconds
 
 NOTE: ModelFinder requires 1 MB RAM!
 ModelFinder will test up to 24 protein models (sample size: 79) ...
  No. Model         -LnL         df  AIC          AICc         BIC
 WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
-  1  LG            1507.475     33  3080.950     3130.816     3159.141
+  1  LG            1507.475     33  3080.950     3130.817     3159.142
 WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
   2  LG+I          1497.930     34  3063.859     3117.950     3144.420
 WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
   3  LG+G4         1491.104     34  3050.208     3104.299     3130.769
 WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
-  4  LG+I+G4       1489.501     35  3049.002     3107.606     3131.932
+  4  LG+I+G4       1489.501     35  3049.002     3107.607     3131.933
 WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
   7  LG+F+G4       1490.402     53  3086.804     3315.764     3212.385
 WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
-  8  LG+F+I+G4     1489.339     54  3086.677     3334.177     3214.628
+  8  LG+F+I+G4     1489.338     54  3086.676     3334.176     3214.626
 WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
  11  WAG+G4        1507.227     34  3082.454     3136.545     3163.016
 WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
- 12  WAG+I+G4      1505.115     35  3080.231     3138.836     3163.162
+ 12  WAG+I+G4      1505.116     35  3080.232     3138.837     3163.163
 WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
- 15  WAG+F+G4      1504.086     53  3114.173     3343.133     3239.754
+ 15  WAG+F+G4      1504.087     53  3114.173     3343.133     3239.754
 WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
  16  WAG+F+I+G4    1502.192     54  3112.385     3359.885     3240.335
 WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
  19  JTT+G4        1504.096     34  3076.193     3130.284     3156.754
 WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
- 20  JTT+I+G4      1502.905     35  3075.809     3134.414     3158.740
+ 20  JTT+I+G4      1502.904     35  3075.808     3134.412     3158.738
 WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
  23  JTT+F+G4      1500.234     53  3106.468     3335.428     3232.048
 WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
- 24  JTT+F+I+G4    1499.328     54  3106.655     3354.155     3234.605
+ 24  JTT+F+I+G4    1499.326     54  3106.652     3354.152     3234.603
 Akaike Information Criterion:           LG+I+G4
 Corrected Akaike Information Criterion: LG+G4
 Bayesian Information Criterion:         LG+G4
 Best-fit model: LG+G4 chosen according to BIC
 
 All model information printed to results_trees/RefOG067.genes.iqtree.model.gz
-CPU time for ModelFinder: 78.884 seconds (0h:1m:18s)
-Wall-clock time for ModelFinder: 26.642 seconds (0h:0m:26s)
-Generating 1000 samples for ultrafast bootstrap (seed: 951944)...
+CPU time for ModelFinder: 22.517 seconds (0h:0m:22s)
+Wall-clock time for ModelFinder: 10.546 seconds (0h:0m:10s)
+Generating 1000 samples for ultrafast bootstrap (seed: 966404)...
 
 NOTE: 1 MB RAM (0 GB) is required!
 WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
@@ -106,16 +104,16 @@ Estimate model parameters (epsilon = 0.100)
 1. Initial log-likelihood: -1491.104
 Optimal log-likelihood: -1491.102
 Gamma shape alpha: 1.810
-Parameters optimization took 1 rounds (0.004 sec)
+Parameters optimization took 1 rounds (0.005 sec)
 Computing ML distances based on estimated model parameters...
-Computing ML distances took 0.008479 sec (of wall-clock time) 0.042398 sec(of CPU time)
-Computing RapidNJ tree took 0.000623 sec (of wall-clock time) 0.002900 sec (of CPU time)
+Computing ML distances took 0.008504 sec (of wall-clock time) 0.033963 sec(of CPU time)
+Computing RapidNJ tree took 0.000272 sec (of wall-clock time) 0.001078 sec (of CPU time)
 Log-likelihood of RapidNJ tree: -1500.001
 --------------------------------------------------------------------
 |             INITIALIZING CANDIDATE TREE SET                      |
 --------------------------------------------------------------------
-Generating 98 parsimony trees... 0.096 second
-Computing log-likelihood of 98 initial trees ... 0.167 seconds
+Generating 98 parsimony trees... 0.186 second
+Computing log-likelihood of 98 initial trees ... 0.334 seconds
 Current best score: -1491.102
 
 Do NNI search on 20 best initial trees
@@ -124,54 +122,52 @@ BETTER TREE FOUND at iteration 1: -1491.102
 Estimate model parameters (epsilon = 0.100)
 BETTER TREE FOUND at iteration 2: -1485.582
 UPDATE BEST LOG-LIKELIHOOD: -1485.579
+BETTER TREE FOUND at iteration 4: -1485.579
 UPDATE BEST LOG-LIKELIHOOD: -1485.579
-Iteration 10 / LogL: -1485.579 / Time: 0h:0m:0s
-UPDATE BEST LOG-LIKELIHOOD: -1485.579
-UPDATE BEST LOG-LIKELIHOOD: -1485.579
-Iteration 20 / LogL: -1491.160 / Time: 0h:0m:1s
-Finish initializing candidate tree set (6)
-Current best tree score: -1485.579 / CPU time: 1.308
+Iteration 10 / LogL: -1491.161 / Time: 0h:0m:1s
+Iteration 20 / LogL: -1494.670 / Time: 0h:0m:1s
+Finish initializing candidate tree set (10)
+Current best tree score: -1485.579 / CPU time: 1.783
 Number of iterations: 20
 --------------------------------------------------------------------
 |               OPTIMIZING CANDIDATE TREE SET                      |
 --------------------------------------------------------------------
+UPDATE BEST LOG-LIKELIHOOD: -1485.579
+UPDATE BEST LOG-LIKELIHOOD: -1485.578
 Estimate model parameters (epsilon = 0.100)
-BETTER TREE FOUND at iteration 21: -1485.542
-Iteration 30 / LogL: -1485.542 / Time: 0h:0m:1s (0h:0m:12s left)
+BETTER TREE FOUND at iteration 28: -1485.542
+BETTER TREE FOUND at iteration 29: -1485.542
+Iteration 30 / LogL: -1485.542 / Time: 0h:0m:2s (0h:0m:16s left)
 UPDATE BEST LOG-LIKELIHOOD: -1485.542
+Iteration 40 / LogL: -1491.821 / Time: 0h:0m:2s (0h:0m:13s left)
 UPDATE BEST LOG-LIKELIHOOD: -1485.542
-Iteration 40 / LogL: -1485.542 / Time: 0h:0m:2s (0h:0m:11s left)
+Iteration 50 / LogL: -1485.542 / Time: 0h:0m:3s (0h:0m:12s left)
+Log-likelihood cutoff on original alignment: -1507.914
+Iteration 60 / LogL: -1496.270 / Time: 0h:0m:3s (0h:0m:11s left)
 UPDATE BEST LOG-LIKELIHOOD: -1485.542
-UPDATE BEST LOG-LIKELIHOOD: -1485.542
-Iteration 50 / LogL: -1485.547 / Time: 0h:0m:2s (0h:0m:9s left)
-Log-likelihood cutoff on original alignment: -1505.025
-UPDATE BEST LOG-LIKELIHOOD: -1485.542
-Iteration 60 / LogL: -1485.542 / Time: 0h:0m:3s (0h:0m:9s left)
-Iteration 70 / LogL: -1490.233 / Time: 0h:0m:3s (0h:0m:8s left)
-Iteration 80 / LogL: -1495.131 / Time: 0h:0m:4s (0h:0m:7s left)
-Iteration 90 / LogL: -1485.542 / Time: 0h:0m:4s (0h:0m:7s left)
-Iteration 100 / LogL: -1485.542 / Time: 0h:0m:5s (0h:0m:6s left)
-Log-likelihood cutoff on original alignment: -1506.036
+Iteration 70 / LogL: -1485.542 / Time: 0h:0m:4s (0h:0m:10s left)
+Iteration 80 / LogL: -1485.585 / Time: 0h:0m:4s (0h:0m:9s left)
+Iteration 90 / LogL: -1485.542 / Time: 0h:0m:5s (0h:0m:8s left)
+Iteration 100 / LogL: -1485.542 / Time: 0h:0m:6s (0h:0m:7s left)
+Log-likelihood cutoff on original alignment: -1507.914
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.995
+Iteration 110 / LogL: -1485.542 / Time: 0h:0m:6s (0h:0m:7s left)
+Iteration 120 / LogL: -1485.542 / Time: 0h:0m:7s (0h:0m:6s left)
+Iteration 130 / LogL: -1485.584 / Time: 0h:0m:7s (0h:0m:5s left)
+Iteration 140 / LogL: -1494.186 / Time: 0h:0m:8s (0h:0m:5s left)
+Iteration 150 / LogL: -1485.585 / Time: 0h:0m:8s (0h:0m:4s left)
+Log-likelihood cutoff on original alignment: -1507.914
+Iteration 160 / LogL: -1485.542 / Time: 0h:0m:9s (0h:0m:4s left)
+Iteration 170 / LogL: -1491.907 / Time: 0h:0m:10s (0h:0m:3s left)
+Iteration 180 / LogL: -1494.408 / Time: 0h:0m:10s (0h:0m:2s left)
+Iteration 190 / LogL: -1485.585 / Time: 0h:0m:11s (0h:0m:2s left)
+Iteration 200 / LogL: -1485.542 / Time: 0h:0m:11s (0h:0m:1s left)
+Log-likelihood cutoff on original alignment: -1507.914
 NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.997
-Iteration 110 / LogL: -1491.143 / Time: 0h:0m:5s (0h:0m:5s left)
-Iteration 120 / LogL: -1490.240 / Time: 0h:0m:6s (0h:0m:5s left)
-Iteration 130 / LogL: -1485.542 / Time: 0h:0m:6s (0h:0m:4s left)
-Iteration 140 / LogL: -1485.542 / Time: 0h:0m:7s (0h:0m:4s left)
-Iteration 150 / LogL: -1485.585 / Time: 0h:0m:7s (0h:0m:3s left)
-Log-likelihood cutoff on original alignment: -1506.645
-Iteration 160 / LogL: -1490.233 / Time: 0h:0m:8s (0h:0m:3s left)
-Iteration 170 / LogL: -1485.584 / Time: 0h:0m:9s (0h:0m:2s left)
-UPDATE BEST LOG-LIKELIHOOD: -1485.542
-Iteration 180 / LogL: -1485.542 / Time: 0h:0m:9s (0h:0m:2s left)
-Iteration 190 / LogL: -1485.542 / Time: 0h:0m:10s (0h:0m:1s left)
-UPDATE BEST LOG-LIKELIHOOD: -1485.542
-UPDATE BEST LOG-LIKELIHOOD: -1485.542
-Iteration 200 / LogL: -1496.270 / Time: 0h:0m:10s (0h:0m:1s left)
-Log-likelihood cutoff on original alignment: -1506.645
-NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.998
-Iteration 210 / LogL: -1485.542 / Time: 0h:0m:11s (0h:0m:4s left)
-Iteration 220 / LogL: -1485.542 / Time: 0h:0m:11s (0h:0m:4s left)
-TREE SEARCH COMPLETED AFTER 222 ITERATIONS / Time: 0h:0m:11s
+Iteration 210 / LogL: -1485.542 / Time: 0h:0m:12s (0h:0m:5s left)
+Iteration 220 / LogL: -1490.232 / Time: 0h:0m:13s (0h:0m:4s left)
+Iteration 230 / LogL: -1485.585 / Time: 0h:0m:13s (0h:0m:4s left)
+TREE SEARCH COMPLETED AFTER 230 ITERATIONS / Time: 0h:0m:13s
 
 --------------------------------------------------------------------
 |                    FINALIZING TREE SEARCH                        |
@@ -181,24 +177,24 @@ Estimate model parameters (epsilon = 0.010)
 1. Initial log-likelihood: -1485.542
 Optimal log-likelihood: -1485.542
 Gamma shape alpha: 1.974
-Parameters optimization took 1 rounds (0.004 sec)
+Parameters optimization took 1 rounds (0.005 sec)
 BEST SCORE FOUND : -1485.542
 Creating bootstrap support values...
 Split supports printed to NEXUS file results_trees/RefOG067.genes.iqtree.splits.nex
 Total tree length: 7.527
 
-Total number of iterations: 222
-CPU time used for tree search: 58.185 sec (0h:0m:58s)
-Wall-clock time used for tree search: 11.908 sec (0h:0m:11s)
-Total CPU time used: 58.651 sec (0h:0m:58s)
-Total wall-clock time used: 12.005 sec (0h:0m:12s)
+Total number of iterations: 230
+CPU time used for tree search: 52.853 sec (0h:0m:52s)
+Wall-clock time used for tree search: 13.755 sec (0h:0m:13s)
+Total CPU time used: 53.272 sec (0h:0m:53s)
+Total wall-clock time used: 13.871 sec (0h:0m:13s)
 
 Computing bootstrap consensus tree...
 Reading input file results_trees/RefOG067.genes.iqtree.splits.nex...
-18 taxa and 235 splits.
+18 taxa and 237 splits.
 Consensus tree written to results_trees/RefOG067.genes.iqtree.contree
 Reading input trees file results_trees/RefOG067.genes.iqtree.contree
-Log-likelihood of consensus tree: -1485.543
+Log-likelihood of consensus tree: -1485.587
 
 Analysis results written to: 
   IQ-TREE report:                results_trees/RefOG067.genes.iqtree.iqtree
@@ -210,4 +206,4 @@ Ultrafast bootstrap approximation results written to:
   Consensus tree:                results_trees/RefOG067.genes.iqtree.contree
   Screen log file:               results_trees/RefOG067.genes.iqtree.log
 
-Date and Time: Sat Feb  6 14:40:21 2021
+Date and Time: Thu Jun 10 18:26:29 2021

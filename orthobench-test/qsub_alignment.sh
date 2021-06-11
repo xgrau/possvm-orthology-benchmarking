@@ -4,7 +4,7 @@
 #$ -M xavier.graubove@crg.eu
 #$ -m a
 #$ -q long-sl7
-#$ -l virtual_free=100G,h_rt=720:00:00
+#$ -l virtual_free=20G,h_rt=72:00:00
 #$ -o tmp/
 #$ -e tmp/
 
@@ -50,25 +50,4 @@ function do_alitrimphy {
 
 # do alignments and trees
 do_alitrimphy $i $c ${i%%.fasta}.l.fasta ${i%%.fasta}.lt.fasta ${i%%.fasta}.iqtree
-
-# now check if there are outlier sequences in the tree
-python /users/asebe/xgraubove/histonome-ops/histonome-analysis/scripts/run_treeshrink.py -c -t ${i%%.fasta}.iqtree.treefile -m per-gene -q 0.05 -s 10,1 -f ${i%%.fasta}.treeshrink.firstpass.txt
-
-# if there's an outlier sequence in the tree, we'll have to re-run the tree...
-if [ -s ${i%%.fasta}.treeshrink.firstpass.txt ] ; then
-
-	# backup previous files
-	for o in ${i%%.fasta}.l.fasta ${i%%.fasta}.lt.fasta ${i%%.fasta}.iqtree.* ; do
-		mv $o ${o}.firstpass
-	done
-
-	# remove unwanted seqs
-	bioawk -c fastx '{ print $1, $2 }' $i | fgrep -v -w -f ${i%%.fasta}.treeshrink.firstpass.txt | awk '{ print ">"$1"\n"$2 }'  > $i.shrunk
-
-	# redo trees
-	do_alitrimphy $i.shrunk $c ${i%%.fasta}.l.fasta ${i%%.fasta}.lt.fasta ${i%%.fasta}.iqtree
-
-fi
-
-
 

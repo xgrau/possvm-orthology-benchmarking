@@ -1,6 +1,5 @@
 # input variables
-n_cpu="8"
-hmm_folder="hmm_profiles_weak/"
+n_cpu="4"
 input_fastas="proteomes/"
 alignments="results_trees"
 searches="results_searches"
@@ -101,7 +100,7 @@ for ref in ${hmm_list} ; do
 	esl-sfetch -f ${input_fastas}/all_proteomes.fa <(fgrep -w ${ref%%.*} refOGs.csv | cut -f2 | sort -u) > ${searches}/${ref}.seed.fasta
 
 	# alignments
-	echo "# ${ref} | HMM search"
+	echo "# ${ref} | diamond search"
 
 	diamond blastp \
         --more-sensitive \
@@ -112,7 +111,7 @@ for ref in ${hmm_list} ; do
         --quiet \
         --threads ${n_cpu}
 	# extract complete sequences
-	awk '$11 < 1e-6 { print $2 }' ${searches}/${ref}.seed.diamond.csv | sort -u > ${searches}/${ref}.genes.txt
+	awk '$11 < 1e-9 { print $2 }' ${searches}/${ref}.seed.diamond.csv | sort -u > ${searches}/${ref}.genes.txt
 	esl-sfetch -f ${input_fastas}/all_proteomes.fa ${searches}/${ref}.genes.txt > ${alignments}/${ref}.genes.fasta
 	echo "# ${ref} | found: $(wc -l ${searches}/${ref}.genes.txt)"
 	echo "# ${ref} | refOG: $(fgrep -w ${ref%%.*} refOGs.csv | cut -f2 | sort -u | wc -l)"
