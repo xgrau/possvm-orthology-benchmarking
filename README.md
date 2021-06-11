@@ -169,3 +169,51 @@ Rscript s02_evaluate_orthobench_one2one.R
 # using one-to-many orthogroup assignments (i.e. all possvm OGs are considered)
 Rscript s02_evaluate_orthobench_one2many.R
 ```
+
+## Alternative methods
+
+### Phylome-style
+
+Let's define orthogroups from a tree using naive approaches based on species overlap, and compare these orthogroups with those defined by *Possvm*.
+
+From the **`orthobench-test`** folder:
+
+* OGs based on the list of genes descending from a given duplication node (absurd):
+
+```bash
+# UNUSED
+# for i in orthobench_trees/raw/*.tre ; do python ../scripts/phylome-dups.py -i $i -p  $(basename ${i%%.*}).dups -ogprefix "$(basename ${i%%.*})." ; done
+```
+
+* OGs based on connected components starting from a focus species (human), using Orthobench trees:
+
+```bash
+for i in orthobench_trees/raw/*.tre ; do python ../scripts/phylome-ccs.py -i $i -p  $(basename ${i%%.*}).ccs -ogprefix "$(basename ${i%%.*})." ; done
+Rscript s10_evaluate_orthobench_one2one_CCfocus.R
+```
+
+* OGs based on connected components, using PhylomeDB trees from a focus species (human):
+
+```bash
+# get data from http://www.phylomedb.org/phylome_514 (meta human phylome with 66 species, including 15 species also present in Orthobench)
+cat ../phylome-data/phylome-0514-human/proteomes/*.fa > ../phylome-data/phylome-0514-human/proteomes_phylome.fasta
+diamond makedb --in ../phylome-data/phylome-0514-human/proteomes_phylome.fasta -d ../phylome-data/phylome-0514-human/proteomes_phylome.fasta
+
+# find matching sequences in phylomeDB
+mkdir -p results_phylomedb/
+for i in $(cut -f1 refOGs.csv | sort -u ) ; do
+diamond blastp --more-sensitive -d ../phylome-data/phylome-0514-human/proteomes_phylome.fasta -q results_searches/${i}.seed.fasta -o results_phylomedb/${i}.diamond_phylome.csv -p 4
+done
+
+# do it with all seqs
+diamond blastp -q ../phylome-data/phylome-0514-human/proteomes_phylome.fasta -d proteomes/all_proteomes.fa -o results_phylomedb/dictionary_diamond_phylome.csv -p 10
+awk '$3 == 100 { print $1,$2 }' results_phylomedb/dictionary_diamond_phylome.csv | tr ' ' '\t' > results_phylomedb/dictionary_diamond_phylome_filt.csv
+
+# get ortholog pairs from phylomeDB
+for i in $(cut -f1 refOGs.csv | sort -u ) ; do
+fgrep -f <(grep -w ${i} refOGs.csv | cut -f2) results_phylomedb/dictionary_diamond_phylome_filt.csv | grep "_HUMAN" | cut -f1 | sort -u > results_phylomedb/${i}.diamond_phylome.human.txt
+fgrep -f results_phylomedb/${i}.diamond_phylome.human.txt ../phylome-data/phylome-0514-human/orthologs.txt > results_phylomedb/${i}.diamond_phylome.human_orthologs.csv
+done
+
+# get orthogroups
+```

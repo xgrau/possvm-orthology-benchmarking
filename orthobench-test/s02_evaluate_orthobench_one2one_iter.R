@@ -30,7 +30,7 @@ for (ort_set in ort_sets) {
   id=ort_set$id
   dia = data.frame()
   
-  pdf(sprintf("eval_o2o_iter_%s_classification_alluvial.pdf",id),height = 8, width = 7)
+  pdf(sprintf("results_evaluation/eval_o2o_iter_%s_classification_alluvial.pdf",id),height = 8, width = 7)
   for (fam in fam_list) {
     
     ort_fn = sprintf("%s/%s.possom_iter.ortholog_groups.csv",ort_fo, fam)
@@ -40,12 +40,12 @@ for (ort_set in ort_sets) {
       # read in possvm classification
       ort = read.table(ort_fn, sep="\t", header = T, stringsAsFactors = F)
       ort$species = stringr::str_split(ort$gene, pattern = "_", simplify = T)[,1]
-      # ort = ort[ort$species %in% sps_list,]
+      ort = ort[ort$species %in% sps_list,]
       
       # subset ref to refOG of interest
       rei = ref[ref$refOG == fam & ref$gene %in% ort$gene,c("gene","refOG")]
       rei$refOG_bool = T
-      ort = ort[ort$gene %in% ref$gene,]
+      # ort = ort[ort$gene %in% ref$gene,]
       
       # add ref annot to possvm classification
       ort = merge(ort[,c("gene","orthogroup")],rei, by.x = "gene",by.y = "gene", all.y = T,all.x = T)
@@ -140,7 +140,7 @@ for (ort_set in ort_sets) {
   
   # compare precsion and recall
   
-  pdf(sprintf("eval_o2o_iter_%s_summary.pdf",id),height = 5, width = 7)
+  pdf(sprintf("results_evaluation/eval_o2o_iter_%s_summary.pdf",id),height = 5, width = 7)
   layout(matrix(1:6, nrow = 2))
   plot(dia$precision, dia$recall, xlim = c(0,1), ylim=c(0,1), xlab = "Precision", ylab="Recall",
        col=alpha("blue", 0.6), main="Precision & recall", cex.axis=0.9, cex.lab=0.9)
@@ -204,6 +204,6 @@ for (ort_set in ort_sets) {
   dev.off()
   
   # save table
-  write.table(dia, file=sprintf("eval_o2o_iter_%s_summary.csv",id), quote = F, sep="\t",row.names = F)
+  write.table(dia, file=sprintf("results_evaluation/eval_o2o_iter_%s_summary.csv",id), quote = F, sep="\t",row.names = F)
   
 }
