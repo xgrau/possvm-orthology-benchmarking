@@ -190,10 +190,28 @@ s05_create_inflated_trees.R
 2. Run *Possvm* with and without iterative rooting:
 
 ```bash
+# low inflation (bound between 5x and 20x, for 5% of edges)
 for i in results_rooting_inflation/*.tre ; do possvm -i $i -p  $(basename ${i%%.*}).possom_mid -ogprefix "$(basename ${i%%.*})." ; done
 for i in results_rooting_inflation/*.tre ; do possvm -i $i -p  $(basename ${i%%.*}).possom_ite -ogprefix "$(basename ${i%%.*})." -itermidroot 10 ; done
+
+# high inflation (bound between 5x and 50x, for 10% of edges)
+for i in results_rooting_inflation_high/*.tre ; do possvm -i $i -p  $(basename ${i%%.*}).possom_mid -ogprefix "$(basename ${i%%.*})." ; done
+for i in results_rooting_inflation_high/*.tre ; do possvm -i $i -p  $(basename ${i%%.*}).possom_ite -ogprefix "$(basename ${i%%.*})." -itermidroot 10 ; done
+
+# higher inflation (bound between 5x and 50x, for 20% of edges)
+for i in results_rooting_inflation_higher/*.tre ; do possvm -i $i -p  $(basename ${i%%.*}).possom_mid -ogprefix "$(basename ${i%%.*})." ; done
+for i in results_rooting_inflation_higher/*.tre ; do possvm -i $i -p  $(basename ${i%%.*}).possom_ite -ogprefix "$(basename ${i%%.*})." -itermidroot 10 ; done
+
+# TODO: decide whether to use high or low inflation!
+# Probably high is better
 ```
 
+3. Evaluate difference:
+
+```bash
+Rscript s06_evaluate_iterroot_one2one.R
+# TODO: decide whether to use high or low inflation!
+```
 
 ## Alternative methods
 
