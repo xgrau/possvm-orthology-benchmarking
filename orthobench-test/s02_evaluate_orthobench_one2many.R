@@ -7,9 +7,9 @@ library(scales)
 ref_fn = "refOGs.csv"
 
 ort_sets = list(
-  list(id="tight", ort_fo="orthobench_trees/tight/"),
-  list(id="raw", ort_fo="orthobench_trees/raw/"),
-  list(id="own", ort_fo="results_orthology/")
+#   list(id="tight", ort_fo="orthobench_trees/tight/"),
+  list(id="raw", ort_fo="orthobench_trees/raw/")
+#   list(id="own", ort_fo="results_orthology/")
 )
 
 
