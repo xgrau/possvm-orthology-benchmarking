@@ -154,8 +154,8 @@ for i in orthobench_trees/raw/*.tre ; do possvm -i $i -p  $(basename ${i%%.*}).p
 for i in orthobench_trees/raw/*.tre ; do possvm -i $i -p  $(basename ${i%%.*}).possom_iter -ogprefix "$(basename ${i%%.*})." -itermidroot 10 ; done
 
 # find OGs in each tree with possom, using new expanded trees (necessary to assess the effect of iterative rooting)
-for i in results_orthology/*.treefile ; do possvm -i $i -p  $(basename ${i%%.*}).possom -ogprefix "$(basename ${i%%.*})." ; done
-for i in results_orthology/*.treefile ; do possvm -i $i -p $(basename ${i%%.*}).possom_iter -ogprefix "$(basename ${i%%.*})." -itermidroot 10 ; done
+for i in results_trees/*.treefile ; do possvm -i $i -p  $(basename ${i%%.*}).possom_mid -ogprefix "$(basename ${i%%.*})." ; done
+for i in results_trees/*.treefile ; do possvm -i $i -p $(basename ${i%%.*}).possom_iter -ogprefix "$(basename ${i%%.*})." -itermidroot 10 ; done
 
 # UNUSED
 # for i in orthobench_trees/tight/*.tre ; do possvm -i $i -p  $(basename ${i%%.*}).possom -ogprefix "$(basename ${i%%.*})." ; done # UNUSED
@@ -176,6 +176,8 @@ Rscript s02_evaluate_orthobench_one2many.R
 
 Let's define orthogroups from a tree using naive approaches based on species overlap, and compare these orthogroups with those defined by *Possvm*.
 
+#### Phylome-style in Orthobench
+
 From the **`orthobench-test`** folder:
 
 * OGs based on the list of genes descending from a given duplication node (absurd):
@@ -192,9 +194,10 @@ for i in orthobench_trees/raw/*.tre ; do python ../scripts/phylome-ccs.py -i $i 
 Rscript s10_evaluate_orthobench_one2one_CCfocus.R
 ```
 
-* OGs based on connected components, using PhylomeDB trees from a focus species (human):
+* OGs based on connected components, using PhylomeDB trees from a focus species (human) — *this seems fair, but it's not a great idea: many reasons for sequence dropout may artifically reduce recall*.
 
 ```bash
+# DEPRECATED
 # get data from http://www.phylomedb.org/phylome_514 (meta human phylome with 66 species, including 15 species also present in Orthobench)
 cat ../phylome-data/phylome-0514-human/proteomes/*.fa > ../phylome-data/phylome-0514-human/proteomes_phylome.fasta
 diamond makedb --in ../phylome-data/phylome-0514-human/proteomes_phylome.fasta -d ../phylome-data/phylome-0514-human/proteomes_phylome.fasta
@@ -218,3 +221,87 @@ done
 # get orthogroups and evaluate estimates
 Rscript s20_orthogroups_from_phylomeDB.R
 ```
+
+#### Phylome-style in HomeoDB
+
+From the **`homeobox-test`** folder:
+
+* OGs based on connected components starting from a focus species (human), using Orthobench trees:
+
+```bash
+i=results_trees/ANTP.genes.iqtree.treefile
+python ../scripts/phylome-ccs-focus.py -i $i -p  $(basename ${i%%.*}).ccs -ogprefix ccs
+Rscript s10_evaluate_orthobench_one2one_CCfocus.R
+```
+
+### BranchClust
+
+1. Download:
+
+```bash
+#wget http://www.bioinformatics.org/branchclust/BranchClust_1-01.txt && mv BranchClust_1-01.txt ../scripts/BranchClust_1.01.pl
+wget http://www.bioinformatics.org/branchclust/BranchClust_1-00.txt && mv BranchClust_1-00.txt ../scripts/BranchClust_1.00.pl
+wget http://www.bioinformatics.org/branchclust/BranchClust_Tutorial.tgz && mv BranchClust_Tutorial.tgz ../scripts/
+tar xvfz ../scripts/BranchClust_Tutorial.tgz && mv BranchClust_Tutorial/ ../scripts
+wget http://bioinformatics.org/branchclust/BranchClust_all.tgz && tar xvfz BranchClust_all.tgz && mv BranchClust_all.tgz BranchClust_all ../scripts
+```
+
+#### BranchClust in Orthobench
+
+From the **`orthobench-test`** folder:
+
+1. Prepare taxa dictionary files:
+
+```bash
+mkdir -p results_branchclust/
+for i in orthobench_trees/raw/RefOG0*.ortholog_groups.csv ; do awk 'NR>1' $i | cut -f1 -d '_' ; done | sort -u | awk '{ print $1" | " $1"_.*" }' > results_branchclust/gi_numbers.out
+```
+
+2. Run BranchClust:
+
+```bash
+cd results_branchclust/
+for i in $(cut -f1 ../refOGs.csv | sort -u ) ; do
+# let's define ntax as 60% of the species in tree (recommended values: 50-80%)
+ntax=$(cat ../orthobench_trees/raw/${i}.tre| tr ',' '\n' | tr -d '()' |grep "^[A-Z]" | cut -f1 -d '_'| sort -u| wc -l | awk 'n=($1 * 0.6) { print int(n) }')
+perl ../../scripts/BranchClust_1.00.pl ../orthobench_trees/raw/${i}.tre 11
+mv clusters.out ${i}.bc_clusters.out
+mv families.list ${i}.bc_families.out
+grep -A 1 ' CLUSTER ' ${i}.bc_clusters.out | grep -v " CLUSTER " | grep -v "\-\-" | awk '{ for(i=1; i<=NF; i++) { print $i"\t'${i}'."NR }}' > ${i}.bc_clusters.csv
+done
+```
+
+3. Test BranchClust:
+
+```bash
+Rscript s21_evaluate_branchclust.R
+```
+
+#### BranchClust in HomeoDB
+
+From the **`homeobox-test`** folder:
+
+1. Prepare taxa dictionary files:
+
+```bash
+mkdir -p results_branchclust/
+for i in orthobench_trees/raw/RefOG0*.ortholog_groups.csv ; do awk 'NR>1' $i | cut -f1 -d '_' ; done | sort -u | awk '{ print $1" | " $1"_.*" }' > results_branchclust/gi_numbers.out
+```
+
+2. Run BranchClust:
+
+```bash
+cd results_branchclust/
+i=../results_trees/ANTP.genes.iqtree.treefile
+# let's define ntax as 60% of the species in tree (recommended values: 50-80%)
+ntax=$(cat ${i} | tr ',' '\n' | tr -d '()' |grep "^[A-Z]" | cut -f1 -d '_'| sort -u| wc -l | awk 'n=($1 * 0.6) { print int(n) }')
+perl ../../scripts/BranchClust_1.00.pl ${i} ${ntax}
+grep -A 1 ' CLUSTER ' clusters.out | grep -v " CLUSTER " | grep -v "\-\-" | awk '{ for(i=1; i<=NF; i++) { print $i"\tOG."NR }}' > ANTP.bc_clusters.csv
+```
+
+3. Test BranchClust:
+
+```bash
+Rscript s21_evaluate_branchclust.R
+```
+
