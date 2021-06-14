@@ -24,7 +24,7 @@ dif = dif[ order(dif$Fscore), ]
 mid = mid[ rownames(dif), ]
 ite = ite[ rownames(dif), ]
 
-pdf("difference_iter_mid.pdf", height = 6, width = 3)
+pdf("results_evaluation/difference_iter_mid.pdf", height = 6, width = 3)
 
 # diffs
 barplot(as.matrix(t(dif)), beside = TRUE, col = c("purple","orange","blue"), border = c("purple4","orange4","blue4"), xlab = "d(iterative-midpoint)", horiz = TRUE, cex.names = 0.5, las=1, xlim = c(-1,1))
@@ -32,7 +32,6 @@ legend("bottomright", legend = c("Precision", "Recall","F-score"), fill = c("pur
 title("changes in accuracy")
 
 # diff fscore
-colnames(mat) = rownames(mid)
 barplot(dif$Fscore, col = c("blue"), border = c("blue4"), xlab = "d(iterative-midpoint)", horiz = TRUE, cex.names = 0.5, las=1, xlim = c(-1,1), names.arg = rownames(dif))
 title("Fscore change")
 
@@ -67,7 +66,6 @@ colnames(mat) = rownames(mid)
 barplot(mat, beside = TRUE, col = c("springgreen3","gray80"), border = c("springgreen4","gray70"), xlab = "F-score", horiz = TRUE, cex.names = 0.5, las=1, xlim = c(0,1))
 legend("bottomright", legend = c("Iterative", "Midpoint"), fill = c("springgreen3","gray80"), border = c("springgreen4","gray70"), bty="n")
 title("absolute fscore")
-
 
 
 dev.off()

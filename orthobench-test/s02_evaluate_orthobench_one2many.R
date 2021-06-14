@@ -38,6 +38,7 @@ for (ort_set in ort_sets) {
     print(fam)
     
     if( file.exists(ort_fn)) {
+      
       # read in possvm classification
       ort = read.table(ort_fn, sep="\t", header = T, stringsAsFactors = F)
       ort$species = stringr::str_split(ort$gene, pattern = "_", simplify = T)[,1]
