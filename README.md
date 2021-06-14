@@ -300,17 +300,33 @@ mkdir -p results_branchclust/
 for i in orthobench_trees/raw/RefOG0*.ortholog_groups.csv ; do awk 'NR>1' $i | cut -f1 -d '_' ; done | sort -u | awk '{ print $1" | " $1"_.*" }' > results_branchclust/gi_numbers.out
 ```
 
-2. Run BranchClust:
+2. Run BranchClust at various possible `<MANY>` values: 50% of the datset, 60%, 70%, and 80% (to assess tradeoff between precision and recall):
 
 ```bash
 cd results_branchclust/
 for i in $(cut -f1 ../refOGs.csv | sort -u ) ; do
 # let's define ntax as 60% of the species in tree (recommended values: 50-80%)
-ntax=$(cat ../orthobench_trees/raw/${i}.tre| tr ',' '\n' | tr -d '()' |grep "^[A-Z]" | cut -f1 -d '_'| sort -u| wc -l | awk 'n=($1 * 0.6) { print int(n) }')
-perl ../../scripts/BranchClust_1.00.pl ../orthobench_trees/raw/${i}.tre 11
-mv clusters.out ${i}.bc_clusters.out
-mv families.list ${i}.bc_families.out
-grep -A 1 ' CLUSTER ' ${i}.bc_clusters.out | grep -v " CLUSTER " | grep -v "\-\-" | awk '{ for(i=1; i<=NF; i++) { print $i"\t'${i}'."NR }}' > ${i}.bc_clusters.csv
+# ntax=$(cat ../orthobench_trees/raw/${i}.tre| tr ',' '\n' | tr -d '()' |grep "^[A-Z]" | cut -f1 -d '_'| sort -u| wc -l | awk 'n=($1 * 0.6) { print int(n) }')
+# 50%
+perl ../../scripts/BranchClust_1.00.pl ../orthobench_trees/raw/${i}.tre 9
+mv clusters.out ${i}.bc_clusters_50.out
+mv families.list ${i}.bc_families_50.out
+grep -A 1 ' CLUSTER ' ${i}.bc_clusters_50.out | grep -v " CLUSTER " | grep -v "\-\-" | awk '{ for(i=1; i<=NF; i++) { print $i"\t'${i}'."NR }}' > ${i}.bc_clusters_50.csv
+# 60%
+perl ../../scripts/BranchClust_1.00.pl ../orthobench_trees/raw/${i}.tre 10
+mv clusters.out ${i}.bc_clusters_60.out
+mv families.list ${i}.bc_families_60.out
+grep -A 1 ' CLUSTER ' ${i}.bc_clusters_60.out | grep -v " CLUSTER " | grep -v "\-\-" | awk '{ for(i=1; i<=NF; i++) { print $i"\t'${i}'."NR }}' > ${i}.bc_clusters_60.csv
+# 70%
+perl ../../scripts/BranchClust_1.00.pl ../orthobench_trees/raw/${i}.tre 12
+mv clusters.out ${i}.bc_clusters_70.out
+mv families.list ${i}.bc_families_70.out
+grep -A 1 ' CLUSTER ' ${i}.bc_clusters_70.out | grep -v " CLUSTER " | grep -v "\-\-" | awk '{ for(i=1; i<=NF; i++) { print $i"\t'${i}'."NR }}' > ${i}.bc_clusters_70.csv
+# 80%
+perl ../../scripts/BranchClust_1.00.pl ../orthobench_trees/raw/${i}.tre 14
+mv clusters.out ${i}.bc_clusters_80.out
+mv families.list ${i}.bc_families_80.out
+grep -A 1 ' CLUSTER ' ${i}.bc_clusters_80.out | grep -v " CLUSTER " | grep -v "\-\-" | awk '{ for(i=1; i<=NF; i++) { print $i"\t'${i}'."NR }}' > ${i}.bc_clusters_80.csv
 done
 ```
 
@@ -331,15 +347,19 @@ mkdir -p results_branchclust/
 for i in orthobench_trees/raw/RefOG0*.ortholog_groups.csv ; do awk 'NR>1' $i | cut -f1 -d '_' ; done | sort -u | awk '{ print $1" | " $1"_.*" }' > results_branchclust/gi_numbers.out
 ```
 
-2. Run BranchClust:
+2. Run BranchClust at various possible `<MANY>` values: 50% of the datset, 60%, 70%, and 80% (to assess tradeoff between precision and recall):
 
 ```bash
 cd results_branchclust/
 i=../results_trees/ANTP.genes.iqtree.treefile
 # let's define ntax as 60% of the species in tree (recommended values: 50-80%)
-ntax=$(cat ${i} | tr ',' '\n' | tr -d '()' |grep "^[A-Z]" | cut -f1 -d '_'| sort -u| wc -l | awk 'n=($1 * 0.6) { print int(n) }')
+for m in 50 60 70 80 ; do
+ntax=$(cat ${i} | tr ',' '\n' | tr -d '()' |grep "^[A-Z]" | cut -f1 -d '_'| sort -u| wc -l | awk 'n=($1 * "'$m'" / 100) { print int(n) }')
 perl ../../scripts/BranchClust_1.00.pl ${i} ${ntax}
-grep -A 1 ' CLUSTER ' clusters.out | grep -v " CLUSTER " | grep -v "\-\-" | awk '{ for(i=1; i<=NF; i++) { print $i"\tOG."NR }}' > ANTP.bc_clusters.csv
+mv clusters.out ANTP.bc_clusters_${m}.out
+mv families.list ANTP.bc_families_${m}.out
+grep -A 1 ' CLUSTER ' ANTP.bc_clusters_${m}.out | grep -v " CLUSTER " | grep -v "\-\-" | awk '{ for(i=1; i<=NF; i++) { print $i"\tOG."NR }}' > ANTP.bc_clusters_${m}.csv
+done
 ```
 
 3. Test BranchClust:

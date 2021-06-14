@@ -7,7 +7,10 @@ library(scales)
 ref_fn = "refOGs.csv"
 
 ort_sets = list(
-  list(id="raw", ort_fo="orthobench_trees/raw/")
+  list(id="raw", ort_fo="orthobench_trees/raw/", many=50),
+  list(id="raw", ort_fo="orthobench_trees/raw/", many=60),
+  list(id="raw", ort_fo="orthobench_trees/raw/", many=70),
+  list(id="raw", ort_fo="orthobench_trees/raw/", many=80)
 )
 
 
@@ -24,13 +27,14 @@ for (ort_set in ort_sets) {
   
   ort_fo = ort_set$ort_fo
   id = ort_set$id
+  many = ort_set$many
   dia = data.frame()
   
   
-  pdf(sprintf("results_evaluation/eval_branchclust_o2m_%s_classification_alluvial.pdf",id),height = 8, width = 7)
+  pdf(sprintf("results_evaluation/eval_branchclust-%s_o2m_%s_classification_alluvial.pdf", many, id),height = 8, width = 7)
   for (fam in fam_list) {
     
-    ort_fn = sprintf("results_branchclust/%s.bc_clusters.csv", fam)
+    ort_fn = sprintf("results_branchclust/%s.bc_clusters_%s.csv", fam, many)
     print(fam)
     
     if( file.exists(ort_fn)) {
@@ -139,7 +143,7 @@ for (ort_set in ort_sets) {
   
   # compare precsion and recall
   
-  pdf(sprintf("results_evaluation/eval_branchclust_o2m_%s_summary.pdf",id),height = 5, width = 7)
+  pdf(sprintf("results_evaluation/eval_branchclust-%s_o2m_%s_summary.pdf", many, id),height = 5, width = 7)
   layout(matrix(1:6, nrow = 2))
   plot(dia$precision, dia$recall, xlim = c(0,1), ylim=c(0,1), xlab = "Precision", ylab="Recall",
        col=alpha("blue", 0.6), main="Precision & recall", cex.axis=0.9, cex.lab=0.9)
@@ -203,6 +207,6 @@ for (ort_set in ort_sets) {
   dev.off()
   
   # save table
-  write.table(dia, file=sprintf("results_evaluation/eval_branchclust_o2m_%s_summary.csv",id), quote = F, sep="\t",row.names = F)
+  write.table(dia, file=sprintf("results_evaluation/eval_branchclust-%s_o2m_%s_summary.csv", many, id), quote = F, sep="\t",row.names = F)
   
 }
