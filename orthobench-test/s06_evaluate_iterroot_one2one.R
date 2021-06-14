@@ -2,12 +2,15 @@
 library(stringr)
 library(alluvial)
 library(scales)
+library(ape)
+library(phangorn)
+library(digest)
 
 # input
 ref_fn = "refOGs.csv"
 
 ort_sets = list(
-  list(id="raw", ort_fo="results_rooting_inflation_high/")
+  list(id="raw", ort_fo="results_rooting_inflation/")
 )
 
 
@@ -38,6 +41,17 @@ for (ort_set in ort_sets) {
       ort_fn = sprintf("%s/%s_it%i.possom_ite.ortholog_groups.csv", ort_fo, fam, it)
       
       if( file.exists(ort_fn)) {
+
+        # get root hash
+        phy_fn = sprintf("%s/%s_it%i.possom_ite.ortholog_groups.newick", ort_fo, fam, it)
+        phy = ape::read.tree(phy_fn)
+        phy$node.label = NULL
+        phy_top5 = phy$tip.label[1:min(5, length(phy$tip))]
+        root_descendants_ix = phangorn::Descendants(phy, phy$edge[1,2])[[1]]
+        root_descendants = phy$tip.label [ root_descendants_ix ]
+        root_descendants = paste(sort(gsub("\\|.*", "", root_descendants)), collapse = " ")
+        root_descendants_hash = sapply(root_descendants, digest, algo="md5")
+        
         # read in possvm classification
         ort = read.table(ort_fn, sep="\t", header = T, stringsAsFactors = F)
         ort$species = stringr::str_split(ort$gene, pattern = "_", simplify = T)[,1]
@@ -129,7 +143,8 @@ for (ort_set in ort_sets) {
             TP_genes=ge_TP,
             FP_genes=ge_FP,
             FN_genes=ge_FN,
-            iteration_id = paste(fam, it)
+            iteration_id = paste(fam, it),
+            root = root_descendants_hash
           ))
         
       }
@@ -232,6 +247,17 @@ for (ort_set in ort_sets) {
       ort_fn = sprintf("%s/%s_it%i.possom_mid.ortholog_groups.csv", ort_fo, fam, it)
       
       if( file.exists(ort_fn)) {
+
+        # get root hash
+        phy_fn = sprintf("%s/%s_it%i.possom_mid.ortholog_groups.newick", ort_fo, fam, it)
+        phy = ape::read.tree(phy_fn)
+        phy$node.label = NULL
+        phy_top5 = phy$tip.label[1:min(5, length(phy$tip))]
+        root_descendants_ix = phangorn::Descendants(phy, phy$edge[1,2])[[1]]
+        root_descendants = phy$tip.label [ root_descendants_ix ]
+        root_descendants = paste(sort(gsub("\\|.*", "", root_descendants)), collapse = " ")
+        root_descendants_hash = sapply(root_descendants, digest, algo="md5")
+        
         # read in possvm classification
         ort = read.table(ort_fn, sep="\t", header = T, stringsAsFactors = F)
         ort$species = stringr::str_split(ort$gene, pattern = "_", simplify = T)[,1]
@@ -323,7 +349,8 @@ for (ort_set in ort_sets) {
             TP_genes=ge_TP,
             FP_genes=ge_FP,
             FN_genes=ge_FN,
-            iteration_id = paste(fam, it)
+            iteration_id = paste(fam, it),
+            root = root_descendants_hash
           ))
         
       }
@@ -409,16 +436,52 @@ for (ort_set in ort_sets) {
 # store midpoint diagnostics
 dia_mid = dia
 
+
+
+
+
+#### Merged analysis ####
+
+# merge
 dit = merge(dia_mid, dia_ite, by.x = "iteration_id", by.y = "iteration_id", all.x = FALSE, all.y = FALSE, suffixes = c(".mid", ".ite"))
 
+# calculate difs?
 dit$recall_diff = dit$recall.ite - dit$recall.mid
 dit$precision_diff = dit$precision.ite - dit$precision.mid
+dit$Fscore_diff = dit$Fscore.ite - dit$Fscore.mid
 
-# ixs_variable = which(dit$recall_diff != 0 | dit$precision_diff != 0)
 
-plot(dit$recall_diff, dit$precision_diff, col = "blue", xlab = "recall ite-mid", ylab = "precision ite-mid")
-abline(h=0, lty=2)
-abline(v=0, lty=2)
+# variable tree: there's been a change in fscore?
+ixs_variable = which(dit$Fscore_diff != 0)
 
-plot(density(dit$recall_diff), xlim = c(-1,1), col = "blue")
-lines(density(dit$precision_diff), xlim = c(-1,1), col = "magenta")
+# variable tree: there's been a change in root hash?
+ixs_variable = which(as.character(dit$root.ite) != as.character(dit$root.mid) & dit$Fscore_diff != 0)
+
+
+# plots
+pdf("difference_iter_mid_inflation.pdf", height = 4, width = 4)
+
+# change in fscore
+hist(dit$Fscore_diff[ixs_variable], breaks = 40, col="gray90", xlim = c(-1,1), main = "Fscore in variable trees", xlab = "d(ite-mid)")
+title(sub=sprintf(
+  "f>0 = %i | f<0 = %i", sum(dit$Fscore_diff > 0 ), sum(dit$Fscore_diff < 0 )
+))
+abline(v=0, lty=2, col="red")
+
+# change in precision
+hist(dit$precision_diff[ixs_variable], breaks = 40, col="gray90", xlim = c(-1,1), main = "Precision in variable trees", xlab = "d(ite-mid)")
+title(sub=sprintf(
+  "p>0 = %i | p<0 = %i", sum(dit$precision_diff > 0 ), sum(dit$precision_diff < 0 )
+))
+abline(v=0, lty=2, col="red")
+
+# change in recall
+hist(dit$recall_diff[ixs_variable], breaks = 40, col="gray90", xlim = c(-1,1), main = "Recall in variable trees", xlab = "d(ite-mid)")
+title(sub=sprintf(
+  "r>0 = %i | r<0 = %i", sum(dit$recall_diff > 0 ), sum(dit$recall_diff < 0 )
+))
+abline(v=0, lty=2, col="red")
+
+dev.off()
+
+write.table(dit, "difference_iter_mid_inflation.csv", quote = FALSE, sep = "\t", row.names = FALSE)
