@@ -7,6 +7,8 @@ library(ape)
 # input
 ref_fn = "refOGs.csv"
 out_fn = "results_rooting_inflation"
+# out_fn = "results_rooting_inflation_high"
+# out_fn = "results_rooting_inflation_higher"
 
 ort_sets = list(
   list(id="raw", ort_fo="orthobench_trees/raw/")
@@ -14,7 +16,10 @@ ort_sets = list(
 
 num_iter = 20
 edge_fraction = 0.05
-inflation_factor_bounds = c(5,20)
+# edge_fraction = 0.1  # high
+# edge_fraction = 0.2 # higher
+inflation_factor_bounds = c(5,20)   # high
+# inflation_factor_bounds = c(5,50) # high/higher
 
 # load data
 ref = read.table(ref_fn, sep="\t", header = F, col.names = c("refOG", "gene"), stringsAsFactors=F)
