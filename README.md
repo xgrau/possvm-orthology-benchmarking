@@ -50,9 +50,9 @@ possvm -i results_trees/ANTP.genes.iqtree.treefile -p ANTP.possom -itermidroot 1
 # run with iterative rooting, excluding cnidarians from the orthology graph
 possvm -i results_trees/ANTP.genes.iqtree.treefile -p ANTP.possom_nocni -itermidroot 10 --outgroup outgroups.txt
 # run with iterative rooting and LPA clustering
-python ../scripts/possvm-lpa.py -i results_trees/ANTP.genes.iqtree.treefile -p ANTP.possom_lpa -itermidroot 10
+possvm -i results_trees/ANTP.genes.iqtree.treefile -p ANTP.possom_lpa -itermidroot 10 -method lpa
 # run with iterative rooting and Louvain clustering
-python ../scripts/possvm-louvain.py -i results_trees/ANTP.genes.iqtree.treefile -p ANTP.possom_lou -itermidroot 10
+possvm -i results_trees/ANTP.genes.iqtree.treefile -p ANTP.possom_lou -itermidroot 10 -method louvain
 # run with iterative rooting and Clauset-Newman-Moore greedy modularity maximization
 python ../scripts/possvm-greedy.py -i results_trees/ANTP.genes.iqtree.treefile -p ANTP.possom_gre -itermidroot 10
 # run with midpoint rooting
