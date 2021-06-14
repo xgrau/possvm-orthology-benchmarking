@@ -9,15 +9,15 @@ out_fo = "results_evaluation/"
 
 # list of datasets
 set_list = list(
-  list(id = "ANTP", ref = "results_searches/ANTP.seed.diamond.csv"),
-  list(id = "PRD", ref = "results_searches/PRD.seed.diamond.csv"),
-  list(id = "TALE", ref = "results_searches/TALE.seed.diamond.csv")
+  list(id = "ANTP", ref = "results_searches/ANTP.seed.diamond.csv")
+  # list(id = "PRD", ref = "results_searches/PRD.seed.diamond.csv"),
+  # list(id = "TALE", ref = "results_searches/TALE.seed.diamond.csv")
 )
 
 sps_subsets = list(
-  all = c("Drer","Galgal","Hsap","Mmus","Xentro","Dmel","Apimel","Tcas","Bflo"),
-  ver = c("Drer","Galgal","Hsap","Mmus","Xentro"),
-  ins = c("Dmel","Apimel","Tcas")
+  all = c("Drer","Galgal","Hsap","Mmus","Xentro","Dmel","Apimel","Tcas","Bflo")
+  # ver = c("Drer","Galgal","Hsap","Mmus","Xentro"),
+  # ins = c("Dmel","Apimel","Tcas")
 )
 
 
@@ -56,10 +56,10 @@ for (spsi in names(sps_subsets)) {
     
     dia = data.frame()
     
-    pdf(sprintf("%s/eval_o2o_%s_%s_classification_alluvial.pdf",out_fo, id, spsi),height = 4, width = 6)
+    pdf(sprintf("%s/eval_o2o_lou_%s_%s_classification_alluvial.pdf",out_fo, id, spsi),height = 4, width = 6)
     for (fam in fam_list) {
       
-      ort_fn = sprintf("%s/%s.possom.ortholog_groups.csv",ort_fo, id)
+      ort_fn = sprintf("%s/%s.possom_lou.ortholog_groups.csv",ort_fo, id)
       print(paste(id,fam))
       
       # read in possvm classification
@@ -164,7 +164,7 @@ for (spsi in names(sps_subsets)) {
     
     # compare precsion and recall
     
-    pdf(sprintf("%s/eval_o2o_%s_%s_summary.pdf",out_fo,id, spsi),height = 5, width = 7)
+    pdf(sprintf("%s/eval_o2o_lou_%s_%s_summary.pdf",out_fo,id, spsi),height = 5, width = 7)
     layout(matrix(1:6, nrow = 2))
     plot(dia$precision, dia$recall, xlim = c(0,1), ylim=c(0,1), xlab = "Precision", ylab="Recall",
          col=alpha("blue", 0.6), main="Precision & recall", cex.axis=0.9, cex.lab=0.9)
@@ -231,7 +231,7 @@ for (spsi in names(sps_subsets)) {
     dev.off()
     
     # save table
-    write.table(dia, file=sprintf("%s/eval_o2o_%s_%s_summary.csv",out_fo,id,spsi), quote = F, sep="\t",row.names = F)
+    write.table(dia, file=sprintf("%s/eval_o2o_lou_%s_%s_summary.csv",out_fo,id,spsi), quote = F, sep="\t",row.names = F)
     
     
   }

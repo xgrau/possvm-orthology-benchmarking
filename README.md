@@ -49,6 +49,12 @@ bash s01_get_trees-diamond.sh seed_ANTP.fasta ANTP proteomes/
 possvm -i results_trees/ANTP.genes.iqtree.treefile -p ANTP.possom -itermidroot 10
 # run with iterative rooting, excluding cnidarians from the orthology graph
 possvm -i results_trees/ANTP.genes.iqtree.treefile -p ANTP.possom_nocni -itermidroot 10 --outgroup outgroups.txt
+# run with iterative rooting and LPA clustering
+python ../scripts/possvm-lpa.py -i results_trees/ANTP.genes.iqtree.treefile -p ANTP.possom_lpa -itermidroot 10
+# run with iterative rooting and Louvain clustering
+python ../scripts/possvm-louvain.py -i results_trees/ANTP.genes.iqtree.treefile -p ANTP.possom_lou -itermidroot 10
+# run with iterative rooting and Clauset-Newman-Moore greedy modularity maximization
+python ../scripts/possvm-greedy.py -i results_trees/ANTP.genes.iqtree.treefile -p ANTP.possom_gre -itermidroot 10
 # run with midpoint rooting
 possvm -i results_trees/ANTP.genes.iqtree.treefile -p ANTP.possom_mid
 
@@ -62,7 +68,10 @@ possvm -i results_trees/ANTP.genes.iqtree.treefile -p ANTP.possom_mid
 ```bash
 # using one-to-one orthogroup assignments (i.e. only best possvm OG is considered)
 Rscript s02_evaluate_homeodb_one2one.R
-Rscript s02_evaluate_homeodb_one2many_mid.R
+Rscript s02_evaluate_homeodb_one2one_mid.R
+Rscript s02_evaluate_homeodb_one2one_lpa.R
+Rscript s02_evaluate_homeodb_one2one_louvain.R
+Rscript s02_evaluate_homeodb_one2one_greedymod.R
 # using one-to-many orthogroup assignments (i.e. all possvm OGs are considered)
 Rscript s02_evaluate_homeodb_one2many.R
 Rscript s02_evaluate_homeodb_one2many_mid.R
@@ -190,6 +199,10 @@ s05_create_inflated_trees.R
 2. Run *Possvm* with and without iterative rooting:
 
 ```bash
+# inflation in one branch
+for i in results_rooting_inflation_one/*.tre ; do possvm -i $i -p  $(basename ${i%%.*}).possom_mid -ogprefix "$(basename ${i%%.*})." ; done
+for i in results_rooting_inflation_one/*.tre ; do possvm -i $i -p  $(basename ${i%%.*}).possom_ite -ogprefix "$(basename ${i%%.*})." -itermidroot 10 ; done
+
 # low inflation (bound between 5x and 20x, for 5% of edges)
 for i in results_rooting_inflation/*.tre ; do possvm -i $i -p  $(basename ${i%%.*}).possom_mid -ogprefix "$(basename ${i%%.*})." ; done
 for i in results_rooting_inflation/*.tre ; do possvm -i $i -p  $(basename ${i%%.*}).possom_ite -ogprefix "$(basename ${i%%.*})." -itermidroot 10 ; done

@@ -15,9 +15,9 @@ set_list = list(
 )
 
 sps_subsets = list(
-  all = c("Drer","Galgal","Hsap","Mmus","Xentro","Dmel","Apimel","Tcas","Bflo"),
-  ver = c("Drer","Galgal","Hsap","Mmus","Xentro"),
-  ins = c("Dmel","Apimel","Tcas")
+  all = c("Drer","Galgal","Hsap","Mmus","Xentro","Dmel","Apimel","Tcas","Bflo")
+  # ver = c("Drer","Galgal","Hsap","Mmus","Xentro"),
+  # ins = c("Dmel","Apimel","Tcas")
 )
 
 

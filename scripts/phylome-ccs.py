@@ -143,33 +143,6 @@ def parse_events(phy, do_allpairs, min_support_node=0):
 
 
 
-# function to cluster a network-like table of orthologs (from ETE) 
-def clusters_lpa(evs, node_list, cluster_label="orthogroup"):
-
-	# clustering: create network
-	logging.info("Create network")
-	evs_e = evs[["in_gene","out_gene","branch_support"]]
-	evs_n = nx.convert_matrix.from_pandas_edgelist(evs_e, source="in_gene", target="out_gene", edge_attr="branch_support")
-	evs_n.add_nodes_from(node_list)
-	
-	# clustering: asynchronous label propagation
-	logging.info("Find communities LPA")
-	clu_c = community.asyn_lpa_communities(evs_n, seed=11)
-	clu_c = { frozenset(c) for c in clu_c }
-	logging.info("Find communities LPA num clusters = %i" % len(clu_c))
-	clu_c_clu = [ i for i, cluster in enumerate(clu_c) for node in cluster ]
-	clu_c_noi = [ node for i, cluster in enumerate(clu_c) for node in cluster ]
-
-	# clustering: save output
-	clu = pd.DataFrame( { 
-		"node"    :  clu_c_noi,
-		cluster_label : clu_c_clu,
-	}, columns=["node",cluster_label])
-	logging.info("Find communities LPA | num clustered genes = %i" % len(clu))
-
-	return clu
-
-
 
 # function to cluster a network-like table of orthologs (from ETE) 
 def clusters_ccs(evs, node_list, cluster_label="orthogroup"):
