@@ -89,10 +89,6 @@ for (ort_fn in list_ort_files) {
   ev_TN = sum(ix_TN)
   ev_FP = sum(ix_FP)
   ev_FN = sum(ix_FN)
-  ge_TP = paste(ort[ix_TP,"gene"], collapse=",")
-  ge_TN = paste(ort[ix_TN,"gene"], collapse=",")
-  ge_FP = paste(ort[ix_FP,"gene"], collapse=",")
-  ge_FN = paste(ort[ix_FN,"gene"], collapse=",")
   
   # evaluate precision = TP / (TP + FP)
   ev_precision = ev_TP / ( ev_TP + ev_FP )
