@@ -67,23 +67,17 @@ possvm -i results_trees/ANTP.genes.iqtree.treefile -p ANTP.possom_mclw -itermidr
 # run with midpoint rooting
 possvm -i results_trees/ANTP.genes.iqtree.treefile -p ANTP.possom_mid
 
-# possvm -i results_trees/PRD.genes.iqtree.treefile -p PRD.possom -itermidroot 10
-# possvm -i results_trees/TALE.genes.iqtree.treefile -p TALE.possom -itermidroot 10
+# ALTERNATIVE TREES
+# PRD and TALE homeoboxes
+possvm -i results_trees/PRD.genes.iqtree.treefile -p PRD.possom -itermidroot 10
+possvm -i results_trees/TALE.genes.iqtree.treefile -p TALE.possom -itermidroot 10
 
 ```
 
 4. Evaluate using classification from blast to HomeoDB.
 
 ```bash
-# using one-to-one orthogroup assignments (i.e. only best possvm OG is considered)
-Rscript s02_evaluate_homeodb_one2one.R
-Rscript s02_evaluate_homeodb_one2one_mid.R
-Rscript s02_evaluate_homeodb_one2one_lpa.R
-Rscript s02_evaluate_homeodb_one2one_louvain.R
-Rscript s02_evaluate_homeodb_one2one_greedymod.R
-# using one-to-many orthogroup assignments (i.e. all possvm OGs are considered)
-Rscript s02_evaluate_homeodb_one2many.R
-Rscript s02_evaluate_homeodb_one2many_mid.R
+Rscript s02_evaluate_homeodb_master.R
 ```
 
 5. Annotate trees with human genes:
@@ -208,31 +202,30 @@ s05_create_inflated_trees.R
 2. Run *Possvm* with and without iterative rooting:
 
 ```bash
+# range of inflation values
+for i in results_rooting_inflated_trees/RefOG0*.tre ; do possvm -i $i -p  $(basename ${i%%.tre}).possom_mid -ogprefix "$(basename ${i%%.*})." --skipprint; done
+for i in results_rooting_inflated_trees/RefOG0*.tre ; do possvm -i $i -p  $(basename ${i%%.tre}).possom_ite -ogprefix "$(basename ${i%%.*})." -itermidroot 10 --skipprint ; done
+
+# DEPRECATED:
 # inflation in one branch
-for i in results_rooting_inflation_one/*.tre ; do possvm -i $i -p  $(basename ${i%%.*}).possom_mid -ogprefix "$(basename ${i%%.*})." ; done
-for i in results_rooting_inflation_one/*.tre ; do possvm -i $i -p  $(basename ${i%%.*}).possom_ite -ogprefix "$(basename ${i%%.*})." -itermidroot 10 ; done
-
-# low inflation (bound between 5x and 20x, for 5% of edges)
-for i in results_rooting_inflation/*.tre ; do possvm -i $i -p  $(basename ${i%%.*}).possom_mid -ogprefix "$(basename ${i%%.*})." ; done
-for i in results_rooting_inflation/*.tre ; do possvm -i $i -p  $(basename ${i%%.*}).possom_ite -ogprefix "$(basename ${i%%.*})." -itermidroot 10 ; done
-
-# high inflation (bound between 5x and 50x, for 10% of edges)
-for i in results_rooting_inflation_high/*.tre ; do possvm -i $i -p  $(basename ${i%%.*}).possom_mid -ogprefix "$(basename ${i%%.*})." ; done
-for i in results_rooting_inflation_high/*.tre ; do possvm -i $i -p  $(basename ${i%%.*}).possom_ite -ogprefix "$(basename ${i%%.*})." -itermidroot 10 ; done
-
-# higher inflation (bound between 5x and 50x, for 20% of edges)
-for i in results_rooting_inflation_higher/*.tre ; do possvm -i $i -p  $(basename ${i%%.*}).possom_mid -ogprefix "$(basename ${i%%.*})." ; done
-for i in results_rooting_inflation_higher/*.tre ; do possvm -i $i -p  $(basename ${i%%.*}).possom_ite -ogprefix "$(basename ${i%%.*})." -itermidroot 10 ; done
-
-# TODO: decide whether to use high or low inflation!
-# Probably high is better
+# for i in results_rooting_inflation_one/*.tre ; do possvm -i $i -p  $(basename ${i%%.*}).possom_mid -ogprefix "$(basename ${i%%.*})." ; done
+# for i in results_rooting_inflation_one/*.tre ; do possvm -i $i -p  $(basename ${i%%.*}).possom_ite -ogprefix "$(basename ${i%%.*})." -itermidroot 10 ; done
+# # low inflation (bound between 5x and 20x, for 5% of edges)
+# for i in results_rooting_inflation/*.tre ; do possvm -i $i -p  $(basename ${i%%.*}).possom_mid -ogprefix "$(basename ${i%%.*})." ; done
+# for i in results_rooting_inflation/*.tre ; do possvm -i $i -p  $(basename ${i%%.*}).possom_ite -ogprefix "$(basename ${i%%.*})." -itermidroot 10 ; done
+# # high inflation (bound between 5x and 50x, for 10% of edges)
+# for i in results_rooting_inflation_high/*.tre ; do possvm -i $i -p  $(basename ${i%%.*}).possom_mid -ogprefix "$(basename ${i%%.*})." ; done
+# for i in results_rooting_inflation_high/*.tre ; do possvm -i $i -p  $(basename ${i%%.*}).possom_ite -ogprefix "$(basename ${i%%.*})." -itermidroot 10 ; done
+# # higher inflation (bound between 5x and 50x, for 20% of edges)
+# for i in results_rooting_inflation_higher/*.tre ; do possvm -i $i -p  $(basename ${i%%.*}).possom_mid -ogprefix "$(basename ${i%%.*})." ; done
+# for i in results_rooting_inflation_higher/*.tre ; do possvm -i $i -p  $(basename ${i%%.*}).possom_ite -ogprefix "$(basename ${i%%.*})." -itermidroot 10 ; done
 ```
 
 3. Evaluate difference:
 
 ```bash
 Rscript s06_evaluate_iterroot_one2one.R
-# TODO: decide whether to use high or low inflation!
+# TODO: adapt script
 ```
 
 ## Alternative methods
@@ -296,7 +289,7 @@ From the **`homeobox-test`** folder:
 ```bash
 i=results_trees/ANTP.genes.iqtree.treefile
 python ../scripts/phylome-ccs-focus.py -i $i -p  $(basename ${i%%.*}).ccs -ogprefix ccs
-Rscript s10_evaluate_orthobench_one2one_CCfocus.R
+# evaluated with s02_evaluate_homeodb_master.R
 ```
 
 ### BranchClust
@@ -333,22 +326,22 @@ for i in $(cut -f1 ../refOGs.csv | sort -u ) ; do
 perl ../../scripts/BranchClust_1.00.pl ../orthobench_trees/raw/${i}.tre 9
 mv clusters.out ${i}.bc_clusters_50.out
 mv families.list ${i}.bc_families_50.out
-grep -A 1 ' CLUSTER ' ${i}.bc_clusters_50.out | grep -v " CLUSTER " | grep -v "\-\-" | awk '{ for(i=1; i<=NF; i++) { print $i"\t'${i}'."NR }}' > ${i}.bc_clusters_50.csv
+grep -A 1 ' CLUSTER ' ${i}.bc_clusters_50.out | grep -v " CLUSTER " | grep -v "\-\-" | awk 'NR == 1 { print "gene\torthogroup" } { for(i=1; i<=NF; i++) { print $i"\t'${i}'."NR }}' > ${i}.bc_clusters_50.csv
 # 60%
 perl ../../scripts/BranchClust_1.00.pl ../orthobench_trees/raw/${i}.tre 10
 mv clusters.out ${i}.bc_clusters_60.out
 mv families.list ${i}.bc_families_60.out
-grep -A 1 ' CLUSTER ' ${i}.bc_clusters_60.out | grep -v " CLUSTER " | grep -v "\-\-" | awk '{ for(i=1; i<=NF; i++) { print $i"\t'${i}'."NR }}' > ${i}.bc_clusters_60.csv
+grep -A 1 ' CLUSTER ' ${i}.bc_clusters_60.out | grep -v " CLUSTER " | grep -v "\-\-" | awk 'NR == 1 { print "gene\torthogroup" } { for(i=1; i<=NF; i++) { print $i"\t'${i}'."NR }}' > ${i}.bc_clusters_60.csv
 # 70%
 perl ../../scripts/BranchClust_1.00.pl ../orthobench_trees/raw/${i}.tre 12
 mv clusters.out ${i}.bc_clusters_70.out
 mv families.list ${i}.bc_families_70.out
-grep -A 1 ' CLUSTER ' ${i}.bc_clusters_70.out | grep -v " CLUSTER " | grep -v "\-\-" | awk '{ for(i=1; i<=NF; i++) { print $i"\t'${i}'."NR }}' > ${i}.bc_clusters_70.csv
+grep -A 1 ' CLUSTER ' ${i}.bc_clusters_70.out | grep -v " CLUSTER " | grep -v "\-\-" | awk 'NR == 1 { print "gene\torthogroup" } { for(i=1; i<=NF; i++) { print $i"\t'${i}'."NR }}' > ${i}.bc_clusters_70.csv
 # 80%
 perl ../../scripts/BranchClust_1.00.pl ../orthobench_trees/raw/${i}.tre 14
 mv clusters.out ${i}.bc_clusters_80.out
 mv families.list ${i}.bc_families_80.out
-grep -A 1 ' CLUSTER ' ${i}.bc_clusters_80.out | grep -v " CLUSTER " | grep -v "\-\-" | awk '{ for(i=1; i<=NF; i++) { print $i"\t'${i}'."NR }}' > ${i}.bc_clusters_80.csv
+grep -A 1 ' CLUSTER ' ${i}.bc_clusters_80.out | grep -v " CLUSTER " | grep -v "\-\-" | awk 'NR == 1 { print "gene\torthogroup" } { for(i=1; i<=NF; i++) { print $i"\t'${i}'."NR }}' > ${i}.bc_clusters_80.csv
 done
 ```
 
@@ -380,13 +373,12 @@ ntax=$(cat ${i} | tr ',' '\n' | tr -d '()' |grep "^[A-Z]" | cut -f1 -d '_'| sort
 perl ../../scripts/BranchClust_1.00.pl ${i} ${ntax}
 mv clusters.out ANTP.bc_clusters_${m}.out
 mv families.list ANTP.bc_families_${m}.out
-grep -A 1 ' CLUSTER ' ANTP.bc_clusters_${m}.out | grep -v " CLUSTER " | grep -v "\-\-" | awk '{ for(i=1; i<=NF; i++) { print $i"\tOG."NR }}' > ANTP.bc_clusters_${m}.csv
+grep -A 1 ' CLUSTER ' ANTP.bc_clusters_${m}.out | grep -v " CLUSTER " | grep -v "\-\-" | awk 'NR == 1 { print "gene\torthogroup" } { for(i=1; i<=NF; i++) { print $i"\tOG."NR }}' > ANTP.bc_clusters_${m}.csv
 done
 ```
 
 3. Test BranchClust:
 
 ```bash
-Rscript s21_evaluate_branchclust.R
+# evaluated with s02_evaluate_homeodb_master.R
 ```
-
