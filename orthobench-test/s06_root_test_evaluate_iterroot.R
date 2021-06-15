@@ -10,7 +10,7 @@ library(digest)
 ref_fn = "refOGs.csv"
 
 ort_sets = list(
-  list(id="raw", ort_fo="results_rooting_inflation_one/")
+  list(id="raw", ort_fo="results_rooting_inflation_higher/")
 )
 
 
