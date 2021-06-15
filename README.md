@@ -47,14 +47,23 @@ bash s01_get_trees-diamond.sh seed_ANTP.fasta ANTP proteomes/
 ```bash
 # base run with iterative rooting
 possvm -i results_trees/ANTP.genes.iqtree.treefile -p ANTP.possom -itermidroot 10
+
+# ALTERNATIVE TAXON SAMPLING
 # run with iterative rooting, excluding cnidarians from the orthology graph
 possvm -i results_trees/ANTP.genes.iqtree.treefile -p ANTP.possom_nocni -itermidroot 10 --outgroup outgroups.txt
-# run with iterative rooting and LPA clustering
+
+# ALTERNATIVE CLUSTERING METHODS
+# LPA clustering
 possvm -i results_trees/ANTP.genes.iqtree.treefile -p ANTP.possom_lpa -itermidroot 10 -method lpa
-# run with iterative rooting and Louvain clustering
+# Louvain clustering
 possvm -i results_trees/ANTP.genes.iqtree.treefile -p ANTP.possom_lou -itermidroot 10 -method louvain
-# run with iterative rooting and Clauset-Newman-Moore greedy modularity maximization
+# Clauset-Newman-Moore greedy modularity maximization
 python ../scripts/possvm-greedy.py -i results_trees/ANTP.genes.iqtree.treefile -p ANTP.possom_gre -itermidroot 10
+# MCL weighted by node supports
+possvm -i results_trees/ANTP.genes.iqtree.treefile -p ANTP.possom_mclw -itermidroot 10 -method mclw
+
+
+# ALTERNATIVE ROOTS
 # run with midpoint rooting
 possvm -i results_trees/ANTP.genes.iqtree.treefile -p ANTP.possom_mid
 
