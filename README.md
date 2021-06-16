@@ -157,7 +157,10 @@ ls <path>/Open_Orthobench/Supporting_Data/Additional_Files/proteomes/primary_tra
 # find OGs in each tree with possom, using the original trees from orthobench:
 for i in orthobench_trees/raw/*.tre ; do possvm -i $i -p  $(basename ${i%%.*}).possom -ogprefix "$(basename ${i%%.*})." ; done
 for i in orthobench_trees/raw/*.tre ; do possvm -i $i -p  $(basename ${i%%.*}).possom_iter -ogprefix "$(basename ${i%%.*})." -itermidroot 10 ; done
-
+for i in orthobench_trees/raw/*.tre ; do possvm -i $i -p  $(basename ${i%%.*}).possom_mclw -ogprefix "$(basename ${i%%.*})." -method mclw    ; done
+for i in orthobench_trees/raw/*.tre ; do possvm -i $i -p  $(basename ${i%%.*}).possom_lpa -ogprefix "$(basename ${i%%.*})." -method lpa      ; done
+for i in orthobench_trees/raw/*.tre ; do possvm -i $i -p  $(basename ${i%%.*}).possom_lou -ogprefix "$(basename ${i%%.*})." -method louvain  ; done
+for i in orthobench_trees/raw/*.tre ; do possvm -i $i -p  $(basename ${i%%.*}).possom_skr -ogprefix "$(basename ${i%%.*})." -skiproot ; done
 
 # UNUSED
 # for i in orthobench_trees/tight/*.tre ; do possvm -i $i -p  $(basename ${i%%.*}).possom -ogprefix "$(basename ${i%%.*})." ; done # UNUSED
