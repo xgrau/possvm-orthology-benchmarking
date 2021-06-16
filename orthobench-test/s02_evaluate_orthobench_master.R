@@ -11,8 +11,10 @@ out_fo = "results_evaluation/"
 # list of datasets
 set_list = list(
   list(id = "ortb_all_mid_mcl",  ref = "refOGs.csv", ort_fn = "orthobench_trees/raw/RefOG.*.possom.ortholog_groups.csv"),
+  # list(id = "ortb_all_ite_mcl",  ref = "refOGs.csv", ort_fn = "orthobench_trees/raw/RefOG.*.possom_iter.ortholog_groups.csv"),
   list(id = "ortb_all_mid_mclw", ref = "refOGs.csv", ort_fn = "orthobench_trees/raw/RefOG.*.possom_mclw.ortholog_groups.csv"),
-  list(id = "ortb_all_ite_mcl",  ref = "refOGs.csv", ort_fn = "orthobench_trees/raw/RefOG.*.possom_iter.ortholog_groups.csv"),
+  list(id = "ortb_all_mid_lou",  ref = "refOGs.csv", ort_fn = "orthobench_trees/raw/RefOG.*.possom_lou.ortholog_groups.csv"),
+  list(id = "ortb_all_mid_lpa",  ref = "refOGs.csv", ort_fn = "orthobench_trees/raw/RefOG.*.possom_lpa.ortholog_groups.csv"),
   list(id = "ortb_all_phylome",  ref = "refOGs.csv", ort_fn = "orthobench_trees/raw/RefOG.*.ccs.ortholog_groups_from_ccs.csv"),
   list(id = "ortb_all_brc_m50",  ref = "refOGs.csv", ort_fn = "results_branchclust/RefOG.*.bc_clusters_50.csv"),
   list(id = "ortb_all_brc_m60",  ref = "refOGs.csv", ort_fn = "results_branchclust/RefOG.*.bc_clusters_60.csv"),
