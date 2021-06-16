@@ -72,6 +72,11 @@ possvm -i results_trees/ANTP.genes.iqtree.treefile -p ANTP.possom_mid
 possvm -i results_trees/PRD.genes.iqtree.treefile -p PRD.possom -itermidroot 10
 possvm -i results_trees/TALE.genes.iqtree.treefile -p TALE.possom -itermidroot 10
 
+# ALTERNATIVE ALL
+# base run with species tree reconciliation
+possvm -i results_trees/ANTP.genes.iqtree.treefile -p ANTP.possom -itermidroot 10 -spstree taxon_sampling.newick
+
+
 ```
 
 4. Evaluate using classification from blast to HomeoDB.
