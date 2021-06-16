@@ -223,7 +223,7 @@ for (set in set_list) {
   
   # fscore
   hist(dia$Fscore, breaks = 10, xlim = c(0,1),main="F-score", col="blue", ylim=c(0,50),border = "white", xlab = "F-score", cex.axis=0.9, cex.lab=0.9)
-  title(sub=sprintf("av = %.3f (inc = %.3f)", mean(dia$Fscore), mean(dia$Fscore_i)))
+  title(sub=sprintf("av = %.3f (inc = %.3f)", weighted.mean(dia$Fscore, dia$ref_size), weighted.mean(dia$Fscore_i, dia$ref_size)))
   abline(v=0.95, lty=2, col="grey")
   # precision ecdf
   plot(sort(dia$Fscore), col="blue", ylab = "Fscore", ylim = c(0,1), main="Fscore", cex.axis=0.9, cex.lab=0.9)
@@ -232,7 +232,7 @@ for (set in set_list) {
   
   # precision
   hist(dia$precision, breaks = 10, xlim = c(0,1),main="Precision", col="blue",ylim=c(0,50), border = "white", xlab = "Precision", cex.axis=0.9, cex.lab=0.9)
-  title(sub=sprintf("av = %.3f (inc = %.3f)", mean(dia$precision), mean(dia$precision_i)))
+  title(sub=sprintf("av = %.3f (inc = %.3f)", weighted.mean(dia$precision, dia$ref_size), weighted.mean(dia$precision_i, dia$ref_size)))
   abline(v=0.95, lty=2, col="grey")
   # precision ecdf
   plot(sort(dia$precision), col="blue", ylab = "Precision", ylim = c(0,1), main="Precision", cex.axis=0.9, cex.lab=0.9)
@@ -242,7 +242,7 @@ for (set in set_list) {
   # recall
   hist(dia$recall, breaks = 10, xlim = c(0,1),main="Recall", col="blue",ylim=c(0,50), border = "white", xlab = "Recall", cex.axis=0.9, cex.lab=0.9)
   ek_mean = ev_TP / ( ev_TP + ev_FP )
-  title(sub=sprintf("av = %.3f (inc = %.3f)", mean(dia$recall), mean(dia$recall_i)))
+  title(sub=sprintf("av = %.3f (inc = %.3f)", weighted.mean(dia$recall, dia$ref_size), weighted.mean(dia$recall_i, dia$ref_size)))
   abline(v=0.95, lty=2, col="grey")
   # recall ecdf
   plot(sort(dia$recall), col="blue", ylab = "Recall", ylim = c(0,1), main="Recall", cex.axis=0.9, cex.lab=0.9)
@@ -252,7 +252,7 @@ for (set in set_list) {
   # rand_index
   hist(dia$rand_index, breaks = 10, xlim = c(0,1),main="Rand index", col="blue",ylim=c(0,50), border = "white", xlab = "Rand index", cex.axis=0.9, cex.lab=0.9)
   ek_mean = ev_TP / ( ev_TP + ev_FP )
-  title(sub=sprintf("av = %.3f (inc = %.3f)", mean(dia$rand_index), mean(dia$rand_index)))
+  title(sub=sprintf("av = %.3f (inc = %.3f)", weighted.mean(dia$rand_index, dia$ref_size), weighted.mean(dia$rand_index, dia$ref_size)))
   abline(v=0.95, lty=2, col="grey")
   # rand_index ecdf
   plot(sort(dia$rand_index), col="blue", ylab = "Rand index", ylim = c(0,1), main="Rand index", cex.axis=0.9, cex.lab=0.9)
