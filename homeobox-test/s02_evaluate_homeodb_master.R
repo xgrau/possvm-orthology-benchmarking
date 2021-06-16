@@ -14,10 +14,10 @@ set_list = list(
   list(id = "antp_ver_ite_mcl",  ref = "results_searches/ANTP.seed.diamond-edit.csv", ort_fn = "results_trees/ANTP.possom.ortholog_groups.csv",      sps_list = c("Drer","Galgal","Hsap","Mmus","Xentro")),
   list(id = "antp_ins_ite_mcl",  ref = "results_searches/ANTP.seed.diamond-edit.csv", ort_fn = "results_trees/ANTP.possom.ortholog_groups.csv",      sps_list = c("Dmel","Apimel","Tcas")),
   list(id = "antp_all_mid_mcl",  ref = "results_searches/ANTP.seed.diamond-edit.csv", ort_fn = "results_trees/ANTP.possom_mid.ortholog_groups.csv",  sps_list = c("Drer","Galgal","Hsap","Mmus","Xentro","Dmel","Apimel","Tcas","Bflo")),
-  list(id = "antp_all_ite_lpa",  ref = "results_searches/ANTP.seed.diamond-edit.csv", ort_fn = "results_trees/ANTP.possom_lpa.ortholog_groups.csv",  sps_list = c("Drer","Galgal","Hsap","Mmus","Xentro","Dmel","Apimel","Tcas","Bflo")),
+  list(id = "antp_all_ite_mclw", ref = "results_searches/ANTP.seed.diamond-edit.csv", ort_fn = "results_trees/ANTP.possom_mclw.ortholog_groups.csv", sps_list = c("Drer","Galgal","Hsap","Mmus","Xentro","Dmel","Apimel","Tcas","Bflo")),
   list(id = "antp_all_ite_lou",  ref = "results_searches/ANTP.seed.diamond-edit.csv", ort_fn = "results_trees/ANTP.possom_lou.ortholog_groups.csv",  sps_list = c("Drer","Galgal","Hsap","Mmus","Xentro","Dmel","Apimel","Tcas","Bflo")),
   list(id = "antp_all_ite_cnm",  ref = "results_searches/ANTP.seed.diamond-edit.csv", ort_fn = "results_trees/ANTP.possom_gre.ortholog_groups.csv",  sps_list = c("Drer","Galgal","Hsap","Mmus","Xentro","Dmel","Apimel","Tcas","Bflo")),
-  list(id = "antp_all_ite_mclw", ref = "results_searches/ANTP.seed.diamond-edit.csv", ort_fn = "results_trees/ANTP.possom_mclw.ortholog_groups.csv", sps_list = c("Drer","Galgal","Hsap","Mmus","Xentro","Dmel","Apimel","Tcas","Bflo")),
+  list(id = "antp_all_ite_lpa",  ref = "results_searches/ANTP.seed.diamond-edit.csv", ort_fn = "results_trees/ANTP.possom_lpa.ortholog_groups.csv",  sps_list = c("Drer","Galgal","Hsap","Mmus","Xentro","Dmel","Apimel","Tcas","Bflo")),
   list(id = "antp_all_phylome",  ref = "results_searches/ANTP.seed.diamond-edit.csv", ort_fn = "results_trees/ANTP.ccs.ortholog_groups_from_ccs.csv",sps_list = c("Drer","Galgal","Hsap","Mmus","Xentro","Dmel","Apimel","Tcas","Bflo")),
   list(id = "antp_all_brc_m50",  ref = "results_searches/ANTP.seed.diamond-edit.csv", ort_fn = "results_branchclust/ANTP.bc_clusters_50.csv",        sps_list = c("Drer","Galgal","Hsap","Mmus","Xentro","Dmel","Apimel","Tcas","Bflo")),
   list(id = "antp_all_brc_m60",  ref = "results_searches/ANTP.seed.diamond-edit.csv", ort_fn = "results_branchclust/ANTP.bc_clusters_60.csv",        sps_list = c("Drer","Galgal","Hsap","Mmus","Xentro","Dmel","Apimel","Tcas","Bflo")),
@@ -37,6 +37,7 @@ eval_list_ids = unlist(lapply(set_list, function(x) x$id))
 
 rand_index_adj = c()
 rand_index_raw = c()
+message("Rand Index...")
 for (set in set_list) {
   
   # input info
@@ -68,8 +69,16 @@ for (set in set_list) {
   
   # merge
   ort = merge(ort[,c("gene","orthogroup")], ref, by.x = "gene", by.y = "sseqid", all.x = FALSE, all.y = TRUE)
-  rand_index_adj = c(rand_index_adj, fossil::adj.rand.index(as.numeric(as.factor(ort$refOG)), as.numeric(as.factor(ort$orthogroup))))
-  rand_index_raw = c(rand_index_raw,fossil::rand.index(as.numeric(as.factor(ort$refOG)), as.numeric(as.factor(ort$orthogroup))))
+
+  # calculate indexes (raw and adjusted)
+  clu_r = as.numeric(as.factor(ort$refOG))
+  clu_q = as.numeric(as.factor(ort$orthogroup))
+  i_adj = fossil::adj.rand.index(clu_r, clu_q)
+  i_raw = fossil::rand.index(clu_r, clu_q)
+
+  # add to vector
+  rand_index_adj = c(rand_index_adj, i_adj)
+  rand_index_raw = c(rand_index_raw, i_raw)
   
 }
 
@@ -82,14 +91,21 @@ rand_index_df = data.frame(
 write.table(rand_index_df, sprintf("%s/all_methods.rand_index.csv", out_fo), quote = FALSE, sep = "\t", row.names = FALSE)
 
 # plot rand index
-pdf(sprintf("%s/all_methods.rand_index.pdf", out_fo), width = 7, height = 5)
+pdf(sprintf("%s/all_methods.rand_index.pdf", out_fo), width = 6, height = 5)
 par(mar = c(10.1, 4.1, 4.1, 2.1))
 mat = t(as.matrix(rand_index_df[,2:3]))
 colnames(mat) = eval_list_ids
-barplot(mat, beside = TRUE, las = 2, col = c("blue","gray90"), ylim = c(0,1), xlim = c(0,60))
+
+# side by side
+barplot(mat, beside = TRUE, las = 2, col = c("blue","gray90"), ylim = c(0,1), xlim = c(0,60), ylab = "Rand index")
 title(main = "Rand index per dataset")
 abline(h=mat[1,1], col = "purple", lty=2)
 legend("topright", legend = c("adjusted", "raw"), fill = c("blue","gray90"))
+
+# only adjusted
+barplot(rand_index_df$rand_index_adj, names.arg = rand_index_df$method, las = 2, col = "blue", ylim = c(0,1), ylab = "Adjusted Rand index")
+title(main = "Rand index per dataset")
+abline(h=mat[1,1], col = "purple", lty=2)
 dev.off()
 
 
@@ -134,7 +150,7 @@ for (set in set_list) {
   pdf(sprintf("%s/eval.%s.alluvial.pdf",out_fo, id),height = 4, width = 6)
   for (fam in fam_list) {
     
-    print(paste(id,fam))
+    message(paste(id,fam))
     
     # read in possvm classification
     ort = read.table(ort_fn, sep="\t", header = TRUE, stringsAsFactors = FALSE)
@@ -292,7 +308,7 @@ for (set in set_list) {
   
   # fscore
   hist(dia$Fscore, breaks = 10, xlim = c(0,1),main="F-score", col="blue", ylim=c(0,50),border = "white", xlab = "F-score", cex.axis=0.9, cex.lab=0.9)
-  title(sub=sprintf("av = %.3f (inc = %.3f)", weighted.mean(dia$Fscore, dia$ref_size), weighted.mean(dia$Fscore_i, dia$ref_size)))
+  title(sub=sprintf("av = %.3f (inc = %.3f)", mean(dia$Fscore), mean(dia$Fscore_i)))
   abline(v=0.95, lty=2, col="grey")
   # precision ecdf
   plot(sort(dia$Fscore), col="blue", ylab = "Fscore", ylim = c(0,1), main="Fscore", cex.axis=0.9, cex.lab=0.9)
@@ -301,7 +317,7 @@ for (set in set_list) {
   
   # precision
   hist(dia$precision, breaks = 10, xlim = c(0,1),main="Precision", col="blue",ylim=c(0,50), border = "white", xlab = "Precision", cex.axis=0.9, cex.lab=0.9)
-  title(sub=sprintf("av = %.3f (inc = %.3f)", weighted.mean(dia$precision, dia$ref_size), weighted.mean(dia$precision_i, dia$ref_size)))
+  title(sub=sprintf("av = %.3f (inc = %.3f)", mean(dia$precision), mean(dia$precision_i)))
   abline(v=0.95, lty=2, col="grey")
   # precision ecdf
   plot(sort(dia$precision), col="blue", ylab = "Precision", ylim = c(0,1), main="Precision", cex.axis=0.9, cex.lab=0.9)
@@ -311,7 +327,7 @@ for (set in set_list) {
   # recall
   hist(dia$recall, breaks = 10, xlim = c(0,1),main="Recall", col="blue",ylim=c(0,50), border = "white", xlab = "Recall", cex.axis=0.9, cex.lab=0.9)
   ek_mean = ev_TP / ( ev_TP + ev_FP )
-  title(sub=sprintf("av = %.3f (inc = %.3f)", weighted.mean(dia$recall, dia$ref_size), weighted.mean(dia$recall_i, dia$ref_size)))
+  title(sub=sprintf("av = %.3f (inc = %.3f)", mean(dia$recall), mean(dia$recall_i)))
   abline(v=0.95, lty=2, col="grey")
   # recall ecdf
   plot(sort(dia$recall), col="blue", ylab = "Recall", ylim = c(0,1), main="Recall", cex.axis=0.9, cex.lab=0.9)
@@ -321,7 +337,7 @@ for (set in set_list) {
   # rand_index
   hist(dia$rand_index, breaks = 10, xlim = c(0,1),main="Rand index", col="blue",ylim=c(0,50), border = "white", xlab = "Rand index", cex.axis=0.9, cex.lab=0.9)
   ek_mean = ev_TP / ( ev_TP + ev_FP )
-  title(sub=sprintf("av = %.3f (inc = %.3f)", weighted.mean(dia$rand_index, dia$ref_size), weighted.mean(dia$rand_index, dia$ref_size)))
+  title(sub=sprintf("av = %.3f (inc = %.3f)", mean(dia$rand_index), mean(dia$rand_index)))
   abline(v=0.95, lty=2, col="grey")
   # rand_index ecdf
   plot(sort(dia$rand_index), col="blue", ylab = "Rand index", ylim = c(0,1), main="Rand index", cex.axis=0.9, cex.lab=0.9)
@@ -385,7 +401,7 @@ for (set in set_list) {
 eval_list_ids = unlist(lapply(set_list, function(x) x$id))
 dit$method = factor(dit$method, levels = eval_list_ids)
 
-pdf(sprintf("%s/all_methods.pdf", out_fo), width = 7, height = 5)
+pdf(sprintf("%s/all_methods.pdf", out_fo), width = 6, height = 5)
 par(mar = c(10.1, 4.1, 4.1, 2.1))
 
 # fscore
