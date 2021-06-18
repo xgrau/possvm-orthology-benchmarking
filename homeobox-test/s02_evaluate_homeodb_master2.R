@@ -144,7 +144,29 @@ for (set in set_list) {
   fam_count = table(ref$refOG)
   fam_list = names(fam_count)[fam_count>1]
   
-  # store diagnostics
+  # load orthogroups
+  ort = read.table(ort_fn, sep="\t", header = TRUE, stringsAsFactors = FALSE)
+  colnames(ort)[1:2] = c("gene","orthogroup")
+  ort = ort[ort$gene %in% ref$sseqid,]
+  
+  ort = merge(ort[,c("gene","orthogroup")], ref, by.x = "gene",by.y = "sseqid", all.y = T, all.x = T)
+  ort_mat = as.matrix(table(ort$refOG,ort$orthogroup))
+  
+  # find best query OG alignment for each reference OG 
+  # (query OGs that only align to more than one reference are assigned
+  # to the largest possible reference, and not used more than once!)
+  ort_mat_best = as.data.frame(t(apply(ort_mat, 1, function(x) {
+    i = colnames(ort_mat)[which.max(x)]
+    n = x[which.max(x)]
+    return(c( i, n ))
+  })), stringsAsFactors = FALSE)
+  colnames(ort_mat_best) = c("queryOG", "counts")
+  ort_mat_best$counts = as.numeric(ort_mat_best$counts)
+  ort_mat_best = ort_mat_best[ order(ort_mat_best$counts, decreasing = TRUE), ]
+  double_assignments = duplicated(ort_mat_best$queryOG)
+  ort_mat_best [ double_assignments, "queryOG" ] = "None"
+  ort_mat_best [ double_assignments, "counts" ] = 0
+  
   
   #### per-family evaluation ####
   
@@ -155,72 +177,66 @@ for (set in set_list) {
     
     message(paste(id,fam))
     
-    # read in possvm classification
-    ort = read.table(ort_fn, sep="\t", header = TRUE, stringsAsFactors = FALSE)
-    colnames(ort)[1:2] = c("gene","orthogroup")
-    ort$species = stringr::str_split(ort$gene, pattern = "_", simplify = T)[,1]
-    
     # subset ref to refOG of interest
     rei = ref[ref$refOG == fam,c("sseqid","refOG")]
     rei$refOG_bool = T
     rei = rei[order(rei$refOG,rei$sseqid),]
-    ort = ort[ort$gene %in% ref$sseqid,]
     
     # add ref annot to possvm classification
-    ort = merge(ort[,c("gene","orthogroup")], rei, by.x = "gene",by.y = "sseqid", all.y = T, all.x = T)
-    ort[is.na(ort$refOG),"refOG"] = "other"
-    ort[is.na(ort$refOG_bool),"refOG_bool"] = F
+    ori = merge(ort[,c("gene","orthogroup")], rei, by.x = "gene",by.y = "sseqid", all.y = TRUE, all.x = FALSE)
+    ori[is.na(ori$refOG),"refOG"] = "other"
+    ori[is.na(ori$refOG_bool),"refOG_bool"] = FALSE
     
     # identify equivalent possvm orthogroup
-    ort_xtab = as.data.frame(table(ort$refOG,ort$orthogroup), stringsAsFactors = F)
+    ort_xtab = as.data.frame(table(ori$refOG, ori$orthogroup), stringsAsFactors = F)
     colnames(ort_xtab) = c("refOG","Possvm","Freq")
     ort_xtab_pos = ort_xtab[ort_xtab$refOG == fam,]
     ort_xtab_oth = ort_xtab[ort_xtab$refOG == "other",]
     ort_xtab_frac = ort_xtab_pos$Freq / (ort_xtab_pos$Freq+ort_xtab_oth$Freq)
     
     
-    # this block will find the BEST OGs with shared genes with refOG 
-    # (less inclusive, aims to identify a single hit, therefore lower recall)
-    ort_xtab_max = which.max(ort_xtab_pos$Freq)
-    ort_hits_best = ort_xtab_pos[ort_xtab_max,"Possvm"]
-    ort_hits_best_count = sum(ort_xtab_pos$Freq[ort_xtab_max])
+    
+    ort_hits_best = ort_mat_best[fam, "queryOG"]
+    ort_hits_best_count = ort_xtab_pos[ort_xtab_pos$Possvm == ort_hits_best , "Freq"]
+    if (length(ort_hits_best_count) == 0) {
+      ort_hits_best_count = 0
+    }
     # assign bool POSSVM OGs
-    ort$orthogroup_bool = (ort$orthogroup %in% ort_hits_best)
-    ort[is.na(ort$orthogroup_bool),"orthogroup_bool"] = FALSE
+    ori$orthogroup_bool = (ori$orthogroup %in% ort_hits_best)
+    ori[is.na(ort$orthogroup_bool),"orthogroup_bool"] = FALSE
     
     # evaluate: based on number of present genes
-    ix_TP = ort$orthogroup_bool & ort$refOG_bool
-    ix_FP = ort$orthogroup_bool & !ort$refOG_bool
-    ix_FN = !ort$orthogroup_bool & ort$refOG_bool
+    ix_TP = ori$orthogroup_bool & ori$refOG_bool
+    ix_FP = ori$orthogroup_bool & !ori$refOG_bool
+    ix_FN = !ori$orthogroup_bool & ori$refOG_bool
     ev_TP = sum(ix_TP)
     ev_FP = sum(ix_FP)
     ev_FN = sum(ix_FN)
-    ge_TP = paste(ort[ix_TP,"gene"], collapse=",")
-    ge_FP = paste(ort[ix_FP,"gene"], collapse=",")
-    ge_FN = paste(ort[ix_FN,"gene"], collapse=",")
+    ge_TP = paste(ori[ix_TP,"gene"], collapse=",")
+    ge_FP = paste(ori[ix_FP,"gene"], collapse=",")
+    ge_FN = paste(ori[ix_FN,"gene"], collapse=",")
     
     
     # this block will add additional OGs that also align with the refOG (more inclusive)
     # defined as: possvm OG which has at least one gene in the refOG, and at least 50% of its contents are part of the refOG
     ort_xtab_hits = which(ort_xtab_pos$Freq>0 & ort_xtab_frac >= 0.5)
-    ort_hits = ort_xtab_pos[c(ort_xtab_max, ort_xtab_hits),"Possvm"]
+    ort_hits = ort_hits_best
     ort_hits_string = paste(ort_hits,collapse = ",")
-    ort_hits_count = sum(ort_xtab_pos$Freq[ort_xtab_hits])
     # assign bool POSSVM OGs
-    ort$orthogroup_bool_inclusive = (ort$orthogroup %in% ort_hits)
-    ort[is.na(ort$orthogroup_bool_inclusive),"orthogroup_bool_inclusive"] = FALSE
+    ori$orthogroup_bool_inclusive = (ori$orthogroup %in% ort_hits)
+    ori[is.na(ori$orthogroup_bool_inclusive),"orthogroup_bool_inclusive"] = FALSE
     
     # evaluate: based on number of present genes
-    ix_TPi = ort$orthogroup_bool_inclusive & ort$refOG_bool
-    ix_FPi = ort$orthogroup_bool_inclusive & !ort$refOG_bool
-    ix_FNi = !ort$orthogroup_bool_inclusive & ort$refOG_bool
+    ix_TPi = ori$orthogroup_bool_inclusive & ori$refOG_bool
+    ix_FPi = ori$orthogroup_bool_inclusive & !ori$refOG_bool
+    ix_FNi = !ori$orthogroup_bool_inclusive & ori$refOG_bool
     ev_TPi = sum(ix_TPi)
     ev_FPi = sum(ix_FPi)
     ev_FNi = sum(ix_FNi)
 
         
     # calculate Rand index
-    rand_index = fossil::adj.rand.index(as.numeric(ort$refOG_bool), as.numeric(ort$orthogroup_bool))
+    rand_index = fossil::adj.rand.index(as.numeric(ori$refOG_bool), as.numeric(ori$orthogroup_bool))
     
     # evaluate: based on number of present gene pairs
     # get ordered pairs from reference
@@ -244,11 +260,20 @@ for (set in set_list) {
     ev_precision   = ev_TP  / ( ev_TP  + ev_FP )
     ev_precision_i = ev_TPi / ( ev_TPi + ev_FPi )
     # recall
-    ev_recall   = ev_TPi / ( ev_TPi + ev_FN )
+    ev_recall   = ev_TP  / ( ev_TP  + ev_FN )
     ev_recall_i = ev_TPi / ( ev_TPi + ev_FNi )
     # F score
     ev_Fscore   = (2 * ev_precision * ev_recall)     / sum(ev_recall, ev_precision)
     ev_Fscore_i = (2 * ev_precision_i * ev_recall_i) / sum(ev_recall_i, ev_precision_i)
+    
+    if (is.na(ev_precision))   { ev_precision = 0 }
+    if (is.na(ev_precision_i)) { ev_precision_i = 0 }
+    if (is.na(ev_recall))      { ev_recall = 0 }
+    if (is.na(ev_recall_i))    { ev_recall_i = 0 }
+    if (is.na(ev_Fscore))      { ev_Fscore = 0 }
+    if (is.na(ev_Fscore_i))    { ev_Fscore_i = 0 }
+    if (is.na(rand_index))     { rand_index = 0 }
+    
     
     # alluvial plot
     ort_xtab = ort_xtab[ort_xtab$Possvm %in% ort_hits, ]
@@ -277,7 +302,7 @@ for (set in set_list) {
         best_hit = ort_hits_best,
         num_best_hits = ort_hits_best_count,
         all_hits = ort_hits_string, 
-        ref_size = ort_hits_count,
+        ref_size = nrow(rei),
         precision = ev_precision,  # precision and recall (best OG)
         recall    = ev_recall, 
         Fscore    = ev_Fscore,
@@ -299,8 +324,6 @@ for (set in set_list) {
     
   }
   dev.off()
-  
-  
   
   
   #### Summary plots ####
