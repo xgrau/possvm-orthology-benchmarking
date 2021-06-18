@@ -122,23 +122,6 @@ for i in results_trees/downsampling/downsample*newick ; do possvm -i $i -p $(bas
 Rscript s21_evaluate_permutations_all.R
 ```
 
-### Effect of iterative tree rooting
-
-1. Create tree collection
-
-```bash
-Rscript s10_root_test_inflate_collection_v2.R
-```
-
-2. Run *Possvm* with and without iterative rooting:
-
-```bash
-# range of inflation values
-for i in results_rooting_inflated_trees/antp*.tre ; do possvm -i $i -p  $(basename ${i%%.tre}).possom_mid -ogprefix "$(basename ${i%%.*})." --skipprint; done
-for i in results_rooting_inflated_trees/antp*.tre ; do possvm -i $i -p  $(basename ${i%%.tre}).possom_ite -ogprefix "$(basename ${i%%.*})." -itermidroot 10 --skipprint ; done
-
-
-
 ### Alternative methods
 
 #### BranchClust & HomeoDB
@@ -230,6 +213,7 @@ for i in orthobench_trees/raw/*.tre ; do possvm -i $i -p  $(basename ${i%%.*}).p
 for i in orthobench_trees/raw/*.tre ; do possvm -i $i -p  $(basename ${i%%.*}).possom_lpa -ogprefix "$(basename ${i%%.*})." -method lpa      ; done
 for i in orthobench_trees/raw/*.tre ; do possvm -i $i -p  $(basename ${i%%.*}).possom_lou -ogprefix "$(basename ${i%%.*})." -method louvain  ; done
 for i in orthobench_trees/raw/*.tre ; do possvm -i $i -p  $(basename ${i%%.*}).possom_skr -ogprefix "$(basename ${i%%.*})." -skiproot ; done
+for i in orthobench_trees/raw/*.tre ; do possvm -i $i -p  $(basename ${i%%.*}).possom_spst -ogprefix "$(basename ${i%%.*})." -spstree species_tree.newick  ; done
 
 # UNUSED
 # for i in orthobench_trees/tight/*.tre ; do possvm -i $i -p  $(basename ${i%%.*}).possom -ogprefix "$(basename ${i%%.*})." ; done # UNUSED
