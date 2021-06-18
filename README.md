@@ -59,6 +59,8 @@ possvm -i results_trees/ANTP.genes.iqtree.treefile -p ANTP.possom_lpa -itermidro
 possvm -i results_trees/ANTP.genes.iqtree.treefile -p ANTP.possom_lou -itermidroot 10 -method louvain
 # Clauset-Newman-Moore greedy modularity maximization
 python ../scripts/possvm-greedy.py -i results_trees/ANTP.genes.iqtree.treefile -p ANTP.possom_gre -itermidroot 10
+# k-clique
+possvm -i results_trees/ANTP.genes.iqtree.treefile -p ANTP.possom_kcl -itermidroot 10 -method kclique
 # MCL weighted by node supports
 possvm -i results_trees/ANTP.genes.iqtree.treefile -p ANTP.possom_mclw -itermidroot 10 -method mclw
 
@@ -75,8 +77,6 @@ possvm -i results_trees/TALE.genes.iqtree.treefile -p TALE.possom -itermidroot 1
 # ALTERNATIVE ALL
 # base run with species tree reconciliation
 possvm -i results_trees/ANTP.genes.iqtree.treefile -p ANTP.possom -itermidroot 10 -spstree taxon_sampling.newick
-
-
 ```
 
 4. Evaluate using classification from blast to HomeoDB.
@@ -121,6 +121,23 @@ for i in results_trees/downsampling/downsample*newick ; do possvm -i $i -p $(bas
 # evaluate precision and recall
 Rscript s21_evaluate_permutations_all.R
 ```
+
+### Effect of iterative tree rooting
+
+1. Create tree collection
+
+```bash
+Rscript s10_root_test_inflate_collection_v2.R
+```
+
+2. Run *Possvm* with and without iterative rooting:
+
+```bash
+# range of inflation values
+for i in results_rooting_inflated_trees/antp*.tre ; do possvm -i $i -p  $(basename ${i%%.tre}).possom_mid -ogprefix "$(basename ${i%%.*})." --skipprint; done
+for i in results_rooting_inflated_trees/antp*.tre ; do possvm -i $i -p  $(basename ${i%%.tre}).possom_ite -ogprefix "$(basename ${i%%.*})." -itermidroot 10 --skipprint ; done
+
+
 
 ### Alternative methods
 

@@ -126,7 +126,23 @@ dia_ite = dia [ dia$method == "ite", ]
 
 # merge
 dit = merge(dia_mid, dia_ite, by.x = "iteration_id", by.y = "iteration_id", all.x = FALSE, all.y = FALSE, suffixes = c(".mid", ".ite"))
-# dit = dit[ dit$inflated_fraction.ite != "f0.100" , ]
+dit = dit [ dit$inflated_quantile.mid == "q0.990", ] 
+# add factor with inflation method
+dit$inflation_method = apply(stringr::str_split(dit$iteration_id, " ", simplify = TRUE)[,3:4], 1, function(x) paste(x, collapse = " "))
+dit$inflation_method = factor(dit$inflation_method, levels = sort(unique(dit$inflation_method)))
+
+# remove trees that have been sampled more than once
+# dit = dit [ !duplicated(dit$root.ite) | !duplicated(dit$root.mid) , ]
+# # remove trees that have been sampled more than one time
+root_pairs = unlist(lapply(1:length(dit$root.ite), function(i) {
+  a = as.character(dit$root.ite)[i]
+  b = as.character(dit$root.mid)[i]
+  p = paste(sort(c(a,b)), collapse = " ")
+}
+))
+# sum(duplicated(root_pairs))
+# root_pairs = paste(dit$root.ite, dit$root.mid)
+dit = dit [!duplicated(paste(root_pairs, dit$inflation_method)), ]
 
 # calculate change in recall, precision and Fscore
 dit$recall_diff = dit$recall.ite - dit$recall.mid
@@ -137,17 +153,20 @@ dit$Fscore_diff = dit$Fscore.ite - dit$Fscore.mid
 ixs_fscd = abs(dit$Fscore_diff) > 0
 # variable tree: there's been a change in root hash?
 ixs_variable = as.character(dit$root.ite) != as.character(dit$root.mid)
-# ixs_variable = which(as.character(dit$root.ite) != as.character(dit$root.mid) & abs(dit$Fscore_diff) > 0)
 
+# which trees have a variable orthology solution?
+ixs_variable_solution = dit$precision.mid != dit$precision.ite | dit$recall.mid != dit$recall.ite
 
+# plot pie counts
+variable_tree_counts = table(ixs_variable, ixs_variable_solution)
+variable_tree_counts = as.vector(variable_tree_counts)
+names(variable_tree_counts) = c("Same tree, same solution", "Dif tree, same solution", "Same tree, dif solution", "Dif tree, dif solution")
+pdf("results_evaluation/difference_iter_mid_inflation_pie.pdf", height = 4.5, width = 4.5)
+labels = paste(names(variable_tree_counts),"\nn=",variable_tree_counts)
+pie(variable_tree_counts, labels = labels)
+dev.off()
 
-# add factor with inflation method
-dit$inflation_method = apply(stringr::str_split(dit$iteration_id, " ", simplify = TRUE)[,3:4], 1, function(x) paste(x, collapse = " "))
-dit$inflation_method = factor(dit$inflation_method, levels = sort(unique(dit$inflation_method)))
-
-
-
-pdf("results_evaluation/difference_iter_mid_inflation.pdf", height = 5, width = 5)
+pdf("results_evaluation/difference_iter_mid_inflation.pdf", height = 5, width = 4)
 par(mar = c(10.1, 4.1, 4.1, 2.1))
 
 # table: number of recall or precision improvements caused by iterative rooting
@@ -162,7 +181,7 @@ dit_sum = data.frame(
 barplot(
   t(as.matrix(dit_sum))[c(1,3),], 
   beside = TRUE, las = 2, 
-  ylim = c(-100, 160),
+  ylim = c(-50, 100),
   col = c("blue","skyblue"), 
   ylab = "# changes in precision or recall")
 barplot(
@@ -170,17 +189,17 @@ barplot(
   beside = TRUE, axes = FALSE, axisnames = FALSE,
   col = c("deeppink3","pink1"), 
   add = TRUE)
-legend(1,170, cex = 0.7, legend = c("ite improves recall", "ite improves precision", "ite worsens recall", "ite worsens precision"), fill=c("blue","skyblue","deeppink3","pink1"), bty="n")
+legend("topleft", cex = 0.7, legend = c("ite improves recall", "ite improves precision", "ite worsens recall", "ite worsens precision"), fill=c("blue","skyblue","deeppink3","pink1"), bty="n")
 title(main = "Change in recall and precision in inflated trees")
 
 
 # table: median of recall or precision improvement caused by iterative rooting
 dit_mag = data.frame(
   row.names  =    levels(dit$inflation_method),
-  d_recall_p =    aggregate(recall_diff ~ inflation_method, data = dit[ixs_variable,], FUN = function(x) median(x[x>0]) )[,2],
-  d_recall_n =    aggregate(recall_diff ~ inflation_method, data = dit[ixs_variable,], FUN = function(x) median(x[x<0]) )[,2],
-  d_precision_p = aggregate(precision_diff ~ inflation_method, data = dit[ixs_variable,], FUN = function(x) median(x[x>0]) )[,2],
-  d_precision_n = aggregate(precision_diff ~ inflation_method, data = dit[ixs_variable,], FUN = function(x) median(x[x<0]) )[,2]
+  d_recall_p =    aggregate(recall_diff ~ inflation_method, data = dit[ixs_variable,], FUN = function(x) sum(x[x>0]) )[,2],
+  d_recall_n =    aggregate(recall_diff ~ inflation_method, data = dit[ixs_variable,], FUN = function(x) sum(x[x<0]) )[,2],
+  d_precision_p = aggregate(precision_diff ~ inflation_method, data = dit[ixs_variable,], FUN = function(x) sum(x[x>0]) )[,2],
+  d_precision_n = aggregate(precision_diff ~ inflation_method, data = dit[ixs_variable,], FUN = function(x) sum(x[x<0]) )[,2]
 )
 
 
@@ -188,9 +207,9 @@ dit_mag = data.frame(
 barplot(
   t(as.matrix(dit_mag))[c(1,3),], 
   beside = TRUE, las = 2, 
-  ylim = c(-1, 1),
+  ylim = c(-20, 20),
   col = c("blue","skyblue"), 
-  ylab = "sum(ite-mid)")
+  ylab = "median ite-mid")
 barplot(
   t(as.matrix(dit_mag))[c(2,4),], 
   beside = TRUE, axes = FALSE, axisnames = FALSE,
@@ -223,31 +242,87 @@ title("Recall per inflation method")
 # plots
 breaks = seq(from = -1, to = 1, length.out = 40)
 # change in fscore
-hist(dit$Fscore_diff[ixs_variable], breaks = breaks, col="gray90", xlim = c(-1,1), main = "Fscore in variable trees", xlab = "d(ite-mid)", ylim=c(0,200))
+hist(dit$Fscore_diff[ixs_variable], breaks = breaks, col="gray90", xlim = c(-1,1), main = "Fscore in variable trees", xlab = "d(ite-mid)", ylim=c(0,60))
 title(sub=sprintf(
   "ite improves = %i | ite worsens = %i | n = %i", sum(dit$Fscore_diff[ixs_variable] > 0), sum(dit$Fscore_diff[ixs_variable] < 0), length(ixs_variable)
 ))
 abline(v=0, lty=2, col="red")
 
 # change in precision
-hist(dit$precision_diff[ixs_variable], breaks = breaks, col="gray90", xlim = c(-1,1), main = "Precision in variable trees", xlab = "d(ite-mid)",ylim=c(0,200))
+hist(dit$precision_diff[ixs_variable], breaks = breaks, col="gray90", xlim = c(-1,1), main = "Precision in variable trees", xlab = "d(ite-mid)",ylim=c(0,60))
 title(sub=sprintf(
   "ite improves = %i | ite worsens = %i | n = %i", sum(dit$precision_diff[ixs_variable] > 0), sum(dit$precision_diff[ixs_variable] < 0), length(ixs_variable)
 ))
 abline(v=0, lty=2, col="red")
 
 # change in recall
-hist(dit$recall_diff[ixs_variable], breaks = breaks, col="gray90", xlim = c(-1,1), main = "Recall in variable trees", xlab = "d(ite-mid)", ylim=c(0,200))
+hist(dit$recall_diff[ixs_variable], breaks = breaks, col="gray90", xlim = c(-1,1), main = "Recall in variable trees", xlab = "d(ite-mid)", ylim=c(0,60))
 title(sub=sprintf(
   "ite improves = %i | ite worsens = %i | n = %i", sum(dit$recall_diff[ixs_variable] > 0), sum(dit$recall_diff[ixs_variable] < 0), length(ixs_variable)
 ))
 abline(v=0, lty=2, col="red")
 
+
+# ecdf?
+variable_var = dit$Fscore.mid != dit$Fscore.ite
+plot(sort(dit$Fscore.ite[variable_var] - dit$Fscore.mid[variable_var]), ylim = c(-1,1), col = "blue", ylab = "ite-mid", main = "fscore")
+abline(h=0, lty = 2)
+plot(sort(dit$precision.ite[variable_var] - dit$precision.mid[variable_var]), ylim = c(-1,1), col = "blue", ylab = "ite-mid", main = "precision")
+abline(h=0, lty = 2)
+plot(sort(dit$recall.ite[variable_var] - dit$recall.mid[variable_var]), ylim = c(-1,1), col = "blue", ylab = "ite-mid", main = "recall")
+abline(h=0, lty = 2)
+
 dev.off()
-
-
 
 # save?
 write.table(dit, "results_evaluation/difference_iter_mid_inflation.csv", quote = FALSE, sep = "\t", row.names = FALSE)
 
+
+
+
+# all dots
+library(hexbin)
+hexcol = colorRampPalette(interpolate="l",c("#cbeefe", "deepskyblue","dodgerblue3","midnightblue"))
+# hexcol = colorRampPalette(interpolate="l",c("#ffe082","orange","orangered2","#520c52"))
+
+pdf("results_evaluation/difference_iter_mid_inflation_hexs.pdf", height = 4, width = 4.5)
+
+# fscore
+variable_var = dit$Fscore.ite != dit$Fscore.mid
+dat_hexbin = hexbin::hexbin(
+  dit$Fscore.ite[variable_var], 
+  dit$Fscore.mid[variable_var], 
+  xbins = 20, 
+  xlab = "Iterative", 
+  ylab = "Midpoint", 
+  xbnds = c(-0.1,1.1), 
+  ybnds = c(-0.1,1.1))
+plot(dat_hexbin, colramp = hexcol, main = "F-score") 
+
+# precision
+variable_var = dit$precision.ite != dit$precision.mid
+dat_hexbin = hexbin::hexbin(
+  dit$precision.ite[variable_var], 
+  dit$precision.mid[variable_var], 
+  xbins = 20, 
+  xlab = "Iterative", 
+  ylab = "Midpoint", 
+  xbnds = c(-0.1,1.1), 
+  ybnds = c(-0.1,1.1))
+plot(dat_hexbin, colramp = hexcol, main = "Precision") 
+
+# recall
+variable_var = dit$recall.ite != dit$recall.mid
+dat_hexbin = hexbin::hexbin(
+  dit$recall.ite[variable_var], 
+  dit$recall.mid[variable_var], 
+  xbins = 20, 
+  xlab = "Iterative", 
+  ylab = "Midpoint", 
+  xbnds = c(-0.1,1.1), 
+  ybnds = c(-0.1,1.1))
+plot(dat_hexbin, colramp = hexcol, main = "Recall") 
+
+
+dev.off()
 

@@ -11,7 +11,7 @@ out_fo = "results_evaluation/"
 # list of datasets
 set_list = list(
   list(id = "ortb_all_mid_mcl",  ref = "refOGs.csv", ort_fn = "orthobench_trees/raw/RefOG.*.possom.ortholog_groups.csv"),
-  # list(id = "ortb_all_ite_mcl",  ref = "refOGs.csv", ort_fn = "orthobench_trees/raw/RefOG.*.possom_iter.ortholog_groups.csv"),
+  list(id = "ortb_all_ite_mcl",  ref = "refOGs.csv", ort_fn = "orthobench_trees/raw/RefOG.*.possom_iter.ortholog_groups.csv"),
   list(id = "ortb_all_mid_mclw", ref = "refOGs.csv", ort_fn = "orthobench_trees/raw/RefOG.*.possom_mclw.ortholog_groups.csv"),
   list(id = "ortb_all_mid_lou",  ref = "refOGs.csv", ort_fn = "orthobench_trees/raw/RefOG.*.possom_lou.ortholog_groups.csv"),
   list(id = "ortb_all_mid_lpa",  ref = "refOGs.csv", ort_fn = "orthobench_trees/raw/RefOG.*.possom_lpa.ortholog_groups.csv"),
@@ -252,7 +252,7 @@ for (set in set_list) {
   # rand_index
   hist(dia$rand_index, breaks = 10, xlim = c(0,1),main="Rand index", col="blue",ylim=c(0,50), border = "white", xlab = "Rand index", cex.axis=0.9, cex.lab=0.9)
   ek_mean = ev_TP / ( ev_TP + ev_FP )
-  title(sub=sprintf("av = %.3f (inc = %.3f)", weighted.mean(dia$rand_index, dia$ref_size), weighted.mean(dia$rand_index, dia$ref_size)))
+  title(sub=sprintf("av = %.3f (inc = %.3f) | med = %.3f", weighted.mean(dia$rand_index, dia$ref_size), weighted.mean(dia$rand_index, dia$ref_size), median(dia$rand_index, na.rm = T)))
   abline(v=0.95, lty=2, col="grey")
   # rand_index ecdf
   plot(sort(dia$rand_index), col="blue", ylab = "Rand index", ylim = c(0,1), main="Rand index", cex.axis=0.9, cex.lab=0.9)
