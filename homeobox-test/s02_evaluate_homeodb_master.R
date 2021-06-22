@@ -277,7 +277,7 @@ for (set in set_list) {
         best_hit = ort_hits_best,
         num_best_hits = ort_hits_best_count,
         all_hits = ort_hits_string, 
-        ref_size = ort_hits_count,
+        ref_size = nrow(rei),
         precision = ev_precision,  # precision and recall (best OG)
         recall    = ev_recall, 
         Fscore    = ev_Fscore,
