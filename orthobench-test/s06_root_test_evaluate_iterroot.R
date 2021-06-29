@@ -244,21 +244,21 @@ breaks = seq(from = -1, to = 1, length.out = 40)
 # change in fscore
 hist(dit$Fscore_diff[ixs_variable], breaks = breaks, col="gray90", xlim = c(-1,1), main = "Fscore in variable trees", xlab = "d(ite-mid)", ylim=c(0,60))
 title(sub=sprintf(
-  "ite improves = %i | ite worsens = %i | n = %i", sum(dit$Fscore_diff[ixs_variable] > 0), sum(dit$Fscore_diff[ixs_variable] < 0), length(ixs_variable)
+  "ite improves=%i | worsens=%i | nc=%i | n=%i", sum(dit$Fscore_diff[ixs_variable] > 0), sum(dit$Fscore_diff[ixs_variable] < 0),sum(dit$Fscore_diff[ixs_variable] == 0), length(ixs_variable)
 ))
 abline(v=0, lty=2, col="red")
 
 # change in precision
 hist(dit$precision_diff[ixs_variable], breaks = breaks, col="gray90", xlim = c(-1,1), main = "Precision in variable trees", xlab = "d(ite-mid)",ylim=c(0,60))
 title(sub=sprintf(
-  "ite improves = %i | ite worsens = %i | n = %i", sum(dit$precision_diff[ixs_variable] > 0), sum(dit$precision_diff[ixs_variable] < 0), length(ixs_variable)
+  "ite improves=%i | worsens=%i | nc=%i | n=%i", sum(dit$precision_diff[ixs_variable] > 0), sum(dit$precision_diff[ixs_variable] < 0),  sum(dit$precision_diff[ixs_variable] == 0), length(ixs_variable)
 ))
 abline(v=0, lty=2, col="red")
 
 # change in recall
 hist(dit$recall_diff[ixs_variable], breaks = breaks, col="gray90", xlim = c(-1,1), main = "Recall in variable trees", xlab = "d(ite-mid)", ylim=c(0,60))
 title(sub=sprintf(
-  "ite improves = %i | ite worsens = %i | n = %i", sum(dit$recall_diff[ixs_variable] > 0), sum(dit$recall_diff[ixs_variable] < 0), length(ixs_variable)
+  "ite improves=%i | worsens=%i | nc=%i | n=%i", sum(dit$recall_diff[ixs_variable] > 0), sum(dit$recall_diff[ixs_variable] < 0), sum(dit$recall_diff[ixs_variable] == 0), length(ixs_variable)
 ))
 abline(v=0, lty=2, col="red")
 
