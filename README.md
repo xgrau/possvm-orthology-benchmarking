@@ -1,6 +1,6 @@
 # *Possvm* accuracy benchmarks
 
-This is a companion repository to [*Possvm*](https://github.com/xgrau/possvm-orthology), and contains scripts and data to reproduce the benchmarking analyses done for the *Possvm* manuscript ([Grau-Bové and Sebé-Pedrós, bioRxiv 2021](https://www.biorxiv.org/content/10.1101/2021.05.03.442399v1)).
+This is a companion repository to [*Possvm*](https://github.com/xgrau/possvm-orthology), and contains scripts and data to reproduce the benchmarking analyses done for the *Possvm* manuscript ([Grau-Bové and Sebé-Pedrós, MBE 2021](https://academic.oup.com/mbe/article/38/11/5204/6342420)).
 
 You can find the *Possvm* source code, manual and installation instructions in the [main repository for this project](https://github.com/xgrau/possvm-orthology).
 
